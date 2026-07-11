@@ -1,13 +1,6 @@
-# SpVgg Kaufbeuren – Bilder-Update
+# Update Jugendleitung
 
-Dieses Paket enthält die komplette bisherige Seitenstruktur plus eine überarbeitete Startseite mit echten Bildern der bisherigen Vereinswebsite.
+Dieses Update ersetzt die Jugend-Übersicht und die Seite Jugend/Abteilungsleitung. Es ergänzt die aktuellen Ansprechpartner, Bilder, Telefonnummern, E-Mail-Adresse und Kleinfeldkoordinatoren.
 
-## Einfügen bei GitHub
-1. ZIP entpacken.
-2. Alle Dateien und Ordner markieren.
-3. Im bestehenden Repository über Add file → Upload files hochladen.
-4. Gleichnamige Dateien ersetzen lassen.
-5. Commit changes anklicken.
-
-## Sponsoren
-Die Sponsoren sind auf der Startseite vollständig als Namenskacheln enthalten. Für die offiziellen Logos werden die Original-Logo-Dateien des Vereins benötigt; diese lassen sich später ohne Änderung der Struktur einsetzen.
+## Hochladen
+ZIP entpacken und die Ordner `jugend` und `assets` sowie deren Inhalte in das bestehende GitHub-Repository hochladen. Gleichnamige Dateien ersetzen lassen und anschließend committen.
