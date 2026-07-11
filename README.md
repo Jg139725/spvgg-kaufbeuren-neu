@@ -1,9 +1,13 @@
-# SpVgg Kaufbeuren – neue Website
+# SpVgg Kaufbeuren – Bilder-Update
 
-Diese Version enthält eine vollständige interne Seitenstruktur. Kein Vereins-Menüpunkt führt auf die alte Website zurück.
+Dieses Paket enthält die komplette bisherige Seitenstruktur plus eine überarbeitete Startseite mit echten Bildern der bisherigen Vereinswebsite.
 
-## GitHub Pages
-Alle Dateien und Ordner in das Repository hochladen. Danach unter Settings → Pages den Branch `main` und `/ (root)` auswählen.
+## Einfügen bei GitHub
+1. ZIP entpacken.
+2. Alle Dateien und Ordner markieren.
+3. Im bestehenden Repository über Add file → Upload files hochladen.
+4. Gleichnamige Dateien ersetzen lassen.
+5. Commit changes anklicken.
 
-## Nächster Schritt
-Die Inhalte, Bilder, Ansprechpartner, Trainingszeiten und Downloads der bisherigen TYPO3-Seite werden seitenweise in diese Struktur übertragen.
+## Sponsoren
+Die Sponsoren sind auf der Startseite vollständig als Namenskacheln enthalten. Für die offiziellen Logos werden die Original-Logo-Dateien des Vereins benötigt; diese lassen sich später ohne Änderung der Struktur einsetzen.
