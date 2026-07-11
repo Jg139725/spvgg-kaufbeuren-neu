@@ -1,0 +1,102 @@
+
+/* BFV Live-Daten – responsive Einbindung */
+.bfv-live-section{
+  padding:72px 0;
+  background:#f2f6fb;
+}
+.bfv-live-head{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:28px;
+  margin-bottom:28px;
+}
+.bfv-live-head span{
+  color:#0753a5;
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.15em;
+  text-transform:uppercase;
+}
+.bfv-live-head h2{
+  margin:8px 0 0;
+  color:#122033;
+  font-size:clamp(34px,4vw,48px);
+  letter-spacing:-.045em;
+}
+.bfv-live-head p{
+  max-width:580px;
+  margin:0;
+  color:#66758a;
+  line-height:1.65;
+}
+.bfv-widget-shell{
+  overflow:hidden;
+  min-height:480px;
+  padding:18px;
+  border:1px solid #dce5ef;
+  border-radius:22px;
+  background:#fff;
+  box-shadow:0 16px 42px rgba(2,31,70,.08);
+}
+.bfv-widget-target{
+  width:100%;
+  min-height:440px;
+}
+.bfv-widget-target iframe,
+.bfv-widget-target > div{
+  width:100%!important;
+  max-width:100%!important;
+}
+.bfv-awaiting{
+  min-height:440px;
+  display:grid;
+  place-items:center;
+  padding:32px;
+  text-align:center;
+  border:2px dashed #c9d8e8;
+  border-radius:15px;
+  background:linear-gradient(145deg,#f8fbff,#eef5fc);
+}
+.bfv-awaiting-inner{max-width:620px}
+.bfv-awaiting strong{
+  display:block;
+  margin-bottom:10px;
+  color:#021f46;
+  font-size:24px;
+}
+.bfv-awaiting p{
+  margin:0;
+  color:#66758a;
+  line-height:1.65;
+}
+.bfv-tabs-note{
+  display:flex;
+  flex-wrap:wrap;
+  gap:9px;
+  margin-top:18px;
+}
+.bfv-tabs-note span{
+  padding:8px 11px;
+  color:#0753a5;
+  border-radius:999px;
+  background:#e8f2fc;
+  font-size:12px;
+  font-weight:800;
+}
+@media(max-width:700px){
+  .bfv-live-section{padding:50px 0}
+  .bfv-live-head{
+    align-items:flex-start;
+    flex-direction:column;
+  }
+  .bfv-widget-shell{
+    padding:8px;
+    border-radius:16px;
+  }
+  .bfv-widget-target,.bfv-awaiting{
+    min-height:520px;
+  }
+  .bfv-awaiting{padding:22px 15px}
+  .bfv-awaiting strong{font-size:21px}
+}

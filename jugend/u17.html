@@ -7,6 +7,8 @@
   <title>U17 – B-Jugend | SpVgg Kaufbeuren</title>
   <link rel="stylesheet" href="../assets/css/style.css">
   <link rel="stylesheet" href="../assets/css/youth.css">
+  <link rel="stylesheet" href="../assets/css/bfv.css">
+  <!-- BFV INCLUDE-CODE EINMAL HIER VOR </head> EINFÜGEN -->
 </head>
 <body>
 <header class="site-header">
@@ -148,6 +150,41 @@
   </section>
 </main>
 
+
+<section class="bfv-live-section" id="bfv-live">
+  <div class="wrap">
+    <div class="bfv-live-head">
+      <div>
+        <span>Automatisch aktuell</span>
+        <h2>Spiele, Ergebnisse und Tabelle</h2>
+      </div>
+      <p>Die offiziellen Daten der U17 werden nach der einmaligen BFV-Einrichtung automatisch aktualisiert.</p>
+    </div>
+
+    <div class="bfv-widget-shell">
+      <div class="bfv-widget-target" id="bfv-u17">
+        <!--
+          BFV WIDGET SCRIPT FÜR: U17
+          Den Code aus dem BFV-Generator exakt an dieser Stelle einfügen.
+          Empfohlen: Mannschafts-Widget, Breite 100 %, Start-Reiter „Spiele“.
+        -->
+        <div class="bfv-awaiting">
+          <div class="bfv-awaiting-inner">
+            <strong>BFV-Live-Daten für U17</strong>
+            <p>Diese Fläche ist bereits fertig vorbereitet. Nach dem Einfügen des offiziellen BFV-Widget-Codes erscheinen hier automatisch Spielplan, Ergebnisse, Tabelle, Torschützen und – sofern verfügbar – Liveticker.</p>
+            <div class="bfv-tabs-note">
+              <span>Nächste Spiele</span>
+              <span>Ergebnisse</span>
+              <span>Tabelle</span>
+              <span>Torschützen</span>
+              <span>Liveticker</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 <footer>
   <div class="wrap footer-row">
     <div>
@@ -168,5 +205,6 @@ if(button&&nav){
   });
 }
 </script>
+<script src="../assets/js/bfv.js"></script>
 </body>
 </html>
