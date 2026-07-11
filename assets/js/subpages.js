@@ -1,0 +1,2 @@
+const b=document.querySelector('.sub-menu'),n=document.querySelector('.sub-nav');
+if(b&&n)b.addEventListener('click',()=>{n.classList.toggle('open');b.setAttribute('aria-expanded',n.classList.contains('open'))});
