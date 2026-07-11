@@ -1,23 +1,9 @@
-# SpVgg Kaufbeuren – moderne Website-Vorschau
+# SpVgg Kaufbeuren – neue Website
 
-## Veröffentlichung über GitHub Pages
+Diese Version enthält eine vollständige interne Seitenstruktur. Kein Vereins-Menüpunkt führt auf die alte Website zurück.
 
-1. ZIP-Datei entpacken.
-2. Alle Inhalte des Ordners in das GitHub-Repository `spvgg-kaufbeuren-neu` hochladen.
-3. In GitHub zu **Settings → Pages** gehen.
-4. **Deploy from a branch** auswählen.
-5. Branch **main** und Ordner **/(root)** auswählen.
-6. Auf **Save** klicken.
+## GitHub Pages
+Alle Dateien und Ordner in das Repository hochladen. Danach unter Settings → Pages den Branch `main` und `/ (root)` auswählen.
 
-Die Seite ist danach normalerweise innerhalb weniger Minuten erreichbar.
-
-## Dateien
-
-- `index.html` – Aufbau und Inhalte
-- `css/style.css` – komplettes Design und Handyansicht
-- `js/main.js` – mobiles Menü und Scrollanimation
-- `assets/images/` – lokale Vereinsbilder
-
-## Hinweis
-
-Dies ist zunächst eine statische Designvorschau. Für den späteren Einsatz in TYPO3 müssen die Bereiche als TYPO3-Templates bzw. Content-Elemente umgesetzt werden. Vor einer öffentlichen dauerhaften Verwendung sollten die Bildrechte der übernommenen Vereinsbilder geprüft werden.
+## Nächster Schritt
+Die Inhalte, Bilder, Ansprechpartner, Trainingszeiten und Downloads der bisherigen TYPO3-Seite werden seitenweise in diese Struktur übertragen.
