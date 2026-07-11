@@ -1,6 +1,24 @@
-# Update Jugendleitung
+# Responsive Update: Jugend-Abteilungsleitung
 
-Dieses Update ersetzt die Jugend-Übersicht und die Seite Jugend/Abteilungsleitung. Es ergänzt die aktuellen Ansprechpartner, Bilder, Telefonnummern, E-Mail-Adresse und Kleinfeldkoordinatoren.
+Dieses Update optimiert die Seite für Desktop, Tablet und Handy.
 
-## Hochladen
-ZIP entpacken und die Ordner `jugend` und `assets` sowie deren Inhalte in das bestehende GitHub-Repository hochladen. Gleichnamige Dateien ersetzen lassen und anschließend committen.
+## Desktop
+- zwei Ansprechpartner-Karten nebeneinander
+- kompakte runde Fotos
+- bessere Abstände und Button-Anordnung
+
+## Tablet
+- Karten untereinander mit Bild links und Text rechts
+
+## Handy
+- Karten untereinander
+- Bild oben, Text und Buttons darunter
+- volle Buttonbreite
+- kleinere Überschriften und Abstände
+- bessere Darstellung auf sehr kleinen Displays
+
+## Upload
+Bitte im bestehenden GitHub-Repository hochladen und ersetzen:
+
+- `jugend/abteilungsleitung.html`
+- `assets/css/style.css`

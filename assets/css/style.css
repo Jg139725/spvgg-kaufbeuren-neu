@@ -18,3 +18,291 @@ footer{background:#01152f;color:#fff;padding:46px 0}.footer{display:flex;justify
 .coordinator-card{margin-top:22px;border-radius:22px;overflow:hidden;background:#021f46;box-shadow:0 18px 45px rgba(2,31,70,.14)}.coordinator-card img{display:block;width:100%;height:auto}.coordinator-details{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;padding:22px}.coordinator-details>div{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:14px;padding:18px;color:#fff}.coordinator-details strong{display:block;font-size:20px}.coordinator-details span{display:block;color:#c8ddf5;margin-top:5px}.contact-strip{display:flex;flex-wrap:wrap;gap:12px;align-items:center;padding:22px 24px;margin:32px 0;background:#eef6ff;border-radius:16px}.contact-strip strong{margin-right:auto}.contact-strip a{color:var(--blue);font-weight:800}.source-note{font-size:13px;color:var(--muted);margin-top:24px}
 .youth-quick{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}.youth-quick a{padding:24px;border-radius:18px;border:1px solid #dce5ef;background:#fff;box-shadow:0 12px 30px rgba(2,31,70,.06)}.youth-quick strong{display:block;font-size:22px;margin-bottom:8px}.youth-quick span{color:var(--muted);line-height:1.5}
 @media(max-width:900px){.lead-grid,.coordinator-details,.youth-quick{grid-template-columns:1fr}.person-card img{height:auto}.contact-strip{align-items:flex-start;flex-direction:column}.contact-strip strong{margin-right:0}}
+
+
+/* Update: kleinere, runde Ansprechpartner-Fotos */
+.lead-grid{
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  align-items:stretch;
+}
+
+.person-card{
+  display:grid;
+  grid-template-columns:160px 1fr;
+  align-items:center;
+  min-height:300px;
+  padding:26px;
+  overflow:visible;
+}
+
+.person-card img{
+  width:140px;
+  height:140px;
+  border-radius:50%;
+  object-fit:cover;
+  object-position:center top;
+  justify-self:center;
+  border:5px solid #fff;
+  outline:3px solid var(--blue);
+  box-shadow:0 12px 28px rgba(2,31,70,.18);
+}
+
+.person-body{
+  padding:8px 8px 8px 24px;
+}
+
+.person-body h3{
+  font-size:28px;
+}
+
+.coordinator-card{
+  display:grid;
+  grid-template-columns:minmax(240px,360px) 1fr;
+  align-items:center;
+  padding:24px;
+}
+
+.coordinator-card img{
+  width:100%;
+  max-height:260px;
+  object-fit:contain;
+  border-radius:16px;
+  background:#fff;
+}
+
+.coordinator-details{
+  padding:0 0 0 24px;
+}
+
+@media(max-width:1000px){
+  .lead-grid{grid-template-columns:1fr}
+}
+
+@media(max-width:700px){
+  .person-card{
+    grid-template-columns:1fr;
+    text-align:center;
+    padding:28px 20px;
+  }
+
+  .person-card img{
+    width:125px;
+    height:125px;
+  }
+
+  .person-body{
+    padding:22px 0 0;
+  }
+
+  .contact-actions{
+    justify-content:center;
+  }
+
+  .coordinator-card{
+    grid-template-columns:1fr;
+  }
+
+  .coordinator-details{
+    padding:20px 0 0;
+  }
+}
+
+
+/* Responsive Feinschliff: Jugend-Abteilungsleitung */
+
+/* Desktop */
+@media (min-width: 1100px){
+  .lead-grid{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:28px;
+  }
+
+  .person-card{
+    display:grid;
+    grid-template-columns:150px 1fr;
+    min-height:260px;
+    padding:28px;
+    border-radius:22px;
+  }
+
+  .person-card img{
+    width:140px;
+    height:140px;
+  }
+
+  .person-body{
+    padding-left:26px;
+  }
+
+  .contact-actions{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+  }
+
+  .coordinator-card{
+    display:grid;
+    grid-template-columns:320px 1fr;
+    gap:30px;
+    align-items:center;
+  }
+
+  .coordinator-card img{
+    max-height:240px;
+  }
+}
+
+/* Tablet */
+@media (min-width: 701px) and (max-width: 1099px){
+  .lead-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:22px;
+  }
+
+  .person-card{
+    display:grid;
+    grid-template-columns:130px 1fr;
+    min-height:230px;
+    padding:24px;
+  }
+
+  .person-card img{
+    width:120px;
+    height:120px;
+  }
+
+  .person-body{
+    padding-left:22px;
+  }
+
+  .coordinator-card{
+    display:grid;
+    grid-template-columns:260px 1fr;
+    gap:24px;
+  }
+}
+
+/* Handy */
+@media (max-width: 700px){
+  .content-grid{
+    display:block;
+  }
+
+  .side{
+    position:static;
+    margin-bottom:24px;
+    overflow-x:auto;
+  }
+
+  .lead-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:18px;
+  }
+
+  .person-card{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    min-height:0;
+    padding:24px 18px;
+    border-radius:18px;
+  }
+
+  .person-card img{
+    width:112px;
+    height:112px;
+    margin-bottom:18px;
+  }
+
+  .person-body{
+    padding:0;
+    width:100%;
+  }
+
+  .person-body h3{
+    font-size:24px;
+    margin-bottom:6px;
+  }
+
+  .person-body p,
+  .person-body a{
+    overflow-wrap:anywhere;
+  }
+
+  .contact-actions{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:10px;
+    margin-top:18px;
+  }
+
+  .contact-actions a{
+    width:100%;
+    justify-content:center;
+    text-align:center;
+  }
+
+  .coordinator-card{
+    display:flex;
+    flex-direction:column;
+    padding:18px;
+    border-radius:18px;
+  }
+
+  .coordinator-card img{
+    width:100%;
+    max-width:320px;
+    max-height:220px;
+    margin:0 auto;
+  }
+
+  .coordinator-details{
+    padding:18px 0 0;
+    text-align:center;
+  }
+
+  .page-hero{
+    padding:58px 0;
+  }
+
+  .page-hero h1{
+    font-size:38px;
+    line-height:1.08;
+  }
+
+  .section{
+    padding:48px 0;
+  }
+
+  .content h2{
+    font-size:32px;
+  }
+}
+
+/* Sehr kleine Handys */
+@media (max-width: 420px){
+  .wrap{
+    width:min(100% - 24px,1180px);
+  }
+
+  .person-card{
+    padding:20px 14px;
+  }
+
+  .person-card img{
+    width:100px;
+    height:100px;
+  }
+
+  .person-body h3{
+    font-size:22px;
+  }
+
+  .page-hero h1{
+    font-size:33px;
+  }
+}
