@@ -53,3 +53,15 @@
   .training-card,.coach-card{border-radius:17px}
   .youth-title h2{margin-bottom:22px}
 }
+
+
+/* BFV-Mannschaftsfotos */
+.youth-team-hero img[src*="bfv-u19"]{object-position:center 46%}
+.youth-team-hero img[src*="bfv-u17"]{object-position:center 42%}
+.youth-team-hero img[src*="bfv-u13"]{object-position:center 45%}
+
+@media(max-width:650px){
+  .youth-team-hero img[src*="bfv-u19"]{object-position:center}
+  .youth-team-hero img[src*="bfv-u17"]{object-position:center}
+  .youth-team-hero img[src*="bfv-u13"]{object-position:center}
+}
