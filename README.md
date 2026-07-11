@@ -1,24 +1,21 @@
-# Responsive Update: Jugend-Abteilungsleitung
+# Jugendleitung – vollständiges Bilder-Update
 
-Dieses Update optimiert die Seite für Desktop, Tablet und Handy.
+Dieses Paket enthält die fehlenden Bilder in genau den Pfaden, die die Website erwartet.
 
-## Desktop
-- zwei Ansprechpartner-Karten nebeneinander
-- kompakte runde Fotos
-- bessere Abstände und Button-Anordnung
-
-## Tablet
-- Karten untereinander mit Bild links und Text rechts
-
-## Handy
-- Karten untereinander
-- Bild oben, Text und Buttons darunter
-- volle Buttonbreite
-- kleinere Überschriften und Abstände
-- bessere Darstellung auf sehr kleinen Displays
-
-## Upload
-Bitte im bestehenden GitHub-Repository hochladen und ersetzen:
-
+## Enthalten
 - `jugend/abteilungsleitung.html`
 - `assets/css/style.css`
+- `assets/images/jugend/stefan-bauer.png`
+- `assets/images/jugend/rafael-grundei.png`
+- `assets/images/jugend/kleinfeldkoordinatoren.png`
+
+## Upload bei GitHub
+1. ZIP entpacken.
+2. Im bestehenden Repository `spvgg-kaufbeuren-neu` auf **Add file → Upload files** gehen.
+3. Den gesamten Inhalt des entpackten Ordners hineinziehen.
+4. Gleichnamige Dateien ersetzen lassen.
+5. Auf **Commit changes** klicken.
+6. Danach 1–3 Minuten warten und die Seite mit **Cmd + Shift + R** neu laden.
+
+Direkte Seite:
+`https://jg139725.github.io/spvgg-kaufbeuren-neu/jugend/abteilungsleitung.html`
