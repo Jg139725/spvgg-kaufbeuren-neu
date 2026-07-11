@@ -162,3 +162,15 @@ a{text-decoration:none;color:inherit}
   .contact-banner a{width:100%;text-align:center}
   .main-content h2{font-size:34px}
 }
+
+/* Einheitliches Logo wie auf der Start- und Jugendseite */
+.sub-brand img{
+  width:245px;
+  max-width:42vw;
+  max-height:58px;
+  object-fit:contain;
+  display:block;
+}
+@media(max-width:700px){
+  .sub-brand img{width:190px;max-width:65vw}
+}
