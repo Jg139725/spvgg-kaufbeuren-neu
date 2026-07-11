@@ -1,0 +1,1 @@
+document.querySelectorAll('.player-card,.coach-card,.stat-card,.news-card').forEach(el=>{el.setAttribute('tabindex','0')});
