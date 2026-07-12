@@ -35,7 +35,7 @@
     if (path.includes("geschichte")) return current.includes("geschichte");
     if (path.includes("live-center")) return current.includes("live-center");
     if (path.includes("stadion")) return current.includes("stadion");
-    if (path.includes("fanshop")) return current.includes("fanshop");
+    if (path.startsWith("http")) return false;
     return current.endsWith("/index.html") || current.endsWith("/");
   }
 
@@ -52,7 +52,7 @@
       ["Historie", "verein/geschichte.html"],
       ["SVK Live", "verein/live-center.html"],
       ["Stadion", "stadion.html"],
-      ["Fanshop", "fanshop.html"]
+      ["Fanshop", "https://spvgg-kaufbeuren.fan12.de/"]
     ];
 
     header.innerHTML = `
@@ -80,8 +80,9 @@
 
           <nav class="svk-global-nav">
             ${links.map(([label, path]) => `
-              <a href="${base}${path}"
-                 class="${relativeActive(path) ? "active" : ""} ${path.includes("fanshop") ? "svk-global-fanshop" : ""}">
+              <a href="${path.startsWith("http") ? path : base + path}"
+                 ${path.startsWith("http") ? 'target="_blank" rel="noopener noreferrer"' : ""}
+                 class="${relativeActive(path) ? "active" : ""} ${path.includes("fan12.de") ? "svk-global-fanshop" : ""}">
                 ${label}
               </a>
             `).join("")}
