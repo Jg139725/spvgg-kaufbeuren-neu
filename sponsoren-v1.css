@@ -1,0 +1,10 @@
+:root{--blue:#0753a5;--navy:#021f46}
+.sponsor-hero{padding:110px 0;background:linear-gradient(135deg,var(--navy),var(--blue));color:#fff}
+.sponsor-hero h1{font-size:64px;margin:10px 0}
+.sponsor-hero p{max-width:760px;font-size:20px;line-height:1.7}
+.partner-section,.become-partner,.thanks{padding:80px 0}
+.partner-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px}
+.partner-card{background:#fff;border-radius:18px;min-height:170px;border:1px solid #dfe7f2;display:grid;place-items:center;box-shadow:0 12px 30px rgba(2,31,70,.08)}
+.become-partner{background:#f4f8fc}
+.btn-primary{display:inline-block;background:#0753a5;color:#fff;padding:14px 22px;border-radius:10px;text-decoration:none;font-weight:700}
+@media(max-width:700px){.sponsor-hero h1{font-size:42px}}
