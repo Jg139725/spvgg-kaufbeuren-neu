@@ -25,27 +25,3 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
-
-
-document.addEventListener("DOMContentLoaded", () => {
-  const eraLinks = [...document.querySelectorAll(".history-era-nav a")];
-  const eraSections = eraLinks
-    .map(link => document.querySelector(link.getAttribute("href")))
-    .filter(Boolean);
-
-  if ("IntersectionObserver" in window) {
-    const eraObserver = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
-        eraLinks.forEach(link => {
-          link.classList.toggle(
-            "active",
-            link.getAttribute("href") === `#${entry.target.id}`
-          );
-        });
-      });
-    }, {rootMargin:"-30% 0px -60% 0px"});
-
-    eraSections.forEach(section => eraObserver.observe(section));
-  }
-});
