@@ -80,3 +80,50 @@ img,video{max-width:100%}
 @media(max-width:850px){.h2-nav{display:none;position:absolute;top:76px;left:0;right:0;flex-direction:column;align-items:stretch;padding:18px 20px;background:#fff;border-bottom:1px solid var(--h2-line)}.h2-nav.open{display:flex}.h2-menu{display:block}.h2-section-head,.h2-info-panel,.h2-footer-row{align-items:flex-start;flex-direction:column}.profile-intro-grid,.profile-video-grid{grid-template-columns:1fr}.profile-video-frame{justify-self:stretch;max-width:620px}}
 @media(max-width:600px){.h2-wrap{width:min(100% - 26px,1180px)}.h2-hero{padding:75px 0 65px}.h2-player-grid,.profile-facts,.profile-detail-grid{grid-template-columns:1fr}.profile-hero{min-height:680px}.profile-hero-bg img{object-position:58% center}.profile-hero h1{font-size:63px}.profile-video-frame{border-radius:20px}.h2-footer-row>div:last-child{flex-direction:column}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.h2-player-card,.h2-player-media img{transition:none}}
+
+
+/* Spielerprofil: Video erscheint nur beim Berühren des Spielerbildes */
+.profile-hover-motion{
+  position:relative;
+  aspect-ratio:4/5;
+  cursor:pointer;
+  background:#021f46;
+}
+.profile-hover-motion .profile-hover-image,
+.profile-hover-motion .profile-hover-video{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;
+  transition:opacity .24s ease;
+}
+.profile-hover-motion .profile-hover-image{opacity:1}
+.profile-hover-motion .profile-hover-video{opacity:0}
+.profile-hover-motion:hover .profile-hover-image,
+.profile-hover-motion:focus .profile-hover-image,
+.profile-hover-motion.is-playing .profile-hover-image{opacity:0}
+.profile-hover-motion:hover .profile-hover-video,
+.profile-hover-motion:focus .profile-hover-video,
+.profile-hover-motion.is-playing .profile-hover-video{opacity:1}
+.profile-hover-hint{
+  position:absolute;
+  left:15px;
+  bottom:15px;
+  z-index:3;
+  padding:9px 12px;
+  border-radius:999px;
+  color:#fff;
+  background:rgba(2,31,70,.84);
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  backdrop-filter:blur(8px);
+}
+.profile-hover-motion:hover .profile-hover-hint,
+.profile-hover-motion:focus .profile-hover-hint,
+.profile-hover-motion.is-playing .profile-hover-hint{
+  opacity:0;
+}

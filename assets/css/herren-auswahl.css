@@ -1,0 +1,83 @@
+
+.team-choice-hero{
+  padding:95px 0 64px;
+  color:#fff;
+  background:
+    radial-gradient(circle at 82% 18%,rgba(44,147,231,.62),transparent 32%),
+    linear-gradient(135deg,#021f46,#0753a5);
+}
+.team-choice-hero .h2-kicker{color:#b9dcff}
+.team-choice-hero h1{
+  max-width:900px;
+  margin:12px 0 18px;
+  font-size:clamp(48px,7vw,74px);
+  line-height:.98;
+  letter-spacing:-.055em;
+}
+.team-choice-hero p{
+  max-width:710px;
+  color:#dceaff;
+  font-size:18px;
+  line-height:1.65;
+}
+.team-choice-section{
+  padding:62px 0 82px;
+  background:#f2f6fb;
+}
+.team-choice-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:22px;
+}
+.team-choice-card{
+  display:block;
+  min-height:250px;
+  padding:31px;
+  border:1px solid #dce5ef;
+  border-radius:22px;
+  color:#021f46;
+  background:#fff;
+  box-shadow:0 16px 42px rgba(2,31,70,.09);
+  transition:.26s;
+}
+.team-choice-card:hover{
+  transform:translateY(-6px);
+  border-color:#0753a5;
+  box-shadow:0 25px 56px rgba(2,31,70,.15);
+}
+.team-choice-card>span{
+  color:#0753a5;
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+}
+.team-choice-card h2{
+  margin:10px 0 12px;
+  font-size:34px;
+  letter-spacing:-.04em;
+}
+.team-choice-card p{
+  color:#66758a;
+  line-height:1.65;
+}
+.team-choice-card strong{
+  display:inline-block;
+  margin-top:12px;
+  color:#0753a5;
+}
+.team-choice-card.second{
+  color:#fff;
+  border-color:transparent;
+  background:
+    radial-gradient(circle at 84% 18%,rgba(44,147,231,.52),transparent 35%),
+    linear-gradient(135deg,#021f46,#0753a5);
+}
+.team-choice-card.second>span,
+.team-choice-card.second p,
+.team-choice-card.second strong{
+  color:#dceaff;
+}
+@media(max-width:720px){
+  .team-choice-grid{grid-template-columns:1fr}
+}

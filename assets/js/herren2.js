@@ -30,3 +30,32 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const motion = document.querySelector(".profile-hover-motion");
+  const motionVideo = motion?.querySelector(".profile-hover-video");
+  if (!motion || !motionVideo) return;
+
+  async function startMotion(){
+    motion.classList.add("is-playing");
+    motionVideo.currentTime = 0;
+    try { await motionVideo.play(); } catch {}
+  }
+
+  function stopMotion(){
+    motionVideo.pause();
+    motionVideo.currentTime = 0;
+    motion.classList.remove("is-playing");
+  }
+
+  motion.addEventListener("mouseenter", startMotion);
+  motion.addEventListener("mouseleave", stopMotion);
+  motion.addEventListener("focusin", startMotion);
+  motion.addEventListener("focusout", stopMotion);
+
+  motion.addEventListener("click", () => {
+    if (motion.classList.contains("is-playing")) stopMotion();
+    else startMotion();
+  });
+});

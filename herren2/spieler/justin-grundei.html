@@ -19,8 +19,7 @@
     <nav class="h2-nav">
       <a href="../../index.html">Start</a>
       <a href="../../news.html">News</a>
-      <a href="../../herren/index.html">Herren 1</a>
-      <a class="active" href="../../herren2/index.html">Herren 2</a>
+      <a class="active" href="../../herren/index.html">Herren</a>
       <a href="../../jugend/index.html">Jugend</a>
       <a href="../../verein/index.html">Verein</a>
     </nav>
@@ -41,15 +40,21 @@
         Das erste interaktive Spielerprofil dient als Vorlage für die komplette
         zweite Herrenmannschaft.
       </p>
-      <a class="profile-scroll-button" href="#spieler-video">Animation ansehen</a>
+      <a class="profile-scroll-button" href="#spielerprofil">Spielerdaten ansehen</a>
     </div>
   </section>
 
-  <section class="profile-intro h2-section">
+  <section class="profile-intro h2-section" id="spielerprofil">
     <div class="h2-wrap profile-intro-grid">
-      <div class="profile-photo-card">
-        <img src="../../assets/images/herren2/spieler/justin-grundei.webp" alt="Spielerporträt Justin Grundei">
-      </div>
+      <div class="profile-photo-card profile-hover-motion" tabindex="0"
+     aria-label="Spielerbild berühren oder fokussieren, um die Animation abzuspielen">
+  <img class="profile-hover-image" src="../../assets/images/herren2/spieler/justin-grundei.webp" alt="Spielerporträt Justin Grundei">
+  <video class="profile-hover-video" muted playsinline preload="metadata"
+         poster="../../assets/images/herren2/spieler/justin-grundei.webp">
+    <source src="../../assets/videos/herren2/justin-grundei.mp4" type="video/mp4">
+  </video>
+  <span class="profile-hover-hint">Bild berühren: Animation</span>
+</div>
       <div class="profile-summary">
         <span class="h2-kicker">Spielerübersicht</span>
         <h2>Justin Grundei</h2>
@@ -63,32 +68,6 @@
           Die offenen Angaben sind bewusst nicht erfunden. Sie können später
           direkt ergänzt werden, ohne das Design erneut aufzubauen.
         </p>
-      </div>
-    </div>
-  </section>
-
-  <section class="profile-video-section" id="spieler-video">
-    <div class="h2-wrap profile-video-grid">
-      <div>
-        <span class="h2-kicker">Player Motion</span>
-        <h2>Kurze Animation statt statischem Bild</h2>
-        <p>
-          Das Video startet automatisch ohne Ton und läuft als kurzer Loop.
-          Auf Handys kann es über den Wiedergabe-Button erneut gestartet werden.
-        </p>
-        <button id="replay-player-video" type="button">Video erneut abspielen</button>
-      </div>
-      <div class="profile-video-frame">
-        <video id="player-profile-video"
-               autoplay muted loop playsinline preload="metadata"
-               poster="../../assets/images/herren2/spieler/justin-grundei.webp">
-          <source src="../../assets/videos/herren2/justin-grundei.mp4" type="video/mp4">
-          Dein Browser unterstützt dieses Video nicht.
-        </video>
-        <div class="video-nameplate">
-          <span>SpVgg Kaufbeuren</span>
-          <strong>Justin Grundei</strong>
-        </div>
       </div>
     </div>
   </section>
