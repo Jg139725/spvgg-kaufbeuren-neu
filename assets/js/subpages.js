@@ -73,12 +73,10 @@ if(b&&n)b.addEventListener('click',()=>{n.classList.toggle('open');b.setAttribut
 
       <div class="svk-global-main">
         <div class="svk-global-main-inner">
-          <a class="svk-global-brand" href="${base}index.html">
+          <a class="svk-global-brand" href="${base}index.html"
+             aria-label="SpVgg Kaufbeuren – zur Startseite">
             <img src="${base}assets/images/logo-top.png"
-                 alt="SpVgg Kaufbeuren"
-                 onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
-            <span class="svk-global-brand-fallback">SVK</span>
-            <span>SpVgg Kaufbeuren e.V.</span>
+                 alt="SpVgg Kaufbeuren e. V.">
           </a>
 
           <button class="svk-global-menu" type="button"

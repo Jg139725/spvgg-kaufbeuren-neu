@@ -219,3 +219,44 @@
     font-size:15px;
   }
 }
+
+
+/* Logo-Fix: exakt wie auf der Startseite */
+.svk-global-brand{
+  display:block;
+  flex:0 0 auto;
+  line-height:0;
+}
+
+.svk-global-brand img{
+  display:block !important;
+  width:315px !important;
+  height:auto !important;
+  max-height:58px !important;
+  object-fit:contain !important;
+  object-position:left center !important;
+}
+
+.svk-global-brand-fallback,
+.svk-global-brand-text{
+  display:none !important;
+}
+
+@media(max-width:980px){
+  .svk-global-brand img{
+    width:240px !important;
+  }
+}
+
+@media(max-width:760px){
+  .svk-global-brand img{
+    width:210px !important;
+    max-height:50px !important;
+  }
+}
+
+@media(max-width:430px){
+  .svk-global-brand img{
+    width:185px !important;
+  }
+}
