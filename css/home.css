@@ -16,3 +16,49 @@
 .home-sponsors__button{margin-top:28px;text-align:center}
 @keyframes homeSponsorScroll{to{transform:translateX(-50%)}}
 @media(max-width:600px){.home-sponsors{padding:55px 0}.home-sponsor-track a{width:170px;height:90px}.home-sponsor-track img{max-width:140px;max-height:60px}}
+
+
+/* Parkstadion-Teaser Startseite */
+.home-stadium-teaser{
+  padding:78px 0;
+  background:#fff;
+}
+.home-stadium-layout{
+  display:grid;
+  grid-template-columns:1.08fr .92fr;
+  gap:48px;
+  align-items:center;
+}
+.home-stadium-image{
+  overflow:hidden;
+  min-height:420px;
+  border-radius:24px;
+  box-shadow:0 22px 58px rgba(2,31,70,.15);
+}
+.home-stadium-image img{
+  width:100%;
+  height:100%;
+  min-height:420px;
+  display:block;
+  object-fit:cover;
+}
+.home-stadium-copy h2{
+  margin:10px 0 17px;
+  font-size:clamp(38px,5vw,56px);
+  line-height:1.02;
+  letter-spacing:-.05em;
+}
+.home-stadium-copy p{
+  margin-bottom:25px;
+  color:#66758a;
+  font-size:18px;
+  line-height:1.7;
+}
+@media(max-width:850px){
+  .home-stadium-layout{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+  .home-stadium-teaser{padding:55px 0}
+  .home-stadium-image,
+  .home-stadium-image img{min-height:280px}
+}
