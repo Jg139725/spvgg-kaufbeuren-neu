@@ -66,3 +66,86 @@
 .article-aside a{display:inline-block;margin-top:8px;padding:11px 14px;border-radius:9px;background:#fff;color:var(--news-blue);font-weight:900}
 @media(max-width:950px){.news-grid-v1{grid-template-columns:repeat(2,1fr)}.newsletter-panel,.article-layout{grid-template-columns:1fr}.article-aside{position:static}}
 @media(max-width:650px){.news-hero-v1{padding:68px 0 58px}.news-hero-v1 h1{font-size:45px}.featured-news{min-height:460px}.featured-content{padding:25px 20px}.news-toolbar{align-items:flex-start;flex-direction:column}.news-search,.news-search input{width:100%}.news-grid-v1{grid-template-columns:1fr}.news-card-image{height:220px}.newsletter-panel{padding:28px 20px}.newsletter-panel h2{font-size:34px}.newsletter-panel form>div{flex-direction:column}.article-hero{min-height:500px}.article-hero-content{padding:68px 0 45px}.article-layout{padding-top:45px}.article-body{font-size:17px}}
+
+
+/* News V2 + V3 – redaktioneller Ausbau */
+.article-meta-row{
+  display:flex;
+  gap:18px;
+  flex-wrap:wrap;
+  margin-bottom:28px;
+  color:#0753a5;
+  font-size:13px;
+  font-weight:850;
+}
+.article-quote{
+  margin:38px 0;
+  padding:28px 30px;
+  border-left:5px solid #0753a5;
+  border-radius:14px;
+  background:#eef6ff;
+  color:#021f46;
+  font-size:24px;
+  line-height:1.45;
+  font-weight:800;
+}
+.article-gallery{
+  margin-top:48px;
+}
+.article-gallery h2,
+.related-news h2{
+  font-size:32px;
+  letter-spacing:-.035em;
+}
+.article-gallery-grid{
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:18px;
+}
+.article-gallery-grid img,
+.gallery-placeholder{
+  width:100%;
+  min-height:260px;
+  border-radius:18px;
+}
+.article-gallery-grid img{
+  object-fit:cover;
+}
+.gallery-placeholder{
+  display:grid;
+  place-items:center;
+  padding:24px;
+  text-align:center;
+  color:#66758a;
+  border:2px dashed #cbd8e6;
+  background:#f6f9fc;
+}
+.related-news{
+  margin-top:48px;
+}
+.related-news-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+}
+.related-news-grid a{
+  padding:18px;
+  border-radius:14px;
+  background:#f2f6fb;
+  color:#0753a5;
+  font-weight:900;
+}
+.related-news-grid a:hover{
+  background:#0753a5;
+  color:#fff;
+}
+@media(max-width:750px){
+  .article-gallery-grid,
+  .related-news-grid{
+    grid-template-columns:1fr;
+  }
+  .article-quote{
+    padding:22px;
+    font-size:21px;
+  }
+}
