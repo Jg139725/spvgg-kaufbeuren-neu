@@ -65,3 +65,90 @@
   .youth-team-hero img[src*="bfv-u17"]{object-position:center}
   .youth-team-hero img[src*="bfv-u13"]{object-position:center}
 }
+
+
+/* Jugendleitung – Sprechzeiten */
+.office-hours-section{
+  padding:72px 0;
+  background:#f2f6fb;
+}
+.office-hours-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:20px;
+}
+.office-hours-card{
+  min-height:170px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding:28px;
+  border:1px solid var(--line);
+  border-radius:20px;
+  background:#fff;
+  box-shadow:0 14px 35px rgba(2,31,70,.07);
+}
+.office-hours-card span{
+  color:var(--blue);
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+.office-hours-card strong{
+  margin-top:12px;
+  color:var(--navy);
+  font-size:28px;
+  line-height:1.2;
+}
+.office-hours-card.closed{
+  background:linear-gradient(145deg,var(--navy),var(--blue));
+}
+.office-hours-card.closed span,
+.office-hours-card.closed strong{
+  color:#fff;
+}
+.office-hours-contact{
+  margin-top:28px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:24px;
+  padding:28px;
+  border-radius:20px;
+  color:#fff;
+  background:linear-gradient(130deg,var(--navy),var(--blue));
+}
+.office-hours-contact h3{
+  margin:0 0 7px;
+  font-size:26px;
+}
+.office-hours-contact p{
+  margin:0;
+  color:#dceaff;
+  line-height:1.6;
+}
+.office-hours-contact a{
+  flex:none;
+  padding:13px 17px;
+  border-radius:9px;
+  background:#fff;
+  color:var(--blue);
+  font-weight:900;
+}
+@media(max-width:850px){
+  .office-hours-grid{grid-template-columns:1fr}
+  .office-hours-card{min-height:130px}
+}
+@media(max-width:650px){
+  .office-hours-section{padding:52px 0}
+  .office-hours-card strong{font-size:24px}
+  .office-hours-contact{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+  .office-hours-contact a{
+    width:100%;
+    text-align:center;
+  }
+}
