@@ -35,7 +35,7 @@
     if (path.includes("geschichte")) return current.includes("geschichte");
     if (path.includes("live-center")) return current.includes("live-center");
     if (path.includes("stadion")) return current.includes("stadion");
-    if (path.startsWith("http")) return false;
+    if (path.includes("fanshop")) return current.includes("fanshop");
     return current.endsWith("/index.html") || current.endsWith("/");
   }
 
@@ -80,9 +80,8 @@
 
           <nav class="svk-global-nav">
             ${links.map(([label, path]) => `
-              <a href="${path.startsWith("http") ? path : base + path}"
-                 ${path.startsWith("http") ? 'target="_blank" rel="noopener noreferrer"' : ""}
-                 class="${relativeActive(path) ? "active" : ""} ${path.includes("textilstars.com") ? "svk-global-fanshop" : ""}">
+              <a href="${base}${path}"
+                 class="${relativeActive(path) ? "active" : ""} ${path.includes("fanshop") ? "svk-global-fanshop" : ""}">
                 ${label}
               </a>
             `).join("")}
@@ -137,3 +136,25 @@
     installHeader();
   }
 })();
+
+
+/* Fanshop-Hardfix: alle alten oder lokalen Shoplinks direkt auf Textilstars setzen */
+document.addEventListener("DOMContentLoaded", () => {
+  const correctShopUrl = "https://textilstars.com/SpVgg-Kaufbeuren";
+
+  document.querySelectorAll("a").forEach(link => {
+    const href = (link.getAttribute("href") || "").toLowerCase();
+    const text = (link.textContent || "").trim().toLowerCase();
+
+    if (
+      text.includes("fanshop") ||
+      href.includes("fanshop.html") ||
+      href.includes("fan12.de") ||
+      href.includes("textilstars.com/spvgg-kaufbeuren")
+    ) {
+      link.setAttribute("href", correctShopUrl);
+      link.setAttribute("target", "_blank");
+      link.setAttribute("rel", "noopener noreferrer");
+    }
+  });
+});

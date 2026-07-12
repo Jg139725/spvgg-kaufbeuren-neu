@@ -29,3 +29,25 @@ document.querySelectorAll('#main-navigation a').forEach(link=>{
     if(button) button.setAttribute('aria-expanded','false');
   });
 });
+
+
+/* Fanshop-Hardfix: alle alten oder lokalen Shoplinks direkt auf Textilstars setzen */
+document.addEventListener("DOMContentLoaded", () => {
+  const correctShopUrl = "https://textilstars.com/SpVgg-Kaufbeuren";
+
+  document.querySelectorAll("a").forEach(link => {
+    const href = (link.getAttribute("href") || "").toLowerCase();
+    const text = (link.textContent || "").trim().toLowerCase();
+
+    if (
+      text.includes("fanshop") ||
+      href.includes("fanshop.html") ||
+      href.includes("fan12.de") ||
+      href.includes("textilstars.com/spvgg-kaufbeuren")
+    ) {
+      link.setAttribute("href", correctShopUrl);
+      link.setAttribute("target", "_blank");
+      link.setAttribute("rel", "noopener noreferrer");
+    }
+  });
+});
