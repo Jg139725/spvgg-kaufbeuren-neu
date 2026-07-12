@@ -1,7 +1,11 @@
-Dieses Paket enthält die neue einheitliche Kopfzeile.
+Dieses Paket ergänzt die vorhandenen Öffnungszeiten.
 
-Aktuell musst du HEADER-V1.html in den Header jeder Seite übernehmen
-und header-v1.css einbinden.
+Die bestehende Wochenübersicht bleibt unverändert.
 
-Im nächsten großen Website-Update kann die Kopfzeile zentralisiert werden,
-sodass Änderungen nur noch an einer Stelle nötig sind.
+Neu:
+- grüner Punkt + "Jetzt geöffnet"
+- roter Punkt + "Derzeit geschlossen"
+- automatische Anzeige:
+  - Heute bis ...
+  - Öffnet heute um ...
+  - Öffnet Montag um ...
