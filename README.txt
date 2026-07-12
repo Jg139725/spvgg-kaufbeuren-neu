@@ -1,11 +1,7 @@
-# Herren 2 Navigation Patch
+Dieses Paket enthält die neue einheitliche Kopfzeile.
 
-1. Öffne die Datei mit deiner Hauptnavigation (Header).
-2. Ersetze den bisherigen Menüpunkt 'Herren' durch den Inhalt aus
-   NAVIGATION-HERREN2.html.
-3. Stelle sicher, dass der Ordner `herren2/` aus dem vorherigen Paket
-   bereits hochgeladen wurde.
+Aktuell musst du HEADER-V1.html in den Header jeder Seite übernehmen
+und header-v1.css einbinden.
 
-Danach erscheint unter 'Herren':
-- 1. Herren
-- 2. Herren
+Im nächsten großen Website-Update kann die Kopfzeile zentralisiert werden,
+sodass Änderungen nur noch an einer Stelle nötig sind.
