@@ -27,3 +27,86 @@ body{margin:0;font-family:Inter,Arial,Helvetica,sans-serif;color:var(--text);bac
 @media(max-width:1100px){.player-grid{grid-template-columns:repeat(3,1fr)}.coach-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:800px){.stat-grid,.news-grid{grid-template-columns:1fr}.player-grid{grid-template-columns:repeat(2,1fr)}.coach-grid{grid-template-columns:1fr}.section-head{align-items:flex-start;flex-direction:column}}
 @media(max-width:600px){.hv3-hero{min-height:590px}.hv3-hero .wrap{padding:88px 0 58px}.hv3-hero h1{font-size:46px}.hero-actions{flex-direction:column;align-items:flex-start}.player-grid{grid-template-columns:1fr}.player-card{min-height:280px}.coach-card{min-height:390px}.cta-band{flex-direction:column;align-items:flex-start}.cta-band a{width:100%;text-align:center}.position-head{align-items:flex-start;flex-direction:column;gap:5px}}
+
+
+/* Herren V4 – echte Spielerfotos */
+.real-player-grid{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:20px;
+}
+.real-player-card{
+  overflow:hidden;
+  border:1px solid var(--line);
+  border-radius:22px;
+  background:#fff;
+  box-shadow:0 16px 42px rgba(2,31,70,.10);
+  transition:transform .28s ease, box-shadow .28s ease, border-color .28s ease;
+}
+.real-player-card:hover,
+.real-player-card:focus{
+  transform:translateY(-7px);
+  border-color:var(--blue);
+  box-shadow:0 24px 55px rgba(2,31,70,.16);
+  outline:none;
+}
+.real-player-image{
+  position:relative;
+  aspect-ratio:4/5;
+  overflow:hidden;
+  background:linear-gradient(145deg,var(--sky),var(--navy));
+}
+.real-player-image:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(0deg,rgba(2,31,70,.52),transparent 42%);
+}
+.real-player-image img{
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;
+  object-position:center top;
+  transition:transform .45s ease;
+}
+.real-player-card:hover .real-player-image img,
+.real-player-card:focus .real-player-image img{
+  transform:scale(1.035);
+}
+.real-player-index{
+  position:absolute;
+  right:15px;
+  bottom:10px;
+  z-index:2;
+  color:rgba(255,255,255,.86);
+  font-size:42px;
+  font-weight:950;
+  line-height:1;
+  text-shadow:0 5px 16px rgba(2,31,70,.35);
+}
+.real-player-info{padding:20px 20px 23px}
+.real-player-info span{
+  color:var(--blue);
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+}
+.real-player-info h3{
+  margin:8px 0 0;
+  color:var(--navy);
+  font-size:22px;
+  line-height:1.22;
+}
+@media(max-width:1100px){
+  .real-player-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media(max-width:780px){
+  .real-player-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:500px){
+  .real-player-grid{grid-template-columns:1fr}
+  .real-player-image{aspect-ratio:5/6}
+  .real-player-info h3{font-size:24px}
+}
