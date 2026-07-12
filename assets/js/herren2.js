@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ["Historie", "verein/geschichte.html"],
       ["SVK Live", "verein/live-center.html"],
       ["Stadion", "stadion.html"],
-      ["Fanshop", "https://spvgg-kaufbeuren.fan12.de/"]
+      ["Fanshop", "https://textilstars.com/SpVgg-Kaufbeuren"]
     ];
 
     header.innerHTML = `
@@ -128,7 +128,7 @@ document.addEventListener("DOMContentLoaded", () => {
             ${links.map(([label, path]) => `
               <a href="${path.startsWith("http") ? path : base + path}"
                  ${path.startsWith("http") ? 'target="_blank" rel="noopener noreferrer"' : ""}
-                 class="${relativeActive(path) ? "active" : ""} ${path.includes("fan12.de") ? "svk-global-fanshop" : ""}">
+                 class="${relativeActive(path) ? "active" : ""} ${path.includes("textilstars.com") ? "svk-global-fanshop" : ""}">
                 ${label}
               </a>
             `).join("")}

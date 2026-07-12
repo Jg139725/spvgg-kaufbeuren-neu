@@ -2,7 +2,7 @@
 
 Dieses Paket verlinkt den Menüpunkt `Fanshop` direkt zum offiziellen externen Shop:
 
-https://spvgg-kaufbeuren.fan12.de/
+https://textilstars.com/SpVgg-Kaufbeuren
 
 ## Verhalten
 - Klick auf Fanshop öffnet den offiziellen Shop in einem neuen Tab.
