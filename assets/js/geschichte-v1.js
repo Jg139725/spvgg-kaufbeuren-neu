@@ -13,3 +13,15 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(".timeline-item").forEach(item => observer.observe(item));
   }
 });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".museum-grid details").forEach(item => {
+    item.addEventListener("toggle", () => {
+      if (!item.open) return;
+      document.querySelectorAll(".museum-grid details").forEach(other => {
+        if (other !== item) other.open = false;
+      });
+    });
+  });
+});
