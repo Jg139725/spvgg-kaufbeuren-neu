@@ -1,0 +1,46 @@
+
+/* KORRIGIERTE POSITIONEN */
+
+.label-main-stand{
+    top:18px;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+.label-jordanpark{
+    top:58px;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+.label-small-stand{
+    bottom:18px;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+.label-esvk{
+    bottom:70px;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+/* Bahnhof links mittig */
+.label-station{
+    left:18px;
+    top:50%;
+    transform:translateY(-50%);
+}
+
+/* EINLASS RECHTS MITTIG (gleich hoch wie Bahnhof) */
+.label-entry{
+    right:18px;
+    top:50%;
+    transform:translateY(-50%);
+}
+
+/* Innenstadt rechts unterhalb des Einlasses */
+.label-city{
+    right:18px;
+    top:66%;
+}
