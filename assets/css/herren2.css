@@ -127,3 +127,86 @@ img,video{max-width:100%}
 .profile-hover-motion.is-playing .profile-hover-hint{
   opacity:0;
 }
+
+
+/* Herren 2 – Kartenformat wie Herren 1 */
+.h2-player-card{
+  position:relative;
+  overflow:hidden;
+  border-radius:22px;
+  background:#fff;
+  box-shadow:0 16px 42px rgba(2,31,70,.09);
+}
+
+.h2-player-media::after{
+  background:
+    linear-gradient(0deg,rgba(2,31,70,.84) 0%,rgba(2,31,70,.25) 45%,transparent 70%);
+}
+
+.h2-player-copy{
+  position:relative;
+  z-index:3;
+  margin-top:-112px;
+  padding:18px 18px 20px;
+  color:#fff;
+}
+
+.h2-position-badge{
+  display:inline-block;
+  padding:7px 10px;
+  border-radius:999px;
+  color:#fff !important;
+  background:rgba(7,83,165,.92);
+  backdrop-filter:blur(8px);
+}
+
+.h2-player-copy h3{
+  margin:11px 0 16px;
+  color:#fff;
+  font-size:25px;
+  text-shadow:0 2px 12px rgba(0,0,0,.35);
+}
+
+.h2-mini-stats{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:8px;
+}
+
+.h2-mini-stats div{
+  padding:10px 6px;
+  border:1px solid rgba(255,255,255,.17);
+  border-radius:12px;
+  background:rgba(2,31,70,.72);
+  backdrop-filter:blur(9px);
+  text-align:center;
+}
+
+.h2-mini-stats strong{
+  display:block;
+  color:#fff;
+  font-size:19px;
+}
+
+.h2-mini-stats span{
+  color:#dceaff;
+  font-size:10px;
+  font-weight:800;
+  text-transform:uppercase;
+}
+
+.h2-player-status{
+  top:14px;
+  left:14px;
+  bottom:auto;
+}
+
+.h2-player-card.is-disabled{
+  opacity:.88;
+}
+
+@media(max-width:600px){
+  .h2-player-copy{
+    margin-top:-104px;
+  }
+}
