@@ -28,9 +28,7 @@
     }
     if (path.includes("jugend")) return current.includes("/jugend/");
     if (path.includes("verein/index")) {
-      return current.includes("/verein/") &&
-        !current.includes("geschichte") &&
-        !current.includes("live-center");
+      return current.includes("/verein/") && !current.includes("live-center");
     }
     if (path.includes("vorstand")) return current.includes("vorstand");
     if (path.includes("geschichte")) return current.includes("geschichte");
@@ -50,7 +48,6 @@
       ["Mannschaften", "herren/index.html"],
       ["Jugend", "jugend/index.html"],
       ["Verein", "verein/index.html"],
-      ["Vorstand", "verein/vorstand.html"],
       ["Historie", "verein/geschichte.html"],
       ["SVK Live", "verein/live-center.html"],
       ["Stadion", "stadion.html"],
@@ -136,5 +133,83 @@
     document.addEventListener("DOMContentLoaded", installHeader);
   } else {
     installHeader();
+  }
+})();
+
+
+(() => {
+  function installVereinDropdown() {
+    const nav = document.querySelector(".svk-global-nav");
+    if (!nav || nav.querySelector(".svk-verein-dropdown")) return;
+
+    // Remove a standalone Vorstand link if one still exists.
+    [...nav.querySelectorAll("a")].forEach(link => {
+      if ((link.textContent || "").trim().toLowerCase() === "vorstand") {
+        link.remove();
+      }
+    });
+
+    const vereinLink = [...nav.querySelectorAll("a")].find(link =>
+      (link.textContent || "").trim().toLowerCase() === "verein"
+    );
+    if (!vereinLink) return;
+
+    const baseHref = vereinLink.getAttribute("href") || "";
+    const base = baseHref.replace(/verein\/index\.html(?:\?.*)?$/, "");
+
+    const wrapper = document.createElement("div");
+    wrapper.className = "svk-verein-dropdown";
+
+    const trigger = vereinLink.cloneNode(true);
+    trigger.classList.add("svk-verein-trigger");
+    trigger.setAttribute("aria-haspopup", "true");
+    trigger.setAttribute("aria-expanded", "false");
+
+    const menu = document.createElement("div");
+    menu.className = "svk-verein-menu";
+    menu.innerHTML = `
+      <a href="${base}verein/index.html">Übersicht</a>
+      <a href="${base}verein/vorstand.html">Vorstand</a>
+      <a href="${base}verein/geschichte.html">Historie</a>
+      <a href="${base}verein/kontakt.html">Ansprechpartner</a>
+      <a href="${base}verein/mitglied-werden.html">Mitglied werden</a>
+      <a href="${base}verein/satzung.html">Satzung</a>
+    `;
+
+    vereinLink.replaceWith(wrapper);
+    wrapper.append(trigger, menu);
+
+    function setOpen(open) {
+      wrapper.classList.toggle("open", open);
+      trigger.setAttribute("aria-expanded", String(open));
+    }
+
+    trigger.addEventListener("click", event => {
+      if (window.matchMedia("(max-width: 900px)").matches) {
+        event.preventDefault();
+        setOpen(!wrapper.classList.contains("open"));
+      }
+    });
+
+    wrapper.addEventListener("mouseenter", () => {
+      if (!window.matchMedia("(max-width: 900px)").matches) setOpen(true);
+    });
+    wrapper.addEventListener("mouseleave", () => {
+      if (!window.matchMedia("(max-width: 900px)").matches) setOpen(false);
+    });
+
+    document.addEventListener("click", event => {
+      if (!wrapper.contains(event.target)) setOpen(false);
+    });
+
+    menu.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => setOpen(false));
+    });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", installVereinDropdown);
+  } else {
+    installVereinDropdown();
   }
 })();

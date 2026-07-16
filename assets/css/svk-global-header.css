@@ -267,3 +267,107 @@ body > .h2-header,
 body > .site-header{
   display:none !important;
 }
+
+
+/* Verein-Dropdown – schlanke Hauptnavigation */
+.svk-verein-dropdown{
+  position:relative;
+  display:flex;
+  align-items:center;
+}
+
+.svk-verein-trigger{
+  cursor:pointer;
+}
+
+.svk-verein-trigger::before{
+  content:"";
+  display:inline-block;
+  width:6px;
+  height:6px;
+  margin:0 0 3px 7px;
+  border-right:2px solid currentColor;
+  border-bottom:2px solid currentColor;
+  transform:rotate(45deg);
+  transition:transform .2s ease;
+}
+
+.svk-verein-dropdown.open .svk-verein-trigger::before{
+  transform:rotate(225deg) translate(-2px,-2px);
+}
+
+.svk-verein-menu{
+  position:absolute;
+  top:calc(100% - 10px);
+  left:50%;
+  z-index:10020;
+  width:235px;
+  display:none;
+  padding:10px;
+  border:1px solid #dce5ef;
+  border-radius:17px;
+  background:#fff;
+  box-shadow:0 22px 55px rgba(2,31,70,.18);
+  transform:translateX(-50%);
+}
+
+.svk-verein-dropdown.open .svk-verein-menu{
+  display:block;
+  animation:svkMenuIn .18s ease both;
+}
+
+.svk-verein-menu a{
+  display:block;
+  padding:12px 13px !important;
+  border-radius:10px;
+  color:#142a59 !important;
+  font-size:13px !important;
+  font-weight:800 !important;
+  white-space:nowrap;
+}
+
+.svk-verein-menu a::after{
+  display:none !important;
+}
+
+.svk-verein-menu a:hover{
+  color:#0753a5 !important;
+  background:#eef5fc;
+}
+
+@keyframes svkMenuIn{
+  from{opacity:0;transform:translate(-50%,-7px)}
+  to{opacity:1;transform:translate(-50%,0)}
+}
+
+@media(max-width:900px){
+  .svk-verein-dropdown{
+    display:block;
+  }
+
+  .svk-verein-trigger{
+    display:block;
+    width:100%;
+  }
+
+  .svk-verein-menu{
+    position:static;
+    width:100%;
+    margin:0;
+    padding:4px 0 8px 14px;
+    border:0;
+    border-radius:0;
+    background:#f7faff;
+    box-shadow:none;
+    transform:none;
+  }
+
+  .svk-verein-dropdown.open .svk-verein-menu{
+    animation:none;
+  }
+
+  .svk-verein-menu a{
+    padding:11px 12px !important;
+    border-bottom:1px solid #e6edf5;
+  }
+}
