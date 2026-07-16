@@ -1,0 +1,17 @@
+
+.h2-trainer-section{padding:76px 0;background:#f2f6fb}
+.h2-trainer-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:34px;margin-bottom:28px}
+.h2-trainer-heading>div>span{color:#0753a5;font-size:12px;font-weight:900;letter-spacing:.14em;text-transform:uppercase}
+.h2-trainer-heading h2{margin:8px 0 0;color:#021f46;font-size:clamp(36px,4.5vw,54px);line-height:1.03;letter-spacing:-.05em}
+.h2-trainer-heading>p{max-width:610px;margin:0;color:#66758a;line-height:1.65}
+.h2-trainer-grid{display:grid;grid-template-columns:repeat(2,minmax(0,380px));gap:22px}
+.h2-trainer-card{overflow:hidden;border:1px solid #dce5ef;border-radius:22px;background:#fff;box-shadow:0 16px 42px rgba(2,31,70,.09);transition:.27s}
+.h2-trainer-card:hover{transform:translateY(-6px);border-color:#0753a5;box-shadow:0 25px 56px rgba(2,31,70,.15)}
+.h2-trainer-media{position:relative;aspect-ratio:4/5;overflow:hidden;background:#eaf1f8}
+.h2-trainer-media:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(2,31,70,.72),transparent 48%);pointer-events:none}
+.h2-trainer-media img{width:100%;height:100%;display:block;object-fit:cover;transition:transform .42s}
+.h2-trainer-card:hover img{transform:scale(1.035)}
+.h2-trainer-media span{position:absolute;left:15px;bottom:15px;z-index:2;padding:8px 11px;border-radius:999px;color:#fff;background:rgba(7,83,165,.92);font-size:11px;font-weight:900;letter-spacing:.08em;text-transform:uppercase}
+.h2-trainer-body{padding:22px}.h2-trainer-body h3{margin:0 0 7px;color:#021f46;font-size:25px;letter-spacing:-.03em}.h2-trainer-body p{margin:0;color:#66758a;font-weight:750}
+@media(max-width:760px){.h2-trainer-heading{align-items:flex-start;flex-direction:column}}
+@media(max-width:620px){.h2-trainer-grid{grid-template-columns:1fr}}
