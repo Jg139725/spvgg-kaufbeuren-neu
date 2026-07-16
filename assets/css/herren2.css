@@ -210,3 +210,15 @@ img,video{max-width:100%}
     margin-top:-104px;
   }
 }
+
+
+/* Herren 2 Vollpremium */
+.h2-player-card.is-clickable{
+  opacity:1;
+  cursor:pointer;
+}
+.h2-player-card.is-clickable:hover{
+  transform:translateY(-7px);
+  border-color:#0753a5;
+  box-shadow:0 25px 57px rgba(2,31,70,.16);
+}
