@@ -1,0 +1,31 @@
+
+:root{--blue:#0753a5;--navy:#021f46;--soft:#f2f6fb;--line:#dce5ef;--muted:#66758a}
+*{box-sizing:border-box}
+body{margin:0;color:var(--navy);font-family:Inter,Arial,sans-serif}
+a{text-decoration:none}
+.player-profile-wrap{width:min(1120px,calc(100% - 40px));margin:auto}
+.player-profile-hero{padding:70px 0;color:#fff;background:radial-gradient(circle at 82% 18%,rgba(42,145,230,.62),transparent 35%),linear-gradient(135deg,var(--navy),var(--blue))}
+.player-profile-back{display:inline-block;margin-bottom:28px;color:#dceaff;font-weight:900}
+.player-profile-hero-grid{display:grid;grid-template-columns:1fr 420px;gap:55px;align-items:center}
+.player-profile-copy>span,.player-profile-heading>span,.career-summary>span,.future-profile-box>span{font-size:12px;font-weight:900;letter-spacing:.14em;text-transform:uppercase}
+.player-profile-copy>span{color:#b9dcff}
+.player-profile-copy h1{margin:12px 0;font-size:clamp(52px,7vw,84px);line-height:.94;letter-spacing:-.06em}
+.player-profile-copy p{color:#dceaff;font-size:19px}
+.player-profile-media{overflow:hidden;aspect-ratio:4/5;border-radius:25px;background:#eaf1f8;box-shadow:0 25px 65px rgba(0,0,0,.3)}
+.player-profile-media img,.profile-placeholder{width:100%;height:100%;display:grid;place-items:center;object-fit:cover}
+.profile-placeholder{color:#fff;background:linear-gradient(145deg,#3e83c8,var(--navy));font-size:72px;font-weight:950}
+.player-profile-section{padding:72px 0}.player-profile-soft{background:var(--soft)}
+.player-profile-heading>span,.career-summary>span,.future-profile-box>span{color:var(--blue)}
+.player-profile-heading h2,.future-profile-box h2{margin:8px 0 25px;font-size:clamp(35px,4vw,50px);letter-spacing:-.045em}
+.player-profile-facts{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.player-profile-facts article{padding:21px;border:1px solid var(--line);border-radius:17px;background:#fff}
+.player-profile-facts span{display:block;margin-bottom:7px;color:var(--blue);font-size:11px;font-weight:900;letter-spacing:.1em;text-transform:uppercase}
+.player-profile-facts strong{font-size:20px}
+.profile-two-column{display:grid;grid-template-columns:1.15fr .85fr;gap:35px}
+.career-list{display:grid;gap:11px;margin:0;padding:0;list-style:none}
+.career-list li{padding:16px 18px;border:1px solid var(--line);border-radius:14px;background:#fff;font-weight:800}
+.career-summary{padding:27px;border-radius:20px;color:#fff;background:linear-gradient(135deg,var(--navy),var(--blue))}
+.career-summary>span{color:#b9dcff}.career-summary>strong{display:block;margin:12px 0;font-size:28px}.career-summary p{color:#dceaff;line-height:1.65}.career-summary a{display:inline-block;margin-top:12px;padding:12px 15px;border-radius:9px;color:var(--blue);background:#fff;font-weight:900}
+.future-profile-box{max-width:850px;text-align:center}.future-profile-box p{color:var(--muted);font-size:17px;line-height:1.7}
+@media(max-width:850px){.player-profile-hero-grid,.profile-two-column{grid-template-columns:1fr}.player-profile-media{max-width:450px}.player-profile-facts{grid-template-columns:1fr 1fr}}
+@media(max-width:550px){.player-profile-wrap{width:min(100% - 24px,1120px)}.player-profile-facts{grid-template-columns:1fr}.player-profile-copy h1{font-size:48px}}

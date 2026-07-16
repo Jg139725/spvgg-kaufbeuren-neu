@@ -20,3 +20,12 @@
 @media(max-width:1050px){.fupa-player-grid{grid-template-columns:repeat(3,1fr)}.fupa-staff-grid{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:800px){.fupa-section-head,.fupa-source-panel{align-items:flex-start;flex-direction:column}.fupa-player-grid{grid-template-columns:repeat(2,1fr)}.fupa-staff-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:540px){.fupa-wrap{width:min(100% - 24px,1180px)}.fupa-player-grid,.fupa-staff-grid{grid-template-columns:1fr}.fupa-player-info h3{min-height:0}}
+
+.position-group{margin-top:56px}
+.position-group:first-of-type{margin-top:10px}
+.position-group-title{margin-bottom:21px;padding-bottom:15px;border-bottom:2px solid var(--line)}
+.position-group-title>span{color:var(--blue);font-size:11px;font-weight:900;letter-spacing:.12em;text-transform:uppercase}
+.position-group-title h2{margin:7px 0 0;font-size:38px;letter-spacing:-.04em}
+.fupa-player-card{display:block;color:inherit;text-decoration:none;transition:.25s}
+.fupa-player-card:hover{transform:translateY(-6px);border-color:var(--blue);box-shadow:0 23px 52px rgba(2,31,70,.14)}
+.profile-link-text{display:block;margin-top:13px;color:var(--blue);font-size:13px}
