@@ -32,6 +32,7 @@
         !current.includes("geschichte") &&
         !current.includes("live-center");
     }
+    if (path.includes("vorstand")) return current.includes("vorstand");
     if (path.includes("geschichte")) return current.includes("geschichte");
     if (path.includes("live-center")) return current.includes("live-center");
     if (path.includes("stadion")) return current.includes("stadion");
@@ -49,6 +50,7 @@
       ["Mannschaften", "herren/index.html"],
       ["Jugend", "jugend/index.html"],
       ["Verein", "verein/index.html"],
+      ["Vorstand", "verein/vorstand.html"],
       ["Historie", "verein/geschichte.html"],
       ["SVK Live", "verein/live-center.html"],
       ["Stadion", "stadion.html"],
