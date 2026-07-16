@@ -1,0 +1,1 @@
+Header-Fix: Alle Herren-Seiten verwenden wieder die identische Kopfzeile wie die Startseite.
