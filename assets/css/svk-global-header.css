@@ -260,3 +260,10 @@
     width:185px !important;
   }
 }
+
+
+/* Hardfix: alte kompakte Herren-Kopfzeilen niemals anzeigen */
+body > .h2-header,
+body > .site-header{
+  display:none !important;
+}
