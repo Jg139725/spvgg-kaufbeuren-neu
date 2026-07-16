@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",()=>{const b=[...document.querySelectorAll(".fupa-filter button")],c=[...document.querySelectorAll(".fupa-player-card")];b.forEach(x=>x.addEventListener("click",()=>{b.forEach(y=>y.classList.remove("active"));x.classList.add("active");const f=x.dataset.filter;c.forEach(k=>k.hidden=f!=="Alle"&&k.dataset.position!==f)}))});

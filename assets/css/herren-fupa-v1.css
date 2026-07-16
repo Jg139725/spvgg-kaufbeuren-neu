@@ -1,0 +1,22 @@
+ 
+:root{--blue:#0753a5;--navy:#021f46;--soft:#f2f6fb;--line:#dce5ef;--muted:#66758a}
+*{box-sizing:border-box}body{margin:0;color:var(--navy);font-family:Inter,Arial,sans-serif}a{text-decoration:none}
+.fupa-wrap{width:min(1180px,calc(100% - 40px));margin:auto}
+.fupa-hero{padding:105px 0 82px;color:#fff;background:radial-gradient(circle at 82% 17%,rgba(43,147,231,.68),transparent 33%),linear-gradient(135deg,var(--navy),var(--blue))}
+.fupa-hero span,.fupa-section-head span,.fupa-source-panel span{font-size:12px;font-weight:900;letter-spacing:.14em;text-transform:uppercase}
+.fupa-hero span{color:#b9dcff}.fupa-hero h1{margin:12px 0 18px;font-size:clamp(52px,7vw,80px);line-height:.97;letter-spacing:-.055em}
+.fupa-hero p{max-width:760px;color:#dceaff;font-size:19px;line-height:1.68}.fupa-hero a{display:inline-block;margin-top:25px;padding:14px 18px;border-radius:10px;color:var(--blue);background:#fff;font-weight:900}
+.fupa-section{padding:76px 0}.fupa-soft{background:var(--soft)}
+.fupa-section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:28px}.fupa-section-head span,.fupa-source-panel span{color:var(--blue)}
+.fupa-section-head h2,.fupa-source-panel h2{margin:8px 0 0;font-size:clamp(36px,4vw,52px);letter-spacing:-.045em}.fupa-section-head p{max-width:600px;color:var(--muted);line-height:1.65}
+.fupa-filter{display:flex;gap:9px;overflow-x:auto;margin-bottom:23px}.fupa-filter button{padding:10px 15px;border:0;border-radius:999px;color:var(--blue);background:#eef5fc;font-weight:900}.fupa-filter button.active{color:#fff;background:var(--blue)}
+.fupa-player-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}.fupa-player-card{overflow:hidden;border:1px solid var(--line);border-radius:21px;background:#fff;box-shadow:0 14px 38px rgba(2,31,70,.08)}
+.fupa-player-media{position:relative;aspect-ratio:4/5;overflow:hidden;background:#eaf1f8}.fupa-player-media img{width:100%;height:100%;object-fit:cover}.fupa-player-placeholder{width:100%;height:100%;display:grid;place-items:center;color:#fff;background:linear-gradient(145deg,#3e83c8,var(--navy));font-size:52px;font-weight:950}
+.fupa-shirt-number,.fupa-captain{position:absolute;padding:8px 10px;border-radius:999px;color:#fff;background:rgba(2,31,70,.86);font-size:11px;font-weight:900}.fupa-shirt-number{top:13px;right:13px}.fupa-captain{left:13px;bottom:13px;background:rgba(7,83,165,.92)}
+.fupa-player-info{padding:19px}.fupa-position{color:var(--blue);font-size:11px;font-weight:900;letter-spacing:.11em;text-transform:uppercase}.fupa-player-info h3{min-height:54px;margin:8px 0 14px;font-size:22px}
+.fupa-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}.fupa-stats div{padding:10px 5px;border-radius:11px;background:var(--soft);text-align:center}.fupa-stats strong{display:block;font-size:20px}.fupa-stats span{color:var(--muted);font-size:10px;font-weight:800}
+.fupa-staff-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.fupa-staff-grid article{padding:21px;border:1px solid var(--line);border-radius:17px;background:#fff}.fupa-staff-grid strong{display:block;margin-bottom:7px;font-size:20px}.fupa-staff-grid span{color:var(--muted)}
+.fupa-source-section{padding:70px 0}.fupa-source-panel{display:flex;align-items:center;justify-content:space-between;gap:35px;padding:34px;border-radius:22px;color:#fff;background:linear-gradient(130deg,var(--navy),var(--blue))}.fupa-source-panel h2{color:#fff}.fupa-source-panel p{max-width:760px;color:#dceaff}.fupa-source-panel a{padding:13px 16px;border-radius:10px;color:var(--blue);background:#fff;font-weight:900}
+@media(max-width:1050px){.fupa-player-grid{grid-template-columns:repeat(3,1fr)}.fupa-staff-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:800px){.fupa-section-head,.fupa-source-panel{align-items:flex-start;flex-direction:column}.fupa-player-grid{grid-template-columns:repeat(2,1fr)}.fupa-staff-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:540px){.fupa-wrap{width:min(100% - 24px,1180px)}.fupa-player-grid,.fupa-staff-grid{grid-template-columns:1fr}.fupa-player-info h3{min-height:0}}
