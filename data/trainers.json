@@ -1,0 +1,70 @@
+{
+  "updatedAt": "2026-07-17T19:30:00+02:00",
+  "trainers": [
+    {
+      "id": "manuel-guenes",
+      "name": "Manuel Günes",
+      "role": "Cheftrainer",
+      "teamId": "erste-herren",
+      "teamName": "1. Herren",
+      "imageUrl": null,
+      "videoUrl": null,
+      "license": null,
+      "since": null,
+      "birthDate": null,
+      "career": []
+    },
+    {
+      "id": "luca-wollens",
+      "name": "Luca Wollens",
+      "role": "Spielender Co-Trainer",
+      "teamId": "erste-herren",
+      "teamName": "1. Herren",
+      "imageUrl": null,
+      "videoUrl": null,
+      "license": null,
+      "since": null,
+      "birthDate": null,
+      "career": []
+    },
+    {
+      "id": "fred-jentzsch",
+      "name": "Fred Jentzsch",
+      "role": "Co-Trainer",
+      "teamId": "erste-herren",
+      "teamName": "1. Herren",
+      "imageUrl": null,
+      "videoUrl": null,
+      "license": null,
+      "since": null,
+      "birthDate": null,
+      "career": []
+    },
+    {
+      "id": "goran-nikolic-kovacic",
+      "name": "Goran Nikolic Kovacic",
+      "role": "Trainer",
+      "teamId": "zweite-herren",
+      "teamName": "2. Herren",
+      "imageUrl": null,
+      "videoUrl": null,
+      "license": null,
+      "since": null,
+      "birthDate": null,
+      "career": []
+    },
+    {
+      "id": "emir-korlat",
+      "name": "Emir Korlat",
+      "role": "Co-Trainer",
+      "teamId": "zweite-herren",
+      "teamName": "2. Herren",
+      "imageUrl": null,
+      "videoUrl": null,
+      "license": null,
+      "since": null,
+      "birthDate": null,
+      "career": []
+    }
+  ]
+}
