@@ -1,0 +1,197 @@
+{
+  "updatedAt": "2026-07-17T18:00:00+02:00",
+  "teams": [
+    {
+      "id": "erste-herren",
+      "name": "1. Herren",
+      "shortName": "Herren I",
+      "section": "Herren",
+      "league": "Bezirksliga",
+      "teamImageUrl": null,
+      "coaches": [
+        {
+          "name": "Manuel Günes",
+          "role": "Trainer",
+          "imageUrl": null
+        }
+      ],
+      "players": [
+        {
+          "id": "lukas-kress",
+          "name": "Lukas Kress",
+          "number": "1",
+          "position": "Torwart",
+          "imageUrl": null,
+          "videoUrl": null
+        },
+        {
+          "id": "muersel",
+          "name": "Mürsel",
+          "number": "",
+          "position": "Abwehr",
+          "imageUrl": null,
+          "videoUrl": null
+        },
+        {
+          "id": "erkin",
+          "name": "Erkin",
+          "number": "",
+          "position": "Mittelfeld",
+          "imageUrl": null,
+          "videoUrl": null
+        },
+        {
+          "id": "ivano",
+          "name": "Ivano",
+          "number": "",
+          "position": "Mittelfeld",
+          "imageUrl": null,
+          "videoUrl": null
+        },
+        {
+          "id": "mohamed",
+          "name": "Mohamed",
+          "number": "",
+          "position": "Mittelfeld",
+          "imageUrl": null,
+          "videoUrl": null
+        },
+        {
+          "id": "nenad",
+          "name": "Nenad",
+          "number": "",
+          "position": "Mittelfeld",
+          "imageUrl": null,
+          "videoUrl": null
+        },
+        {
+          "id": "can-uygun",
+          "name": "Can Uygun",
+          "number": "9",
+          "position": "Sturm",
+          "imageUrl": null,
+          "videoUrl": null
+        },
+        {
+          "id": "nikita",
+          "name": "Nikita",
+          "number": "",
+          "position": "Sturm",
+          "imageUrl": null,
+          "videoUrl": null
+        },
+        {
+          "id": "emre",
+          "name": "Emre",
+          "number": "",
+          "position": "Sturm",
+          "imageUrl": null,
+          "videoUrl": null
+        }
+      ]
+    },
+    {
+      "id": "zweite-herren",
+      "name": "2. Herren",
+      "shortName": "Herren II",
+      "section": "Herren",
+      "league": "",
+      "teamImageUrl": null,
+      "coaches": [
+        {
+          "name": "Goran",
+          "role": "Trainer",
+          "imageUrl": null
+        }
+      ],
+      "players": []
+    },
+    {
+      "id": "u19",
+      "name": "U19 / A-Jugend",
+      "shortName": "U19",
+      "section": "Jugend",
+      "league": "",
+      "teamImageUrl": null,
+      "coaches": [
+        {
+          "name": "Goran",
+          "role": "Trainer",
+          "imageUrl": null
+        }
+      ],
+      "players": []
+    },
+    {
+      "id": "u17",
+      "name": "U17 / B-Jugend",
+      "shortName": "U17",
+      "section": "Jugend",
+      "league": "",
+      "teamImageUrl": null,
+      "coaches": [
+        {
+          "name": "Stefan Amander",
+          "role": "Trainer",
+          "imageUrl": null
+        },
+        {
+          "name": "Stefan Bauer",
+          "role": "Trainer",
+          "imageUrl": null
+        }
+      ],
+      "players": []
+    },
+    {
+      "id": "u15",
+      "name": "U15 / C-Jugend",
+      "shortName": "U15",
+      "section": "Jugend",
+      "league": "",
+      "teamImageUrl": null,
+      "coaches": [],
+      "players": []
+    },
+    {
+      "id": "u13",
+      "name": "U13 / D-Jugend",
+      "shortName": "U13",
+      "section": "Jugend",
+      "league": "",
+      "teamImageUrl": null,
+      "coaches": [],
+      "players": []
+    },
+    {
+      "id": "u11",
+      "name": "U11 / E-Jugend",
+      "shortName": "U11",
+      "section": "Jugend",
+      "league": "",
+      "teamImageUrl": null,
+      "coaches": [],
+      "players": []
+    },
+    {
+      "id": "u9",
+      "name": "U9 / F-Jugend",
+      "shortName": "U9",
+      "section": "Jugend",
+      "league": "",
+      "teamImageUrl": null,
+      "coaches": [],
+      "players": []
+    },
+    {
+      "id": "u7",
+      "name": "U7 / G-Jugend",
+      "shortName": "U7",
+      "section": "Jugend",
+      "league": "",
+      "teamImageUrl": null,
+      "coaches": [],
+      "players": []
+    }
+  ]
+}
