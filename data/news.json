@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-17T16:55:00+02:00",
+  "updatedAt": "2026-07-17T17:35:00+02:00",
   "articles": [
     {
       "id": "herren-vorbereitung-2026",
@@ -20,13 +20,40 @@
       "content": "Für das besondere Vorbereitungsspiel im Parkstadion wird ein Kartenvorverkauf angeboten.\n\nAlle Informationen zu den Verkaufsstellen, Terminen und Uhrzeiten werden über die offiziellen Kanäle der SpVgg Kaufbeuren veröffentlicht.\n\nDer Verein empfiehlt, Tickets rechtzeitig zu sichern und am Spieltag genügend Zeit für die Anreise einzuplanen."
     },
     {
-      "id": "bundesligist-im-parkstadion",
+      "id": "fc-augsburg-saarbruecken",
       "category": "Topspiel",
       "date": "01.07.2026",
-      "title": "Bundesligist im Parkstadion",
-      "teaser": "Der FC Augsburg trifft in Kaufbeuren auf den 1. FC Saarbrücken.",
+      "title": "FC Augsburg gegen den 1. FC Saarbrücken",
+      "teaser": "Am 25. Juli 2026 steigt im Parkstadion ein besonderes Vorbereitungsspiel.",
       "imageUrl": "https://jg139725.github.io/spvgg-kaufbeuren-neu/assets/images/stadion/parkstadion-hauptplatz.jpg",
       "content": "Am 25. Juli 2026 wird das Parkstadion Kaufbeuren zur Bühne für ein besonderes Vorbereitungsspiel.\n\nDer FC Augsburg trifft um 14:00 Uhr auf den 1. FC Saarbrücken. Fußballfans aus Kaufbeuren und der Region dürfen sich auf einen außergewöhnlichen Fußballtag freuen.\n\nWeitere organisatorische Hinweise zu Einlass, Parkmöglichkeiten und Tickets werden rechtzeitig bekannt gegeben."
+    },
+    {
+      "id": "testspiel-fc-memmingen-zwei",
+      "category": "Herren",
+      "date": "29.06.2026",
+      "title": "Testspiel beim FC Memmingen II",
+      "teaser": "Die SVK testet auswärts gegen die zweite Mannschaft des FC Memmingen.",
+      "imageUrl": null,
+      "content": "Im Rahmen der Saisonvorbereitung trifft die SpVgg Kaufbeuren auf die zweite Mannschaft des FC Memmingen.\n\nDas Testspiel bietet dem Trainerteam die Möglichkeit, weitere taktische Varianten auszuprobieren und allen Spielern wichtige Einsatzzeit zu geben.\n\nDas Ergebnis und weitere Informationen werden über die Vereinskanäle veröffentlicht."
+    },
+    {
+      "id": "reaktion-bad-woerishofen",
+      "category": "Herren",
+      "date": "27.06.2026",
+      "title": "Klare Reaktion gegen Bad Wörishofen",
+      "teaser": "Die Mannschaft zeigt im Testspiel eine deutliche Leistungssteigerung.",
+      "imageUrl": null,
+      "content": "Die SpVgg Kaufbeuren zeigte im Vorbereitungsspiel gegen Bad Wörishofen eine klare Reaktion.\n\nDie Mannschaft trat konzentriert auf, setzte die Vorgaben des Trainerteams besser um und überzeugte über weite Strecken mit einer geschlossenen Leistung.\n\nDer Auftritt war ein weiterer wichtiger Schritt auf dem Weg zum Saisonstart."
+    },
+    {
+      "id": "nachwuchsbereich-waechst",
+      "category": "Jugend",
+      "date": "25.06.2026",
+      "title": "Der Nachwuchsbereich wächst weiter",
+      "teaser": "Die Jugendabteilung der SpVgg Kaufbeuren entwickelt sich weiter und gewinnt neue Spieler und Trainer.",
+      "imageUrl": "https://jg139725.github.io/spvgg-kaufbeuren-neu/assets/images/home/hero-jugend.jpg",
+      "content": "Der Nachwuchsbereich der SpVgg Kaufbeuren wächst weiter.\n\nNeue Spieler, engagierte Trainer und eine klare sportliche Struktur sorgen dafür, dass die Jugendabteilung kontinuierlich weiterentwickelt wird.\n\nDer Verein möchte jungen Fußballerinnen und Fußballern weiterhin ein gutes Umfeld für ihre sportliche und persönliche Entwicklung bieten."
     }
   ]
 }
