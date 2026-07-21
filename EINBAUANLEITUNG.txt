@@ -1,0 +1,71 @@
+SVK – PAKET TRAININGSGELÄNDE
+
+Enthalten:
+- moderne, responsive Seite für das Trainingsgelände
+- drei große Platzkarten: 2× Naturrasen und 1× Kunstrasen
+- Bereich zum Trainingsalltag
+- Bildergalerie mit Großansicht
+- Anfahrt zum Sportgelände Im Haken
+- mobile Navigation
+- Platzhalter für eigene Fotos
+
+EINBAU
+
+1. Entpacke das Paket.
+2. Kopiere den Ordner "trainingsgelaende" in das Hauptverzeichnis deiner Webseite.
+3. Kopiere:
+   assets/css/trainingsgelaende.css
+   assets/js/trainingsgelaende.js
+   assets/images/trainingsgelaende/
+   in die gleichnamigen Ordner deiner Webseite.
+4. Öffne anschließend:
+   trainingsgelaende/index.html
+
+DIE SEITE WIRD SPÄTER ERREICHBAR UNTER:
+https://jg139725.github.io/spvgg-kaufbeuren-neu/trainingsgelaende/
+
+NAVIGATION ERGÄNZEN
+
+Füge in der Navigation deiner vorhandenen Seiten an der gewünschten Stelle ein:
+
+<a href="trainingsgelaende/index.html">Trainingsgelände</a>
+
+Bei Seiten in Unterordnern kann stattdessen nötig sein:
+
+<a href="../trainingsgelaende/index.html">Trainingsgelände</a>
+
+BILDER
+
+Lege eigene Fotos mit genau diesen Dateinamen ab:
+
+assets/images/trainingsgelaende/trainingsgelaende-hero.jpg
+assets/images/trainingsgelaende/naturrasen-1.jpg
+assets/images/trainingsgelaende/naturrasen-2.jpg
+assets/images/trainingsgelaende/kunstrasen.jpg
+assets/images/trainingsgelaende/training-action.jpg
+assets/images/trainingsgelaende/galerie-1.jpg
+assets/images/trainingsgelaende/galerie-2.jpg
+assets/images/trainingsgelaende/galerie-3.jpg
+assets/images/trainingsgelaende/galerie-4.jpg
+assets/images/trainingsgelaende/galerie-5.jpg
+
+Solange Bilder fehlen, zeigt die Seite an den Hauptstellen einen blau gestalteten Ersatzhintergrund.
+Fehlende Galeriebilder werden automatisch ausgeblendet.
+
+WICHTIG
+
+Die bestätigten Angaben sind:
+- 2 Naturrasenplätze
+- 1 Kunstrasenplatz
+- Sportgelände Im Haken
+- Wolftrigelstraße 15, 87600 Kaufbeuren
+
+Aussagen zu Flutlicht, Umkleiden, Parkplätzen oder weiteren Einrichtungen wurden
+bewusst nicht als feste Fakten eingebaut, weil sie nicht sicher bestätigt waren.
+
+Falls eure vorhandene Haupt-CSS nicht "assets/css/style.css" heißt, ändere in
+trainingsgelaende/index.html diese Zeile:
+
+<link rel="stylesheet" href="../assets/css/style.css">
+
+Die neue Seite funktioniert dank trainingsgelaende.css trotzdem weitgehend eigenständig.
