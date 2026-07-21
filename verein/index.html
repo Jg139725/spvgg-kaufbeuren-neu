@@ -3,202 +3,173 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Alle Vereinsbereiche der SpVgg Kaufbeuren – Vorstandschaft, Historie, Parkstadion, Trainingsgelände, Schiedsrichter und mehr.">
+  <meta name="description" content="Alle Vereinsbereiche der SpVgg Kaufbeuren auf einen Blick.">
   <title>Verein | SpVgg Kaufbeuren</title>
-
-  <link rel="stylesheet" href="../assets/css/style.css">
-  <link rel="stylesheet" href="../assets/css/verein-erweitert.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/home.css">
+  <link rel="stylesheet" href="../css/verein-fix.css">
 </head>
 <body>
-  <header class="svk-v-header">
-    <a class="svk-v-brand" href="../index.html">
-      <img src="../assets/images/svk_logo.png" alt="SpVgg Kaufbeuren">
-      <span>SpVgg Kaufbeuren</span>
+
+<div class="topbar">
+  <div class="container topbar__inner">
+    <span>SpVgg Kaufbeuren e. V.</span>
+    <div class="topbar__links">
+      <a href="../verein/kontakt.html">Kontakt</a>
+      <a href="../sponsoren.html">Partner</a>
+    </div>
+  </div>
+</div>
+
+<header class="site-header" id="start">
+  <div class="container navigation">
+    <a class="brand" href="../index.html" aria-label="Zur Startseite">
+      <img src="../assets/images/logo-top.png" alt="SpVgg Kaufbeuren">
     </a>
 
-    <button class="svk-v-menu-button" type="button" aria-expanded="false" aria-controls="svk-v-nav">
-      Menü
+    <button class="menu-button" type="button" aria-expanded="false"
+            aria-controls="main-navigation" aria-label="Menü öffnen">
+      <span></span><span></span><span></span>
     </button>
 
-    <nav class="svk-v-nav" id="svk-v-nav" aria-label="Hauptnavigation">
-      <a href="../index.html">Start</a>
-      <a href="../news.html">News</a>
-      <a href="../herren/index.html">Herren</a>
-      <a href="../frauen/index.html">Frauen</a>
+    <nav class="main-nav" id="main-navigation">
+      <a href="../news.html">Aktuelles</a>
+      <a href="../index.html#spiele">Spiele</a>
+      <a href="../index.html#mannschaften">Mannschaften</a>
       <a href="../jugend/index.html">Jugend</a>
-
-      <div class="svk-v-dropdown">
-        <button class="svk-v-dropdown-button is-active" type="button" aria-expanded="false">
-          Verein
-          <span aria-hidden="true">⌄</span>
-        </button>
-        <div class="svk-v-dropdown-menu">
-          <a href="./index.html">Vereinsübersicht</a>
-          <a href="../stadion.html">Parkstadion</a>
-          <a class="svk-v-highlight-link" href="../trainingsgelaende/index.html">
-            Trainingsgelände
-            <small>2× Rasen · 1× Kunstrasen</small>
-          </a>
-          <a href="../historie.html">Historie</a>
-          <a href="./vorstandschaft.html">Vorstandschaft</a>
-          <a href="./schiedsrichter.html">Schiedsrichter</a>
-          <a href="./downloads.html">Formulare &amp; Downloads</a>
-          <a href="../sponsoren.html">Sponsoren</a>
-          <a href="./kontakt.html">Kontakt</a>
-        </div>
-      </div>
-
-      <a href="../sponsoren.html">Sponsoren</a>
+      <a class="is-active" href="../verein/index.html">Verein</a>
+      <a href="../verein/geschichte.html">Historie</a>
+      <a href="../stadion.html">Stadion</a>
+      <a class="nav-button" href="../fanshop.html">Fanshop</a>
     </nav>
-  </header>
+  </div>
+</header>
 
-  <main>
-    <section class="svk-v-hero">
-      <div class="svk-v-hero-bg">
-        <img
-          src="../assets/images/verein-formation.jpg"
-          alt="SpVgg Kaufbeuren"
-          onerror="this.remove()"
-        >
+
+<main>
+  <section class="v-hero">
+    <div class="container v-hero__content">
+      <span class="kicker kicker--light">Unser Verein</span>
+      <h1>Die SpVgg Kaufbeuren</h1>
+      <p>Menschen, Orte, Geschichte und Verantwortung – hier findest du alle wichtigen Bereiche der SVK.</p>
+    </div>
+  </section>
+
+  <section class="v-section">
+    <div class="container">
+      <div class="v-heading">
+        <span class="kicker">Vereinsübersicht</span>
+        <h2>Mehr als 90 Minuten</h2>
+        <p>Entdecke die wichtigsten Bereiche des Vereins übersichtlich an einem Ort.</p>
       </div>
-      <div class="svk-v-hero-overlay"></div>
 
-      <div class="svk-v-container svk-v-hero-content">
-        <p class="svk-v-eyebrow">Unser Verein</p>
-        <h1>Die SpVgg Kaufbeuren</h1>
-        <p>
-          Organisation, Tradition, Spielstätten, Ehrenamt und Vereinsleben –
-          alle wichtigen Bereiche der SVK auf einen Blick.
-        </p>
-      </div>
-    </section>
+      <div class="v-grid">
+        <a class="v-card v-card--large" href="../stadion.html">
+          <div class="v-card__bg stadium-bg"></div>
+          <div class="v-card__shade"></div>
+          <div class="v-card__content">
+            <span>Unsere Heimspielstätte</span>
+            <h3>Parkstadion</h3>
+            <p>Geschichte, Stadionplan, Anfahrt und alles rund um die Heimat der SVK.</p>
+            <strong>Stadion entdecken →</strong>
+          </div>
+        </a>
 
-    <section class="svk-v-section">
-      <div class="svk-v-container">
-        <div class="svk-v-heading">
-          <p class="svk-v-eyebrow">Schnellzugriff</p>
-          <h2>Alle Vereinsbereiche</h2>
-          <p>
-            Entdecke die Menschen, Orte und Geschichten hinter der SpVgg Kaufbeuren.
-          </p>
-        </div>
-
-        <div class="svk-v-card-grid">
-          <a class="svk-v-card svk-v-card-large" href="../stadion.html">
-            <div class="svk-v-card-media">
-              <img src="../assets/images/parkstadion-hauptplatz.jpg" alt="Parkstadion Kaufbeuren" loading="lazy">
+        <a class="v-card v-card--large" href="../trainingsgelaende/index.html">
+          <div class="v-card__bg training-bg"></div>
+          <div class="v-card__shade"></div>
+          <div class="v-card__content">
+            <span>Unsere Trainingsheimat</span>
+            <h3>Trainingsgelände</h3>
+            <p>Zwei Naturrasenplätze und ein Kunstrasenplatz für Herren und Nachwuchs.</p>
+            <div class="v-badges">
+              <b>2× Naturrasen</b>
+              <b>1× Kunstrasen</b>
             </div>
-            <div class="svk-v-card-overlay"></div>
-            <div class="svk-v-card-content">
-              <span class="svk-v-card-kicker">Unsere Heimspielstätte</span>
-              <h3>Parkstadion</h3>
-              <p>Historie, Anfahrt, Stadionplan und alles rund um die Heimat der SVK.</p>
-              <strong>Stadion entdecken →</strong>
-            </div>
-          </a>
+            <strong>Plätze entdecken →</strong>
+          </div>
+        </a>
 
-          <a class="svk-v-card svk-v-card-large svk-v-training-card" href="../trainingsgelaende/index.html">
-            <div class="svk-v-card-media">
-              <img
-                src="../assets/images/trainingsgelaende/trainingsgelaende-hero.jpg"
-                alt="Trainingsgelände der SpVgg Kaufbeuren"
-                loading="lazy"
-                onerror="this.remove()"
-              >
-            </div>
-            <div class="svk-v-card-overlay"></div>
-            <div class="svk-v-card-content">
-              <span class="svk-v-card-kicker">Unsere Trainingsheimat</span>
-              <h3>Trainingsgelände</h3>
-              <p>Zwei Naturrasenplätze und ein Kunstrasenplatz für Herren und Nachwuchs.</p>
-              <div class="svk-v-place-facts">
-                <span><b>2</b> Naturrasen</span>
-                <span><b>1</b> Kunstrasen</span>
-              </div>
-              <strong>Plätze entdecken →</strong>
-            </div>
-          </a>
+        <a class="v-card v-card--small" href="../verein/geschichte.html">
+          <div class="v-icon">1909</div>
+          <h3>Historie</h3>
+          <p>Mehr als ein Jahrhundert Fußballgeschichte in Kaufbeuren.</p>
+          <strong>Mehr erfahren →</strong>
+        </a>
 
-          <a class="svk-v-card svk-v-card-small" href="../historie.html">
-            <span class="svk-v-icon">1909</span>
-            <h3>Historie</h3>
-            <p>Mehr als ein Jahrhundert Fußballgeschichte in Kaufbeuren.</p>
-            <strong>Mehr erfahren →</strong>
-          </a>
+        <a class="v-card v-card--small" href="../verein/vorstandschaft.html">
+          <div class="v-icon">SVK</div>
+          <h3>Vorstandschaft</h3>
+          <p>Die Verantwortlichen und Ansprechpartner des Vereins.</p>
+          <strong>Zum Vorstand →</strong>
+        </a>
 
-          <a class="svk-v-card svk-v-card-small" href="./vorstandschaft.html">
-            <span class="svk-v-icon">👥</span>
-            <h3>Vorstandschaft</h3>
-            <p>Die Verantwortlichen und Ansprechpartner des Vereins.</p>
-            <strong>Zum Vorstand →</strong>
-          </a>
+        <a class="v-card v-card--small" href="../verein/schiedsrichter.html">
+          <div class="v-icon">SR</div>
+          <h3>Schiedsrichter</h3>
+          <p>Informationen zum Schiedsrichterwesen der SpVgg Kaufbeuren.</p>
+          <strong>Bereich öffnen →</strong>
+        </a>
 
-          <a class="svk-v-card svk-v-card-small" href="./schiedsrichter.html">
-            <span class="svk-v-icon">🟨</span>
-            <h3>Schiedsrichter</h3>
-            <p>Informationen zum Schiedsrichterwesen der SpVgg Kaufbeuren.</p>
-            <strong>Bereich öffnen →</strong>
-          </a>
+        <a class="v-card v-card--small" href="../sponsoren.html">
+          <div class="v-icon">+</div>
+          <h3>Sponsoren</h3>
+          <p>Unsere Partner und Unterstützer.</p>
+          <strong>Partner ansehen →</strong>
+        </a>
 
-          <a class="svk-v-card svk-v-card-small" href="../sponsoren.html">
-            <span class="svk-v-icon">🤝</span>
-            <h3>Sponsoren</h3>
-            <p>Partner und Unterstützer, die den SVK-Fußball möglich machen.</p>
-            <strong>Partner ansehen →</strong>
-          </a>
+        <a class="v-card v-card--small" href="../verein/downloads.html">
+          <div class="v-icon">↓</div>
+          <h3>Downloads</h3>
+          <p>Formulare und wichtige Dokumente zum Herunterladen.</p>
+          <strong>Downloads öffnen →</strong>
+        </a>
 
-          <a class="svk-v-card svk-v-card-small" href="./downloads.html">
-            <span class="svk-v-icon">↓</span>
-            <h3>Downloads</h3>
-            <p>Formulare, Dokumente und wichtige Informationen zum Herunterladen.</p>
-            <strong>Downloads öffnen →</strong>
-          </a>
-
-          <a class="svk-v-card svk-v-card-small" href="./kontakt.html">
-            <span class="svk-v-icon">✉</span>
-            <h3>Kontakt &amp; Anfahrt</h3>
-            <p>So erreichst du den Verein und die richtigen Ansprechpartner.</p>
-            <strong>Kontakt aufnehmen →</strong>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section class="svk-v-training-highlight">
-      <div class="svk-v-container svk-v-training-highlight-inner">
-        <div>
-          <p class="svk-v-eyebrow">Neu im Vereinsbereich</p>
-          <h2>Drei Plätze für die Entwicklung der SVK</h2>
-          <p>
-            Lerne unser Trainingsgelände mit zwei Naturrasenplätzen und einem
-            Kunstrasenplatz kennen. Die neue Seite erzählt mehr über die einzelnen
-            Flächen und den täglichen Trainingsbetrieb.
-          </p>
-          <a class="svk-v-button" href="../trainingsgelaende/index.html">
-            Zum Trainingsgelände
-          </a>
-        </div>
-
-        <div class="svk-v-training-numbers">
-          <div><strong>2</strong><span>Naturrasenplätze</span></div>
-          <div><strong>1</strong><span>Kunstrasenplatz</span></div>
-          <div><strong>3</strong><span>Trainingsflächen</span></div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="svk-v-footer">
-    <div class="svk-v-container">
-      <strong>SpVgg Kaufbeuren</strong>
-      <div>
-        <a href="./kontakt.html">Kontakt</a>
-        <a href="../impressum.html">Impressum</a>
-        <a href="../datenschutz.html">Datenschutz</a>
+        <a class="v-card v-card--small" href="../verein/kontakt.html">
+          <div class="v-icon">@</div>
+          <h3>Kontakt</h3>
+          <p>So erreichst du den Verein und die richtigen Ansprechpartner.</p>
+          <strong>Kontakt aufnehmen →</strong>
+        </a>
       </div>
     </div>
-  </footer>
+  </section>
+</main>
 
-  <script src="../assets/js/verein-erweitert.js"></script>
+
+<footer class="footer">
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <img src="../assets/images/logo-top.png" alt="SpVgg Kaufbeuren">
+      <p>Tradition, Nachwuchs und Fußballleidenschaft in Kaufbeuren.</p>
+    </div>
+    <div>
+      <h3>Verein</h3>
+      <a href="../verein/index.html">Vereinsübersicht</a>
+      <a href="../trainingsgelaende/index.html">Trainingsgelände</a>
+      <a href="../verein/geschichte.html">Historie</a>
+    </div>
+    <div>
+      <h3>Service</h3>
+      <a href="../verein/kontakt.html">Kontakt</a>
+      <a href="../stadion.html">Anfahrt</a>
+      <a href="../verein/downloads.html">Downloads</a>
+    </div>
+    <div>
+      <h3>Rechtliches</h3>
+      <a href="../impressum.html">Impressum</a>
+      <a href="../datenschutz.html">Datenschutz</a>
+    </div>
+  </div>
+  <div class="container footer__bottom">
+    <span>© 2026 SpVgg Kaufbeuren</span>
+    <a href="#start">Nach oben ↑</a>
+  </div>
+</footer>
+
+
+<script src="../js/home.js"></script>
 </body>
 </html>

@@ -1,0 +1,49 @@
+
+.tg-hero{background:
+linear-gradient(90deg,rgba(1,24,57,.94),rgba(2,31,70,.58)),
+linear-gradient(135deg,#021f46,#0753a5);
+color:#fff;padding:120px 0 105px}
+.tg-hero h1{font-size:clamp(52px,8vw,90px);line-height:.96;letter-spacing:-.06em;margin:12px 0 24px}
+.tg-hero h1 span{color:#b5d9ff}
+.tg-hero p{font-size:20px;line-height:1.65;max-width:720px;color:#dceaff}
+.tg-facts{background:#021f46;color:#fff}
+.tg-facts__grid{display:grid;grid-template-columns:repeat(3,1fr)}
+.tg-facts__grid>div{padding:30px;display:flex;align-items:center;justify-content:center;gap:14px;border-right:1px solid rgba(255,255,255,.12)}
+.tg-facts strong{font-size:42px}
+.tg-facts span{color:#bfd3e8;font-weight:700}
+.tg-section{padding:88px 0;background:#f1f5fa}
+.tg-heading{max-width:760px;margin-bottom:36px}
+.tg-heading h2,.tg-dark h2,.tg-location h2{font-size:clamp(38px,5vw,58px);letter-spacing:-.045em;margin:8px 0 14px}
+.tg-heading p{color:#68778b;font-size:18px}
+.tg-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.tg-card{overflow:hidden;background:#fff;border-radius:22px;box-shadow:0 14px 35px rgba(2,31,70,.08)}
+.tg-photo{height:270px;background-size:cover;background-position:center}
+.tg-photo--one{background-image:linear-gradient(135deg,#dceaf5,#9fc5dc),url('../assets/images/trainingsgelaende/naturrasen-1.jpg')}
+.tg-photo--two{background-image:linear-gradient(135deg,#dceaf5,#9fc5dc),url('../assets/images/trainingsgelaende/naturrasen-2.jpg')}
+.tg-photo--three{background-image:linear-gradient(135deg,#0753a5,#021f46),url('../assets/images/trainingsgelaende/kunstrasen.jpg')}
+.tg-card__body{padding:25px}
+.tg-card__body>span{color:#0753a5;text-transform:uppercase;font-weight:800;font-size:12px;letter-spacing:.12em}
+.tg-card h3{font-size:29px;margin:8px 0 12px}
+.tg-card p{color:#68778b;line-height:1.6}
+.tg-card--blue{background:#0753a5;color:#fff}
+.tg-card--blue .tg-card__body>span,.tg-card--blue p{color:#dceaff}
+.tg-dark{padding:95px 0;background:#021f46;color:#fff}
+.tg-dark__grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:start}
+.tg-dark h2{color:#fff}
+.tg-dark p{color:#bfd3e8;font-size:18px;line-height:1.65}
+.tg-list{display:grid;gap:12px}
+.tg-list>div{display:grid;grid-template-columns:48px 1fr;gap:14px;padding:18px;border:1px solid rgba(255,255,255,.12);border-radius:16px;background:rgba(255,255,255,.06)}
+.tg-list b{color:#58bfff;font-size:20px}
+.tg-list span{color:#bfd3e8;line-height:1.5}
+.tg-list strong{display:block;color:#fff;margin-bottom:4px}
+.tg-location{padding:75px 0;background:#f1f5fa}
+.tg-location__card{display:flex;align-items:center;justify-content:space-between;gap:30px;padding:48px;border-radius:24px;background:linear-gradient(130deg,#021f46,#0753a5);color:#fff}
+.tg-location__card h2{color:#fff}
+.tg-location__card p{color:#dceaff;font-size:19px;line-height:1.55}
+.main-nav .is-active{color:#0753a5}
+@media(max-width:900px){
+.tg-grid,.tg-dark__grid{grid-template-columns:1fr}
+.tg-facts__grid{grid-template-columns:1fr}
+.tg-facts__grid>div{border-right:0;border-bottom:1px solid rgba(255,255,255,.12)}
+.tg-location__card{align-items:flex-start;flex-direction:column}
+}

@@ -1,0 +1,31 @@
+
+.v-hero{background:linear-gradient(130deg,#021f46,#0753a5);color:#fff;padding:105px 0 85px}
+.v-hero h1{font-size:clamp(48px,7vw,80px);line-height:1;margin:10px 0 20px;letter-spacing:-.055em}
+.v-hero p{font-size:19px;line-height:1.65;max-width:700px;color:#dceaff}
+.v-section{padding:88px 0;background:#f1f5fa}
+.v-heading{max-width:730px;margin-bottom:35px}
+.v-heading h2{font-size:clamp(38px,5vw,58px);letter-spacing:-.045em;margin:8px 0 14px}
+.v-heading p{color:#68778b;font-size:18px;line-height:1.6}
+.v-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}
+.v-card{position:relative;overflow:hidden;border-radius:22px;background:#fff;box-shadow:0 14px 35px rgba(2,31,70,.08);transition:.25s}
+.v-card:hover{transform:translateY(-5px);box-shadow:0 24px 60px rgba(2,31,70,.16)}
+.v-card--large{grid-column:span 6;min-height:430px;color:#fff}
+.v-card--small{grid-column:span 4;padding:26px;min-height:225px}
+.v-card__bg,.v-card__shade{position:absolute;inset:0}
+.v-card__bg{background-size:cover;background-position:center}
+.stadium-bg{background-image:linear-gradient(135deg,#0b4a85,#0b84d8),url('../assets/images/parkstadion-hauptplatz.jpg')}
+.training-bg{background-image:linear-gradient(135deg,#0b4a85,#0b84d8),url('../assets/images/trainingsgelaende/trainingsgelaende-hero.jpg')}
+.v-card__shade{background:linear-gradient(0deg,rgba(2,31,70,.96),rgba(2,31,70,.12) 72%)}
+.v-card__content{position:absolute;z-index:2;left:0;right:0;bottom:0;padding:28px}
+.v-card__content span{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.12em;color:#b5d9ff}
+.v-card h3{font-size:28px;margin:10px 0 10px}
+.v-card--large h3{font-size:38px}
+.v-card p{color:#68778b;line-height:1.55}
+.v-card--large p{color:#dceaff;max-width:520px}
+.v-card strong{color:#0753a5}
+.v-card--large strong{color:#fff}
+.v-icon{width:62px;height:62px;border-radius:18px;background:#0753a5;color:#fff;display:grid;place-items:center;font-weight:900;font-size:20px}
+.v-badges{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0 18px}
+.v-badges b{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);padding:8px 10px;border-radius:10px;font-size:12px}
+.main-nav .is-active{color:#0753a5}
+@media(max-width:900px){.v-card--large,.v-card--small{grid-column:span 12}}

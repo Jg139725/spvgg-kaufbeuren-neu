@@ -1,72 +1,41 @@
-SVK PAKET – VEREINSBEREICH MIT TRAININGSGELÄNDE
+SVK – HEADER-FIX FÜR VEREIN UND TRAININGSGELÄNDE
 
-Dieses Paket enthält:
-- neue moderne Vereinsübersicht
-- große Karte für das Parkstadion
-- große Karte für das Trainingsgelände
-- weitere Karten für Historie, Vorstandschaft, Schiedsrichter, Sponsoren,
-  Downloads sowie Kontakt
-- Dropdown-Menü unter dem Kopfzeilenpunkt „Verein“
-- hervorgehobener Menüpunkt „Trainingsgelände“
-- responsive Handyansicht
+Dieses Paket passt exakt zur normalen Kopfzeile deiner Startseite.
 
-1. DATEIEN HOCHLADEN
+ERSETZEN:
+- verein/index.html
+- trainingsgelaende/index.html
 
-Kopiere diese Dateien in dein GitHub-Projekt:
+NEU HOCHLADEN:
+- css/verein-fix.css
+- css/trainingsgelaende-fix.css
 
-verein/index.html
-assets/css/verein-erweitert.css
-assets/js/verein-erweitert.js
-assets/css/verein-dropdown-global.css
-assets/js/verein-dropdown-global.js
+WICHTIG:
+Die beiden Seiten verwenden jetzt direkt:
+- css/home.css
+- js/home.js
+- assets/images/logo-top.png
 
-Die vorhandene Datei verein/index.html wird ersetzt.
+Dadurch bleibt die normale weiße SVK-Kopfzeile mit Logo, Menü und Fanshop erhalten.
+Es wird keine eigene blaue Sonder-Kopfzeile mehr geladen.
 
-Die Seite trainingsgelaende/index.html aus dem vorherigen Paket muss ebenfalls
-bereits hochgeladen sein.
+Die Vereinsübersicht enthält weiterhin den gut sichtbaren Punkt Trainingsgelände.
+Von der normalen Startseite aus:
+Verein → Trainingsgelände
 
-2. DROPDOWN AUF DER STARTSEITE AKTIVIEREN
+BILDER:
+Die Seite verwendet diese Pfade, falls du eigene Bilder hochlädst:
+- assets/images/trainingsgelaende/trainingsgelaende-hero.jpg
+- assets/images/trainingsgelaende/naturrasen-1.jpg
+- assets/images/trainingsgelaende/naturrasen-2.jpg
+- assets/images/trainingsgelaende/kunstrasen.jpg
 
-Öffne index.html.
+Fehlen die Bilder, werden saubere blaue Platzhalter angezeigt.
 
-Im <head>-Bereich direkt vor </head> einfügen:
-
-<link rel="stylesheet" href="assets/css/verein-dropdown-global.css">
-
-Direkt vor </body> einfügen:
-
-<script src="assets/js/verein-dropdown-global.js"></script>
-
-Danach wird der vorhandene Link „Verein“ automatisch in ein Dropdown umgewandelt.
-Darin befindet sich auch „Trainingsgelände“.
-
-3. DROPDOWN AUF SEITEN IN UNTERORDNERN
-
-Bei einer Seite wie herren/erste.html verwendest du:
-
-<link rel="stylesheet" href="../assets/css/verein-dropdown-global.css">
-<script src="../assets/js/verein-dropdown-global.js"></script>
-
-Bei zwei Unterordnern kann ../../ erforderlich sein.
-
-4. PRÜFEN
-
-Vereinsübersicht:
-https://jg139725.github.io/spvgg-kaufbeuren-neu/verein/
-
-Trainingsgelände:
-https://jg139725.github.io/spvgg-kaufbeuren-neu/trainingsgelaende/
-
-Auf der Startseite sollte beim Klick auf „Verein“ nun ein Menü aufgehen.
-Darin ist „Trainingsgelände“ blau hervorgehoben.
-
-5. BILDER
-
-Die Vereinsseite verwendet vorhandene oder zuvor vorgesehene Bilder:
-
-assets/images/verein-formation.jpg
-assets/images/parkstadion-hauptplatz.jpg
-assets/images/trainingsgelaende/trainingsgelaende-hero.jpg
-
-Fehlt das Trainingsgelände-Bild, bleibt die Karte trotzdem als blau gestaltete
-Fläche sichtbar.
+UPLOAD:
+1. ZIP entpacken
+2. gesamten Inhalt in das Hauptverzeichnis des GitHub-Repositories ziehen
+3. gleichnamige Dateien ersetzen
+4. Commit changes
+5. 1–3 Minuten warten
+6. Seite mit Cmd + Shift + R neu laden

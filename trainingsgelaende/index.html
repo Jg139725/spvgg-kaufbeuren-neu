@@ -3,331 +3,173 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Das Trainingsgelände der SpVgg Kaufbeuren: zwei Naturrasenplätze und ein Kunstrasenplatz im Sportgelände Im Haken.">
+  <meta name="description" content="Das Trainingsgelände der SpVgg Kaufbeuren mit zwei Naturrasenplätzen und einem Kunstrasenplatz.">
   <title>Trainingsgelände | SpVgg Kaufbeuren</title>
-
-  <!-- Falls eure Haupt-CSS anders heißt, diese Zeile entsprechend anpassen. -->
-  <link rel="stylesheet" href="../assets/css/style.css">
-  <link rel="stylesheet" href="../assets/css/trainingsgelaende.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/home.css">
+  <link rel="stylesheet" href="../css/trainingsgelaende-fix.css">
 </head>
-
 <body>
-  <header class="tg-site-header">
-    <a class="tg-brand" href="../index.html" aria-label="Zur Startseite">
-      <img src="../assets/images/svk_logo.png" alt="Logo der SpVgg Kaufbeuren">
-      <span>SpVgg Kaufbeuren</span>
+
+<div class="topbar">
+  <div class="container topbar__inner">
+    <span>SpVgg Kaufbeuren e. V.</span>
+    <div class="topbar__links">
+      <a href="../verein/kontakt.html">Kontakt</a>
+      <a href="../sponsoren.html">Partner</a>
+    </div>
+  </div>
+</div>
+
+<header class="site-header" id="start">
+  <div class="container navigation">
+    <a class="brand" href="../index.html" aria-label="Zur Startseite">
+      <img src="../assets/images/logo-top.png" alt="SpVgg Kaufbeuren">
     </a>
 
-    <button class="tg-menu-button" type="button" aria-expanded="false" aria-controls="tg-navigation">
-      Menü
+    <button class="menu-button" type="button" aria-expanded="false"
+            aria-controls="main-navigation" aria-label="Menü öffnen">
+      <span></span><span></span><span></span>
     </button>
 
-    <nav class="tg-navigation" id="tg-navigation" aria-label="Hauptnavigation">
-      <a href="../index.html">Startseite</a>
+    <nav class="main-nav" id="main-navigation">
       <a href="../news.html">Aktuelles</a>
-      <a href="../spiele.html">Spiele</a>
-      <a href="../herren/index.html">Mannschaften</a>
+      <a href="../index.html#spiele">Spiele</a>
+      <a href="../index.html#mannschaften">Mannschaften</a>
       <a href="../jugend/index.html">Jugend</a>
-      <a href="../verein/index.html">Verein</a>
-      <a href="../historie.html">Historie</a>
+      <a class="is-active" href="../verein/index.html">Verein</a>
+      <a href="../verein/geschichte.html">Historie</a>
       <a href="../stadion.html">Stadion</a>
-      <a class="is-active" href="./index.html">Trainingsgelände</a>
+      <a class="nav-button" href="../fanshop.html">Fanshop</a>
     </nav>
-  </header>
+  </div>
+</header>
 
-  <main>
-    <section class="tg-hero">
-      <div class="tg-hero-media">
-        <img
-          src="../assets/images/trainingsgelaende/trainingsgelaende-hero.jpg"
-          alt="Trainingsplätze der SpVgg Kaufbeuren"
-          onerror="this.closest('.tg-hero-media').classList.add('tg-image-missing'); this.remove();"
-        >
-      </div>
 
-      <div class="tg-hero-overlay"></div>
-
-      <div class="tg-container tg-hero-content">
-        <p class="tg-eyebrow">Unsere Trainingsheimat</p>
-        <h1>Drei Plätze.<br>Ein gemeinsames Ziel.</h1>
-        <p class="tg-lead">
-          Zwei Naturrasenplätze und ein Kunstrasenplatz bieten den Mannschaften der
-          SpVgg Kaufbeuren Raum für Technik, Athletik, Teamarbeit und sportliche Entwicklung.
-        </p>
-
-        <div class="tg-hero-actions">
-          <a class="tg-button tg-button-primary" href="#plaetze">Plätze entdecken</a>
-          <a
-            class="tg-button tg-button-ghost"
-            href="https://www.google.com/maps/search/?api=1&query=Wolftrigelstraße+15%2C+87600+Kaufbeuren"
-            target="_blank"
-            rel="noopener noreferrer"
-          >Route öffnen</a>
-        </div>
-      </div>
-
-      <div class="tg-facts-strip" aria-label="Daten zum Trainingsgelände">
-        <div><strong>2</strong><span>Naturrasenplätze</span></div>
-        <div><strong>1</strong><span>Kunstrasenplatz</span></div>
-        <div><strong>3</strong><span>Trainingsflächen</span></div>
-      </div>
-    </section>
-
-    <section class="tg-intro tg-section">
-      <div class="tg-container tg-intro-grid">
-        <div>
-          <p class="tg-eyebrow">Sportgelände Im Haken</p>
-          <h2>Wo Entwicklung täglich stattfindet</h2>
-        </div>
-
-        <div>
-          <p>
-            Das Trainingsgelände ist die sportliche Arbeitsstätte des Vereins. Hier
-            trainieren Mannschaften an Technik, Spielverständnis, Fitness und Zusammenhalt.
-            Die Kombination aus zwei Naturrasenflächen und einem Kunstrasenplatz ermöglicht
-            eine flexible Verteilung des Trainingsbetriebs.
-          </p>
-          <p>
-            Der Kunstrasen ergänzt die beiden Rasenplätze besonders dann, wenn eine robuste
-            und intensiv nutzbare Trainingsfläche benötigt wird. Die Naturrasenplätze bieten
-            dagegen das klassische Spielgefühl auf natürlichem Untergrund.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="tg-section tg-places-section" id="plaetze">
-      <div class="tg-container">
-        <div class="tg-section-heading">
-          <p class="tg-eyebrow">Unsere Plätze</p>
-          <h2>Drei Flächen für den SVK-Fußball</h2>
-          <p>
-            Jeder Platz erfüllt seine eigene Rolle im Trainingsalltag. Gemeinsam bilden
-            sie die Grundlage für die sportliche Arbeit im Herren- und Nachwuchsbereich.
-          </p>
-        </div>
-
-        <div class="tg-place-grid">
-          <article class="tg-place-card">
-            <div class="tg-place-image">
-              <img
-                src="../assets/images/trainingsgelaende/naturrasen-1.jpg"
-                alt="Erster Naturrasenplatz"
-                loading="lazy"
-                onerror="this.closest('.tg-place-image').classList.add('tg-image-missing'); this.remove();"
-              >
-              <span class="tg-place-number">01</span>
-            </div>
-            <div class="tg-place-content">
-              <p class="tg-place-type">Naturrasen</p>
-              <h3>Rasenplatz 1</h3>
-              <p>
-                Eine natürliche Trainingsfläche für fußballspezifische Einheiten,
-                Spielformen und die Vorbereitung auf Begegnungen auf Naturrasen.
-              </p>
-              <ul>
-                <li>Natürliches Ball- und Laufverhalten</li>
-                <li>Geeignet für Technik- und Mannschaftstraining</li>
-                <li>Wichtiger Bestandteil des regulären Trainingsbetriebs</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="tg-place-card">
-            <div class="tg-place-image">
-              <img
-                src="../assets/images/trainingsgelaende/naturrasen-2.jpg"
-                alt="Zweiter Naturrasenplatz"
-                loading="lazy"
-                onerror="this.closest('.tg-place-image').classList.add('tg-image-missing'); this.remove();"
-              >
-              <span class="tg-place-number">02</span>
-            </div>
-            <div class="tg-place-content">
-              <p class="tg-place-type">Naturrasen</p>
-              <h3>Rasenplatz 2</h3>
-              <p>
-                Die zweite Rasenfläche schafft zusätzliche Kapazität und hilft dabei,
-                Trainingsgruppen sowie unterschiedliche Mannschaften sinnvoll zu verteilen.
-              </p>
-              <ul>
-                <li>Zusätzliche Trainingskapazität</li>
-                <li>Flexible Nutzung durch Herren und Nachwuchs</li>
-                <li>Entlastung der weiteren Spielflächen</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="tg-place-card tg-place-card-featured">
-            <div class="tg-place-image">
-              <img
-                src="../assets/images/trainingsgelaende/kunstrasen.jpg"
-                alt="Kunstrasenplatz im Sportgelände Im Haken"
-                loading="lazy"
-                onerror="this.closest('.tg-place-image').classList.add('tg-image-missing'); this.remove();"
-              >
-              <span class="tg-place-number">03</span>
-            </div>
-            <div class="tg-place-content">
-              <p class="tg-place-type">Kunstrasen</p>
-              <h3>Kunstrasenplatz</h3>
-              <p>
-                Eine belastbare und gleichmäßige Trainingsfläche, die intensive Einheiten
-                und einen verlässlichen Trainingsbetrieb auf einem modernen Untergrund ermöglicht.
-              </p>
-              <ul>
-                <li>Gleichmäßiges Spiel- und Rollverhalten</li>
-                <li>Hohe Nutzbarkeit bei wechselnden Bedingungen</li>
-                <li>Ideal für Technik, Passformen und kleine Spielfelder</li>
-              </ul>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="tg-section tg-training-section">
-      <div class="tg-container tg-training-grid">
-        <div class="tg-training-image">
-          <img
-            src="../assets/images/trainingsgelaende/training-action.jpg"
-            alt="Training bei der SpVgg Kaufbeuren"
-            loading="lazy"
-            onerror="this.closest('.tg-training-image').classList.add('tg-image-missing'); this.remove();"
-          >
-        </div>
-
-        <div class="tg-training-content">
-          <p class="tg-eyebrow">Der tägliche Trainingsbetrieb</p>
-          <h2>Mehr als nur Runden und Torschüsse</h2>
-          <p>
-            Auf den Trainingsplätzen entstehen Abläufe, Automatismen und Gemeinschaft.
-            Je nach Mannschaft und Trainingstag stehen unterschiedliche Schwerpunkte im Mittelpunkt.
-          </p>
-
-          <div class="tg-training-list">
-            <div>
-              <span>01</span>
-              <section>
-                <h3>Technik &amp; Ballkontrolle</h3>
-                <p>Passspiel, erster Kontakt, Dribbling und Torabschluss.</p>
-              </section>
-            </div>
-            <div>
-              <span>02</span>
-              <section>
-                <h3>Taktik &amp; Spielformen</h3>
-                <p>Mannschaftliche Abläufe, Positionsspiel und Spielsituationen.</p>
-              </section>
-            </div>
-            <div>
-              <span>03</span>
-              <section>
-                <h3>Athletik &amp; Koordination</h3>
-                <p>Schnelligkeit, Stabilität, Beweglichkeit und Belastungssteuerung.</p>
-              </section>
-            </div>
-            <div>
-              <span>04</span>
-              <section>
-                <h3>Torwart- &amp; Individualtraining</h3>
-                <p>Positionsspezifische Einheiten und persönliche Entwicklung.</p>
-              </section>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="tg-section tg-gallery-section">
-      <div class="tg-container">
-        <div class="tg-section-heading">
-          <p class="tg-eyebrow">Einblicke</p>
-          <h2>Das Trainingsgelände in Bildern</h2>
-          <p>
-            Ersetze die mitgelieferten Platzhalter durch eigene Fotos. Ein Klick öffnet
-            die Bilder anschließend in einer großen Ansicht.
-          </p>
-        </div>
-
-        <div class="tg-gallery">
-          <button type="button" data-gallery-image="../assets/images/trainingsgelaende/galerie-1.jpg" aria-label="Bild 1 öffnen">
-            <img src="../assets/images/trainingsgelaende/galerie-1.jpg" alt="Trainingsgelände – Ansicht 1" loading="lazy">
-          </button>
-          <button type="button" data-gallery-image="../assets/images/trainingsgelaende/galerie-2.jpg" aria-label="Bild 2 öffnen">
-            <img src="../assets/images/trainingsgelaende/galerie-2.jpg" alt="Trainingsgelände – Ansicht 2" loading="lazy">
-          </button>
-          <button type="button" data-gallery-image="../assets/images/trainingsgelaende/galerie-3.jpg" aria-label="Bild 3 öffnen">
-            <img src="../assets/images/trainingsgelaende/galerie-3.jpg" alt="Trainingsgelände – Ansicht 3" loading="lazy">
-          </button>
-          <button type="button" data-gallery-image="../assets/images/trainingsgelaende/galerie-4.jpg" aria-label="Bild 4 öffnen">
-            <img src="../assets/images/trainingsgelaende/galerie-4.jpg" alt="Trainingsgelände – Ansicht 4" loading="lazy">
-          </button>
-          <button type="button" data-gallery-image="../assets/images/trainingsgelaende/galerie-5.jpg" aria-label="Bild 5 öffnen">
-            <img src="../assets/images/trainingsgelaende/galerie-5.jpg" alt="Trainingsgelände – Ansicht 5" loading="lazy">
-          </button>
-        </div>
-      </div>
-    </section>
-
-    <section class="tg-section tg-location-section">
-      <div class="tg-container tg-location-card">
-        <div>
-          <p class="tg-eyebrow">Anfahrt</p>
-          <h2>Sportgelände Im Haken</h2>
-          <address>
-            Wolftrigelstraße 15<br>
-            87600 Kaufbeuren
-          </address>
-          <p>
-            Bitte beachte bei Trainings- und Spieltagen die Beschilderung sowie
-            mögliche Hinweise des Vereins vor Ort.
-          </p>
-
-          <a
-            class="tg-button tg-button-primary"
-            href="https://www.google.com/maps/search/?api=1&query=Wolftrigelstraße+15%2C+87600+Kaufbeuren"
-            target="_blank"
-            rel="noopener noreferrer"
-          >Navigation starten</a>
-        </div>
-
-        <div class="tg-map-placeholder" aria-label="Lage des Trainingsgeländes">
-          <span>SVK</span>
-          <strong>Trainingsgelände</strong>
-          <small>Wolftrigelstraße 15 · Kaufbeuren</small>
-        </div>
-      </div>
-    </section>
-
-    <section class="tg-cta">
-      <div class="tg-container">
-        <p class="tg-eyebrow">Blau-weiße Heimat</p>
-        <h2>Hier wird jeden Tag an der Zukunft der SVK gearbeitet.</h2>
-        <a class="tg-button tg-button-light" href="../mannschaften.html">Unsere Mannschaften</a>
-      </div>
-    </section>
-  </main>
-
-  <footer class="tg-footer">
-    <div class="tg-container tg-footer-inner">
-      <div>
-        <strong>SpVgg Kaufbeuren</strong>
-        <p>Tradition, Nachwuchs und Fußballleidenschaft in Kaufbeuren.</p>
-      </div>
-      <div>
-        <a href="../impressum.html">Impressum</a>
-        <a href="../datenschutz.html">Datenschutz</a>
-        <a href="../kontakt.html">Kontakt</a>
+<main>
+  <section class="tg-hero">
+    <div class="container tg-hero__content">
+      <span class="kicker kicker--light">Unsere Trainingsheimat</span>
+      <h1>Drei Plätze.<br><span>Ein gemeinsames Ziel.</span></h1>
+      <p>Zwei Naturrasenplätze und ein Kunstrasenplatz bilden die Grundlage für den täglichen Trainingsbetrieb der SpVgg Kaufbeuren.</p>
+      <div class="button-row">
+        <a class="button button--primary" href="#plaetze">Plätze entdecken</a>
+        <a class="button button--ghost" target="_blank" rel="noopener noreferrer"
+           href="https://www.google.com/maps/search/?api=1&query=Wolftrigelstraße+15%2C+87600+Kaufbeuren">Route öffnen</a>
       </div>
     </div>
-  </footer>
+  </section>
 
-  <dialog class="tg-lightbox" id="tg-lightbox">
-    <button type="button" class="tg-lightbox-close" aria-label="Großansicht schließen">×</button>
-    <img src="" alt="Großansicht Trainingsgelände">
-  </dialog>
+  <section class="tg-facts">
+    <div class="container tg-facts__grid">
+      <div><strong>2</strong><span>Naturrasenplätze</span></div>
+      <div><strong>1</strong><span>Kunstrasenplatz</span></div>
+      <div><strong>3</strong><span>Trainingsflächen</span></div>
+    </div>
+  </section>
 
-  <script src="../assets/js/trainingsgelaende.js"></script>
+  <section class="tg-section" id="plaetze">
+    <div class="container">
+      <div class="tg-heading">
+        <span class="kicker">Unsere Plätze</span>
+        <h2>Drei Flächen für den SVK-Fußball</h2>
+        <p>Jeder Platz erfüllt eine eigene Aufgabe im Trainingsalltag.</p>
+      </div>
+
+      <div class="tg-grid">
+        <article class="tg-card">
+          <div class="tg-photo tg-photo--one"></div>
+          <div class="tg-card__body">
+            <span>Naturrasen</span>
+            <h3>Rasenplatz 1</h3>
+            <p>Eine natürliche Trainingsfläche für Technik, Spielformen und mannschaftliche Einheiten.</p>
+          </div>
+        </article>
+
+        <article class="tg-card">
+          <div class="tg-photo tg-photo--two"></div>
+          <div class="tg-card__body">
+            <span>Naturrasen</span>
+            <h3>Rasenplatz 2</h3>
+            <p>Zusätzliche Kapazität für Herren- und Jugendmannschaften sowie zur Entlastung der weiteren Flächen.</p>
+          </div>
+        </article>
+
+        <article class="tg-card tg-card--blue">
+          <div class="tg-photo tg-photo--three"></div>
+          <div class="tg-card__body">
+            <span>Kunstrasen</span>
+            <h3>Kunstrasenplatz</h3>
+            <p>Eine robuste und gleichmäßige Fläche für intensive Einheiten und einen verlässlichen Trainingsbetrieb.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="tg-dark">
+    <div class="container tg-dark__grid">
+      <div>
+        <span class="kicker kicker--light">Trainingsalltag</span>
+        <h2>Wo Entwicklung täglich stattfindet</h2>
+        <p>Auf den drei Plätzen entstehen Technik, Spielverständnis, Fitness und Zusammenhalt.</p>
+      </div>
+      <div class="tg-list">
+        <div><b>01</b><span><strong>Technik & Ballkontrolle</strong>Passspiel, erster Kontakt, Dribbling und Torabschluss.</span></div>
+        <div><b>02</b><span><strong>Taktik & Spielformen</strong>Positionsspiel, Abläufe und Spielsituationen.</span></div>
+        <div><b>03</b><span><strong>Athletik & Koordination</strong>Schnelligkeit, Stabilität und Beweglichkeit.</span></div>
+        <div><b>04</b><span><strong>Torwarttraining</strong>Positionsspezifische und individuelle Einheiten.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tg-location">
+    <div class="container tg-location__card">
+      <div>
+        <span class="kicker kicker--light">Anfahrt</span>
+        <h2>Sportgelände Im Haken</h2>
+        <p>Wolftrigelstraße 15<br>87600 Kaufbeuren</p>
+      </div>
+      <a class="button button--white" target="_blank" rel="noopener noreferrer"
+         href="https://www.google.com/maps/search/?api=1&query=Wolftrigelstraße+15%2C+87600+Kaufbeuren">Navigation starten</a>
+    </div>
+  </section>
+</main>
+
+
+<footer class="footer">
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <img src="../assets/images/logo-top.png" alt="SpVgg Kaufbeuren">
+      <p>Tradition, Nachwuchs und Fußballleidenschaft in Kaufbeuren.</p>
+    </div>
+    <div>
+      <h3>Verein</h3>
+      <a href="../verein/index.html">Vereinsübersicht</a>
+      <a href="../trainingsgelaende/index.html">Trainingsgelände</a>
+      <a href="../verein/geschichte.html">Historie</a>
+    </div>
+    <div>
+      <h3>Service</h3>
+      <a href="../verein/kontakt.html">Kontakt</a>
+      <a href="../stadion.html">Anfahrt</a>
+      <a href="../verein/downloads.html">Downloads</a>
+    </div>
+    <div>
+      <h3>Rechtliches</h3>
+      <a href="../impressum.html">Impressum</a>
+      <a href="../datenschutz.html">Datenschutz</a>
+    </div>
+  </div>
+  <div class="container footer__bottom">
+    <span>© 2026 SpVgg Kaufbeuren</span>
+    <a href="#start">Nach oben ↑</a>
+  </div>
+</footer>
+
+
+<script src="../js/home.js"></script>
 </body>
 </html>
