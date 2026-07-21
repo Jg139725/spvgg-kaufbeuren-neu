@@ -1,71 +1,72 @@
-SVK – PAKET TRAININGSGELÄNDE
+SVK PAKET – VEREINSBEREICH MIT TRAININGSGELÄNDE
 
-Enthalten:
-- moderne, responsive Seite für das Trainingsgelände
-- drei große Platzkarten: 2× Naturrasen und 1× Kunstrasen
-- Bereich zum Trainingsalltag
-- Bildergalerie mit Großansicht
-- Anfahrt zum Sportgelände Im Haken
-- mobile Navigation
-- Platzhalter für eigene Fotos
+Dieses Paket enthält:
+- neue moderne Vereinsübersicht
+- große Karte für das Parkstadion
+- große Karte für das Trainingsgelände
+- weitere Karten für Historie, Vorstandschaft, Schiedsrichter, Sponsoren,
+  Downloads sowie Kontakt
+- Dropdown-Menü unter dem Kopfzeilenpunkt „Verein“
+- hervorgehobener Menüpunkt „Trainingsgelände“
+- responsive Handyansicht
 
-EINBAU
+1. DATEIEN HOCHLADEN
 
-1. Entpacke das Paket.
-2. Kopiere den Ordner "trainingsgelaende" in das Hauptverzeichnis deiner Webseite.
-3. Kopiere:
-   assets/css/trainingsgelaende.css
-   assets/js/trainingsgelaende.js
-   assets/images/trainingsgelaende/
-   in die gleichnamigen Ordner deiner Webseite.
-4. Öffne anschließend:
-   trainingsgelaende/index.html
+Kopiere diese Dateien in dein GitHub-Projekt:
 
-DIE SEITE WIRD SPÄTER ERREICHBAR UNTER:
+verein/index.html
+assets/css/verein-erweitert.css
+assets/js/verein-erweitert.js
+assets/css/verein-dropdown-global.css
+assets/js/verein-dropdown-global.js
+
+Die vorhandene Datei verein/index.html wird ersetzt.
+
+Die Seite trainingsgelaende/index.html aus dem vorherigen Paket muss ebenfalls
+bereits hochgeladen sein.
+
+2. DROPDOWN AUF DER STARTSEITE AKTIVIEREN
+
+Öffne index.html.
+
+Im <head>-Bereich direkt vor </head> einfügen:
+
+<link rel="stylesheet" href="assets/css/verein-dropdown-global.css">
+
+Direkt vor </body> einfügen:
+
+<script src="assets/js/verein-dropdown-global.js"></script>
+
+Danach wird der vorhandene Link „Verein“ automatisch in ein Dropdown umgewandelt.
+Darin befindet sich auch „Trainingsgelände“.
+
+3. DROPDOWN AUF SEITEN IN UNTERORDNERN
+
+Bei einer Seite wie herren/erste.html verwendest du:
+
+<link rel="stylesheet" href="../assets/css/verein-dropdown-global.css">
+<script src="../assets/js/verein-dropdown-global.js"></script>
+
+Bei zwei Unterordnern kann ../../ erforderlich sein.
+
+4. PRÜFEN
+
+Vereinsübersicht:
+https://jg139725.github.io/spvgg-kaufbeuren-neu/verein/
+
+Trainingsgelände:
 https://jg139725.github.io/spvgg-kaufbeuren-neu/trainingsgelaende/
 
-NAVIGATION ERGÄNZEN
+Auf der Startseite sollte beim Klick auf „Verein“ nun ein Menü aufgehen.
+Darin ist „Trainingsgelände“ blau hervorgehoben.
 
-Füge in der Navigation deiner vorhandenen Seiten an der gewünschten Stelle ein:
+5. BILDER
 
-<a href="trainingsgelaende/index.html">Trainingsgelände</a>
+Die Vereinsseite verwendet vorhandene oder zuvor vorgesehene Bilder:
 
-Bei Seiten in Unterordnern kann stattdessen nötig sein:
-
-<a href="../trainingsgelaende/index.html">Trainingsgelände</a>
-
-BILDER
-
-Lege eigene Fotos mit genau diesen Dateinamen ab:
-
+assets/images/verein-formation.jpg
+assets/images/parkstadion-hauptplatz.jpg
 assets/images/trainingsgelaende/trainingsgelaende-hero.jpg
-assets/images/trainingsgelaende/naturrasen-1.jpg
-assets/images/trainingsgelaende/naturrasen-2.jpg
-assets/images/trainingsgelaende/kunstrasen.jpg
-assets/images/trainingsgelaende/training-action.jpg
-assets/images/trainingsgelaende/galerie-1.jpg
-assets/images/trainingsgelaende/galerie-2.jpg
-assets/images/trainingsgelaende/galerie-3.jpg
-assets/images/trainingsgelaende/galerie-4.jpg
-assets/images/trainingsgelaende/galerie-5.jpg
 
-Solange Bilder fehlen, zeigt die Seite an den Hauptstellen einen blau gestalteten Ersatzhintergrund.
-Fehlende Galeriebilder werden automatisch ausgeblendet.
-
-WICHTIG
-
-Die bestätigten Angaben sind:
-- 2 Naturrasenplätze
-- 1 Kunstrasenplatz
-- Sportgelände Im Haken
-- Wolftrigelstraße 15, 87600 Kaufbeuren
-
-Aussagen zu Flutlicht, Umkleiden, Parkplätzen oder weiteren Einrichtungen wurden
-bewusst nicht als feste Fakten eingebaut, weil sie nicht sicher bestätigt waren.
-
-Falls eure vorhandene Haupt-CSS nicht "assets/css/style.css" heißt, ändere in
-trainingsgelaende/index.html diese Zeile:
-
-<link rel="stylesheet" href="../assets/css/style.css">
-
-Die neue Seite funktioniert dank trainingsgelaende.css trotzdem weitgehend eigenständig.
+Fehlt das Trainingsgelände-Bild, bleibt die Karte trotzdem als blau gestaltete
+Fläche sichtbar.

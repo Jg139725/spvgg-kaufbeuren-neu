@@ -1,0 +1,66 @@
+/* SVK Dropdown unter dem Menüpunkt "Verein" – für bestehende Seiten */
+.svk-verein-menu-wrap {
+  position: relative;
+  display: inline-flex;
+}
+
+.svk-verein-menu-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.svk-verein-menu-panel {
+  position: absolute;
+  z-index: 9999;
+  top: calc(100% + 12px);
+  right: 0;
+  display: none;
+  width: 285px;
+  padding: 10px;
+  border-radius: 18px;
+  background: #061f3d;
+  box-shadow: 0 25px 65px rgba(0,0,0,.3);
+}
+
+.svk-verein-menu-wrap.is-open .svk-verein-menu-panel {
+  display: grid;
+}
+
+.svk-verein-menu-panel a {
+  display: grid !important;
+  gap: 2px;
+  padding: 11px 12px !important;
+  border-radius: 12px;
+  color: rgba(255,255,255,.84) !important;
+  text-decoration: none !important;
+}
+
+.svk-verein-menu-panel a:hover {
+  color: #fff !important;
+  background: rgba(255,255,255,.1);
+}
+
+.svk-verein-menu-panel small {
+  color: #58bfff;
+  font-size: 10px;
+}
+
+.svk-verein-menu-panel .svk-training-link {
+  margin: 4px 0;
+  border: 1px solid rgba(88,191,255,.25);
+  background: rgba(11,134,216,.14);
+}
+
+@media (max-width: 900px) {
+  .svk-verein-menu-wrap {
+    display: grid;
+  }
+
+  .svk-verein-menu-panel {
+    position: static;
+    width: auto;
+    margin-top: 5px;
+    box-shadow: none;
+  }
+}
