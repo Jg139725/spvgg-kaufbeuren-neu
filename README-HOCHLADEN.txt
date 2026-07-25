@@ -1,57 +1,43 @@
-SVK Parkstadion – Bildupdate v1.1
-=====================================
+SVK Parkstadion – Korrekturpaket v1.3
+========================================
 
-Dieses Paket ersetzt die bisherige Stadionseite und den gesamten alten
-Stadion-Bildordner durch sieben aktuelle, optimierte Vereinsfotos.
+Dieses Paket ist für:
+https://jg139725.github.io/spvgg-kaufbeuren-neu/stadion.html
 
-SO HOCHLADEN
-------------
+KORREKTE BILDZUORDNUNG
+----------------------
+1. parkstadion-hero.jpg
+   Komplette Tribüne frontal – wird als Hero-Bild verwendet.
 
-1. Öffne dein GitHub-Repository:
-   Jg139725/spvgg-kaufbeuren-neu
+2. parkstadion-eckfahne.jpg
+   Eckfahne mit Weitwinkelblick.
 
-2. Lösche zuerst den bisherigen Ordner:
+3. parkstadion-rasenhoehe.jpg
+   Weiße Linie aus niedriger Rasenperspektive.
+
+4. parkstadion-tribuene-komplett.jpg
+   Komplette Tribüne – kein separates Bild „Haupttribüne“.
+
+5. parkstadion-tore.jpg
+   Toransicht.
+
+UPLOAD
+------
+1. Im Repository nur diesen alten Ordner vollständig löschen:
    assets/images/stadion/
 
-   Wichtig: Nur diesen Stadion-Bildordner löschen, nicht den gesamten images-Ordner.
+2. Danach den Inhalt dieses ZIP-Pakets in das Hauptverzeichnis hochladen.
 
-3. Lade anschließend den vollständigen Inhalt dieses Pakets in das Hauptverzeichnis
-   deines Repositorys hoch.
+3. Folgende Dateien ersetzen:
+   stadion.html
+   assets/css/stadion-v2.css
+   assets/js/stadion-v2.js
 
-4. Gleichnamige Dateien ersetzen:
-   - stadion.html
-   - assets/css/stadion-v2.css
-   - assets/js/stadion-v2.js
-
-5. Commit erstellen und GitHub Pages kurz aktualisieren lassen.
-
-ENTHALTEN
----------
-- Neue Hero-Aufnahme
-- Sieben aktuelle Stadionbilder
-- Alte historische Stadionbilder aus der Seite entfernt
-- Moderne, responsive Galerie
-- Vollbild-Lightbox
-- Lazy Loading für Galerie-Bilder
-- Mobile Optimierung
-- Barrierearme Bedienung per Escape-Taste und Schließen-Schaltfläche
+4. Den neuen Ordner hochladen:
+   assets/images/stadion/
 
 WICHTIG
 -------
-Ein ZIP-Upload allein löscht alte Dateien bei GitHub nicht automatisch.
-Darum muss der alte Ordner assets/images/stadion/ vor dem Hochladen einmal
-manuell gelöscht werden. Danach befinden sich dort nur noch die neuen Bilder.
-
-
-UPDATE v1.1
------------
-Das Hero-Bild wurde durch IMG_8068(2).jpg ersetzt.
-Die Aufnahme zeigt die Haupttribüne frontal und passt damit eindeutig zur
-Location Parkstadion Kaufbeuren.
-
-
-UPDATE v1.2
-- Eckfahnenbild ersetzt
-- Rasenhöhe ersetzt
-- Panorama durch komplette Tribüne ersetzt
-- Torbild ersetzt
+Die Dateinamen in stadion.html stimmen in dieser Version exakt mit den
+Dateien im neuen Bilderordner überein. Es gibt keine separate Datei oder
+Galeriekarte mit der Bezeichnung „Haupttribüne“ mehr.
