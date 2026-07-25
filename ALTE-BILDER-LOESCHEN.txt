@@ -1,0 +1,15 @@
+Diese alten Stadionbilder werden nicht mehr verwendet und können gelöscht werden:
+
+parkstadion-drohne.jpg
+parkstadion-haupttribuene.jpg
+parkstadion-panorama.jpg
+parkstadion-spieltag.jpg
+parkstadion-kurve.jpg
+parkstadion-flutlicht.jpg
+parkstadion-laufbahn-links.jpg
+parkstadion-laufbahn-rechts.jpg
+parkstadion-eingang-alt.jpg
+parkstadion-tribuene-alt.jpg
+
+Am sichersten: Den bisherigen Ordner assets/images/stadion vollständig löschen
+und danach den neuen Ordner aus diesem Paket hochladen.
