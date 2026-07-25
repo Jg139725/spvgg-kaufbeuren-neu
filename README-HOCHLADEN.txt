@@ -48,3 +48,10 @@ UPDATE v1.1
 Das Hero-Bild wurde durch IMG_8068(2).jpg ersetzt.
 Die Aufnahme zeigt die Haupttribüne frontal und passt damit eindeutig zur
 Location Parkstadion Kaufbeuren.
+
+
+UPDATE v1.2
+- Eckfahnenbild ersetzt
+- Rasenhöhe ersetzt
+- Panorama durch komplette Tribüne ersetzt
+- Torbild ersetzt
