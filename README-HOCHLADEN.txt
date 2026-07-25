@@ -1,4 +1,4 @@
-SVK Parkstadion – Bildupdate v1.0
+SVK Parkstadion – Bildupdate v1.1
 =====================================
 
 Dieses Paket ersetzt die bisherige Stadionseite und den gesamten alten
@@ -41,3 +41,10 @@ WICHTIG
 Ein ZIP-Upload allein löscht alte Dateien bei GitHub nicht automatisch.
 Darum muss der alte Ordner assets/images/stadion/ vor dem Hochladen einmal
 manuell gelöscht werden. Danach befinden sich dort nur noch die neuen Bilder.
+
+
+UPDATE v1.1
+-----------
+Das Hero-Bild wurde durch IMG_8068(2).jpg ersetzt.
+Die Aufnahme zeigt die Haupttribüne frontal und passt damit eindeutig zur
+Location Parkstadion Kaufbeuren.
