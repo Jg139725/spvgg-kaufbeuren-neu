@@ -1,23 +1,15 @@
-SVK Jugendleitung – Erreichbarkeitszeiten V2
+SVK Jugendleitung – Handy-Optimierung v1
 
-Enthaltene Änderungen:
-- Montag bis Donnerstag: 16:00–20:00 Uhr
-- Freitag: 16:00–18:00 Uhr
-- Samstag und Sonntag: Ruhetag
-- Automatische Anzeige „Jetzt erreichbar“ / „Derzeit nicht erreichbar“
-- Berechnung in der Zeitzone Europe/Berlin
-- Modernere Darstellung mit Hervorhebung des heutigen Tages
+Dieses Paket verändert ausschließlich die Darstellung auf Smartphones.
+Desktop und Tablet ab 761 px bleiben unverändert.
 
 Einbau:
 1. ZIP entpacken.
-2. Den gesamten Inhalt in das Hauptverzeichnis des GitHub-Repositorys ziehen.
-3. Gleichnamige Dateien ersetzen lassen.
-4. Änderungen committen.
-5. Nach 1–3 Minuten die Seite mit Strg+F5 oder Cmd+Shift+R neu laden.
+2. Die Datei assets/css/jugend-office-status.css in das Hauptverzeichnis
+   deines Repositorys kopieren.
+3. Die bestehende gleichnamige Datei ersetzen.
+4. Bei GitHub committen und die Website auf dem Handy neu laden.
 
-Ersetzte/ergänzte Dateien:
-- jugend/abteilungsleitung.html
-- assets/css/jugend-office-status.css
-- assets/js/jugend-office-status.js
-
-Andere Seiten und Layout-Dateien werden nicht verändert.
+Geändert werden nur mobile Abstände, Schriftgrößen, Öffnungszeiten,
+Statusanzeige, Kontaktbuttons und Ansprechpartnerkarten.
+HTML und JavaScript werden nicht verändert.

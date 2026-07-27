@@ -216,3 +216,197 @@
   .office-contact-actions{flex-direction:column}
   .office-contact-actions a{text-align:center}
 }
+
+/* =========================================================
+   MOBILE-ONLY UPDATE – Jugendleitung
+   Desktop bleibt unverändert. Wirksam bis maximal 760 px.
+   ========================================================= */
+@media (max-width:760px){
+  .youth-office-section{
+    margin:30px 0 36px;
+    padding:20px 14px;
+    border-radius:20px;
+    box-shadow:0 12px 34px rgba(2,31,70,.09);
+  }
+
+  .youth-office-header{
+    gap:16px;
+    margin-bottom:18px;
+  }
+
+  .youth-office-header h2{
+    margin-top:6px;
+    font-size:clamp(28px,9vw,36px);
+    line-height:1.05;
+  }
+
+  .office-status-card{
+    gap:13px;
+    padding:15px 16px;
+    border-radius:15px;
+  }
+
+  .office-status-card strong{
+    font-size:16px;
+    line-height:1.3;
+  }
+
+  .office-status-card span:last-child{
+    font-size:13px;
+    line-height:1.45;
+  }
+
+  .office-dot{
+    width:13px;
+    height:13px;
+    flex-basis:13px;
+  }
+
+  .office-hours-layout{
+    gap:16px;
+  }
+
+  .office-hours-list{
+    border-radius:16px;
+  }
+
+  .office-hours-row{
+    min-height:54px;
+    padding:14px 16px;
+  }
+
+  .office-hours-row span,
+  .office-hours-row strong{
+    font-size:14px;
+  }
+
+  .office-contact-box{
+    padding:21px 18px;
+    border-radius:16px;
+  }
+
+  .office-contact-box h3{
+    margin:7px 0 9px;
+    font-size:22px;
+    line-height:1.2;
+  }
+
+  .office-contact-box p{
+    margin-bottom:0;
+    font-size:14px;
+    line-height:1.6;
+  }
+
+  .office-contact-actions{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:9px;
+    margin-top:16px;
+  }
+
+  .office-contact-box .office-contact-actions a{
+    width:100%;
+    min-height:48px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:13px 15px;
+    text-align:center;
+  }
+
+  /* Ansprechpartnerkarten nur auf Smartphones kompakter */
+  .contact-people-grid{
+    grid-template-columns:1fr !important;
+    gap:16px !important;
+  }
+
+  .contact-person{
+    grid-template-columns:86px minmax(0,1fr) !important;
+    gap:15px !important;
+    align-items:center !important;
+    padding:17px !important;
+    text-align:left !important;
+    border-radius:18px !important;
+  }
+
+  .contact-person img,
+  .contact-person img.wide-photo{
+    width:86px !important;
+    height:86px !important;
+    min-width:86px !important;
+    object-fit:cover !important;
+    object-position:center top !important;
+    border-radius:50% !important;
+    margin:0 !important;
+  }
+
+  .contact-person h3{
+    margin:5px 0 7px !important;
+    font-size:22px !important;
+    line-height:1.15 !important;
+  }
+
+  .contact-person p{
+    margin:0 0 12px !important;
+    font-size:14px !important;
+  }
+
+  .contact-actions{
+    display:grid !important;
+    grid-template-columns:1fr 1fr !important;
+    gap:8px !important;
+  }
+
+  .contact-actions a{
+    min-height:44px !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    padding:11px 9px !important;
+    text-align:center !important;
+  }
+
+  .coordinator-heading{
+    margin-top:38px !important;
+  }
+}
+
+@media (max-width:420px){
+  .youth-office-section{
+    margin-left:-4px;
+    margin-right:-4px;
+    padding:18px 12px;
+  }
+
+  .office-hours-row{
+    flex-direction:row;
+    align-items:center;
+    gap:12px;
+  }
+
+  .office-hours-row strong{
+    margin-left:auto;
+    text-align:right;
+  }
+
+  .contact-person{
+    grid-template-columns:72px minmax(0,1fr) !important;
+    gap:13px !important;
+    padding:15px !important;
+  }
+
+  .contact-person img,
+  .contact-person img.wide-photo{
+    width:72px !important;
+    height:72px !important;
+    min-width:72px !important;
+  }
+
+  .contact-person h3{
+    font-size:20px !important;
+  }
+
+  .contact-actions{
+    grid-template-columns:1fr !important;
+  }
+}
