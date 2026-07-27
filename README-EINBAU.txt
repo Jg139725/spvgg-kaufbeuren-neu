@@ -1,19 +1,23 @@
-SVK SCHIEDSRICHTER PREMIUM V1
-=============================
+SVK SCHIEDSRICHTER PREMIUM V2
+================================
 
-Enthaltene Dateien:
+INHALT
 - verein/schiedsrichter.html
 - css/schiedsrichter.css
+- assets/images/schiedsrichter/justin-grundei.webp
 
-Einbau:
-1. ZIP entpacken.
-2. Die beiden Ordner "verein" und "css" in das Hauptverzeichnis des GitHub-Repositories hochladen.
-3. Vorhandene Datei verein/schiedsrichter.html ersetzen.
-4. Commit bestätigen und GitHub Pages kurz aktualisieren lassen.
+EINBAU
+1. ZIP-Datei entpacken.
+2. Die drei enthaltenen Ordner in das Hauptverzeichnis des GitHub-Projekts kopieren.
+3. Vorhandene Dateien bei Nachfrage ersetzen.
+4. Änderungen zu GitHub hochladen und die Seite neu laden.
 
-Wichtig:
-- Die Startseite wird nicht verändert.
-- Die vorhandene Verlinkung auf verein/schiedsrichter.html funktioniert weiter.
-- Die Seite verwendet die bereits vorhandenen Dateien css/home.css, js/home.js und assets/images/logo-top.png.
-- Es werden keine Namen oder Kontaktdaten erfunden. Der Kontaktbutton führt deshalb zunächst auf verein/kontakt.html.
-- Später können echte Schiedsrichterprofile ergänzt werden, ohne das Layout neu aufzubauen.
+NEU IN VERSION 2
+- Echte Profilkarte für Justin Grundei
+- Schiedsrichter seit 2022
+- Nach einjähriger Pause wieder aktiv
+- Hinweis auf seine Zugehörigkeit zur 2. Herren
+- Vorhandenes Spielerfoto eingebunden
+- Desktop- und Handyansicht optimiert
+
+Die Startseite und alle anderen Seiten werden nicht verändert.
