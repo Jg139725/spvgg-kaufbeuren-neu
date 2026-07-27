@@ -1,16 +1,23 @@
-SVK Jugend-Startseite – Layout Restore v4
+SVK Jugendleitung – Erreichbarkeitszeiten V2
 
-Dieses Paket repariert ausschließlich die Jugend-Startseite.
+Enthaltene Änderungen:
+- Montag bis Donnerstag: 16:00–20:00 Uhr
+- Freitag: 16:00–18:00 Uhr
+- Samstag und Sonntag: Ruhetag
+- Automatische Anzeige „Jetzt erreichbar“ / „Derzeit nicht erreichbar“
+- Berechnung in der Zeitzone Europe/Berlin
+- Modernere Darstellung mit Hervorhebung des heutigen Tages
 
-Enthalten:
-- jugend/index.html
-- assets/css/youth.css
+Einbau:
+1. ZIP entpacken.
+2. Den gesamten Inhalt in das Hauptverzeichnis des GitHub-Repositorys ziehen.
+3. Gleichnamige Dateien ersetzen lassen.
+4. Änderungen committen.
+5. Nach 1–3 Minuten die Seite mit Strg+F5 oder Cmd+Shift+R neu laden.
 
-Einbau auf GitHub:
-1. Den Inhalt dieses Pakets in das Hauptverzeichnis des Repositorys kopieren.
-2. Die beiden gleichnamigen Dateien ersetzen.
-3. Keine anderen Jugend-Unterseiten löschen oder überschreiben.
-4. Änderungen committen und GitHub Pages kurz neu veröffentlichen lassen.
-5. Danach die Seite einmal mit Strg+F5 (Windows) bzw. Cmd+Shift+R (Mac) neu laden.
+Ersetzte/ergänzte Dateien:
+- jugend/abteilungsleitung.html
+- assets/css/jugend-office-status.css
+- assets/js/jugend-office-status.js
 
-Die index.html enthält eine Versionskennung an youth.css, damit der Browser nicht die kaputte CSS-Datei aus dem Cache verwendet.
+Andere Seiten und Layout-Dateien werden nicht verändert.
