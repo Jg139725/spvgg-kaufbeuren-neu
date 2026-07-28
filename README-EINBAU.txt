@@ -1,13 +1,17 @@
-SVK Schiedsrichter Premium V4
+SVK Schiedsrichter Premium V5
 
-1. Den Inhalt dieses Pakets in das Hauptverzeichnis der Website hochladen.
-2. Vorhandene Dateien ersetzen:
+1. Den Ordnerinhalt in das Stammverzeichnis der Website hochladen.
+2. Vorhandene Dateien überschreiben:
    - verein/schiedsrichter.html
    - css/schiedsrichter.css
-3. Danach die Seite im Browser vollständig neu laden.
+3. Neu hinzugefügte Bilder hochladen:
+   - assets/images/schiedsrichter/armin-boeck.jpg
+   - assets/images/schiedsrichter/darinka-kaden.jpg
+   - assets/images/schiedsrichter/lukas-ponkratz.jpg
+   - assets/images/schiedsrichter/paul-stachiw.jpg
 
-Änderungen:
-- Profilkarte wurde neu aufgebaut, damit das Bild vollständig und ohne Abschneiden angezeigt wird.
-- Desktop- und Handyansicht wurden angepasst.
-- Der Bereich "Schiedsrichter werden" ist direkt mit dem offiziellen BFV-Neulingslehrgang der Schiedsrichtergruppe Ostallgäu verbunden.
-- Alle anderen Seiten bleiben unverändert.
+Neu:
+- harmonische, nicht abgeschnittene Profilkarte für Justin
+- zusätzliche Schiedsrichter: Armin Böck, Darinka Kaden, Lukas Ponkratz und Paul Stachiw
+- Spielklassen wurden bewusst nicht angezeigt
+- BFV-Lehrgang Ostallgäu bleibt verlinkt
