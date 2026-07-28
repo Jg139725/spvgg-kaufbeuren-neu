@@ -1,17 +1,12 @@
-SVK Schiedsrichter Premium V5
+SVK Schiedsrichter Premium V6
 
-1. Den Ordnerinhalt in das Stammverzeichnis der Website hochladen.
-2. Vorhandene Dateien überschreiben:
-   - verein/schiedsrichter.html
-   - css/schiedsrichter.css
-3. Neu hinzugefügte Bilder hochladen:
-   - assets/images/schiedsrichter/armin-boeck.jpg
-   - assets/images/schiedsrichter/darinka-kaden.jpg
-   - assets/images/schiedsrichter/lukas-ponkratz.jpg
-   - assets/images/schiedsrichter/paul-stachiw.jpg
+1. Den Ordner "verein" in das Hauptverzeichnis des GitHub-Repositories hochladen und vorhandene Datei ersetzen.
+2. Den Ordner "css" in das Hauptverzeichnis hochladen und vorhandene Datei ersetzen.
+3. Die bestehenden Bilder unter assets/images/schiedsrichter bleiben unverändert und werden weiterverwendet.
+4. Anschließend GitHub Pages kurz aktualisieren lassen und die Seite im Browser vollständig neu laden.
 
-Neu:
-- harmonische, nicht abgeschnittene Profilkarte für Justin
-- zusätzliche Schiedsrichter: Armin Böck, Darinka Kaden, Lukas Ponkratz und Paul Stachiw
-- Spielklassen wurden bewusst nicht angezeigt
-- BFV-Lehrgang Ostallgäu bleibt verlinkt
+Geändert werden ausschließlich:
+- verein/schiedsrichter.html
+- css/schiedsrichter.css
+
+Desktop, Tablet und Handy sind optimiert.
