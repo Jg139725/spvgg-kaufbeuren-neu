@@ -4,7 +4,7 @@
 .sr-hero{position:relative;overflow:hidden;color:#fff;background:linear-gradient(115deg,#03152f 0%,#073d7c 56%,#095db4 100%)}
 .sr-hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 63% 30%,rgba(79,164,244,.20),transparent 30%),linear-gradient(90deg,rgba(0,0,0,.12),transparent 52%)}
 .sr-hero::after{content:"";position:absolute;right:-4%;bottom:-31%;width:49%;height:66%;background:linear-gradient(155deg,rgba(255,255,255,.98),rgba(223,234,247,.96));clip-path:polygon(25% 0,100% 0,100% 100%,0 100%)}
-.sr-hero__watermark{position:absolute;left:49%;top:47%;transform:translate(-50%,-50%);font-size:250px;font-weight:900;letter-spacing:-.11em;color:rgba(255,255,255,.035)}
+.sr-hero__watermark{display:none}
 .sr-hero__stripe{display:none}
 .sr-hero__inner{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .55fr .95fr;gap:34px;align-items:center;min-height:430px;padding-top:58px;padding-bottom:58px}
 .sr-hero__copy{max-width:590px}
@@ -12,8 +12,10 @@
 .sr-hero h1{margin:0 0 17px;font-size:clamp(48px,5.3vw,72px);line-height:.96;letter-spacing:-.06em}
 .sr-hero p{margin:0;max-width:610px;color:#dceaff;font-size:16px;line-height:1.65}
 .sr-hero__actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}
-.sr-hero__crest{display:grid;place-items:center;padding:18px;border-right:1px solid rgba(255,255,255,.34)}
-.sr-hero__crest img{width:min(220px,100%);filter:brightness(0) invert(1);opacity:.96}
+.sr-hero__crest{display:grid;place-items:center;padding:22px;border-right:1px solid rgba(255,255,255,.34)}
+.sr-hero__crest::before{content:"";position:absolute;width:250px;height:250px;max-width:24vw;max-height:24vw;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.96) 0%,rgba(255,255,255,.82) 52%,rgba(255,255,255,0) 73%);filter:blur(.2px)}
+.sr-hero__crest img{position:relative;z-index:1}
+.sr-hero__crest img{width:min(220px,100%);height:auto;filter:drop-shadow(0 18px 34px rgba(0,0,0,.24));opacity:1;object-fit:contain}
 .sr-bfv{position:relative;z-index:2;display:grid;grid-template-columns:72px 1fr;gap:18px;align-items:center}
 .sr-bfv__mark{width:72px;height:92px;border-radius:50% 50% 46% 46%;display:grid;place-items:center;background:linear-gradient(145deg,#1689e8,#0757b7);border:2px solid rgba(255,255,255,.8);font-size:22px;font-weight:900;font-style:italic;box-shadow:0 14px 34px rgba(0,0,0,.18)}
 .sr-bfv small{display:block;color:#46a9ff;font-size:11px;font-weight:900;letter-spacing:.12em;text-transform:uppercase}
