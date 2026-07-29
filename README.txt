@@ -1,25 +1,20 @@
-SVK Premium Update V7
-=====================
+SVK Schiedsrichter – Hero-Hintergrund Update V8
 
 Enthalten:
-- verein/schiedsrichter.html
 - css/schiedsrichter.css
-
-Änderung Schiedsrichter-Hero:
-- Das Vereinslogo wird nicht mehr weiß eingefärbt.
-- Das originale farbige SVK-Logo bleibt sichtbar.
-- Das reine SVK-Schrift-Wasserzeichen wurde entfernt.
-- Eine dezente helle Fläche und ein Schatten sorgen für gute Lesbarkeit.
-- Das bestehende Desktop- und Mobile-Layout bleibt erhalten.
+- verein/schiedsrichter.html
+- assets/images/stadion/parkstadion-hero.jpg
 
 Installation:
 1. ZIP entpacken.
-2. Die beiden Ordner "verein" und "css" in dein Projekt kopieren.
-3. Vorhandene Dateien überschreiben.
-4. Änderungen zu GitHub hochladen.
+2. Die enthaltenen Ordner css, verein und assets in das Hauptverzeichnis der Website hochladen.
+3. Vorhandene Dateien ersetzen.
 
-Hinweis Herren 1:
-Die gelieferte Datei index(6).html ist die Auswahlseite der Herrenmannschaften,
-nicht die eigentliche Seite der 1. Herren (erste.html). Deshalb wurde sie nicht
-verändert, damit nichts am bestehenden Layout beschädigt wird. Für die fehlende
-Kopfzeile wird die Datei herren/erste.html benötigt.
+Neu:
+- echtes Parkstadion-Foto als Hero-Hintergrund
+- dunkles blaues Premium-Overlay
+- kein weißer Keil mehr
+- dezente blaue Lichtkante am unteren Hero-Rand
+- BFV-Bereich als hochwertige Glass-Karte
+- farbiges Vereinslogo bleibt erhalten
+- mobile Darstellung angepasst
