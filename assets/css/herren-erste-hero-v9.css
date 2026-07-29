@@ -1,0 +1,176 @@
+/* Premium-Kopfzeile für die 1. Herren – ergänzt vorhandenes Layout, ohne Kader/Trainerbereich zu verändern. */
+.h1-premium-hero{
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  color:#fff;
+  background:
+    radial-gradient(circle at 76% 18%,rgba(45,145,255,.30),transparent 28%),
+    radial-gradient(circle at 18% 86%,rgba(0,89,190,.22),transparent 34%),
+    linear-gradient(116deg,#020d1f 0%,#052b5c 48%,#0760b8 100%);
+  border-bottom:1px solid rgba(111,184,255,.28);
+}
+.h1-premium-hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-3;
+  background:
+    linear-gradient(90deg,rgba(0,0,0,.20),transparent 55%),
+    repeating-linear-gradient(125deg,rgba(255,255,255,.025) 0 1px,transparent 1px 18px);
+}
+.h1-premium-hero::after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  height:4px;
+  z-index:3;
+  background:linear-gradient(90deg,transparent,#2c9dff 18%,#fff 50%,#2c9dff 82%,transparent);
+  box-shadow:0 0 24px rgba(44,157,255,.7);
+}
+.h1-premium-hero__glow{
+  position:absolute;
+  right:-9%;
+  top:-45%;
+  width:620px;
+  height:620px;
+  z-index:-2;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(80,170,255,.30),rgba(80,170,255,0) 68%);
+  filter:blur(5px);
+}
+.h1-premium-hero__crest{
+  position:absolute;
+  left:57%;
+  top:50%;
+  z-index:-1;
+  width:min(390px,34vw);
+  transform:translate(-50%,-50%) rotate(-5deg);
+  opacity:.13;
+  filter:drop-shadow(0 25px 60px rgba(0,0,0,.25));
+}
+.h1-premium-hero__crest img{display:block;width:100%;height:auto}
+.h1-premium-hero__inner{
+  position:relative;
+  display:grid;
+  grid-template-columns:minmax(0,1.25fr) minmax(280px,.75fr);
+  gap:54px;
+  align-items:center;
+  min-height:430px;
+  padding-top:70px;
+  padding-bottom:70px;
+}
+.h1-premium-hero__copy{max-width:720px}
+.h1-premium-hero__eyebrow{
+  display:inline-block;
+  margin-bottom:14px;
+  color:#70bdff;
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+}
+.h1-premium-hero__league{
+  display:inline-flex;
+  margin:0 0 18px 12px;
+  padding:7px 12px;
+  border:1px solid rgba(144,203,255,.34);
+  border-radius:999px;
+  background:rgba(3,24,53,.42);
+  backdrop-filter:blur(10px);
+  color:#e7f4ff;
+  font-size:11px;
+  font-weight:800;
+}
+.h1-premium-hero h1{
+  margin:0 0 18px;
+  max-width:760px;
+  font-size:clamp(54px,6.2vw,86px);
+  line-height:.92;
+  letter-spacing:-.065em;
+  text-shadow:0 12px 38px rgba(0,0,0,.32);
+}
+.h1-premium-hero__copy>p{
+  max-width:660px;
+  margin:0;
+  color:#d9eaff;
+  font-size:17px;
+  line-height:1.7;
+}
+.h1-premium-hero__actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.h1-premium-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:48px;
+  padding:0 22px;
+  border-radius:10px;
+  font-size:13px;
+  font-weight:900;
+  text-decoration:none;
+  transition:transform .2s ease,box-shadow .2s ease,background .2s ease;
+}
+.h1-premium-btn:hover{transform:translateY(-2px)}
+.h1-premium-btn--primary{
+  color:#fff;
+  background:linear-gradient(135deg,#1685eb,#0757b7);
+  box-shadow:0 14px 30px rgba(0,92,190,.28);
+}
+.h1-premium-btn--ghost{
+  color:#fff;
+  border:1px solid rgba(255,255,255,.45);
+  background:rgba(3,21,47,.35);
+  backdrop-filter:blur(10px);
+}
+.h1-premium-hero__card{
+  position:relative;
+  overflow:hidden;
+  padding:28px;
+  border:1px solid rgba(154,210,255,.36);
+  border-radius:20px;
+  background:linear-gradient(145deg,rgba(2,16,36,.72),rgba(5,54,107,.58));
+  box-shadow:0 22px 60px rgba(0,0,0,.28),inset 0 1px 0 rgba(255,255,255,.10);
+  backdrop-filter:blur(18px);
+}
+.h1-premium-hero__card::before{
+  content:"";
+  position:absolute;
+  right:-35px;
+  bottom:-45px;
+  width:150px;
+  height:150px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(42,151,255,.35),transparent 70%);
+}
+.h1-premium-hero__card span{
+  display:block;
+  color:#65b6ff;
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+}
+.h1-premium-hero__card strong{display:block;margin:10px 0 12px;font-size:30px;line-height:1.05;letter-spacing:-.045em}
+.h1-premium-hero__card p{margin:0;color:#d9eaff;font-size:13px;line-height:1.55}
+.h1-premium-hero__card a{display:inline-flex;margin-top:22px;color:#7cc4ff;font-size:12px;font-weight:900;text-decoration:none}
+
+@media(max-width:900px){
+  .h1-premium-hero__inner{grid-template-columns:1fr;gap:28px;min-height:0;padding-top:58px;padding-bottom:58px}
+  .h1-premium-hero__crest{left:75%;width:360px;opacity:.09}
+  .h1-premium-hero__card{max-width:560px}
+}
+@media(max-width:600px){
+  .h1-premium-hero__inner{padding-top:44px;padding-bottom:48px}
+  .h1-premium-hero__eyebrow{margin-bottom:10px}
+  .h1-premium-hero__league{display:flex;width:max-content;max-width:100%;margin:0 0 16px;padding:7px 10px;white-space:normal}
+  .h1-premium-hero h1{font-size:48px}
+  .h1-premium-hero__copy>p{font-size:15px;line-height:1.6}
+  .h1-premium-hero__actions{flex-direction:column}
+  .h1-premium-btn{width:100%}
+  .h1-premium-hero__card{padding:22px;border-radius:16px}
+  .h1-premium-hero__card strong{font-size:26px}
+  .h1-premium-hero__crest{left:80%;top:38%;width:260px}
+}
+@media(prefers-reduced-motion:reduce){.h1-premium-btn{transition:none}}

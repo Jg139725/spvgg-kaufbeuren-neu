@@ -1,0 +1,13 @@
+SVK – 1. Herren Premium-Kopfzeile V9
+
+1. Den Ordner "herren" in das Hauptverzeichnis der Website hochladen.
+2. Den Ordner "assets" in das Hauptverzeichnis hochladen.
+3. Vorhandene Dateien ersetzen.
+
+Geändert:
+- herren/erste.html
+- assets/css/herren-erste-hero-v9.css
+
+Wichtig:
+- Die globale Kopfzeile wird nun zusätzlich über assets/js/svk-global-header.js geladen.
+- Kader, Trainerteam und Spielerprofile wurden nicht verändert.
