@@ -1,6 +1,7 @@
 
 document.addEventListener("DOMContentLoaded", () => {
   const buttons = [...document.querySelectorAll(".news-filters button")];
+  const cards = [...document.querySelectorAll(".news-card-v1")];
   const search = document.getElementById("news-search-input");
   const empty = document.querySelector(".news-empty");
   let filter = "all";
@@ -8,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function update() {
     const query = (search?.value || "").trim().toLowerCase();
     let visible = 0;
-    document.querySelectorAll(".news-card-v1").forEach(card => {
+    cards.forEach(card => {
       const matchesFilter = filter === "all" || card.dataset.category === filter;
       const matchesSearch = !query || card.dataset.search.includes(query);
       const show = matchesFilter && matchesSearch;
@@ -28,7 +29,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   search?.addEventListener("input", update);
-  document.addEventListener("svk:news-updated", update);
 
   document.getElementById("newsletter-form")?.addEventListener("submit", event => {
     event.preventDefault();
