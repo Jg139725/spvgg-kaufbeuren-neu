@@ -28,4 +28,20 @@
 </main></div></section>
 
 <footer class="footer"><div class="wrap footer-row"><div><strong>SpVgg Kaufbeuren – Frauen & Mädchen</strong><p>Blau-Weiß. Gemeinsam. SVK.</p></div><div><a href="../verein/kontakt.html">Kontakt</a><a href="../impressum.html">Impressum</a><a href="../datenschutz.html">Datenschutz</a></div></div></footer>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  const b=document.querySelector('.sub-menu');
+  const n=document.querySelector('.sub-nav');
+  if(!b||!n)return;
+  b.setAttribute('aria-expanded','false');
+  b.addEventListener('click',function(){
+    const open=n.classList.toggle('is-open');
+    b.setAttribute('aria-expanded',String(open));
+    b.textContent=open?'✕':'☰';
+  });
+  n.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+    n.classList.remove('is-open'); b.setAttribute('aria-expanded','false'); b.textContent='☰';
+  }));
+});
+</script>
 </body></html>
