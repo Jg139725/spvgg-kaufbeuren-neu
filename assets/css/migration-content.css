@@ -1,0 +1,21 @@
+
+/* Migration content additions – intentionally compatible with subpages.css */
+.migration-note{margin:20px 0;padding:16px 18px;border-radius:14px;background:#eef5ff;border-left:4px solid #0b4f9c;color:#25384d}
+.people-grid,.info-grid,.press-grid,.fv-grid,.keeper-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:24px}
+.person-card,.info-box,.press-card,.fv-card,.keeper-card{background:#fff;border:1px solid #dfe7f1;border-radius:18px;padding:22px;box-shadow:0 12px 34px rgba(13,56,102,.07)}
+.person-card .initials,.press-card .initials{width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:#0b4f9c;color:#fff;font-weight:900;font-size:1.05rem;margin-bottom:16px}
+.person-card h3,.press-card h3,.fv-card h3,.keeper-card h3,.info-box h3{margin:.25rem 0 .6rem}
+.role{display:inline-block;font-size:.76rem;text-transform:uppercase;letter-spacing:.08em;font-weight:900;color:#0b4f9c}
+.contact-link{display:inline-flex;margin-top:12px;font-weight:800;color:#0b4f9c;text-decoration:none}
+.definition-list{display:grid;gap:0;margin:22px 0;border:1px solid #dfe7f1;border-radius:16px;overflow:hidden}
+.definition-row{display:grid;grid-template-columns:minmax(150px,.65fr) 1.35fr;gap:18px;padding:15px 18px;background:#fff;border-bottom:1px solid #e6edf5}
+.definition-row:last-child{border-bottom:0}.definition-row strong{color:#0b4f9c}
+.download-list{display:grid;gap:12px;margin-top:22px}
+.download-item{background:#fff;border:1px solid #dfe7f1;border-radius:15px;padding:18px;display:flex;align-items:flex-start;justify-content:space-between;gap:22px}
+.download-item span{font-size:.8rem;font-weight:900;text-transform:uppercase;letter-spacing:.08em;color:#0b4f9c}
+.download-item h3{margin:.25rem 0}.status-badge{white-space:nowrap;border-radius:999px;padding:7px 10px;background:#fff3d9;color:#7d5500;font-weight:800;font-size:.75rem}
+.route-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.route-card{padding:24px;border-radius:18px;background:#fff;border:1px solid #dfe7f1}
+.route-card a,.button-local{display:inline-flex;margin-top:14px;padding:11px 14px;border-radius:10px;background:#0b4f9c;color:#fff;text-decoration:none;font-weight:800}
+.archive-box{padding:22px;border-radius:18px;background:#f6f8fb;border:1px solid #dfe7f1}
+@media(max-width:820px){.people-grid,.info-grid,.press-grid,.fv-grid,.keeper-grid,.route-grid{grid-template-columns:1fr}.definition-row{grid-template-columns:1fr;gap:5px}.download-item{flex-direction:column}.status-badge{white-space:normal}}
