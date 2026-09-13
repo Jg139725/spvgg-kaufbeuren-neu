@@ -32,3 +32,15 @@ a{text-decoration:none;color:inherit}.roster-wrap{width:min(1180px,calc(100% - 4
 @media(max-width:820px){.roster-wrap{width:min(100% - 28px,1180px)}.women-roster-hero{min-height:430px}.women-roster-hero__shade{background:linear-gradient(90deg,rgba(2,31,70,.94),rgba(2,31,70,.55)),linear-gradient(0deg,rgba(2,31,70,.8),transparent 60%)}.women-tabs{position:static}.women-tabs a{padding:19px 16px}.roster-layout{grid-template-columns:1fr}.roster-sidebar{position:static;grid-template-columns:repeat(2,minmax(0,1fr))}.roster-sidebar .quick{grid-column:1/-1}.squad-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.fact-grid{grid-template-columns:1fr}.match-row{grid-template-columns:1fr}.match-place{text-align:left}.squad-heading{align-items:flex-start;flex-direction:column}.position-filter{justify-content:flex-start}}
 @media(max-width:620px){.roster-wrap{width:min(100% - 22px,1180px)}.women-roster-hero{min-height:470px}.women-roster-hero__content{padding:45px 0 34px}.women-roster-hero h1{font-size:48px}.women-roster-hero h2{font-size:19px}.women-roster-hero p{font-size:15px}.hero-buttons{flex-direction:column;align-items:stretch}.hero-buttons a{text-align:center}.women-tabs__inner{width:100%;padding:0}.women-tabs a{padding:16px 14px;font-size:12px}.roster-main{padding-top:26px}.squad-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.squad-meta strong{font-size:13px}.roster-sidebar{grid-template-columns:1fr}.women-footer__inner{align-items:flex-start;flex-direction:column}.women-footer a{margin:0 14px 0 0}}
 @media(max-width:390px){.squad-grid{grid-template-columns:1fr 1fr}.squad-photo{aspect-ratio:4/5}.women-roster-hero h1{font-size:43px}}
+
+/* V6: Bilder auf Retina/HiDPI schärfer darstellen */
+.squad-photo img{
+  image-rendering:auto;
+  -webkit-font-smoothing:antialiased;
+  transform:translateZ(0);
+  backface-visibility:hidden;
+}
+.staff-person img,.captain-mini img{
+  image-rendering:auto;
+  transform:translateZ(0);
+}
