@@ -1,11 +1,8 @@
 <!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Probetraining | SpVgg Kaufbeuren</title><link rel="stylesheet" href="../assets/css/frauen-premium.css"></head><body>
+<title>Probetraining | SpVgg Kaufbeuren</title><link rel="stylesheet" href="../assets/css/svk-global-header.css">
+<link rel="stylesheet" href="../assets/css/frauen-premium.css"></head><body>
 
-<header class="sub-header"><div class="wrap sub-header-row">
-<a class="sub-brand" href="../index.html"><img src="../assets/images/logo-top.png" alt="SpVgg Kaufbeuren"><span>SpVgg Kaufbeuren e.V.</span></a>
-<button class="sub-menu" aria-label="Menü öffnen">☰</button>
-<nav class="sub-nav"><a href="../index.html">Start</a><a href="../news.html">News</a><a href="../herren/index.html">Herren</a><a class="active" href="index.html">Frauen</a><a href="../jugend/index.html">Jugend</a><a href="../verein/index.html">Verein</a><a href="../sponsoren.html">Sponsoren</a></nav>
-</div></header>
+<header class="sub-header"></header>
 
 <section class="women-hero"><div class="wrap"><span class="eyebrow">SpVgg Kaufbeuren · Frauen & Mädchen</span><h1>Probetraining</h1><p>Dein Weg in den Frauen- und Mädchenfußball der SpVgg Kaufbeuren.</p>
 <div class="hero-actions"><a class="btn btn-primary" href="kader.html">Damen-Kader</a><a class="btn btn-ghost" href="probetraining.html">Probetraining</a></div></div></section>
@@ -31,20 +28,6 @@
 </main></div></section>
 
 <footer class="footer"><div class="wrap footer-row"><div><strong>SpVgg Kaufbeuren – Frauen & Mädchen</strong><p>Blau-Weiß. Gemeinsam. SVK.</p></div><div><a href="../verein/kontakt.html">Kontakt</a><a href="../impressum.html">Impressum</a><a href="../datenschutz.html">Datenschutz</a></div></div></footer>
-<script>
-document.addEventListener('DOMContentLoaded',function(){
-  const b=document.querySelector('.sub-menu');
-  const n=document.querySelector('.sub-nav');
-  if(!b||!n)return;
-  b.setAttribute('aria-expanded','false');
-  b.addEventListener('click',function(){
-    const open=n.classList.toggle('is-open');
-    b.setAttribute('aria-expanded',String(open));
-    b.textContent=open?'✕':'☰';
-  });
-  n.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
-    n.classList.remove('is-open'); b.setAttribute('aria-expanded','false'); b.textContent='☰';
-  }));
-});
-</script>
+<script src="../assets/js/svk-global-header.js"></script>
+<script src="../assets/js/subpages.js"></script>
 </body></html>

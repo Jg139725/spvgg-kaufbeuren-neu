@@ -159,3 +159,248 @@ main,.content-layout>main,.info-card,.highlight,.player-card,.game-card{min-widt
   .captain-photo-block>div{padding:20px}
   .contact-box{padding:21px}
 }
+
+
+/* ==========================================================
+   V4 – Frauen optisch an Herren / restliche SVK-Seite angeglichen
+   Die Kopfzeile kommt jetzt ausschließlich aus svk-global-header.js
+   ========================================================== */
+
+/* Alte Frauen-Kopfzeile komplett neutralisieren – globale Header-CSS übernimmt */
+body > .sub-header{
+  position:relative;
+  top:auto;
+  z-index:auto;
+  width:100%;
+  height:auto;
+  border:0;
+  background:transparent;
+}
+body > .sub-header .sub-header-row,
+body > .sub-header .sub-brand,
+body > .sub-header .sub-nav,
+body > .sub-header .sub-menu{
+  display:none !important;
+}
+
+/* Gleiche Inhaltsbreite wie Herren */
+.wrap{
+  width:min(1180px,calc(100% - 40px));
+  margin-inline:auto;
+}
+
+/* Hero näher an Herren-FuPa-Optik */
+.women-hero{
+  padding:105px 0 82px;
+  background:
+    radial-gradient(circle at 82% 17%,rgba(43,147,231,.34),transparent 33%),
+    linear-gradient(135deg,#021f46,#0753a5);
+}
+.women-hero:after{display:none}
+.women-hero .eyebrow{
+  color:#b9dcff;
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.14em;
+}
+.women-hero h1{
+  margin:12px 0 18px;
+  font-size:clamp(52px,7vw,80px);
+  line-height:.97;
+  letter-spacing:-.055em;
+}
+.women-hero p{
+  max-width:760px;
+  color:#dceaff;
+  font-size:19px;
+  line-height:1.68;
+}
+.hero-actions{margin-top:25px}
+.btn{
+  min-height:48px;
+  align-items:center;
+  border-radius:10px;
+  font-weight:900;
+}
+
+/* Inhalt wie Herren: keine dauerhaft stehende linke Sidebar auf Desktop */
+.content-layout{
+  display:block;
+}
+.sidebar{
+  position:static;
+  display:flex;
+  align-items:center;
+  gap:9px;
+  overflow-x:auto;
+  margin:0 0 34px;
+  padding:0;
+  border:0;
+  border-radius:0;
+  box-shadow:none;
+  scrollbar-width:none;
+}
+.sidebar::-webkit-scrollbar{display:none}
+.sidebar strong{display:none}
+.sidebar a{
+  flex:0 0 auto;
+  padding:10px 15px;
+  border-radius:999px;
+  background:#eef5fc;
+  color:#0753a5;
+  font-size:14px;
+  font-weight:900;
+}
+.sidebar a.current{
+  color:#fff;
+  background:#0753a5;
+}
+
+/* Überschriften / Abstände wie bei Herren */
+.section{padding:76px 0}
+.section-head{
+  align-items:flex-end;
+  margin-bottom:28px;
+}
+.section-label{
+  color:#0753a5;
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.14em;
+}
+.section-head h2{
+  margin:8px 0 0;
+  font-size:clamp(36px,4vw,52px);
+  letter-spacing:-.045em;
+}
+.section-head p{
+  max-width:600px;
+  color:#66758a;
+  line-height:1.65;
+}
+
+/* Mannschaftsboxen flacher und hochwertiger */
+.info-card,.highlight,.quick-card,.game-card{
+  border-radius:20px;
+  box-shadow:0 14px 38px rgba(2,31,70,.07);
+}
+.info-card{padding:26px}
+.team-intro{gap:20px}
+
+/* Spielerinnenkarten exakt in Richtung Herren-Karten */
+.player-grid{
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:20px;
+}
+.player-card{
+  position:relative;
+  display:block;
+  overflow:hidden;
+  border:1px solid #dce5ef;
+  border-radius:22px;
+  background:#fff;
+  box-shadow:0 16px 42px rgba(2,31,70,.09);
+  transition:.25s;
+}
+.player-card:hover{
+  transform:translateY(-6px);
+  border-color:#0753a5;
+  box-shadow:0 23px 52px rgba(2,31,70,.14);
+}
+.player-photo,.player-avatar{
+  position:relative;
+  width:100%;
+  height:auto;
+  aspect-ratio:4/5;
+  overflow:hidden;
+  background:#eaf1f8;
+}
+.player-photo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center top;
+  transition:transform .45s ease;
+}
+.player-card:hover .player-photo img{transform:scale(1.04)}
+.player-avatar{
+  display:grid;
+  place-items:center;
+  color:#fff;
+  background:linear-gradient(145deg,#3e83c8,#021f46);
+  font-size:52px;
+  font-weight:950;
+}
+.player-body{
+  padding:18px 18px 20px;
+}
+.player-body small{
+  display:inline-block;
+  color:#0753a5;
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:.11em;
+  text-transform:uppercase;
+}
+.player-body h3{
+  min-height:48px;
+  margin:8px 0 0;
+  color:#021f46;
+  font-size:21px;
+  line-height:1.15;
+}
+
+/* Kapitäninnenfoto / große Mannschaftsbilder */
+.captain-photo-block{
+  border:1px solid #dce5ef;
+  border-radius:22px;
+  box-shadow:0 16px 42px rgba(2,31,70,.09);
+}
+.captain-photo-block img{
+  height:360px;
+  object-fit:cover;
+  object-position:center;
+}
+
+/* Spielkarten */
+.games{gap:14px}
+.game-card{
+  grid-template-columns:minmax(145px,170px) minmax(0,1fr) minmax(160px,220px);
+  padding:20px 22px;
+}
+
+/* Footer näher an restliche Seiten */
+.footer{
+  padding:38px 0;
+  background:#021f46;
+}
+.footer p{color:#b8c9dc}
+
+/* Responsive exakt abgestuft */
+@media(max-width:1050px){
+  .player-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media(max-width:800px){
+  .wrap{width:min(100% - 28px,1180px)}
+  .women-hero{padding:78px 0 62px}
+  .section-head{align-items:flex-start;flex-direction:column}
+  .player-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .team-intro{grid-template-columns:1fr}
+  .game-card{grid-template-columns:1fr}
+  .game-place{text-align:left}
+  .captain-photo-block{grid-template-columns:1fr}
+}
+@media(max-width:540px){
+  .wrap{width:min(100% - 24px,1180px)}
+  .women-hero{padding:62px 0 50px}
+  .women-hero h1{font-size:clamp(44px,14vw,58px)}
+  .women-hero p{font-size:16px}
+  .hero-actions{display:flex;flex-direction:column;align-items:stretch}
+  .hero-actions .btn{justify-content:center}
+  .section{padding:58px 0}
+  .player-grid{grid-template-columns:1fr}
+  .player-card{display:block}
+  .player-photo,.player-avatar{min-height:0;aspect-ratio:4/5}
+  .player-body h3{min-height:0}
+  .captain-photo-block img{height:230px}
+}
