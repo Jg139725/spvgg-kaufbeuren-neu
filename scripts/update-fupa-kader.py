@@ -55,15 +55,56 @@ def render(sections):
         result.append('<section class="position-group"><div class="position-group-title"><span>Kaderbereich</span><h2>' + position + '</h2></div><div class="fupa-player-grid">')
         for name, path, image, number in entries:
             local = ROOT / 'herren/spieler' / (slug(name) + '.html')
-            href = 'spieler/' + local.name if local.exists() else 'https://www.fupa.net' + path
-            extra = ' rel="noopener noreferrer"' if href.startswith('https:') else ''
+            href = 'spieler/' + local.name
             media = ('<img src="' + html.escape(image, quote=True) + '" alt="' + html.escape(name, quote=True) + '" loading="lazy" referrerpolicy="no-referrer">') if image else '<div class="fupa-player-placeholder">' + ''.join(part[0] for part in name.split()[:2]) + '</div>'
             if number:
                 media += '<span class="fupa-bg-number">' + number + '</span><span class="fupa-shirt-number">#' + number + '</span>'
-            result.append('<a class="fupa-player-card" href="' + html.escape(href, quote=True) + '"' + extra + '><div class="fupa-player-media">' + media + '</div><div class="fupa-player-info"><span class="fupa-position">' + position + '</span><h3>' + html.escape(name) + '</h3></div></a>')
+            result.append('<a class="fupa-player-card" href="' + html.escape(href, quote=True) + '"><div class="fupa-player-media">' + media + '</div><div class="fupa-player-info"><span class="fupa-position">' + position + '</span><h3>' + html.escape(name) + '</h3></div></a>')
         result.append('</div></section>')
     result.append('</div></section>')
     return '\n'.join(result)
+
+
+def update_profiles(sections):
+    """Create SVK profiles for newcomers; retain manually maintained existing pages."""
+    for position, entries in sections.items():
+        for name, path, image, number in entries:
+            profile = ROOT / 'herren/spieler' / (slug(name) + '.html')
+            safe_name = html.escape(name)
+            photo = ('<img src="' + html.escape(image, quote=True) + '" alt="' + html.escape(name, quote=True) + '" referrerpolicy="no-referrer">') if image else '<div class="fupa-player-placeholder">' + ''.join(part[0] for part in name.split()[:2]) + '</div>'
+            if profile.exists() and '<!-- AUTO-FUPA-PROFIL -->' not in profile.read_text():
+                # Keep existing personal details, careers and videos. Refresh only the portrait.
+                old = profile.read_text()
+                replacement = '<div class="player-profile-media">' + photo + '</div>'
+                new = re.sub(r'<div class="player-profile-media">.*?</div>', lambda _: replacement, old, count=1, flags=re.S)
+                if new != old:
+                    profile.write_text(new)
+                continue
+            page = '''<!doctype html>
+<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{name} | 1. Herren</title>
+<link rel="stylesheet" href="../../assets/css/svk-global-header.css">
+<link rel="stylesheet" href="../../assets/css/herren-profile-v1.css"></head>
+<body><!-- AUTO-FUPA-PROFIL --><header class="sub-header"></header><main>
+<section class="player-profile-hero"><div class="player-profile-wrap">
+<a class="player-profile-back" href="../erste.html#kader">← Zurück zum Kader</a>
+<div class="player-profile-hero-grid"><div class="player-profile-copy">
+<span>1. Herren · {position}</span><h1>{name}</h1><p>Spieler der SpVgg Kaufbeuren</p>
+</div><div class="player-profile-media">{photo}</div></div></div></section>
+<section class="player-profile-section"><div class="player-profile-wrap">
+<div class="player-profile-heading"><span>Steckbrief</span><h2>Spielerdaten</h2></div>
+<div class="player-profile-facts"><article><span>Position</span><strong>{position}</strong></article>
+<article><span>Rückennummer</span><strong>{number}</strong></article></div></div></section>
+<section class="player-profile-section player-profile-soft"><div class="player-profile-wrap profile-two-column">
+<div><div class="player-profile-heading"><span>1. Herren</span><h2>{name}</h2></div><p>Aktueller Kader der SpVgg Kaufbeuren.</p></div>
+<aside class="career-summary"><span>Weitere Informationen</span><p>Das Spielerprofil auf FuPa enthält aktuelle Spielstatistiken.</p>
+<a href="https://www.fupa.net{path}" target="_blank" rel="noopener noreferrer">FuPa-Profil öffnen ↗</a></aside>
+</div></section></main><script src="../../assets/js/svk-global-header.js"></script>
+<script src="../../assets/js/subpages.js"></script></body></html>
+'''.format(name=safe_name, position=html.escape(position), photo=photo,
+           number=number or 'Noch nicht angegeben', path=html.escape(path, quote=True))
+            if not profile.exists() or profile.read_text() != page:
+                profile.write_text(page)
 
 
 def main():
@@ -73,6 +114,7 @@ def main():
     if page.count(START) != 1 or page.count(END) != 1:
         raise ValueError('Kader-Markierungen fehlen oder sind doppelt')
     updated = re.sub(re.escape(START) + r'.*?' + re.escape(END), START + '\n' + render(sections) + '\n' + END, page, count=1, flags=re.S)
+    update_profiles(sections)
     if updated != page:
         PAGE.write_text(updated)
     print('FuPa-Kader:', sum(map(len, sections.values())), 'Spieler;', 'aktualisiert' if updated != page else 'unverändert')

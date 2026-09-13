@@ -1,0 +1,15 @@
+SVK-Kaderpaket 2026/27
+
+Das Paket enthält drei Ordner: herren, scripts und .github.
+Auf macOS blendet Finder den Ordner .github standardmäßig aus.
+Drücke im geöffneten Paket Cmd + Shift + . (Punkt), um ihn anzuzeigen.
+
+Für die Aktualisierung alle drei Ordner mit derselben Ordnerstruktur
+ins Stammverzeichnis des GitHub-Repositories hochladen. Vorhandene Dateien
+ersetzen; die übrigen Dateien im Repository behalten.
+
+Die Datei .github/workflows/update-fupa-kader.yml startet die Aktualisierung
+täglich um 05:17 UTC (vorbehaltlich GitHub Actions und Schreibzugriff).
+Die Automatik aktualisiert den Kader und vorhandene Fotos, legt für neue
+Spieler interne SVK-Profile an und behält eigene Inhalte bestehender Profile.
+Der Abgleich ist von der Struktur der FuPa-Seite abhängig.
