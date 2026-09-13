@@ -57,8 +57,6 @@ def render(sections):
             local = ROOT / 'herren/spieler' / (slug(name) + '.html')
             href = 'spieler/' + local.name
             media = ('<img src="' + html.escape(image, quote=True) + '" alt="' + html.escape(name, quote=True) + '" loading="lazy" referrerpolicy="no-referrer">') if image else '<div class="fupa-player-placeholder">' + ''.join(part[0] for part in name.split()[:2]) + '</div>'
-            if number:
-                media += '<span class="fupa-bg-number">' + number + '</span><span class="fupa-shirt-number">#' + number + '</span>'
             result.append('<a class="fupa-player-card" href="' + html.escape(href, quote=True) + '"><div class="fupa-player-media">' + media + '</div><div class="fupa-player-info"><span class="fupa-position">' + position + '</span><h3>' + html.escape(name) + '</h3></div></a>')
         result.append('</div></section>')
     result.append('</div></section>')
