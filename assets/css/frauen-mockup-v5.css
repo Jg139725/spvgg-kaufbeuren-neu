@@ -82,3 +82,14 @@ a{text-decoration:none;color:inherit}.roster-wrap{width:min(1180px,calc(100% - 4
   .squad-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 
+
+/* V8 – Originalbild bevorzugen; CSS nur zur sauberen Darstellung */
+.squad-photo img,
+.staff-person img,
+.captain-mini img{
+  image-rendering:auto !important;
+  -webkit-backface-visibility:hidden;
+  backface-visibility:hidden;
+  transform:translateZ(0);
+  filter:contrast(1.025) saturate(1.015);
+}
