@@ -28,3 +28,12 @@
 .note{margin-top:20px;padding:16px 18px;background:#eef6ff;border-left:4px solid #0871d7;border-radius:10px;color:#40546e;line-height:1.55}
 @media(max-width:900px){.sub-nav{display:none}.sub-menu{display:block}.quick-grid,.player-grid,.steps{grid-template-columns:repeat(2,1fr)}.content-layout,.team-intro{grid-template-columns:1fr}.sidebar{position:static}.facts{grid-template-columns:1fr}.game-card{grid-template-columns:1fr}.game-place{text-align:left}}
 @media(max-width:580px){.wrap{width:min(100% - 26px,1180px)}.quick-grid,.player-grid,.steps{grid-template-columns:1fr}.women-hero{padding:52px 0}.sub-header-row{height:76px}.contact-box,.section-head,.footer-row{align-items:flex-start;flex-direction:column}.footer a{margin:0 15px 0 0}}
+
+.player-photo{height:190px;background:#eaf2fb;overflow:hidden}
+.player-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.player-card--photo{transition:.2s}.player-card--photo:hover{transform:translateY(-4px)}
+.captain-photo-block{margin-top:28px;display:grid;grid-template-columns:minmax(0,1.35fr) minmax(260px,.65fr);gap:0;border:1px solid var(--line);border-radius:20px;overflow:hidden;background:#fff;box-shadow:0 14px 38px rgba(20,61,105,.07)}
+.captain-photo-block img{width:100%;height:320px;object-fit:cover;display:block}
+.captain-photo-block>div{padding:30px;display:flex;flex-direction:column;justify-content:center}
+.captain-photo-block h3{font-size:1.55rem;margin:8px 0}.captain-photo-block p{color:var(--muted);line-height:1.55}.captain-photo-block small{color:var(--muted)}
+@media(max-width:760px){.captain-photo-block{grid-template-columns:1fr}.captain-photo-block img{height:240px}}
