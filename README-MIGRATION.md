@@ -39,5 +39,5 @@ Den Inhalt dieses ZIPs in die oberste Ebene des GitHub-Repositories
 Das Paket verändert **keine Herren-Spielerkarten oder Herren-Kaderdateien**.
 
 ## Unabhängigkeit von der alten Website
-Die neuen HTML-Dateien enthalten keine Links auf `https://www.spvgg-kaufbeuren.de/`.
+Die neuen HTML-Dateien enthalten keine Links auf `alte SVK-Website`.
 E-Mail-Adressen mit `@spvgg-kaufbeuren.de` bleiben selbstverständlich bestehen.
