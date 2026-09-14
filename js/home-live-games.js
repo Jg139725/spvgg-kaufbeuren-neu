@@ -42,7 +42,7 @@
 
   async function load() {
     try {
-      const r = await fetch(`data/frauen-spiele.json?v=${Date.now()}`, { cache: "no-store" });
+      const r = await fetch(`data/herren-spiele.json?v=${Date.now()}`, { cache: "no-store" });
       if (!r.ok) throw new Error("HTTP " + r.status);
       const d = await r.json();
 
