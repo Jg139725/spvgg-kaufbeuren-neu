@@ -1,0 +1,25 @@
+
+.reachability-card{margin:46px 0;padding:28px;border:1px solid #dce6f0;border-radius:20px;background:#fff;box-shadow:0 14px 40px rgba(3,31,70,.06)}
+.reachability-card__head{display:flex;justify-content:space-between;gap:20px;align-items:center;margin-bottom:22px}
+.reachability-card__head h2{margin:6px 0 0;font-size:clamp(28px,4vw,42px);letter-spacing:-.035em}
+.reachability-status{display:flex;align-items:center;gap:12px;padding:14px 16px;border:1px solid #d9e4ee;border-radius:16px;background:#f8fbfe}
+.reachability-status strong{display:block}
+.reachability-status small{display:block;margin-top:2px;color:#6a7a8d}
+.reachability-dot{width:13px;height:13px;border-radius:50%;background:#f05a61;box-shadow:0 0 0 5px rgba(240,90,97,.13)}
+.reachability-status.is-open .reachability-dot{background:#22a06b;box-shadow:0 0 0 5px rgba(34,160,107,.13)}
+.reachability-status.is-open{border-color:#bde5d2;background:#f3fcf7}
+.reachability-grid{display:grid;grid-template-columns:1.15fr .75fr;gap:18px}
+.reachability-hours{border:1px solid #dfe7ef;border-radius:16px;overflow:hidden}
+.reachability-hours>div{display:flex;justify-content:space-between;gap:16px;padding:14px 16px;border-bottom:1px solid #edf2f6}
+.reachability-hours>div:last-child{border-bottom:0}
+.reachability-hours span{font-weight:800;color:#0753a5}
+.reachability-hours span.off{color:#b44747}
+.reachability-contact{padding:24px;border-radius:18px;background:linear-gradient(135deg,#031f46,#0753a5);color:#fff}
+.reachability-contact h3{font-size:26px;margin:8px 0 12px}
+.reachability-contact p{line-height:1.6;color:rgba(255,255,255,.9)}
+.reachability-contact .contact-actions a{background:#fff;color:#0753a5}
+.reachability-contact .contact-actions a.secondary{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.35)}
+@media(max-width:760px){
+  .reachability-card__head{align-items:flex-start;flex-direction:column}
+  .reachability-grid{grid-template-columns:1fr}
+}
