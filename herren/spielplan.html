@@ -1,11 +1,62 @@
-<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Spielplan Herren | SpVgg Kaufbeuren</title><link rel="stylesheet" href="../assets/css/subpages.css"><link rel="stylesheet" href="../assets/css/herren-v3.css"></head><body>
-<header class="sub-header"><div class="wrap sub-header-row">
-<a class="sub-brand" href="../index.html"><img src="../assets/images/logo-top.png" alt="SpVgg Kaufbeuren"></a>
-<button class="sub-menu" aria-label="Menü öffnen" aria-expanded="false">☰</button>
-<nav class="sub-nav"><a class="" href="../index.html">Start</a><a class="" href="../news.html">News</a><a class="active" href="index.html">Herren</a><a class="" href="../frauen/index.html">Frauen</a><a class="" href="../jugend/index.html">Jugend</a><a class="" href="../verein/index.html">Verein</a></nav></div></header><main><section class="hv3-hero"><img src="../assets/images/herren/herren-hero.jpg" alt="Spielbetrieb der Herren"><div class="wrap">
-<span class="hv3-kicker">Spielbetrieb</span><h1>Spielplan und Ergebnisse.</h1><p>Aktuelle Begegnungen und Ergebnisse findest du auf der bisherigen Vereinswebsite.</p></div></section>
-<section class="hv3-section"><div class="wrap"><div class="cta-band"><div><span class="section-kicker">BFV-Integration</span><h2>Bereit für die Freigabe.</h2><p>Nach Genehmigung werden Spielplan, Ergebnisse und Tabelle eingebunden.</p></div><a href="mailto:herren@spvgg-kaufbeuren.de">Kontakt</a></div></div></section></main><footer class="sub-footer"><div class="wrap sub-footer-row">
-<div><strong>SpVgg Kaufbeuren – Herren</strong><p>Parkstadion Kaufbeuren</p></div>
-<div class="sub-footer-links"><a href="mailto:herren@spvgg-kaufbeuren.de">herren@spvgg-kaufbeuren.de</a><a href="../verein/kontakt.html">Kontakt</a></div>
-</div></footer><script src="../assets/js/subpages.js"></script><script src="../assets/js/herren-v3.js"></script></body></html>
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Spielplan & Tabelle 1. Herren | SpVgg Kaufbeuren</title>
+  <link rel="stylesheet" href="../assets/css/svk-global-header.css">
+  <link rel="stylesheet" href="../css/herren-spielplan-live.css">
+</head>
+<body>
+  <header class="sub-header"></header>
+
+  <main>
+    <section class="hs-hero">
+      <div class="hs-wrap">
+        <span>1. Herren · Bezirksliga Schwaben Süd</span>
+        <h1>Spielplan & Tabelle</h1>
+        <p>Die nächsten Spiele und die aktuelle Tabelle unserer 1. Herren – automatisch aktualisiert.</p>
+      </div>
+    </section>
+
+    <section class="hs-main">
+      <div class="hs-wrap">
+        <div class="hs-heading">
+          <div>
+            <span class="hs-kicker">Nächste Termine</span>
+            <h2>Die nächsten 10 Spiele</h2>
+          </div>
+          <div id="hs-updated" class="hs-updated"></div>
+        </div>
+
+        <div id="hs-fixtures" class="hs-fixtures">
+          <div class="hs-loading">Spielplan wird geladen …</div>
+        </div>
+
+        <div class="hs-heading hs-table-heading">
+          <div>
+            <span class="hs-kicker">BZL Schwaben Süd</span>
+            <h2>Aktuelle Tabelle</h2>
+          </div>
+        </div>
+
+        <div class="hs-table-shell">
+          <table class="hs-table">
+            <thead>
+              <tr>
+                <th>Pl.</th><th>Verein</th><th>Sp.</th><th>G</th><th>U</th><th>V</th><th>Torv.</th><th>Diff.</th><th>Pkt.</th>
+              </tr>
+            </thead>
+            <tbody id="hs-table-body">
+              <tr><td colspan="9">Tabelle wird geladen …</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="../assets/js/svk-global-header.js"></script>
+  <script src="../js/herren-spielplan-live.js"></script>
+</body>
+</html>
