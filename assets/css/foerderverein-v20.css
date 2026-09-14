@@ -1,20 +1,93 @@
 
-.fv-board-section{margin-top:48px}
-.fv-board-intro{max-width:760px;color:#5c6b7a;margin:0 0 26px}
-.fv-board-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:24px 0 30px}
-.fv-person{background:#fff;border:1px solid #dfe8f3;border-radius:16px;padding:22px;box-shadow:0 10px 28px rgba(2,31,70,.06)}
-.fv-person span{display:block;color:#0753a5;font-size:.78rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px}
-.fv-person h3{margin:0;color:#071a33;font-size:1.08rem}
-.fv-account-card{display:grid;grid-template-columns:1fr 1fr;gap:18px;background:linear-gradient(135deg,#052f67,#0872c9);color:#fff;border-radius:20px;padding:28px;margin-top:10px}
-.fv-account-card .section-label{color:#b9dbff}
-.fv-account-card h3{color:#fff;margin:6px 0 10px}
-.fv-account-card p{margin:0;line-height:1.65}
-.fv-more-link{display:inline-flex;margin-top:20px;font-weight:800;color:#0753a5;text-decoration:none}
-.fv-more-link:hover{text-decoration:underline}
-@media(max-width:900px){.fv-board-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.fv-account-card{grid-template-columns:1fr}}
-@media(max-width:580px){.fv-board-grid{grid-template-columns:1fr}.fv-account-card{padding:22px}}
+.fv-board-section{margin-top:54px}
+.fv-board-heading{max-width:820px;margin-bottom:26px}
+.fv-board-heading h2{margin:6px 0 12px;font-size:clamp(2rem,4vw,3.1rem);line-height:1.03;color:#0b1d36}
+.fv-board-heading p{margin:0;color:#5b6d83;line-height:1.65;font-size:1.02rem}
 
-.fv-board-photo{margin:22px 0 26px;background:#fff;border:1px solid #dfe8f3;border-radius:18px;overflow:hidden;box-shadow:0 12px 30px rgba(2,31,70,.08);max-width:720px}
-.fv-board-photo img{display:block;width:100%;height:auto;object-fit:cover}
-.fv-board-photo figcaption{padding:12px 16px;color:#5b6878;font-size:.9rem;background:#f8fbff;border-top:1px solid #e5edf6}
-.fv-board-photo--detail{max-width:760px}
+.fv-board-feature{
+  display:grid;
+  grid-template-columns:minmax(0,1.08fr) minmax(320px,.92fr);
+  gap:28px;
+  align-items:stretch;
+  margin:28px 0 26px;
+}
+.fv-board-photo{
+  margin:0;
+  background:#fff;
+  border:1px solid #dfe8f3;
+  border-radius:22px;
+  overflow:hidden;
+  box-shadow:0 18px 42px rgba(2,31,70,.10);
+}
+.fv-board-photo img{
+  display:block;
+  width:100%;
+  height:100%;
+  min-height:360px;
+  object-fit:cover;
+  object-position:center;
+}
+.fv-board-photo figcaption{
+  padding:13px 16px;
+  color:#66778c;
+  font-size:.88rem;
+  background:#f8fbff;
+  border-top:1px solid #e5edf6;
+}
+.fv-board-people{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+}
+.fv-board-people article{
+  min-height:108px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  background:#fff;
+  border:1px solid #dfe8f3;
+  border-radius:18px;
+  padding:18px 20px;
+  box-shadow:0 10px 28px rgba(2,31,70,.06);
+}
+.fv-board-people span{
+  color:#0753a5;
+  font-size:.74rem;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.07em;
+  margin-bottom:7px;
+}
+.fv-board-people strong{
+  color:#0b1d36;
+  font-size:1.03rem;
+}
+
+.fv-account-card{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:28px;
+  background:linear-gradient(135deg,#082d62 0%,#0a5fb6 100%);
+  color:#fff;
+  border-radius:22px;
+  padding:30px 34px;
+  box-shadow:0 18px 40px rgba(2,31,70,.16);
+}
+.fv-account-card .section-label{color:#bfe0ff}
+.fv-account-card h3{color:#fff;margin:6px 0 10px;font-size:1.12rem}
+.fv-account-card p{margin:0;line-height:1.7;color:#fff}
+.fv-more-link{display:inline-flex;margin-top:18px;font-weight:800;color:#0753a5;text-decoration:none}
+.fv-more-link:hover{text-decoration:underline}
+
+.fv-detail-photo-wrap{max-width:1040px;margin:34px auto 30px;padding:0 22px}
+.fv-board-photo--detail{max-width:760px;margin:0 auto}
+.fv-board-photo--detail img{min-height:0;height:auto}
+
+@media(max-width:980px){
+  .fv-board-feature{grid-template-columns:1fr}
+  .fv-board-photo img{min-height:0;height:auto}
+}
+@media(max-width:720px){
+  .fv-board-people{grid-template-columns:1fr}
+  .fv-account-card{grid-template-columns:1fr;padding:24px}
+}
