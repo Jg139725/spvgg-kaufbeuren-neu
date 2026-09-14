@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/home-live-games.css">
 </head>
 <body>
   <div class="topbar">
@@ -61,8 +62,75 @@
       <a class="scroll-hint" href="#spiele" aria-label="Weiter nach unten">↓</a>
     </section>
 
-    <section class="match-section" id="spiele"><div class="container"><div class="section-heading section-heading--light"><div><span class="kicker kicker--light">Spielbetrieb</span><h2>Spielplan und Ergebnisse</h2></div></div><p style="color:#fff;font-size:18px">Die aktuellen Termine der Herren findest du beim Verein.</p><a class="button button--white" href="https://www.spvgg-kaufbeuren.de/herren/spielplan-herren-aus-fupa.html">Aktuellen Spielplan ansehen →</a></div></section>
-    <section class="section" id="aktuelles"><div class="container"><div class="section-heading"><div><span class="kicker">Aktuelles</span><h2>Neuigkeiten aus dem Verein</h2></div><a class="text-link" href="news.html">Alle Meldungen ansehen →</a></div><div class="news-grid" id="svk-latest-news" aria-live="polite"></div></div></section>
+    <section class="match-section home-live-match-section" id="spiele">
+  <div class="container">
+    <div class="section-heading section-heading--light">
+      <div>
+        <span class="kicker kicker--light">Spielbetrieb</span>
+        <h2>Nächstes & letztes Spiel</h2>
+      </div>
+      <a class="home-live-link" href="frauen/spielplan.html">Alle Spiele ansehen →</a>
+    </div>
+
+    <div id="home-live-games" class="home-live-games" aria-live="polite">
+      <div class="home-live-loading">Spieldaten werden geladen …</div>
+    </div>
+  </div>
+</section>
+
+    <section class="section" id="aktuelles">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="kicker">Aktuelles</span>
+            <h2>Neuigkeiten aus dem Verein</h2>
+          </div>
+          <a class="text-link" href="news.html">Alle Meldungen ansehen →</a>
+        </div>
+
+        <div class="news-grid">
+          <article class="news-card news-card--large">
+            <a class="news-card__image" href="news.html">
+              <img src="assets/images/news-vorbereitung.jpg" alt="Spielszene der SpVgg Kaufbeuren">
+              <span class="category">Herren</span>
+            </a>
+            <div class="news-card__body">
+              <time datetime="2026-07-05">05.07.2026</time>
+              <h3>Herren weiter in der Vorbereitung</h3>
+              <p>Remis in Raisting und erster Sieg mit 3:2 in Betzigau. Die Vorbereitung auf die neue Saison läuft weiter.</p>
+              <a href="news.html">Weiterlesen →</a>
+            </div>
+          </article>
+
+          <article class="news-card">
+            <a class="news-card__image" href="news.html">
+              <img src="assets/images/news-ticketverkauf.jpg" alt="Hinweis zum Kartenvorverkauf">
+              <span class="category">Tickets</span>
+            </a>
+            <div class="news-card__body">
+              <time datetime="2026-07-03">03.07.2026</time>
+              <h3>Kartenvorverkauf im Parkstadion</h3>
+              <p>Alle Informationen zu Terminen, Uhrzeiten und Verkaufsstellen.</p>
+              <a href="news.html">Weiterlesen →</a>
+            </div>
+          </article>
+
+          <article class="news-card">
+            <a class="news-card__image" href="news.html">
+              <img src="assets/images/news-fca-saarbruecken.jpg" alt="Ankündigung FC Augsburg gegen 1. FC Saarbrücken">
+              <span class="category">Topspiel</span>
+            </a>
+            <div class="news-card__body">
+              <time datetime="2026-07-01">01.07.2026</time>
+              <h3>Bundesligist im Parkstadion</h3>
+              <p>Der FC Augsburg trifft in Kaufbeuren auf den 1. FC Saarbrücken.</p>
+              <a href="news.html">Weiterlesen →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section class="section section--soft" id="mannschaften">
       <div class="container">
         <div class="section-heading">
@@ -244,14 +312,14 @@
         <p>Tradition, Nachwuchs und Fußballleidenschaft in Kaufbeuren.</p>
       </div>
       <div><h3>Verein</h3><a href="#aktuelles">News</a><a href="#mannschaften">Mannschaften</a><a href="verein/index.html">Vereinsleben</a></div>
-      <div><h3>Service</h3><a href="verein/kontakt.html">Kontakt</a><a href="verein/anfahrt.html">Anfahrt</a><a href="verein/downloads.html">Downloads</a></div>
-      <div><h3>Rechtliches</h3><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></div>
+      <div><h3>Service</h3><a href="news.html">Kontakt</a><a href="news.html">Anfahrt</a><a href="news.html">Downloads</a></div>
+      <div><h3>Rechtliches</h3><a href="news.html">Impressum</a><a href="news.html">Datenschutz</a></div>
     </div>
-    <div class="container footer__bottom"><span>© 2026 SpVgg Kaufbeuren · </span><a href="#start">Nach oben ↑</a></div>
+    <div class="container footer__bottom"><span>© 2026 SpVgg Kaufbeuren · Designvorschau</span><a href="#start">Nach oben ↑</a></div>
   </footer>
 
-  <script src="assets/js/svk-news-feed.js"></script>
   <script src="js/home.js"></script>
   <script src="js/sponsor-final.js"></script>
+  <script src="js/home-live-games.js"></script>
 </body>
 </html>

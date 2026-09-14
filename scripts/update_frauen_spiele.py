@@ -1,122 +1,80 @@
 #!/usr/bin/env python3
 from pathlib import Path
-from datetime import datetime, timezone
+from datetime import datetime
 from zoneinfo import ZoneInfo
 import json, re, urllib.request, html
 
 URL = "https://www.bfv.de/mannschaften/spvgg-kaufbeuren/016PA7VSOC000000VV0AG80NVV8OQVTB"
 OUT = Path("data/frauen-spiele.json")
 
-req = urllib.request.Request(
-    URL,
-    headers={
-        "User-Agent": "Mozilla/5.0 (compatible; SVK-Spielplan-Updater/1.0)",
-        "Accept-Language": "de-DE,de;q=0.9"
-    }
-)
+req = urllib.request.Request(URL, headers={
+    "User-Agent": "Mozilla/5.0 (SVK Website Updater)",
+    "Accept-Language": "de-DE,de;q=0.9"
+})
 with urllib.request.urlopen(req, timeout=30) as r:
     raw = r.read().decode("utf-8", "ignore")
 
-# Flatten markup to text while preserving enough spacing.
-text = re.sub(r"<script\b[^>]*>.*?</script>", " ", raw, flags=re.S|re.I)
-text = re.sub(r"<style\b[^>]*>.*?</style>", " ", text, flags=re.S|re.I)
-text = re.sub(r"<[^>]+>", " ", text)
-text = html.unescape(text)
-text = re.sub(r"\s+", " ", text).strip()
+txt = re.sub(r"<script\b[^>]*>.*?</script>", " ", raw, flags=re.S|re.I)
+txt = re.sub(r"<style\b[^>]*>.*?</style>", " ", txt, flags=re.S|re.I)
+txt = re.sub(r"<[^>]+>", " ", txt)
+txt = html.unescape(txt)
+txt = re.sub(r"\s+", " ", txt).strip()
 
-def normalize_date(d):
-    # BFV: 19.09.2026
+def iso(d):
     return datetime.strptime(d, "%d.%m.%Y").strftime("%Y-%m-%d")
 
-def parse_game(label):
-    # Examples:
-    # Letztes Spiel So.. 06.09.2026 /12:30 Uhr FC Augsburg 1 ... SpVgg Kaufbeuren Zum Spiel
-    # Nächstes Spiel Sa.. 19.09.2026 /18:30 Uhr TSV Ottobeuren - : - SpVgg Kaufbeuren Zum Spiel
-    start = text.find(label)
-    if start < 0:
+def parse(label):
+    p = txt.find(label)
+    if p < 0:
         return None
-    chunk = text[start:start+850]
-
+    chunk = txt[p:p+1000]
     dt = re.search(r"(\d{2}\.\d{2}\.\d{4})\s*/\s*(\d{1,2}:\d{2})\s*Uhr", chunk)
     if not dt:
         return None
-
-    after = chunk[dt.end():]
-    end = after.find("Zum Spiel")
-    if end >= 0:
-        after = after[:end]
-
-    # Remove private-use/icon garbage BFV injects.
-    after = re.sub(r"[\ue000-\uf8ff]", " ", after)
-    after = re.sub(r"\s+", " ", after).strip()
+    body = chunk[dt.end():]
+    q = body.find("Zum Spiel")
+    if q >= 0:
+        body = body[:q]
+    body = re.sub(r"[\ue000-\uf8ff]", " ", body)
+    body = re.sub(r"\s+", " ", body).strip()
 
     score = None
-
-    # Prefer explicit upcoming separator.
-    if " - : - " in after:
-        home, away = after.split(" - : - ", 1)
+    if " - : - " in body:
+        home, away = body.split(" - : - ", 1)
     else:
-        # For finished matches, look for score like 0 : 0 / 2 : 1.
-        sm = re.search(r"\b(\d{1,2})\s*:\s*(\d{1,2})\b", after)
-        if sm:
-            score = f"{sm.group(1)}:{sm.group(2)}"
-            home = after[:sm.start()].strip(" -")
-            away = after[sm.end():].strip(" -")
+        m = re.search(r"\b(\d{1,2})\s*:\s*(\d{1,2})\b", body)
+        if m:
+            score = f"{m.group(1)}:{m.group(2)}"
+            home, away = body[:m.start()], body[m.end():]
         else:
-            # BFV sometimes replaces score with icons in text extraction.
-            # We can still recover teams by locating our club name.
             club = "SpVgg Kaufbeuren"
-            pos = after.find(club)
-            if pos >= 0:
-                if pos < len(after)/2:
-                    home = club
-                    away = after[pos+len(club):].strip(" -")
-                else:
-                    home = after[:pos].strip(" -")
-                    away = club
-            else:
+            pos = body.find(club)
+            if pos < 0:
                 return None
+            if pos < len(body)/2:
+                home, away = club, body[pos+len(club):]
+            else:
+                home, away = body[:pos], club
 
-    home = re.sub(r"\s+", " ", home).strip()
-    away = re.sub(r"\s+", " ", away).strip()
-
-    # Trim unrelated text if parser caught the next section.
-    for marker in ["Unsere Neuigkeiten", "Lade Daten", "Frauen BOL", "Spielberichte"]:
-        home = home.split(marker)[0].strip()
-        away = away.split(marker)[0].strip()
+    def clean(v):
+        v = re.sub(r"\s+", " ", v).strip(" -")
+        for marker in ["Unsere Neuigkeiten","Lade Daten","Frauen BOL","Spielberichte"]:
+            v = v.split(marker)[0].strip()
+        return v
 
     return {
-        "date": normalize_date(dt.group(1)),
+        "date": iso(dt.group(1)),
         "time": dt.group(2),
-        "home": home,
-        "away": away,
+        "home": clean(home),
+        "away": clean(away),
         "score": score,
         "venue": ""
     }
 
-last_game = parse_game("Letztes Spiel")
-next_game = parse_game("Nächstes Spiel")
-
-# Pull venue for next game from first listed fixture if possible.
-if next_game:
-    d_display = datetime.strptime(next_game["date"], "%Y-%m-%d").strftime("%d.%m.%Y")
-    fixture_pos = text.find(d_display)
-    if fixture_pos >= 0:
-        frag = text[fixture_pos:fixture_pos+700]
-        # Venue usually follows "Zum Spiel"
-        z = frag.find("Zum Spiel")
-        if z >= 0:
-            venue = frag[z+len("Zum Spiel"):].strip()
-            for stop in ["Frauen BOL", "Sa..", "So..", "Mo..", "Di..", "Mi..", "Do..", "Fr.."]:
-                p = venue.find(stop)
-                if p > 0:
-                    venue = venue[:p].strip()
-            next_game["venue"] = venue
-
-existing = {}
+old = {}
 if OUT.exists():
     try:
-        existing = json.loads(OUT.read_text(encoding="utf-8"))
+        old = json.loads(OUT.read_text(encoding="utf-8"))
     except Exception:
         pass
 
@@ -124,11 +82,12 @@ payload = {
     "team": "SpVgg Kaufbeuren Frauen",
     "competition": "Frauen BOL",
     "updatedAt": datetime.now(ZoneInfo("Europe/Berlin")).isoformat(timespec="seconds"),
-    "lastGame": last_game or existing.get("lastGame"),
-    "nextGame": next_game or existing.get("nextGame"),
+    "nextGame": parse("Nächstes Spiel") or old.get("nextGame"),
+    "lastGame": parse("Letztes Spiel") or old.get("lastGame"),
     "source": "BFV",
     "sourceUrl": URL
 }
+
 OUT.parent.mkdir(parents=True, exist_ok=True)
 OUT.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 print(json.dumps(payload, ensure_ascii=False, indent=2))
