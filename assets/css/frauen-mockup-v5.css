@@ -46,3 +46,30 @@ a{text-decoration:none;color:inherit}.roster-wrap{width:min(1180px,calc(100% - 4
   filter:none !important;
   transform:none !important;
 }
+
+
+/* V11 – automatischer Bereich: nächstes + letztes Spiel */
+.frauen-live-section{padding:58px 0 72px;background:#f4f8fc}
+.frauen-live-head{margin-bottom:22px}
+.frauen-live-head h2{margin:7px 0 8px;font-size:clamp(32px,4vw,46px);letter-spacing:-.045em}
+.frauen-live-head p{max-width:760px;margin:0;color:#66758a;line-height:1.65}
+.live-games-grid{display:grid;grid-template-columns:1.25fr .85fr;gap:18px}
+.live-game-card{padding:26px;border:1px solid #dce5ef;border-radius:20px;background:#fff;box-shadow:0 14px 38px rgba(2,31,70,.07)}
+.live-game-card.next{border-top:4px solid #0753a5}
+.live-game-card.last{border-top:4px solid #aab9ca}
+.live-game-top{display:flex;justify-content:space-between;gap:18px;align-items:center;margin-bottom:22px}
+.live-game-label{color:#0753a5;font-size:12px;font-weight:950;letter-spacing:.13em;text-transform:uppercase}
+.live-game-top time{color:#66758a;font-size:13px;font-weight:800}
+.live-game-match{display:grid;grid-template-columns:1fr auto 1fr;gap:18px;align-items:center;text-align:center}
+.live-game-match>strong:not(.live-score):not(.live-vs){font-size:clamp(19px,2vw,25px)}
+.live-score,.live-vs{min-width:58px;padding:10px 12px;border-radius:12px;color:#fff;background:#0753a5;font-size:20px}
+.live-game-card.last .live-score,.live-game-card.last .live-vs{background:#526a84}
+.live-venue{margin:20px 0 0;padding-top:16px;border-top:1px solid #edf2f7;color:#66758a;text-align:center;font-size:13px}
+.live-updated{margin-top:12px;color:#748398;font-size:11px;text-align:right}
+.live-error{padding:22px;border:1px solid #dce5ef;border-radius:16px;background:#fff;color:#66758a}
+@media(max-width:760px){
+  .live-games-grid{grid-template-columns:1fr}
+  .live-game-top{align-items:flex-start;flex-direction:column;gap:5px}
+  .live-game-match{grid-template-columns:1fr}
+  .live-score,.live-vs{justify-self:center}
+}

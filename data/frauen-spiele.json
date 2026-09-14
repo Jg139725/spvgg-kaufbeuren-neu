@@ -1,0 +1,23 @@
+{
+  "team": "SpVgg Kaufbeuren Frauen",
+  "competition": "Frauen BOL",
+  "updatedAt": "2026-09-14T15:05:00+02:00",
+  "lastGame": {
+    "date": "2026-09-06",
+    "time": "12:30",
+    "home": "FC Augsburg 1",
+    "away": "SpVgg Kaufbeuren",
+    "score": "0:0",
+    "venue": ""
+  },
+  "nextGame": {
+    "date": "2026-09-19",
+    "time": "18:30",
+    "home": "TSV Ottobeuren",
+    "away": "SpVgg Kaufbeuren",
+    "score": null,
+    "venue": "Ottobeuren, Kunstrasen · Am Galgenberg · 87724 Ottobeuren"
+  },
+  "source": "BFV",
+  "sourceUrl": "https://www.bfv.de/mannschaften/spvgg-kaufbeuren/016PA7VSOC000000VV0AG80NVV8OQVTB"
+}
