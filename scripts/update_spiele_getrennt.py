@@ -85,8 +85,8 @@ def fetch_team(kind):
             pass
 
     payload = {
-        "team": old.get("team") or ("SpVgg Kaufbeuren Frauen" if kind=="frauen" else "SpVgg Kaufbeuren 1. Herren"),
-        "competition": old.get("competition") or "",
+        "team": ("SpVgg Kaufbeuren Frauen" if kind=="frauen" else "SpVgg Kaufbeuren 1. Herren"),
+        "competition": ("Frauen BOL" if kind=="frauen" else "BZL Schwaben Süd"),
         "updatedAt": datetime.now(ZoneInfo("Europe/Berlin")).isoformat(timespec="seconds"),
         "nextGame": parse("Nächstes Spiel") or old.get("nextGame"),
         "lastGame": parse("Letztes Spiel") or old.get("lastGame"),

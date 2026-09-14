@@ -1,9 +1,23 @@
 {
   "team": "SpVgg Kaufbeuren 1. Herren",
-  "competition": "Herren",
-  "updatedAt": "2026-09-14T15:22:00+02:00",
-  "nextGame": null,
-  "lastGame": null,
+  "competition": "BZL Schwaben Süd",
+  "updatedAt": "2026-09-14T16:10:00+02:00",
+  "nextGame": {
+    "date": "2026-09-19",
+    "time": "14:00",
+    "home": "TSV 1892 Haunstetten",
+    "away": "SpVgg Kaufbeuren",
+    "score": null,
+    "venue": "TSV-Platz · Landsberger Str. 3 · 86179 Augsburg"
+  },
+  "lastGame": {
+    "date": "2026-09-13",
+    "time": "16:00",
+    "home": "SpVgg Kaufbeuren",
+    "away": "TSV Legau",
+    "score": "2:3",
+    "venue": "Parkstadion Kaufbeuren"
+  },
   "source": "BFV",
-  "sourceUrl": ""
+  "sourceUrl": "https://www.bfv.de/mannschaften/-/016PILCMSS000000VV0AG80NVUT1FLRU"
 }
