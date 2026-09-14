@@ -13,3 +13,8 @@
 .fv-more-link:hover{text-decoration:underline}
 @media(max-width:900px){.fv-board-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.fv-account-card{grid-template-columns:1fr}}
 @media(max-width:580px){.fv-board-grid{grid-template-columns:1fr}.fv-account-card{padding:22px}}
+
+.fv-board-photo{margin:22px 0 26px;background:#fff;border:1px solid #dfe8f3;border-radius:18px;overflow:hidden;box-shadow:0 12px 30px rgba(2,31,70,.08);max-width:720px}
+.fv-board-photo img{display:block;width:100%;height:auto;object-fit:cover}
+.fv-board-photo figcaption{padding:12px 16px;color:#5b6878;font-size:.9rem;background:#f8fbff;border-top:1px solid #e5edf6}
+.fv-board-photo--detail{max-width:760px}
