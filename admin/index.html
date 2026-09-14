@@ -1,5 +1,26 @@
 <!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>SVK Redaktion</title><link rel="stylesheet" href="../assets/css/admin-v24.css"><style>#loginMsg{white-space:pre-wrap}.diag{margin-top:12px;padding:12px;background:#f4f7fb;border:1px solid #d6dfeb;border-radius:10px;white-space:pre-wrap;font:12px/1.45 ui-monospace,SFMono-Regular,Menlo,monospace;overflow-wrap:anywhere}.linkbtn{margin-top:8px;background:#eef4fb;color:#123;border:1px solid #c9d7e8}.error{color:#a31919}.ok{color:#176b38}.working{color:#51606f}</style></head><body>
-<main class="wrap"><section id="login" class="card"><h1>SVK Redaktion</h1><p>Berichte und Bilder verwalten.</p><form id="loginForm"><input id="email" type="email" placeholder="E-Mail" required><input id="password" type="password" placeholder="Passwort" required><button id="loginBtn">Anmelden</button><p id="loginMsg"></p></form><button id="testConnection" type="button" class="linkbtn">Verbindung testen</button><pre id="diag" class="diag" hidden></pre></section>
+<main class="wrap"><section id="login" class="card"><h1>SVK Redaktion</h1><p>Berichte und Bilder verwalten.</p>
+<form id="loginForm">
+<input id="email" type="email" placeholder="E-Mail" required>
+<input id="password" type="password" placeholder="Passwort" required>
+<button id="loginBtn">Anmelden</button>
+<p id="loginMsg"></p>
+</form>
+<button id="forgotPassword" type="button" class="linkbtn">Passwort vergessen</button>
+<button id="testConnection" type="button" class="linkbtn">Verbindung testen</button>
+<pre id="diag" class="diag" hidden></pre>
+</section>
+
+<section id="recovery" class="card hidden">
+<h1>Neues Passwort</h1>
+<p>Lege hier dein neues Passwort für die SVK Redaktion fest.</p>
+<form id="recoveryForm">
+<input id="newPassword" type="password" placeholder="Neues Passwort" minlength="8" required>
+<input id="newPassword2" type="password" placeholder="Passwort wiederholen" minlength="8" required>
+<button id="savePasswordBtn">Neues Passwort speichern</button>
+<p id="recoveryMsg"></p>
+</form>
+</section>
 <section id="app" class="hidden"><header><div><span>SPVGG KAUFBEUREN</span><h1>Redaktionssystem</h1></div><button id="logout">Abmelden</button></header><div class="toolbar"><button id="new">+ Neuer Bericht</button><button id="reload" class="secondary">Aktualisieren</button></div><div id="posts"></div></section></main>
 <dialog id="editor"><form id="postForm"><input type="hidden" id="postId"><h2>Bericht bearbeiten</h2><label>Bereich<select id="category"><option>Herren</option><option>Frauen</option><option>Jugend</option><option>Verein</option><option>Förderverein</option><option>Schiedsrichter</option></select></label><label>Datum<input id="date" type="date" required></label><label>Überschrift<input id="title" required></label><label>Teaser<textarea id="teaser" required></textarea></label><label>Bericht<textarea id="content" rows="10" required></textarea></label><label>Titelbild<input id="image" type="file" accept="image/jpeg,image/png,image/webp"></label><label>Status<select id="status"><option value="draft">Entwurf</option><option value="published">Veröffentlicht</option></select></label><div class="actions"><button type="button" id="cancel" class="secondary">Abbrechen</button><button>Speichern</button></div><p id="editorMsg"></p></form></dialog>
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.57.4/dist/umd/supabase.min.js"></script><script src="../assets/js/supabase-config.js"></script><script src="../assets/js/admin-news-v26.js"></script></body></html>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.57.4/dist/umd/supabase.min.js"></script><script src="../assets/js/supabase-config.js"></script><script src="../assets/js/admin-news-v27.js"></script></body></html>
