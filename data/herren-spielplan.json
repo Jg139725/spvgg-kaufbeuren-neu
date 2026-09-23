@@ -1,254 +1,197 @@
 {
-  "updatedAt": "2026-09-14T16:20:00+02:00",
+  "updatedAt": "2026-09-23T19:16:22+02:00",
   "competition": "BZL Schwaben Süd",
   "fixtures": [
-    {
-      "date": "2026-09-19",
-      "time": "14:00",
-      "home": "TSV 1892 Haunstetten",
-      "away": "SpVgg Kaufbeuren",
-      "venue": "TSV-Platz · Landsberger Str. 3 · 86179 Augsburg"
-    },
     {
       "date": "2026-09-26",
       "time": "16:00",
       "home": "SpVgg Kaufbeuren",
       "away": "FC Königsbrunn",
-      "venue": "Parkstadion Kaufbeuren"
+      "venue": "SpVgg Kaufbeuren - SV Egg a. d. Günz, 1-5 Unsere Neuigkeiten für dich Alle News Lade Daten... Lade Daten... Meisterschaften Alle Heim Auswärts"
     },
     {
       "date": "2026-10-03",
       "time": "15:30",
       "home": "FC Wiggensbach",
       "away": "SpVgg Kaufbeuren",
-      "venue": "Max Swoboda-Stadion · Wiggensbach"
+      "venue": "Max Swoboda -Stadion | Rohrachstr. | 87487 Wiggensbach"
     },
     {
       "date": "2026-10-09",
       "time": "19:00",
       "home": "SpVgg Kaufbeuren",
       "away": "FC Thalhofen",
-      "venue": "Parkstadion Kaufbeuren"
+      "venue": "Parkstadion Kaufbeuren | Berliner Platz 6 | 87600 Kaufbeuren"
     },
     {
       "date": "2026-10-17",
       "time": "15:00",
       "home": "TV Erkheim",
       "away": "SpVgg Kaufbeuren",
-      "venue": "Erkheim"
+      "venue": "Hauptplatz TV Erkheim | Memminger Str. 44 | 87746 Erkheim"
     },
     {
       "date": "2026-10-24",
       "time": "16:00",
       "home": "SpVgg Kaufbeuren",
       "away": "FC Oberstdorf",
-      "venue": "Parkstadion Kaufbeuren"
-    },
-    {
-      "date": "2026-10-30",
-      "time": "19:00",
-      "home": "SVO Germaringen",
-      "away": "SpVgg Kaufbeuren",
-      "venue": "Germaringen"
-    },
-    {
-      "date": "2026-11-07",
-      "time": "14:00",
-      "home": "SpVgg Kaufbeuren",
-      "away": "TSV Kammlach",
-      "venue": "Parkstadion Kaufbeuren"
-    },
-    {
-      "date": "2026-11-14",
-      "time": "14:00",
-      "home": "SSV Niedersonthofen",
-      "away": "SpVgg Kaufbeuren",
-      "venue": "Niedersonthofen"
-    },
-    {
-      "date": "2026-11-21",
-      "time": "14:00",
-      "home": "SpVgg Kaufbeuren",
-      "away": "SV Mering",
-      "venue": "Parkstadion Kaufbeuren"
+      "venue": "Parkstadion Kaufbeuren | Berliner Platz 6 | 87600 Kaufbeuren Mehr anzeigen Spielberichte 21.09.2026: SpVgg Kaufbeuren stoppt Talfahrt 14.09.2026: Nächste Pleite für SpVgg Kaufbeuren 09.09.2026: FC Bad Wörishofen siegt im Kellerduell 31.08.2026: Nächste Pleite"
     }
   ],
   "table": [
     {
       "pos": 1,
       "team": "FC Thalhofen",
-      "played": 7,
-      "won": 5,
+      "played": 9,
+      "won": 7,
       "drawn": 1,
       "lost": 1,
-      "goals": "23:10",
-      "diff": "+13",
-      "points": 16
+      "goals": "28:13",
+      "diff": "+15",
+      "points": 22
     },
     {
       "pos": 2,
-      "team": "TV Erkheim",
-      "played": 8,
-      "won": 5,
-      "drawn": 1,
-      "lost": 2,
-      "goals": "22:14",
-      "diff": "+8",
-      "points": 16
+      "team": "SV Mering",
+      "played": 10,
+      "won": 6,
+      "drawn": 3,
+      "lost": 1,
+      "goals": "23:16",
+      "diff": "+7",
+      "points": 21
     },
     {
       "pos": 3,
-      "team": "TSV Merching",
-      "played": 7,
-      "won": 5,
-      "drawn": 0,
-      "lost": 2,
-      "goals": "15:6",
-      "diff": "+9",
-      "points": 15
+      "team": "TV Erkheim",
+      "played": 10,
+      "won": 6,
+      "drawn": 1,
+      "lost": 3,
+      "goals": "28:18",
+      "diff": "+10",
+      "points": 19
     },
     {
       "pos": 4,
-      "team": "SV Mering",
-      "played": 8,
-      "won": 4,
-      "drawn": 3,
-      "lost": 1,
-      "goals": "17:14",
-      "diff": "+3",
-      "points": 15
+      "team": "TSV Legau",
+      "played": 9,
+      "won": 6,
+      "drawn": 1,
+      "lost": 2,
+      "goals": "26:14",
+      "diff": "+12",
+      "points": 19
     },
     {
       "pos": 5,
       "team": "SV Egg a. d. Günz",
-      "played": 7,
-      "won": 4,
-      "drawn": 1,
+      "played": 9,
+      "won": 5,
+      "drawn": 2,
       "lost": 2,
-      "goals": "19:13",
-      "diff": "+6",
-      "points": 13
+      "goals": "24:15",
+      "diff": "+9",
+      "points": 17
     },
     {
       "pos": 6,
-      "team": "TSV Legau",
-      "played": 7,
-      "won": 4,
+      "team": "VfL Kaufering",
+      "played": 10,
+      "won": 5,
       "drawn": 1,
-      "lost": 2,
-      "goals": "18:12",
-      "diff": "+6",
-      "points": 13
+      "lost": 4,
+      "goals": "26:19",
+      "diff": "+7",
+      "points": 16
     },
     {
       "pos": 7,
-      "team": "TSV Kammlach",
-      "played": 8,
-      "won": 3,
-      "drawn": 2,
+      "team": "TSV Merching",
+      "played": 9,
+      "won": 5,
+      "drawn": 1,
       "lost": 3,
-      "goals": "18:17",
-      "diff": "+1",
-      "points": 11
+      "goals": "16:9",
+      "diff": "+7",
+      "points": 16
     },
     {
       "pos": 8,
-      "team": "TSV 1892 Haunstetten",
+      "team": "FC Königsbrunn",
+      "played": 10,
+      "won": 3,
+      "drawn": 3,
+      "lost": 4,
+      "goals": "20:23",
+      "diff": "-3",
+      "points": 12
+    },
+    {
+      "pos": 9,
+      "team": "SpVgg Kaufbeuren",
+      "played": 10,
+      "won": 4,
+      "drawn": 0,
+      "lost": 6,
+      "goals": "15:19",
+      "diff": "-4",
+      "points": 12
+    },
+    {
+      "pos": 11,
+      "team": "FC Oberstdorf",
       "played": 9,
       "won": 3,
       "drawn": 2,
       "lost": 4,
-      "goals": "15:19",
-      "diff": "-4",
+      "goals": "17:19",
+      "diff": "-2",
       "points": 11
     },
     {
-      "pos": 9,
-      "team": "VfL Kaufering",
-      "played": 7,
-      "won": 3,
-      "drawn": 1,
-      "lost": 3,
-      "goals": "15:15",
-      "diff": "0",
-      "points": 10
-    },
-    {
-      "pos": 10,
-      "team": "FC Königsbrunn",
-      "played": 8,
-      "won": 2,
-      "drawn": 3,
-      "lost": 3,
-      "goals": "15:19",
-      "diff": "-4",
-      "points": 9
-    },
-    {
-      "pos": 11,
-      "team": "SpVgg Kaufbeuren",
-      "played": 8,
-      "won": 3,
-      "drawn": 0,
-      "lost": 5,
-      "goals": "10:14",
-      "diff": "-4",
-      "points": 9
-    },
-    {
       "pos": 12,
-      "team": "FC Oberstdorf",
-      "played": 7,
-      "won": 2,
+      "team": "TSV 1892 Haunstetten",
+      "played": 10,
+      "won": 3,
       "drawn": 2,
-      "lost": 3,
-      "goals": "12:14",
-      "diff": "-2",
-      "points": 8
+      "lost": 5,
+      "goals": "17:22",
+      "diff": "-5",
+      "points": 11
     },
     {
       "pos": 13,
       "team": "FC Wiggensbach",
-      "played": 7,
+      "played": 9,
       "won": 2,
       "drawn": 2,
-      "lost": 3,
-      "goals": "8:12",
-      "diff": "-4",
+      "lost": 5,
+      "goals": "10:18",
+      "diff": "-8",
       "points": 8
     },
     {
       "pos": 14,
-      "team": "SSV Niedersonthofen",
-      "played": 7,
-      "won": 1,
-      "drawn": 1,
+      "team": "FC Bad Wörishofen",
+      "played": 9,
+      "won": 2,
+      "drawn": 2,
       "lost": 5,
-      "goals": "9:20",
-      "diff": "-11",
-      "points": 4
+      "goals": "9:17",
+      "diff": "-8",
+      "points": 8
     },
     {
       "pos": 15,
-      "team": "FC Bad Wörishofen",
-      "played": 7,
-      "won": 1,
+      "team": "SSV Niedersonthofen",
+      "played": 10,
+      "won": 2,
       "drawn": 1,
-      "lost": 5,
-      "goals": "5:16",
-      "diff": "-11",
-      "points": 4
-    },
-    {
-      "pos": 16,
-      "team": "SVO Germaringen",
-      "played": 6,
-      "won": 1,
-      "drawn": 1,
-      "lost": 4,
-      "goals": "8:14",
-      "diff": "-6",
-      "points": 4
+      "lost": 7,
+      "goals": "14:30",
+      "diff": "-16",
+      "points": 7
     }
   ]
 }
