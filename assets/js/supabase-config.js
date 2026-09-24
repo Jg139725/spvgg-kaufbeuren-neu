@@ -1,1 +1,1 @@
-window.SVK_SUPABASE={url:"https://bgnyfwmfmocjxbczlklp.supabase.co",anonKey:"sb_publishable_oXemoLZBfK4GQW-RT4eyow_V1z1-SpR"};
+window.SVK_SUPABASE={url:"https://tjfnjdzqlrblvwfmswvp.supabase.co",anonKey:"sb_publishable_9hRarZ9dtcz6swzErkdaQQ_7o0FK_5R"};
