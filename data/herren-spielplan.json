@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-24T21:19:21+02:00",
+  "updatedAt": "2026-09-24T21:00:00+02:00",
   "competition": "BZL Schwaben Süd",
   "fixtures": [
     {
@@ -7,14 +7,14 @@
       "time": "16:00",
       "home": "SpVgg Kaufbeuren",
       "away": "FC Königsbrunn",
-      "venue": "SpVgg Kaufbeuren - SV Egg a. d. Günz, 1-5 Unsere Neuigkeiten für dich Alle News Lade Daten... Lade Daten... Meisterschaften Alle Heim Auswärts"
+      "venue": "Parkstadion Kaufbeuren | Berliner Platz 6 | 87600 Kaufbeuren"
     },
     {
       "date": "2026-10-03",
       "time": "15:30",
       "home": "FC Wiggensbach",
       "away": "SpVgg Kaufbeuren",
-      "venue": "Max Swoboda -Stadion | Rohrachstr. | 87487 Wiggensbach"
+      "venue": "Max Swoboda-Stadion | Rohrachstr. | 87487 Wiggensbach"
     },
     {
       "date": "2026-10-09",
@@ -35,163 +35,8 @@
       "time": "16:00",
       "home": "SpVgg Kaufbeuren",
       "away": "FC Oberstdorf",
-      "venue": "Parkstadion Kaufbeuren | Berliner Platz 6 | 87600 Kaufbeuren Mehr anzeigen Spielberichte 21.09.2026: SpVgg Kaufbeuren stoppt Talfahrt 14.09.2026: Nächste Pleite für SpVgg Kaufbeuren 09.09.2026: FC Bad Wörishofen siegt im Kellerduell 31.08.2026: Nächste Pleite"
+      "venue": "Parkstadion Kaufbeuren | Berliner Platz 6 | 87600 Kaufbeuren"
     }
   ],
-  "table": [
-    {
-      "pos": 1,
-      "team": "FC Thalhofen",
-      "played": 9,
-      "won": 7,
-      "drawn": 1,
-      "lost": 1,
-      "goals": "28:13",
-      "diff": "+15",
-      "points": 22
-    },
-    {
-      "pos": 2,
-      "team": "TSV Legau",
-      "played": 10,
-      "won": 7,
-      "drawn": 1,
-      "lost": 2,
-      "goals": "30:14",
-      "diff": "+16",
-      "points": 22
-    },
-    {
-      "pos": 3,
-      "team": "SV Mering",
-      "played": 10,
-      "won": 6,
-      "drawn": 3,
-      "lost": 1,
-      "goals": "23:16",
-      "diff": "+7",
-      "points": 21
-    },
-    {
-      "pos": 4,
-      "team": "SV Egg a. d. Günz",
-      "played": 10,
-      "won": 6,
-      "drawn": 2,
-      "lost": 2,
-      "goals": "25:15",
-      "diff": "+10",
-      "points": 20
-    },
-    {
-      "pos": 5,
-      "team": "TV Erkheim",
-      "played": 10,
-      "won": 6,
-      "drawn": 1,
-      "lost": 3,
-      "goals": "28:18",
-      "diff": "+10",
-      "points": 19
-    },
-    {
-      "pos": 6,
-      "team": "VfL Kaufering",
-      "played": 10,
-      "won": 5,
-      "drawn": 1,
-      "lost": 4,
-      "goals": "26:19",
-      "diff": "+7",
-      "points": 16
-    },
-    {
-      "pos": 7,
-      "team": "TSV Merching",
-      "played": 9,
-      "won": 5,
-      "drawn": 1,
-      "lost": 3,
-      "goals": "16:9",
-      "diff": "+7",
-      "points": 16
-    },
-    {
-      "pos": 8,
-      "team": "FC Königsbrunn",
-      "played": 10,
-      "won": 3,
-      "drawn": 3,
-      "lost": 4,
-      "goals": "20:23",
-      "diff": "-3",
-      "points": 12
-    },
-    {
-      "pos": 9,
-      "team": "SpVgg Kaufbeuren",
-      "played": 10,
-      "won": 4,
-      "drawn": 0,
-      "lost": 6,
-      "goals": "15:19",
-      "diff": "-4",
-      "points": 12
-    },
-    {
-      "pos": 11,
-      "team": "FC Oberstdorf",
-      "played": 9,
-      "won": 3,
-      "drawn": 2,
-      "lost": 4,
-      "goals": "17:19",
-      "diff": "-2",
-      "points": 11
-    },
-    {
-      "pos": 12,
-      "team": "TSV 1892 Haunstetten",
-      "played": 10,
-      "won": 3,
-      "drawn": 2,
-      "lost": 5,
-      "goals": "17:22",
-      "diff": "-5",
-      "points": 11
-    },
-    {
-      "pos": 13,
-      "team": "FC Wiggensbach",
-      "played": 10,
-      "won": 2,
-      "drawn": 2,
-      "lost": 6,
-      "goals": "10:19",
-      "diff": "-9",
-      "points": 8
-    },
-    {
-      "pos": 14,
-      "team": "FC Bad Wörishofen",
-      "played": 10,
-      "won": 2,
-      "drawn": 2,
-      "lost": 6,
-      "goals": "9:21",
-      "diff": "-12",
-      "points": 8
-    },
-    {
-      "pos": 15,
-      "team": "SSV Niedersonthofen",
-      "played": 10,
-      "won": 2,
-      "drawn": 1,
-      "lost": 7,
-      "goals": "14:30",
-      "diff": "-16",
-      "points": 7
-    }
-  ]
+  "table": []
 }
