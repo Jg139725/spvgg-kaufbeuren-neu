@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-24T17:16:55+02:00",
+  "updatedAt": "2026-09-24T21:19:21+02:00",
   "competition": "BZL Schwaben Süd",
   "fixtures": [
     {
@@ -74,6 +74,17 @@
     },
     {
       "pos": 4,
+      "team": "SV Egg a. d. Günz",
+      "played": 10,
+      "won": 6,
+      "drawn": 2,
+      "lost": 2,
+      "goals": "25:15",
+      "diff": "+10",
+      "points": 20
+    },
+    {
+      "pos": 5,
       "team": "TV Erkheim",
       "played": 10,
       "won": 6,
@@ -82,17 +93,6 @@
       "goals": "28:18",
       "diff": "+10",
       "points": 19
-    },
-    {
-      "pos": 5,
-      "team": "SV Egg a. d. Günz",
-      "played": 9,
-      "won": 5,
-      "drawn": 2,
-      "lost": 2,
-      "goals": "24:15",
-      "diff": "+9",
-      "points": 17
     },
     {
       "pos": 6,
@@ -163,12 +163,12 @@
     {
       "pos": 13,
       "team": "FC Wiggensbach",
-      "played": 9,
+      "played": 10,
       "won": 2,
       "drawn": 2,
-      "lost": 5,
-      "goals": "10:18",
-      "diff": "-8",
+      "lost": 6,
+      "goals": "10:19",
+      "diff": "-9",
       "points": 8
     },
     {
