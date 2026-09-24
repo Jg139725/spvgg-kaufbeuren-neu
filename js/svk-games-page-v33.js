@@ -1,0 +1,5 @@
+(async()=>{const S=window.SVKLive,fixtures=document.getElementById("svk-fixtures"),table=document.getElementById("svk-table-body"),updated=document.getElementById("svk-updated");if(!S)return;
+try{const d=await S.getGames();if(updated)updated.textContent="Stand: "+new Date(d.updatedAt).toLocaleString("de-DE");
+if(fixtures){fixtures.innerHTML=(d.fixtures||[]).map(g=>`<article class="svk-fixture"><div><b>${S.date(g.date)}</b><span>${S.esc(g.time)} Uhr</span></div><strong>${S.esc(g.home)}</strong><em>VS</em><strong>${S.esc(g.away)}</strong><small>${S.esc(g.venue||"")}</small></article>`).join("")||"<p>Keine kommenden Spiele.</p>"}
+if(table){table.innerHTML=(d.table||[]).map(r=>`<tr class="${r.team==="SpVgg Kaufbeuren"?"svk-own":""}"><td>${r.pos}.</td><td>${S.esc(r.team)}</td><td>${r.played}</td><td>${r.won}</td><td>${r.drawn}</td><td>${r.lost}</td><td>${S.esc(r.goals)}</td><td>${S.esc(r.diff)}</td><td><b>${r.points}</b></td></tr>`).join("")}
+}catch(e){if(fixtures)fixtures.innerHTML="<p>Daten konnten gerade nicht geladen werden.</p>";console.error(e)}})();
