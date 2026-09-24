@@ -1,0 +1,28 @@
+/* SVK V32 – Startseite: Live-Spiele + News */
+#home-live-games{display:grid;gap:18px}
+.svk-game{border:1px solid rgba(255,255,255,.22);border-radius:22px;padding:24px;background:rgba(255,255,255,.09);box-shadow:0 16px 40px rgba(0,0,0,.08);color:#fff}
+.svk-game-top{display:flex;justify-content:space-between;gap:20px;align-items:center;margin-bottom:24px;font-weight:800}
+.svk-game-top>span{font-size:.78rem;text-transform:uppercase;letter-spacing:.12em;background:#fff;color:#0757ad;padding:8px 12px;border-radius:999px}
+.svk-game-top time{opacity:.9}
+.svk-game-row{display:grid;grid-template-columns:1fr auto 1fr;gap:28px;align-items:center}
+.svk-game-team{display:flex;align-items:center;gap:14px;font-size:1.2rem}
+.svk-game-team.right{justify-content:flex-end;text-align:right}
+.svk-game-badge{display:grid;place-items:center;width:54px;height:54px;border-radius:50%;background:#fff;color:#0757ad;font-size:.86rem;flex:0 0 auto}
+.svk-game-vs{font-size:1.45rem;font-weight:900}
+.svk-game small{display:block;text-align:center;margin-top:22px;opacity:.78}
+.svk-game-foot{display:flex;justify-content:space-between;gap:16px;align-items:center;color:#fff}
+.svk-game-foot a{color:#fff;font-weight:800;text-decoration:none}.svk-game-foot span{font-size:.78rem;opacity:.72}
+
+/* Kein hochgeladenes Newsbild: neutrales SVK-Feld statt vergrößertem Logo */
+.news-card__image.svk-news-placeholder{display:flex!important;align-items:center;justify-content:center;min-height:230px;background:linear-gradient(135deg,#071f49,#0870cf);overflow:hidden}
+.news-card__image.svk-news-placeholder img{width:92px!important;height:92px!important;object-fit:contain!important;filter:brightness(0) invert(1);opacity:.94}
+.news-card__image.svk-news-placeholder .category{position:absolute;top:18px;left:18px}
+.news-card__image img{object-fit:cover}
+
+@media(max-width:700px){
+ .svk-game{padding:18px}.svk-game-top{align-items:flex-start;flex-direction:column;margin-bottom:18px}
+ .svk-game-row{grid-template-columns:1fr;gap:12px;text-align:center}
+ .svk-game-team,.svk-game-team.right{justify-content:center;text-align:center;flex-direction:column}
+ .svk-game-vs{font-size:1.1rem}.svk-game-foot{align-items:flex-start;flex-direction:column}
+ .news-card__image.svk-news-placeholder{min-height:190px}
+}
