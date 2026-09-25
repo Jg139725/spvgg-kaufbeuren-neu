@@ -1,77 +1,70 @@
 (() => {
-  "use strict";
-  const SUPABASE_URL="https://tjfnjdzqlrblvwfmswvp.supabase.co";
-  const SUPABASE_KEY="sb_publishable_9hRarZ9dtcz6swzErkdaQQ_7o0FK_5R";
-  const esc=(s="")=>String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
-  const fmt=iso=>{if(!iso)return"";const [y,m,d]=iso.slice(0,10).split("-");return `${d}.${m}.${y}`};
-  const initials=n=>n==="SpVgg Kaufbeuren"?"SVK":n.replace(/\d+/g,"").trim().split(/\s+/).slice(0,3).map(w=>w[0]).join("").toUpperCase();
+"use strict";
+if (window.__SVK_V34_RUNNING__) return;
+window.__SVK_V34_RUNNING__=true;
 
-  async function news(){
-    const grid=document.querySelector("#aktuelles .news-grid");
-    if(!grid)return;
-    const u=`${SUPABASE_URL}/rest/v1/news?select=id,category,date,title,teaser,image_url,published_at,status&status=eq.published&order=published_at.desc.nullslast,date.desc&limit=3`;
-    const r=await fetch(u,{headers:{apikey:SUPABASE_KEY,Authorization:`Bearer ${SUPABASE_KEY}`},cache:"no-store"});
-    if(!r.ok)throw Error("News "+r.status);
-    const rows=await r.json(); if(!rows.length)return;
-    grid.innerHTML=rows.map((n,i)=>{
-      const href=`news.html?id=${encodeURIComponent(n.id)}`;
-      const media=n.image_url
-        ? `<a class="news-card__image" href="${href}"><img src="${esc(n.image_url)}" alt="${esc(n.title)}" loading="lazy"><span class="category">${esc(n.category||"SVK")}</span></a>`
-        : `<a class="news-card__image svk-news-placeholder" href="${href}" aria-label="${esc(n.title)}"><img src="assets/images/logo-top.png" alt="" loading="lazy"><span class="category">${esc(n.category||"SVK")}</span></a>`;
-      return `<article class="news-card${i===0?" news-card--large":""}">${media}<div class="news-card__body">
-        <time datetime="${esc(n.date||"")}">${esc(fmt(n.date))}</time><h3>${esc(n.title)}</h3>
-        ${n.teaser?`<p>${esc(n.teaser)}</p>`:""}<a href="${href}">Weiterlesen →</a></div></article>`;
-    }).join("");
-  }
-
-  function gameCard(label,g,kind){
-    if(!g)return "";
-    const d=new Date(`${g.date}T12:00:00`);
-    const dt=d.toLocaleDateString("de-DE",{weekday:"short",day:"2-digit",month:"2-digit",year:"numeric"});
-    return `<article class="svk-game ${kind}">
-      <div class="svk-game-top"><span>${label}</span><time>${esc(dt)} · ${esc(g.time)} Uhr</time></div>
-      <div class="svk-game-row">
-        <div class="svk-game-team"><b class="svk-game-badge">${esc(initials(g.home))}</b><strong>${esc(g.home)}</strong></div>
-        <div class="svk-game-vs">${g.score?esc(g.score):"VS"}</div>
-        <div class="svk-game-team right"><b class="svk-game-badge">${esc(initials(g.away))}</b><strong>${esc(g.away)}</strong></div>
-      </div>
-      <small>${esc(g.venue || (g.home==="SpVgg Kaufbeuren"?"Parkstadion Kaufbeuren":"Auswärtsspiel"))}</small>
-    </article>`;
-  }
-
-  async function games(){
-    const old=document.getElementById("home-live-games");
-    const legacy=document.querySelector("#spiele");
-    const root=old || legacy;
-    if(!root)return;
-    const r=await fetch(`data/herren-spielplan.json?v=${Date.now()}`,{cache:"no-store"});
-    if(!r.ok)throw Error("Spiele "+r.status);
-    const d=await r.json();
-    const all=(d.fixtures||[]).slice().sort((a,b)=>(a.date+a.time).localeCompare(b.date+b.time));
-    const now=new Date();
-    const next=all.find(g=>new Date(`${g.date}T${g.time}:00`)>=now) || all[0];
-    if(!next)return;
-
-    if(old){
-      old.innerHTML=gameCard("Nächstes Spiel",next,"next")+`<div class="svk-game-foot"><a href="herren/spielplan.html">Alle Spiele der 1. Herren ansehen →</a><span>Stand: ${esc(new Date(d.updatedAt).toLocaleString("de-DE"))}</span></div>`;
-      return;
-    }
-
-    // Fallback for the older homepage markup.
-    const dateEl=legacy.querySelector(".match-date");
-    if(dateEl)dateEl.textContent=`${fmt(next.date)} · ${next.time} Uhr`;
-    const teams=legacy.querySelectorAll(".match-team strong");
-    if(teams[0])teams[0].textContent=next.home;
-    if(teams[1])teams[1].textContent=next.away;
-    const center=legacy.querySelector(".match-center");
-    if(center){
-      const s=center.querySelector("span"), sm=center.querySelector("small");
-      if(s)s.textContent=d.competition||"BZL Schwaben Süd";
-      if(sm)sm.textContent=next.venue||"";
-    }
-  }
-
-  async function run(){await Promise.allSettled([news(),games()]);}
-  if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",run,{once:true}); else run();
-  setInterval(run,300000);
+const SB="https://tjfnjdzqlrblvwfmswvp.supabase.co";
+const KEY="sb_publishable_9hRarZ9dtcz6swzErkdaQQ_7o0FK_5R";
+const esc=(v="")=>String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const fmt=v=>{if(!v)return"";const s=String(v).slice(0,10),p=s.split("-");return p.length===3?`${p[2]}.${p[1]}.${p[0]}`:s};
+const parseDT=g=>{
+  const date=g.date||g.datum||""; let time=g.time||g.uhrzeit||"00:00";
+  time=String(time).replace(" Uhr","").trim()||"00:00";
+  const d=new Date(`${date}T${time.length===5?time+":00":time}`);
+  return isNaN(d)?new Date(`${date}T12:00:00`):d;
+};
+const normGame=g=>({
+ date:g.date||g.datum||"", time:g.time||g.uhrzeit||"",
+ home:g.home||g.homeTeam||g.heim||g.heimteam||"",
+ away:g.away||g.awayTeam||g.gast||g.gastteam||"",
+ score:g.score||g.ergebnis||"", venue:g.venue||g.spielort||g.location||""
+});
+async function gameData(){
+ const r=await fetch(`data/herren-spielplan.json?cb=${Date.now()}`,{cache:"no-store"});
+ if(!r.ok)throw Error("HTTP "+r.status);
+ const d=await r.json();
+ const raw=d.fixtures||d.games||d.matches||d.spiele||[];
+ return {raw:d,games:Array.isArray(raw)?raw.map(normGame):[]};
+}
+async function newsData(limit=3){
+ const q=`/rest/v1/news?select=id,category,date,title,teaser,content,image_url,published_at,status&status=eq.published&order=published_at.desc.nullslast,date.desc&limit=${limit}`;
+ const r=await fetch(SB+q,{headers:{apikey:KEY,Authorization:`Bearer ${KEY}`},cache:"no-store"});
+ if(!r.ok)throw Error("News HTTP "+r.status); return r.json();
+}
+function newsCard(n){
+ const href=`artikel.html?id=${encodeURIComponent(n.id)}`;
+ const img=n.image_url
+ ? `<a class="v34-news-media" href="${href}"><img src="${esc(n.image_url)}" alt="${esc(n.title)}"><span>${esc(n.category||"SVK")}</span></a>`
+ : `<a class="v34-news-media v34-empty" href="${href}"><img src="assets/images/logo-top.png" alt=""><span>${esc(n.category||"SVK")}</span></a>`;
+ return `<article class="v34-news-card">${img}<div class="v34-news-copy"><time>${fmt(n.date)}</time><h3>${esc(n.title)}</h3>${n.teaser?`<p>${esc(n.teaser)}</p>`:""}<a href="${href}">Weiterlesen →</a></div></article>`;
+}
+async function renderHomeNews(){
+ const grid=document.querySelector("#aktuelles .news-grid"); if(!grid)return;
+ try{const n=await newsData(3);if(n.length){grid.className="news-grid v34-news-grid";grid.innerHTML=n.map(newsCard).join("")}}
+ catch(e){console.error("SVK News:",e)}
+}
+async function renderHomeGame(){
+ const root=document.getElementById("home-live-games");
+ if(!root)return;
+ try{
+  const {raw,games}=await gameData();
+  if(!games.length)throw Error("Keine Spiele im JSON gefunden");
+  const now=new Date();
+  const sorted=games.slice().sort((a,b)=>parseDT(a)-parseDT(b));
+  const future=sorted.filter(g=>parseDT(g)>=now);
+  const past=sorted.filter(g=>parseDT(g)<now);
+  const next=future[0]||sorted[sorted.length-1];
+  const last=past[past.length-1]||null;
+  const one=(label,g,kind)=>!g?"":`<article class="v34-match ${kind}">
+   <div class="v34-match-top"><span>${label}</span><time>${fmt(g.date)} · ${esc(g.time)} Uhr</time></div>
+   <div class="v34-teams"><strong>${esc(g.home)}</strong><b>${g.score?esc(g.score):"VS"}</b><strong>${esc(g.away)}</strong></div>
+   ${g.venue?`<small>${esc(g.venue)}</small>`:""}
+  </article>`;
+  root.innerHTML=`<div class="v34-match-grid">${one("Nächstes Spiel",next,"next")}${one("Letztes Spiel",last,"last")}</div>
+  <div class="v34-match-footer"><a href="herren/spielplan.html">Spielplan & Tabelle ansehen →</a><span>${raw.updatedAt?`Aktualisiert: ${esc(new Date(raw.updatedAt).toLocaleString("de-DE"))}`:"Automatisch vom BFV aktualisiert"}</span></div>`;
+ }catch(e){console.error("SVK Spiele:",e);root.innerHTML=`<div class="v34-error"><b>Spieldaten konnten nicht angezeigt werden.</b><small>${esc(e.message)}</small></div>`}
+}
+async function run(){renderHomeNews();renderHomeGame()}
+if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",run,{once:true});else run();
+setInterval(run,300000);
 })();
