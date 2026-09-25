@@ -16,4 +16,23 @@ function css(){if(document.getElementById("svk37-css"))return;const s=document.c
 function tuneHeading(x){const section=x.closest("section");if(!section)return;const h=section.querySelector("h2");if(h)h.textContent="1. Herren";const k=section.querySelector(".kicker, [class*=kicker]");if(k)k.textContent="Bezirksliga Schwaben Süd";const topLink=section.querySelector(".section-heading a, [class*=heading] a");if(topLink){topLink.textContent="Alle Spiele & Tabelle →";topLink.setAttribute("href","herren/spielplan.html");}}
 async function load(){const x=document.getElementById("home-live-games");if(!x)return;css();tuneHeading(x);try{const r=await fetch("data/herren-spielplan.json?cb="+Date.now(),{cache:"no-store"});if(!r.ok)throw new Error(r.status);const d=await r.json();x.innerHTML=`<div class="svk37-wrap"><div class="svk37-grid">${card("Letztes Spiel",d.lastGame,"last")}${card("Nächstes Spiel",d.nextGame||d.fixtures?.[0],"next")}</div><div class="svk37-footer"><a href="herren/spielplan.html">Alle Spiele & Tabelle ansehen →</a></div></div>`}catch(e){x.innerHTML='<div class="svk37-empty">Spieldaten konnten nicht geladen werden.</div>'}}
 document.readyState==="loading"?document.addEventListener("DOMContentLoaded",load):load();setInterval(load,300000);
+
+async function loadHomeNews(){
+ const grid=document.querySelector("#aktuelles .news-grid, .news-grid");
+ if(!grid)return;
+ try{
+   if(!window.SVKLive){
+     await new Promise((ok,fail)=>{const s=document.createElement("script");s.src="js/svk-live-core-v33.js?v=40";s.onload=ok;s.onerror=fail;document.head.appendChild(s)});
+   }
+   const S=window.SVKLive;if(!S)return;
+   const items=await S.getNews(3); if(!items.length)return;
+   grid.innerHTML=items.map((n,i)=>{
+     const h=`artikel.html?id=${encodeURIComponent(n.id)}`;
+     const img=n.image_url?`<img src="${S.esc(n.image_url)}" alt="${S.esc(n.title)}">`:`<img src="assets/images/logo-top.png" alt="">`;
+     return `<article class="news-card ${i===0?"news-card--large":""}"><a class="news-card__image" href="${h}">${img}<span class="category">${S.esc(n.category||"SVK")}</span></a><div class="news-card__body"><time>${S.date(n.date||n.published_at)}</time><h3>${S.esc(n.title)}</h3>${n.teaser?`<p>${S.esc(n.teaser)}</p>`:""}<a href="${h}">Weiterlesen →</a></div></article>`;
+   }).join("");
+ }catch(e){console.error("SVK News:",e)}
+}
+document.readyState==="loading"?document.addEventListener("DOMContentLoaded",loadHomeNews):loadHomeNews();
+
 })();

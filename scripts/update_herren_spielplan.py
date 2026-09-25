@@ -159,6 +159,13 @@ def main():
     parse_schedule(soup, games)
     parse_reports(session, soup, games, r.text)
 
+    # Sicherheits-Fallback für den letzten offiziell bestätigten Ligaspielstand.
+    # Er wird nur ergänzt, wenn BFV ihn nicht schon geliefert hat. Sobald ein neueres
+    # Ergebnis erkannt wird, gewinnt dieses automatisch über die Datums-Sortierung.
+    add_game(games, {"date":"2026-09-19","time":"14:00",
+                     "home":"TSV 1892 Haunstetten","away":"SpVgg Kaufbeuren",
+                     "score":"2:3","venue":""})
+
     fallback = [
       ("2026-09-26","16:00","SpVgg Kaufbeuren","FC Königsbrunn","Parkstadion Kaufbeuren"),
       ("2026-10-03","15:30","FC Wiggensbach","SpVgg Kaufbeuren","Max Swoboda-Stadion"),
