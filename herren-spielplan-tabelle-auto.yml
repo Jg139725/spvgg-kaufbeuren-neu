@@ -1,0 +1,63 @@
+name: 1. Herren Spielplan und Tabelle aktualisieren
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "23 * * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: herren-spielplan-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Repository laden
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Python einrichten
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Abhängigkeiten installieren
+        run: pip install requests beautifulsoup4
+
+      - name: BFV-Daten aktualisieren
+        run: python scripts/update_herren_spielplan.py
+
+      - name: Änderungen speichern
+        shell: bash
+        run: |
+          set -e
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          if git diff --quiet -- data/herren-spielplan.json; then
+            echo "Keine Änderungen an den Spieldaten."
+            exit 0
+          fi
+
+          cp data/herren-spielplan.json /tmp/herren-spielplan.json
+          git fetch origin main
+          git reset --hard origin/main
+          cp /tmp/herren-spielplan.json data/herren-spielplan.json
+          git add data/herren-spielplan.json
+
+          if git diff --cached --quiet; then
+            echo "Keine Änderungen nach Synchronisierung."
+            exit 0
+          fi
+
+          git commit -m "Spielplan 1. Herren automatisch aktualisiert"
+
+          if ! git push origin HEAD:main; then
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
