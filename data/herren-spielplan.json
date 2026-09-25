@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-25T21:26:10.457063+00:00",
+  "updatedAt": "2026-09-25T22:32:43.790321+00:00",
   "source": "https://www.bfv.de/mannschaften/-/016PILCMSS000000VV0AG80NVUT1FLRU",
   "fixtures": [
     {
@@ -8,15 +8,7 @@
       "home": "SpVgg Kaufbeuren",
       "away": "FC Königsbrunn",
       "score": "",
-      "venue": ""
-    },
-    {
-      "date": "2026-09-26",
-      "time": "16:00",
-      "home": "SpVgg Kaufbeuren",
-      "away": "FC Königsbrunn",
-      "score": "",
-      "venue": ""
+      "venue": "Parkstadion Kaufbeuren"
     },
     {
       "date": "2026-10-03",
@@ -24,7 +16,7 @@
       "home": "FC Wiggensbach",
       "away": "SpVgg Kaufbeuren",
       "score": "",
-      "venue": ""
+      "venue": "Max Swoboda-Stadion"
     },
     {
       "date": "2026-10-09",
@@ -32,7 +24,7 @@
       "home": "SpVgg Kaufbeuren",
       "away": "FC Thalhofen",
       "score": "",
-      "venue": ""
+      "venue": "Parkstadion Kaufbeuren"
     },
     {
       "date": "2026-10-17",
@@ -48,7 +40,7 @@
       "home": "SpVgg Kaufbeuren",
       "away": "FC Oberstdorf",
       "score": "",
-      "venue": ""
+      "venue": "Parkstadion Kaufbeuren"
     },
     {
       "date": "2026-10-30",
@@ -77,6 +69,94 @@
   ],
   "allGames": [
     {
+      "date": "2026-04-27",
+      "time": "",
+      "home": "TV Weitnau",
+      "away": "SpVgg Kaufbeuren",
+      "score": "3:2",
+      "venue": ""
+    },
+    {
+      "date": "2026-05-03",
+      "time": "",
+      "home": "SpVgg Kaufbeuren",
+      "away": "TSV 1862 Babenhausen",
+      "score": "0:0",
+      "venue": ""
+    },
+    {
+      "date": "2026-05-13",
+      "time": "",
+      "home": "TSV Legau",
+      "away": "SpVgg Kaufbeuren",
+      "score": "2:2",
+      "venue": ""
+    },
+    {
+      "date": "2026-05-18",
+      "time": "",
+      "home": "SpVgg Kaufbeuren",
+      "away": "SVO Germaringen",
+      "score": "1:1",
+      "venue": ""
+    },
+    {
+      "date": "2026-07-31",
+      "time": "",
+      "home": "SpVgg Kaufbeuren",
+      "away": "SVO Germaringen",
+      "score": "3:0",
+      "venue": ""
+    },
+    {
+      "date": "2026-08-10",
+      "time": "",
+      "home": "TSV Merching",
+      "away": "SpVgg Kaufbeuren",
+      "score": "3:0",
+      "venue": ""
+    },
+    {
+      "date": "2026-08-10",
+      "time": "",
+      "home": "SpVgg Kaufbeuren",
+      "away": "SSV Niedersonthofen",
+      "score": "3:2",
+      "venue": ""
+    },
+    {
+      "date": "2026-08-17",
+      "time": "",
+      "home": "SpVgg Kaufbeuren",
+      "away": "SV Egg a. d. Günz",
+      "score": "2:5",
+      "venue": ""
+    },
+    {
+      "date": "2026-08-25",
+      "time": "",
+      "home": "SV Mering",
+      "away": "SpVgg Kaufbeuren",
+      "score": "1:0",
+      "venue": ""
+    },
+    {
+      "date": "2026-08-31",
+      "time": "",
+      "home": "SpVgg Kaufbeuren",
+      "away": "VfL Kaufering",
+      "score": "0:1",
+      "venue": ""
+    },
+    {
+      "date": "2026-09-09",
+      "time": "",
+      "home": "FC Bad Wörishofen",
+      "away": "SpVgg Kaufbeuren",
+      "score": "1:0",
+      "venue": ""
+    },
+    {
       "date": "2026-09-13",
       "time": "",
       "home": "SpVgg Kaufbeuren",
@@ -85,11 +165,11 @@
       "venue": "Parkstadion Kaufbeuren"
     },
     {
-      "date": "2026-09-26",
-      "time": "16:00",
-      "home": "SpVgg Kaufbeuren",
-      "away": "FC Königsbrunn",
-      "score": "",
+      "date": "2026-09-19",
+      "time": "14:00",
+      "home": "TSV 1892 Haunstetten",
+      "away": "SpVgg Kaufbeuren",
+      "score": "2:3",
       "venue": ""
     },
     {
@@ -98,7 +178,7 @@
       "home": "SpVgg Kaufbeuren",
       "away": "FC Königsbrunn",
       "score": "",
-      "venue": ""
+      "venue": "Parkstadion Kaufbeuren"
     },
     {
       "date": "2026-10-03",
@@ -106,7 +186,7 @@
       "home": "FC Wiggensbach",
       "away": "SpVgg Kaufbeuren",
       "score": "",
-      "venue": ""
+      "venue": "Max Swoboda-Stadion"
     },
     {
       "date": "2026-10-09",
@@ -114,7 +194,7 @@
       "home": "SpVgg Kaufbeuren",
       "away": "FC Thalhofen",
       "score": "",
-      "venue": ""
+      "venue": "Parkstadion Kaufbeuren"
     },
     {
       "date": "2026-10-17",
@@ -130,7 +210,7 @@
       "home": "SpVgg Kaufbeuren",
       "away": "FC Oberstdorf",
       "score": "",
-      "venue": ""
+      "venue": "Parkstadion Kaufbeuren"
     },
     {
       "date": "2026-10-30",
@@ -163,15 +243,15 @@
     "home": "SpVgg Kaufbeuren",
     "away": "FC Königsbrunn",
     "score": "",
-    "venue": ""
+    "venue": "Parkstadion Kaufbeuren"
   },
   "lastGame": {
-    "date": "2026-09-13",
-    "time": "",
-    "home": "SpVgg Kaufbeuren",
-    "away": "TSV Legau",
+    "date": "2026-09-19",
+    "time": "14:00",
+    "home": "TSV 1892 Haunstetten",
+    "away": "SpVgg Kaufbeuren",
     "score": "2:3",
-    "venue": "Parkstadion Kaufbeuren"
+    "venue": ""
   },
   "table": [
     {
