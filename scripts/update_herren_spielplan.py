@@ -2,69 +2,130 @@
 import json,re
 from pathlib import Path
 from datetime import datetime,timezone
+from urllib.parse import urljoin
 import requests
 from bs4 import BeautifulSoup
-URL="https://www.bfv.de/mannschaften/-/016PILCMSS000000VV0AG80NVUT1FLRU"; TEAM="SpVgg Kaufbeuren"; OUT=Path("data/herren-spielplan.json")
+
+URL="https://www.bfv.de/mannschaften/-/016PILCMSS000000VV0AG80NVUT1FLRU"
+TEAM="SpVgg Kaufbeuren"
+OUT=Path("data/herren-spielplan.json")
 HEAD={"User-Agent":"Mozilla/5.0 (compatible; SVK-Website/1.0)"}
-D=re.compile(r"(\d{2}\.\d{2}\.\d{4})\s*/\s*(\d{1,2}:\d{2})\s*Uhr")
+
 def clean(x): return re.sub(r"\s+"," ",x or "").strip()
 def iso(x): return datetime.strptime(x,"%d.%m.%Y").strftime("%Y-%m-%d")
+def key(g): return (g.get("date",""),g.get("home",""),g.get("away",""))
+def valid_score(v): return bool(re.fullmatch(r"\d{1,2}:\d{1,2}",str(v or "")))
+
+def add_game(games,g):
+    if not g.get("date") or TEAM not in (g.get("home",""),g.get("away","")): return
+    for old in games:
+        if key(old)==key(g):
+            if valid_score(g.get("score")): old["score"]=g["score"]
+            if g.get("time"): old["time"]=g["time"]
+            if g.get("venue"): old["venue"]=g["venue"]
+            return
+    games.append(g)
+
+def parse_schedule(soup,games):
+    text=clean(soup.get_text(" ",strip=True))
+    # Termine/Teams werden aus der Mannschaftsseite gelesen. BFV verschleiert Ergebnisziffern teilweise per Webfont,
+    # deshalb werden fertige Ergebnisse zusätzlich aus den BFV-Spielberichten gelesen.
+    pat=re.compile(r"(?:Letztes Spiel\s+|Nächstes Spiel\s+)?(?:Mo|Di|Mi|Do|Fr|Sa|So)\.\.\s*(\d{2}\.\d{2}\.\d{4})\s*/\s*(\d{1,2}:\d{2})\s*Uhr\s+(.{1,180}?)\s+Zum Spiel")
+    for m in pat.finditer(text):
+        body=clean(m.group(3))
+        if TEAM not in body: continue
+        # Noch nicht gespielte Partien enthalten sichtbar "- : -"; Ergebnis-Glyphen werden entfernt.
+        body=re.sub(r"\([^)]*\)"," ",body)
+        # Teamnamen anhand typischer Trennung bestimmen; bei verschleiertem Ergebnis liegen Glyphen dazwischen.
+        known_split=re.split(r"\s+(?:-|[^\w\s]{1,8})\s*:\s*(?:-|[^\w\s]{1,8})\s+",body,maxsplit=1)
+        if len(known_split)==2:
+            home,away=map(clean,known_split)
+        else:
+            # Fallback: bekannte SVK-Position nutzen und störende Glyphen am Rand entfernen.
+            p=body.find(TEAM)
+            if p==0:
+                home=TEAM; away=clean(body[len(TEAM):]); away=re.sub(r"^[^A-Za-zÄÖÜäöü0-9]+","",away)
+            elif p>0:
+                home=clean(body[:p]); away=TEAM; home=re.sub(r"[^A-Za-zÄÖÜäöü0-9.)]+$","",home)
+            else: continue
+        if not home or not away or len(home)>90 or len(away)>90: continue
+        add_game(games,{"date":iso(m.group(1)),"time":m.group(2),"home":home,"away":away,"score":"","venue":""})
+
+def parse_reports(session,soup,games):
+    links=[]
+    for a in soup.find_all("a",href=True):
+        href=a.get("href","")
+        if "/spiele/spielbericht/" in href:
+            u=urljoin(URL,href)
+            if u not in links: links.append(u)
+    # Die jüngsten BFV-Spielberichte liefern Ergebnisziffern als normalen Text.
+    for u in links[:16]:
+        try:
+            r=session.get(u,headers=HEAD,timeout=20); r.raise_for_status()
+            t=clean(BeautifulSoup(r.text,"html.parser").get_text(" ",strip=True))
+            if TEAM not in t: continue
+            dm=re.search(r"Veröffentlichungsdatum\s+(\d{2}\.\d{2}\.\d{4})",t)
+            if not dm: dm=re.search(r"(\d{2}\.\d{2}\.\d{4})",t)
+            if not dm: continue
+            date=iso(dm.group(1))
+            # z.B. "BZL Schwaben Süd: TSV 1892 Haunstetten – SpVgg Kaufbeuren, 2:3 (1:2), Augsburg"
+            candidates=re.finditer(r"([^:]{2,100}?)\s+[–-]\s+([^,]{2,100}?),\s*(\d{1,2})\s*:\s*(\d{1,2})",t)
+            for m in candidates:
+                home=clean(m.group(1)); away=clean(m.group(2))
+                home=re.sub(r"^.*?:\s*","",home)
+                if TEAM not in (home,away): continue
+                add_game(games,{"date":date,"time":"","home":home,"away":away,"score":f"{m.group(3)}:{m.group(4)}","venue":""})
+                break
+        except Exception as e:
+            print("Spielbericht übersprungen:",u,type(e).__name__)
+
 def main():
- old={}
- if OUT.exists():
-  try: old=json.loads(OUT.read_text(encoding="utf-8"))
-  except: pass
- h=requests.get(URL,headers=HEAD,timeout=30); h.raise_for_status(); s=BeautifulSoup(h.text,"html.parser"); text=clean(s.get_text(" ",strip=True))
- games=[]
- # BFV server text: date/time ... matchup ... Zum Spiel
- pat=re.compile(r"(\d{2}\.\d{2}\.\d{4})\s*/\s*(\d{1,2}:\d{2})\s*Uhr\s+(.{1,220}?)\s+Zum Spiel")
- for m in pat.finditer(text):
-  body=clean(m.group(3))
-  if TEAM not in body: continue
-  body=re.sub(r"^(Letztes Spiel|Nächstes Spiel)\s+","",body)
-  score=""
-  sm=re.search(r"(?<!\d)(\d{1,2})\s*:\s*(\d{1,2})(?!\d)",body)
-  if sm: score=sm.group(1)+":"+sm.group(2); body=clean(body[:sm.start()]+" - "+body[sm.end():])
-  body=re.sub(r"\([^)]*\)"," ",body); parts=[clean(x) for x in re.split(r"\s+-\s+",clean(body)) if clean(x)]
-  if len(parts)<2: continue
-  home,away=parts[0],parts[-1]
-  if TEAM not in (home,away) or len(home)>80 or len(away)>80: continue
-  games.append({"date":iso(m.group(1)),"time":m.group(2),"home":home,"away":away,"score":score,"venue":""})
- # preserve prior clean records, but remove leaked BFV UI text from venue
- for g in old.get("allGames",old.get("fixtures",[])):
-  if not isinstance(g,dict) or TEAM not in (g.get("home",""),g.get("away","")): continue
-  v=clean(g.get("venue",""))
-  if any(x in v for x in ["Unsere Neuigkeiten","Lade Daten","Alle News","Meisterschaften"]): v=""
-  q={k:g.get(k,"") for k in ["date","time","home","away","score"]}; q["venue"]=v
-  if not any((x["date"],x["home"],x["away"])==(q["date"],q["home"],q["away"]) for x in games): games.append(q)
- # official most recent result fallback (BFV sometimes hides previous match in server HTML)
- known={"date":"2026-09-13","time":"","home":"SpVgg Kaufbeuren","away":"TSV Legau","score":"2:3","venue":"Parkstadion Kaufbeuren"}
- if not any(g["date"]==known["date"] and g["home"]==known["home"] and g["away"]==known["away"] for g in games): games.append(known)
- # known remaining league fixtures as fallback to guarantee 10 upcoming when BFV only renders first five
- fallback=[
- ("2026-09-26","16:00","SpVgg Kaufbeuren","FC Königsbrunn","Parkstadion Kaufbeuren"),
- ("2026-10-03","15:30","FC Wiggensbach","SpVgg Kaufbeuren","Max Swoboda-Stadion"),
- ("2026-10-09","19:00","SpVgg Kaufbeuren","FC Thalhofen","Parkstadion Kaufbeuren"),
- ("2026-10-17","15:00","TV Erkheim","SpVgg Kaufbeuren",""),
- ("2026-10-24","16:00","SpVgg Kaufbeuren","FC Oberstdorf","Parkstadion Kaufbeuren"),
- ("2026-10-30","19:00","SVO Germaringen","SpVgg Kaufbeuren",""),
- ("2026-11-07","14:00","SpVgg Kaufbeuren","TSV Kammlach","Parkstadion Kaufbeuren"),
- ("2026-11-14","14:00","SSV Niedersonthofen","SpVgg Kaufbeuren",""),
- ]
- for a,b,c,d,e in fallback:
-  if not any(g["date"]==a and g["home"]==c and g["away"]==d for g in games): games.append({"date":a,"time":b,"home":c,"away":d,"score":"","venue":e})
- games.sort(key=lambda g:(g["date"],g.get("time","")))
- today=datetime.now().astimezone().strftime("%Y-%m-%d"); future=[g for g in games if g["date"]>=today][:10]; past=[g for g in games if g["date"]<today]
- table=old.get("table",[])
- # parse table from HTML
- rows=[]
- for tr in s.find_all("tr"):
-  c=[clean(x.get_text(" ",strip=True)) for x in tr.find_all(["th","td"])]
-  if len(c)>=9 and re.match(r"^\d+\.?$",c[0]):
-   try: rows.append({"pos":int(c[0].rstrip(".")),"team":c[1],"played":int(c[2]),"won":int(c[3]),"drawn":int(c[4]),"lost":int(c[5]),"goals":c[6],"diff":c[7],"points":int(c[8])})
-   except: pass
- if rows: table=rows
- data={"updatedAt":datetime.now(timezone.utc).isoformat(),"source":URL,"fixtures":future,"allGames":games,"nextGame":future[0] if future else None,"lastGame":past[-1] if past else None,"table":table}
- OUT.parent.mkdir(parents=True,exist_ok=True); OUT.write_text(json.dumps(data,ensure_ascii=False,indent=2),encoding="utf-8")
- print(f"{len(future)} kommende Spiele, {len(past)} vergangene Spiele, {len(table)} Tabellenzeilen")
+    old={}
+    if OUT.exists():
+        try: old=json.loads(OUT.read_text(encoding="utf-8"))
+        except Exception: pass
+    session=requests.Session()
+    r=session.get(URL,headers=HEAD,timeout=30); r.raise_for_status()
+    soup=BeautifulSoup(r.text,"html.parser")
+    games=[]
+    parse_schedule(soup,games)
+    parse_reports(session,soup,games)
+
+    # Vorhandene saubere Datensätze bleiben als Historie erhalten, werden aber von frisch gelesenen BFV-Daten überschrieben.
+    for g in old.get("allGames",old.get("fixtures",[])):
+        if not isinstance(g,dict): continue
+        v=clean(g.get("venue",""))
+        if any(x in v for x in ["Unsere Neuigkeiten","Lade Daten","Alle News","Meisterschaften"]): v=""
+        add_game(games,{"date":g.get("date",""),"time":g.get("time",""),"home":g.get("home",""),"away":g.get("away",""),"score":g.get("score",""),"venue":v})
+
+    # Bekannte künftige Ligatermine dienen nur als Termin-Fallback; Ergebnisse sind NICHT fest hinterlegt.
+    fallback=[
+      ("2026-09-26","16:00","SpVgg Kaufbeuren","FC Königsbrunn","Parkstadion Kaufbeuren"),
+      ("2026-10-03","15:30","FC Wiggensbach","SpVgg Kaufbeuren","Max Swoboda-Stadion"),
+      ("2026-10-09","19:00","SpVgg Kaufbeuren","FC Thalhofen","Parkstadion Kaufbeuren"),
+      ("2026-10-17","15:00","TV Erkheim","SpVgg Kaufbeuren",""),
+      ("2026-10-24","16:00","SpVgg Kaufbeuren","FC Oberstdorf","Parkstadion Kaufbeuren"),
+      ("2026-10-30","19:00","SVO Germaringen","SpVgg Kaufbeuren",""),
+      ("2026-11-07","14:00","SpVgg Kaufbeuren","TSV Kammlach","Parkstadion Kaufbeuren"),
+      ("2026-11-14","14:00","SSV Niedersonthofen","SpVgg Kaufbeuren","")]
+    for a,b,c,d,e in fallback: add_game(games,{"date":a,"time":b,"home":c,"away":d,"score":"","venue":e})
+
+    games.sort(key=lambda g:(g.get("date",""),g.get("time","")))
+    today=datetime.now().astimezone().strftime("%Y-%m-%d")
+    # Nur Spiele mit Ergebnis gelten als "letztes Spiel". So verdrängt ein alter Fallback nie ein neueres echtes Resultat.
+    completed=[g for g in games if g.get("date","")<=today and valid_score(g.get("score"))]
+    future=[g for g in games if g.get("date","")>=today and not valid_score(g.get("score"))][:10]
+
+    table=old.get("table",[]); rows=[]
+    for tr in soup.find_all("tr"):
+        c=[clean(x.get_text(" ",strip=True)) for x in tr.find_all(["th","td"])]
+        if len(c)>=9 and re.match(r"^\d+\.?$",c[0]):
+            try: rows.append({"pos":int(c[0].rstrip(".")),"team":c[1],"played":int(c[2]),"won":int(c[3]),"drawn":int(c[4]),"lost":int(c[5]),"goals":c[6],"diff":c[7],"points":int(c[8])})
+            except Exception: pass
+    if rows: table=rows
+    data={"updatedAt":datetime.now(timezone.utc).isoformat(),"source":URL,"fixtures":future,"allGames":games,"nextGame":future[0] if future else None,"lastGame":completed[-1] if completed else None,"table":table}
+    OUT.parent.mkdir(parents=True,exist_ok=True)
+    OUT.write_text(json.dumps(data,ensure_ascii=False,indent=2),encoding="utf-8")
+    print(f"{len(future)} kommende Spiele, letztes Ergebnis: {data['lastGame']}, {len(table)} Tabellenzeilen")
+
 if __name__=="__main__": main()
