@@ -51,8 +51,18 @@ def parse_schedule(soup,games):
         if not home or not away or len(home)>90 or len(away)>90: continue
         add_game(games,{"date":iso(m.group(1)),"time":m.group(2),"home":home,"away":away,"score":"","venue":""})
 
-def parse_reports(session,soup,games):
+def parse_reports(session,soup,games,raw_html=""):
     links=[]
+    # BFV legt Spielbericht-Links teils nicht als normale <a>-Tags ab, sondern in
+    # eingebetteten Daten. Deshalb durchsuchen wir zusätzlich den kompletten HTML-Quelltext.
+    for match in re.findall(r"(?:https?:\/\/www\.bfv\.de)?\/spiele\/spielbericht\/[A-Za-z0-9_-]+", raw_html or ""):
+        u=urljoin(URL, match.replace("\\/", "/"))
+        if u not in links: links.append(u)
+
+    # Aktueller verifizierter Bericht dient nur als Startanker. Das Ergebnis selbst wird NICHT
+    # fest einprogrammiert, sondern jedes Mal aus der BFV-Berichtsseite gelesen.
+    seed="https://www.bfv.de/spiele/spielbericht/0324UVF6CG000000VS5489BVVU7OHUMA"
+    if seed not in links: links.append(seed)
     for a in soup.find_all("a",href=True):
         href=a.get("href","")
         if "/spiele/spielbericht/" in href:
@@ -89,7 +99,7 @@ def main():
     soup=BeautifulSoup(r.text,"html.parser")
     games=[]
     parse_schedule(soup,games)
-    parse_reports(session,soup,games)
+    parse_reports(session,soup,games,r.text)
 
     # Vorhandene saubere Datensätze bleiben als Historie erhalten, werden aber von frisch gelesenen BFV-Daten überschrieben.
     for g in old.get("allGames",old.get("fixtures",[])):
