@@ -10,3 +10,39 @@
 .history-switch a:hover{background:rgba(255,255,255,.10);transform:translateY(-1px)}
 .history-switch a.active{background:#fff;color:#0b4d92;border-color:#fff;box-shadow:0 8px 24px rgba(0,0,0,.18)}
 @media(max-width:560px){.history-switch{padding:12px}.history-switch-inner{gap:7px}.history-switch a{min-width:0;flex:1;padding:10px 8px;font-size:14px}}
+
+/* V61 – Historie Premium Layout */
+:root{--hist-navy:#071b33;--hist-blue:#0b5aa8;--hist-blue2:#1677c8;--hist-ink:#10243d;--hist-muted:#607184;--hist-bg:#f3f6fa;--hist-line:#d9e4ef}
+body{margin:0;background:var(--hist-bg);color:var(--hist-ink);font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+.history-switch{position:relative;z-index:4;background:rgba(5,22,42,.98);padding:14px 20px;border-bottom:1px solid rgba(255,255,255,.1);box-shadow:0 10px 30px rgba(3,16,31,.12)}
+.history-switch-inner{max-width:720px;margin:0 auto;padding:5px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:999px;display:grid;grid-template-columns:repeat(3,1fr);gap:5px}
+.history-switch a{min-width:0;padding:11px 22px;border:0;border-radius:999px;color:rgba(255,255,255,.78);font-size:.92rem;letter-spacing:.015em;box-shadow:none}
+.history-switch a:hover{background:rgba(255,255,255,.08);color:#fff;transform:none}
+.history-switch a.active{background:#fff;color:#084c8d;box-shadow:0 5px 18px rgba(0,0,0,.18)}
+.history-hero{position:relative;overflow:hidden;background:linear-gradient(118deg,#06182d 0%,#0a3d70 58%,#0b64b7 100%);padding:94px 20px 90px}
+.history-hero:before{content:"";position:absolute;width:520px;height:520px;border:1px solid rgba(255,255,255,.09);border-radius:50%;right:-120px;top:-270px;box-shadow:0 0 0 65px rgba(255,255,255,.025),0 0 0 130px rgba(255,255,255,.018)}
+.history-hero:after{content:"SVK";position:absolute;right:5%;bottom:-.18em;font-weight:950;font-size:clamp(7rem,18vw,16rem);line-height:1;color:rgba(255,255,255,.035);letter-spacing:-.08em;pointer-events:none}
+.history-hero .history-wrap{position:relative;z-index:2}
+.history-kicker{display:inline-flex;align-items:center;gap:9px;font-size:.73rem;letter-spacing:.18em;opacity:.82}.history-kicker:before{content:"";width:28px;height:2px;background:currentColor;border-radius:2px}
+.history-hero h1{max-width:880px;margin:.55rem 0 1rem;font-size:clamp(2.65rem,6vw,5.25rem);line-height:.98;letter-spacing:-.045em;text-wrap:balance}
+.history-hero p{max-width:760px;margin:0;font-size:clamp(1rem,1.7vw,1.16rem);line-height:1.75;color:rgba(255,255,255,.82)}
+.history-main{padding:0 0 90px;background:linear-gradient(#eef3f8 0,#f7f9fc 260px,#f7f9fc 100%)}
+.history-main>.history-wrap{position:relative;top:-32px}
+.history-intro{grid-template-columns:minmax(0,1.45fr) minmax(260px,.55fr);gap:18px;margin-bottom:42px}
+.history-lead,.history-stat{border:1px solid rgba(10,64,112,.07);border-radius:22px;padding:30px 32px;box-shadow:0 18px 50px rgba(7,34,64,.09)}
+.history-lead{background:rgba(255,255,255,.98)}
+.history-lead h2{font-size:clamp(1.55rem,3vw,2.15rem);letter-spacing:-.025em}.history-lead p{font-size:1.01rem}
+.history-stat{position:relative;overflow:hidden;background:linear-gradient(145deg,#0a3765,#0870c4);min-height:150px;box-shadow:0 18px 50px rgba(7,70,126,.2)}
+.history-stat:after{content:"";position:absolute;width:150px;height:150px;border:30px solid rgba(255,255,255,.06);border-radius:50%;right:-75px;top:-65px}
+.history-stat strong{position:relative;z-index:1;font-size:3.25rem;letter-spacing:-.055em}.history-stat span{position:relative;z-index:1;font-size:.95rem}
+.history-section{margin-top:46px}.history-section>h2{font-size:clamp(1.7rem,3vw,2.4rem);letter-spacing:-.035em}
+.timeline{margin-top:26px;padding-left:46px}.timeline:before{left:14px;top:10px;bottom:10px;width:2px;background:linear-gradient(#0b66b6,#bfd4e7)}
+.timeline-item{padding:24px 28px 25px;margin-bottom:18px;border:1px solid #e4ebf2;border-radius:20px;box-shadow:0 10px 30px rgba(8,31,61,.055);transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+.timeline-item:hover{transform:translateY(-2px);box-shadow:0 16px 38px rgba(8,31,61,.09);border-color:#cdddeb}
+.timeline-item:before{left:-39px;top:29px;width:12px;height:12px;background:#fff;border:4px solid #0b65b4;box-shadow:0 0 0 5px #e5f0fa}
+.timeline-year{padding:6px 11px;background:#e9f3fc;color:#07579f;font-size:.74rem}.timeline-item h3{font-size:1.3rem;letter-spacing:-.015em}.timeline-item p{max-width:880px}
+.history-facts{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:22px}.fact{position:relative;overflow:hidden;padding:23px 24px 23px 27px;border:1px solid #e1e9f1;border-left:0;border-radius:18px;box-shadow:0 8px 26px rgba(8,31,61,.045)}.fact:before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(#0b5aa8,#2e8dd5)}.fact strong{font-size:1.03rem}.fact span{font-size:.94rem}
+.history-callout{position:relative;overflow:hidden;margin-top:40px;padding:30px 32px;border-radius:22px;background:linear-gradient(125deg,#071d37,#0a416f);box-shadow:0 18px 42px rgba(6,31,57,.16)}.history-callout:after{content:"";position:absolute;width:190px;height:190px;border-radius:50%;border:38px solid rgba(255,255,255,.045);right:-70px;top:-75px}.history-callout h3,.history-callout p{position:relative;z-index:1}.history-callout h3{font-size:1.3rem}
+.history-note{margin-top:18px;padding:18px 22px;border:1px solid #d8e5f0;border-radius:16px;background:#eef5fb}.history-source{font-size:.84rem;color:#607184}
+.history-actions{margin-top:24px}.history-btn{padding:12px 19px;box-shadow:0 8px 20px rgba(11,77,146,.16);transition:transform .18s ease,box-shadow .18s ease}.history-btn:hover{transform:translateY(-1px);box-shadow:0 11px 25px rgba(11,77,146,.22)}.history-btn.alt{box-shadow:none;background:#fff}
+@media(max-width:760px){.history-switch{padding:10px 12px}.history-switch-inner{display:grid;grid-template-columns:repeat(3,1fr);gap:4px}.history-switch a{padding:10px 5px;font-size:.83rem}.history-hero{padding:70px 14px 68px}.history-hero:after{font-size:8rem;right:1%}.history-main>.history-wrap{top:-22px}.history-intro{grid-template-columns:1fr}.history-lead,.history-stat{padding:24px}.history-stat{min-height:125px}.history-stat strong{font-size:2.8rem}.timeline{padding-left:30px}.timeline:before{left:8px}.timeline-item{padding:20px}.timeline-item:before{left:-29px}.history-facts{grid-template-columns:1fr}.history-callout{padding:24px}.history-actions{display:grid}.history-btn{text-align:center}}
