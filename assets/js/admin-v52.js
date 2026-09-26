@@ -207,14 +207,16 @@
   }
   $('tabNews').onclick=()=>switchPanel('news');
   $('tabTraining').onclick=()=>switchPanel('training');
-  $('newTraining').onclick=()=>openTraining();
+  $('newTraining').onclick=()=>openTraining({period:visibleTrainingPeriod});
   $('trainingCancel').onclick=()=>$('trainingEditor').close();
 
   let activeTrainingPeriod='Sommerzeit';
+  let visibleTrainingPeriod='Sommerzeit';
   async function loadTrainingPlan(){
     const {data,error}=await sb.from('training_settings').select('active_period').eq('scope','Jugend').maybeSingle();
     if(error){$('planMsg').textContent=error.message;return}
     activeTrainingPeriod=data?.active_period||'Sommerzeit';
+    visibleTrainingPeriod=activeTrainingPeriod;
     $('planSummer').className=activeTrainingPeriod==='Sommerzeit'?'active':'secondary';
     $('planWinter').className=activeTrainingPeriod==='Winterzeit'?'active':'secondary';
     $('planMsg').textContent='Aktiv auf der Website: '+activeTrainingPeriod;
@@ -223,7 +225,7 @@
     $('planMsg').textContent='Schalte um …';
     const {error}=await sb.from('training_settings').upsert({scope:'Jugend',active_period:period,updated_by:user.id,updated_at:new Date().toISOString()},{onConflict:'scope'});
     if(error){$('planMsg').textContent=error.message;return}
-    activeTrainingPeriod=period; await loadTrainingPlan(); await loadTraining();
+    activeTrainingPeriod=period; visibleTrainingPeriod=period; await loadTrainingPlan(); visibleTrainingPeriod=period; await loadTraining();
   }
   $('planSummer').onclick=()=>setTrainingPlan('Sommerzeit');
   $('planWinter').onclick=()=>setTrainingPlan('Winterzeit');
@@ -235,11 +237,11 @@
     if(profile?.role==='jugend_redaktion') q=q.eq('scope','Jugend');
     const {data,error}=await q;
     if(error){$('trainingRows').innerHTML='<p>'+esc(error.message)+'</p>';return}
-    training=data||[];
+    training=(data||[]).filter(t => (t.period||'Sommerzeit')===visibleTrainingPeriod);
     training.sort((a,b)=>(a.scope||'').localeCompare(b.scope||'')||(a.team||'').localeCompare(b.team||'')||((dayOrder[a.weekday]||9)-(dayOrder[b.weekday]||9)));
     const groups=training.reduce((a,t)=>((a[t.team]??=[]).push(t),a),{});
-    $('trainingRows').innerHTML=Object.entries(groups).map(([team,items])=>`<section class="training-team-group"><div class="training-team-head"><div><strong>${esc(team)} · ${esc(items[0]?.label||'Mannschaft')}</strong><div class="meta">${items.length} Trainingseinheit${items.length===1?'':'en'}</div></div><button class="secondary" data-add-team="${esc(team)}">+ Einheit</button></div>${items.map(t=>`<div class="training-row"><div><strong>${esc(t.weekday)} · ${esc((t.start_time||'').slice(0,5))}${t.end_time?'–'+esc(t.end_time.slice(0,5)):''} Uhr</strong><div class="meta">${esc(t.location||'')}${t.note?' · '+esc(t.note):''}${t.period?' · '+esc(t.period):''} ${t.active?'':'· INAKTIV'}</div></div><div><button class="secondary" data-te="${t.id}">Bearbeiten</button> <button class="delete" data-td="${t.id}">Löschen</button></div></div>`).join('')}</section>`).join('')||'<p>Noch keine Trainingszeiten angelegt.</p>';
-    document.querySelectorAll('[data-add-team]').forEach(b=>b.onclick=()=>{const old=training.find(x=>x.team===b.dataset.addTeam);openTraining({scope:old?.scope||'Jugend',team:b.dataset.addTeam,label:old?.label||'',location:old?.location||''})});
+    $('trainingRows').innerHTML=`<div class="training-period-title"><strong>${esc(visibleTrainingPeriod)}</strong><span class="meta">${training.length ? training.length+' eingetragene Einheiten' : 'Noch keine Zeiten eingetragen'}</span></div>`+Object.entries(groups).map(([team,items])=>`<section class="training-team-group"><div class="training-team-head"><div><strong>${esc(team)} · ${esc(items[0]?.label||'Mannschaft')}</strong><div class="meta">${items.length} Trainingseinheit${items.length===1?'':'en'}</div></div><button class="secondary" data-add-team="${esc(team)}">+ Einheit</button></div>${items.map(t=>`<div class="training-row"><div><strong>${esc(t.weekday)} · ${esc((t.start_time||'').slice(0,5))}${t.end_time?'–'+esc(t.end_time.slice(0,5)):''} Uhr</strong><div class="meta">${esc(t.location||'')}${t.note?' · '+esc(t.note):''}${t.period?' · '+esc(t.period):''} ${t.active?'':'· INAKTIV'}</div></div><div><button class="secondary" data-te="${t.id}">Bearbeiten</button> <button class="delete" data-td="${t.id}">Löschen</button></div></div>`).join('')}</section>`).join('')+(training.length?'':'<p class="empty-training">Für '+esc(visibleTrainingPeriod)+' sind noch keine Trainingszeiten angelegt. Über <strong>+ Trainingszeit</strong> kannst du den Plan später separat pflegen.</p>');
+    document.querySelectorAll('[data-add-team]').forEach(b=>b.onclick=()=>{const old=training.find(x=>x.team===b.dataset.addTeam);openTraining({scope:old?.scope||'Jugend',team:b.dataset.addTeam,label:old?.label||'',location:old?.location||'',period:visibleTrainingPeriod})});
     document.querySelectorAll('[data-te]').forEach(b=>b.onclick=()=>openTraining(training.find(x=>x.id===b.dataset.te)));
     document.querySelectorAll('[data-td]').forEach(b=>b.onclick=()=>deleteTraining(b.dataset.td));
   }

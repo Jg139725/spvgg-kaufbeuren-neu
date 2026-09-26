@@ -5,3 +5,6 @@
 
 /* V54 Trainingsplan-Umschalter */
 .training-plan-switch{margin:0 0 18px;padding:18px;border:1px solid #d7e3f0;border-radius:16px;background:#f7fbff;display:grid;gap:12px}.plan-buttons{display:flex;gap:10px;flex-wrap:wrap}.plan-buttons button.active{background:#0866b5;color:#fff;border-color:#0866b5}.training-team-group{margin:0 0 16px;padding:14px;border:1px solid #d7e3f0;border-radius:14px}.training-team-head,.training-row{display:flex;align-items:center;justify-content:space-between;gap:16px}.training-team-head{padding-bottom:10px}.training-row{padding:10px 0;border-top:1px solid #e7eef6}@media(max-width:650px){.training-team-head,.training-row{align-items:flex-start;flex-direction:column}.training-row>div:last-child{width:100%}}
+
+/* V55: klare Trennung Sommer-/Winterplan */
+.training-period-title{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:18px 0 10px;padding:12px 14px;border-radius:12px;background:#eef6ff;border:1px solid #cfe2f5}.training-period-title strong{font-size:1.05rem;color:#063b73}.empty-training{padding:24px;border:1px dashed #b9cde1;border-radius:14px;background:#f8fbff;color:#49627a}

@@ -56,7 +56,7 @@
           <div class="svk-global-toplinks">
             <a href="${base}verein/kontakt.html">Kontakt</a>
             <a href="${base}sponsoren.html">Partner</a>
-            <a class="svk-login-link" href="${base}admin/index.html" title="Redaktion anmelden">
+            <a class="svk-login-link" href="${base}admin/index.html" data-svk-login="1" title="Redaktion anmelden">
               <span class="svk-login-icon" aria-hidden="true">↪</span>
               Anmelden
             </a>
@@ -101,6 +101,17 @@
         button.setAttribute("aria-expanded", "false");
       });
     });
+
+    // Login immer auf den echten Admin-/Redaktionsbereich zwingen.
+    // Dadurch kann kein alter /redaktion/index.html-Link mehr greifen.
+    const loginLink = header.querySelector('[data-svk-login="1"]');
+    if (loginLink) {
+      loginLink.href = `${base}admin/index.html`;
+      loginLink.addEventListener("click", (event) => {
+        event.preventDefault();
+        window.location.href = `${base}admin/index.html`;
+      });
+    }
 
     return header;
   }
