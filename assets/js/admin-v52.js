@@ -212,23 +212,32 @@
 
   let activeTrainingPeriod='Sommerzeit';
   let visibleTrainingPeriod='Sommerzeit';
+  function paintTrainingPlan(){
+    $('planSummer').className=visibleTrainingPeriod==='Sommerzeit'?'active':'secondary';
+    $('planWinter').className=visibleTrainingPeriod==='Winterzeit'?'active':'secondary';
+    $('planMsg').textContent='Du bearbeitest: '+visibleTrainingPeriod+' · Öffentlich aktiv: '+activeTrainingPeriod;
+    $('activatePlan').textContent=visibleTrainingPeriod===activeTrainingPeriod?'✓ Dieser Plan ist öffentlich aktiv':'Diesen Plan öffentlich aktivieren';
+  }
   async function loadTrainingPlan(){
     const {data,error}=await sb.from('training_settings').select('active_period').eq('scope','Jugend').maybeSingle();
     if(error){$('planMsg').textContent=error.message;return}
     activeTrainingPeriod=data?.active_period||'Sommerzeit';
     visibleTrainingPeriod=activeTrainingPeriod;
-    $('planSummer').className=activeTrainingPeriod==='Sommerzeit'?'active':'secondary';
-    $('planWinter').className=activeTrainingPeriod==='Winterzeit'?'active':'secondary';
-    $('planMsg').textContent='Aktiv auf der Website: '+activeTrainingPeriod;
+    paintTrainingPlan();
+    await loadTraining();
   }
-  async function setTrainingPlan(period){
-    $('planMsg').textContent='Schalte um …';
-    const {error}=await sb.from('training_settings').upsert({scope:'Jugend',active_period:period,updated_by:user.id,updated_at:new Date().toISOString()},{onConflict:'scope'});
+  async function activateTrainingPlan(){
+    $('planMsg').textContent='Aktiviere '+visibleTrainingPeriod+' …';
+    const {error}=await sb.from('training_settings').upsert({scope:'Jugend',active_period:visibleTrainingPeriod,updated_by:user.id,updated_at:new Date().toISOString()},{onConflict:'scope'});
     if(error){$('planMsg').textContent=error.message;return}
-    activeTrainingPeriod=period; visibleTrainingPeriod=period; await loadTrainingPlan(); visibleTrainingPeriod=period; await loadTraining();
+    activeTrainingPeriod=visibleTrainingPeriod; paintTrainingPlan();
   }
-  $('planSummer').onclick=()=>setTrainingPlan('Sommerzeit');
-  $('planWinter').onclick=()=>setTrainingPlan('Winterzeit');
+  async function showTrainingPlan(period){
+    visibleTrainingPeriod=period; paintTrainingPlan(); await loadTraining();
+  }
+  $('planSummer').onclick=()=>showTrainingPlan('Sommerzeit');
+  $('planWinter').onclick=()=>showTrainingPlan('Winterzeit');
+  $('activatePlan').onclick=activateTrainingPlan;
 
   let training=[];
   const dayOrder={Montag:1,Dienstag:2,Mittwoch:3,Donnerstag:4,Freitag:5,Samstag:6,Sonntag:7};
@@ -250,13 +259,13 @@
     $('trainingScope').value=profile?.role==='jugend_redaktion'?'Jugend':(t.scope||'Jugend');
     $('trainingTeam').value=t.team||''; $('trainingLabel').value=t.label||''; $('trainingDay').value=t.weekday||'Montag';
     $('trainingStart').value=(t.start_time||'').slice(0,5); $('trainingEnd').value=(t.end_time||'').slice(0,5);
-    $('trainingLocation').value=t.location||''; $('trainingNote').value=t.note||''; $('trainingPeriod').value=t.period||activeTrainingPeriod||'Sommerzeit'; $('trainingActive').checked=t.active!==false;
+    $('trainingLocation').value=t.location||''; $('trainingNote').value=t.note||''; $('trainingPeriod').value=t.period||visibleTrainingPeriod||'Sommerzeit'; $('trainingActive').checked=t.active!==false;
     $('trainingMsg').textContent=''; $('trainingEditor').showModal();
   }
   $('trainingForm').onsubmit=async e=>{
     e.preventDefault(); $('trainingMsg').textContent='Speichere …';
     const id=$('trainingId').value;
-    const payload={scope:profile?.role==='jugend_redaktion'?'Jugend':$('trainingScope').value,team:$('trainingTeam').value.trim(),label:$('trainingLabel').value.trim()||null,weekday:$('trainingDay').value,start_time:$('trainingStart').value||null,end_time:$('trainingEnd').value||null,location:$('trainingLocation').value.trim()||null,note:$('trainingNote').value.trim()||null,period:$('trainingPeriod').value.trim()||null,active:$('trainingActive').checked,updated_by:user.id,sort_order:dayOrder[$('trainingDay').value]||99};
+    const payload={scope:profile?.role==='jugend_redaktion'?'Jugend':$('trainingScope').value,team:$('trainingTeam').value.trim(),label:$('trainingLabel').value.trim()||null,weekday:$('trainingDay').value,start_time:$('trainingStart').value||null,end_time:$('trainingEnd').value||null,location:$('trainingLocation').value.trim()||null,note:$('trainingNote').value.trim()||null,period:(id ? (training.find(x=>String(x.id)===String(id))?.period||visibleTrainingPeriod) : visibleTrainingPeriod),active:$('trainingActive').checked,updated_by:user.id,sort_order:dayOrder[$('trainingDay').value]||99};
     const r=id?await sb.from('training_times').update(payload).eq('id',id):await sb.from('training_times').insert({...payload,created_by:user.id});
     if(r.error){$('trainingMsg').textContent=r.error.message;return} $('trainingEditor').close(); loadTraining();
   };
