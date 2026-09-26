@@ -10,8 +10,19 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/home.css">
   <link rel="stylesheet" href="../css/trainingsgelaende-fix.css">
-<link rel="stylesheet" href="../assets/css/svk-global-header.css?v=43"></head>
+  <link rel="stylesheet" href="../assets/css/svk-global-header.css?v=52">
+<link rel="stylesheet" href="../assets/css/training-times-v52.css">
+</head>
 <body>
+
+<div class="topbar">
+  <div class="container topbar__inner">
+    <span>SpVgg Kaufbeuren e. V.</span>
+    <div class="topbar__links">
+      <a href="../verein/kontakt.html">Kontakt</a>
+      <a href="../sponsoren.html">Partner</a>
+    </div>
+  </div>
 </div>
 
 <header class="site-header" id="start">
@@ -116,6 +127,8 @@
     </div>
   </section>
 
+  <section class="tg-section" id="trainingszeiten"><div class="container"><div class="tg-heading"><span class="kicker">Aktueller Wochenplan</span><h2>Trainingszeiten</h2><p>Die Zeiten werden direkt aus dem SVK-Redaktionssystem geladen.</p></div><div id="svk-training-live" class="svk-training-live"><p>Trainingszeiten werden geladen …</p></div></div></section>
+
   <section class="tg-location">
     <div class="container tg-location__card">
       <div>
@@ -162,5 +175,7 @@
 
 
 <script src="../js/home.js"></script>
-<script src="../assets/js/svk-global-header.js?v=43"></script></body>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.57.4/dist/umd/supabase.min.js"></script><script src="../assets/js/supabase-config.js"></script><script src="../assets/js/training-times-public.js?v=52"></script>
+<script src="../assets/js/svk-global-header.js?v=52"></script>
+</body>
 </html>
