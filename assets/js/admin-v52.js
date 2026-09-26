@@ -203,12 +203,31 @@
     $('trainingPanel').classList.toggle('hidden',which!=='training');
     $('tabNews').className=which==='news'?'active':'secondary';
     $('tabTraining').className=which==='training'?'active':'secondary';
-    if(which==='training') loadTraining();
+    if(which==='training'){ loadTraining(); loadTrainingPlan(); }
   }
   $('tabNews').onclick=()=>switchPanel('news');
   $('tabTraining').onclick=()=>switchPanel('training');
   $('newTraining').onclick=()=>openTraining();
   $('trainingCancel').onclick=()=>$('trainingEditor').close();
+
+  let activeTrainingPeriod='Sommerzeit';
+  async function loadTrainingPlan(){
+    const {data,error}=await sb.from('training_settings').select('active_period').eq('scope','Jugend').maybeSingle();
+    if(error){$('planMsg').textContent=error.message;return}
+    activeTrainingPeriod=data?.active_period||'Sommerzeit';
+    $('planSummer').className=activeTrainingPeriod==='Sommerzeit'?'active':'secondary';
+    $('planWinter').className=activeTrainingPeriod==='Winterzeit'?'active':'secondary';
+    $('planMsg').textContent='Aktiv auf der Website: '+activeTrainingPeriod;
+  }
+  async function setTrainingPlan(period){
+    $('planMsg').textContent='Schalte um …';
+    const {error}=await sb.from('training_settings').upsert({scope:'Jugend',active_period:period,updated_by:user.id,updated_at:new Date().toISOString()},{onConflict:'scope'});
+    if(error){$('planMsg').textContent=error.message;return}
+    activeTrainingPeriod=period; await loadTrainingPlan(); await loadTraining();
+  }
+  $('planSummer').onclick=()=>setTrainingPlan('Sommerzeit');
+  $('planWinter').onclick=()=>setTrainingPlan('Winterzeit');
+
   let training=[];
   const dayOrder={Montag:1,Dienstag:2,Mittwoch:3,Donnerstag:4,Freitag:5,Samstag:6,Sonntag:7};
   async function loadTraining(){
@@ -229,7 +248,7 @@
     $('trainingScope').value=profile?.role==='jugend_redaktion'?'Jugend':(t.scope||'Jugend');
     $('trainingTeam').value=t.team||''; $('trainingLabel').value=t.label||''; $('trainingDay').value=t.weekday||'Montag';
     $('trainingStart').value=(t.start_time||'').slice(0,5); $('trainingEnd').value=(t.end_time||'').slice(0,5);
-    $('trainingLocation').value=t.location||''; $('trainingNote').value=t.note||''; $('trainingPeriod').value=t.period||''; $('trainingActive').checked=t.active!==false;
+    $('trainingLocation').value=t.location||''; $('trainingNote').value=t.note||''; $('trainingPeriod').value=t.period||activeTrainingPeriod||'Sommerzeit'; $('trainingActive').checked=t.active!==false;
     $('trainingMsg').textContent=''; $('trainingEditor').showModal();
   }
   $('trainingForm').onsubmit=async e=>{

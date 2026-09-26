@@ -56,7 +56,7 @@
           <div class="svk-global-toplinks">
             <a href="${base}verein/kontakt.html">Kontakt</a>
             <a href="${base}sponsoren.html">Partner</a>
-            <a class="svk-login-link" href="${base}redaktion/index.html" title="Redaktion anmelden">
+            <a class="svk-login-link" href="${base}admin/index.html" title="Redaktion anmelden">
               <span class="svk-login-icon" aria-hidden="true">↪</span>
               Anmelden
             </a>
