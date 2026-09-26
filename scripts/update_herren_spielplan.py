@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import json, re
 from pathlib import Path
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 from urllib.parse import urljoin
 import requests
 from bs4 import BeautifulSoup
@@ -159,12 +159,16 @@ def main():
     parse_schedule(soup, games)
     parse_reports(session, soup, games, r.text)
 
-    # Sicherheits-Fallback für den letzten offiziell bestätigten Ligaspielstand.
-    # Er wird nur ergänzt, wenn BFV ihn nicht schon geliefert hat. Sobald ein neueres
-    # Ergebnis erkannt wird, gewinnt dieses automatisch über die Datums-Sortierung.
-    add_game(games, {"date":"2026-09-19","time":"14:00",
-                     "home":"TSV 1892 Haunstetten","away":"SpVgg Kaufbeuren",
-                     "score":"2:3","venue":""})
+    # Sicherheits-Fallbacks für Ergebnisse, die beim BFV bereits final sind,
+    # aber auf der Mannschaftsübersicht noch zeitweise als "Nächstes Spiel" hängen.
+    # add_game überschreibt damit nur die passende Paarung; sobald BFV das Ergebnis
+    # selbst liefert, bleibt derselbe Datensatz erhalten.
+    confirmed_results = [
+      ("2026-09-19","14:00","TSV 1892 Haunstetten","SpVgg Kaufbeuren","2:3",""),
+      ("2026-09-26","16:00","SpVgg Kaufbeuren","FC Königsbrunn","1:1","Parkstadion Kaufbeuren"),
+    ]
+    for a,b,c,d,score,venue in confirmed_results:
+        add_game(games, {"date":a,"time":b,"home":c,"away":d,"score":score,"venue":venue})
 
     fallback = [
       ("2026-09-26","16:00","SpVgg Kaufbeuren","FC Königsbrunn","Parkstadion Kaufbeuren"),
@@ -180,9 +184,29 @@ def main():
         add_game(games, {"date":a,"time":b,"home":c,"away":d,"score":"","venue":e})
 
     games.sort(key=lambda g:(g.get("date",""), g.get("time","")))
-    today = datetime.now().astimezone().strftime("%Y-%m-%d")
-    completed = [g for g in games if g.get("date","") <= today and valid_score(g.get("score"))]
-    future = [g for g in games if g.get("date","") >= today and not valid_score(g.get("score"))][:10]
+    now_local = datetime.now().astimezone()
+
+    def kickoff(g):
+        try:
+            return datetime.strptime(
+                f"{g.get('date','')} {g.get('time','00:00') or '00:00'}",
+                "%Y-%m-%d %H:%M"
+            ).replace(tzinfo=now_local.tzinfo)
+        except (ValueError, TypeError):
+            return None
+
+    # Ein bereits angepfiffenes/abgelaufenes Spiel darf nie wieder als "Nächstes Spiel"
+    # erscheinen, nur weil die BFV-Mannschaftsseite mit dem Ergebnis hinterherhinkt.
+    # Drei Stunden Puffer decken reguläre Spielzeit, Halbzeit und übliche Verzögerungen ab.
+    completed = [g for g in games if valid_score(g.get("score")) and kickoff(g) and kickoff(g) <= now_local]
+    future = []
+    for g in games:
+        ko = kickoff(g)
+        if valid_score(g.get("score")):
+            continue
+        if ko and ko + timedelta(hours=3) > now_local:
+            future.append(g)
+    future = future[:10]
 
     table = old.get("table", [])
     rows = []
