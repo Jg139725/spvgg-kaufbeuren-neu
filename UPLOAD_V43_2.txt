@@ -1,0 +1,8 @@
+SVK V43.2 – Upload-Paket 2 von 3
+
+Dieses Paket enthält 45 Dateien.
+ZIP entpacken und den INHALT in das Hauptverzeichnis des GitHub-Repositories ziehen.
+Ordnerstruktur beibehalten und gleichnamige Dateien ersetzen.
+Danach Commit changes.
+
+Erst danach das nächste Paket hochladen.
