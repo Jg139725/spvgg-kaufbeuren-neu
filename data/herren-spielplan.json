@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-26T13:14:22.278141+00:00",
+  "updatedAt": "2026-09-26T17:01:16.633832+00:00",
   "source": "https://www.bfv.de/mannschaften/-/016PILCMSS000000VV0AG80NVUT1FLRU",
   "fixtures": [
     {
@@ -257,13 +257,13 @@
     {
       "pos": 1,
       "team": "FC Thalhofen",
-      "played": 9,
-      "won": 7,
+      "played": 10,
+      "won": 8,
       "drawn": 1,
       "lost": 1,
-      "goals": "28:13",
-      "diff": "15",
-      "points": 22
+      "goals": "30:14",
+      "diff": "16",
+      "points": 25
     },
     {
       "pos": 2,
@@ -367,12 +367,12 @@
     {
       "pos": 11,
       "team": "FC Oberstdorf",
-      "played": 9,
+      "played": 10,
       "won": 3,
       "drawn": 2,
-      "lost": 4,
-      "goals": "17:19",
-      "diff": "-2",
+      "lost": 5,
+      "goals": "18:21",
+      "diff": "-3",
       "points": 11
     },
     {
