@@ -217,8 +217,10 @@
     const {data,error}=await q;
     if(error){$('trainingRows').innerHTML='<p>'+esc(error.message)+'</p>';return}
     training=data||[];
-    training.sort((a,b)=>(a.scope||'').localeCompare(b.scope||'')||(a.team||'').localeCompare(b.team||'')-(0)||((dayOrder[a.weekday]||9)-(dayOrder[b.weekday]||9)));
-    $('trainingRows').innerHTML=training.map(t=>`<div class="training-row"><div><strong>${esc(t.team)}${t.label?' · '+esc(t.label):''}</strong><div class="meta">${esc(t.scope)} · ${esc(t.weekday)} · ${esc((t.start_time||'').slice(0,5))}${t.end_time?'–'+esc(t.end_time.slice(0,5)):''} Uhr ${t.active?'':'· INAKTIV'}</div><div class="where">${esc(t.location||'')}${t.note?' · '+esc(t.note):''}</div></div><div><button class="secondary" data-te="${t.id}">Bearbeiten</button>${profile?.role==='admin'?` <button class="delete" data-td="${t.id}">Löschen</button>`:''}</div></div>`).join('')||'<p>Noch keine Trainingszeiten angelegt.</p>';
+    training.sort((a,b)=>(a.scope||'').localeCompare(b.scope||'')||(a.team||'').localeCompare(b.team||'')||((dayOrder[a.weekday]||9)-(dayOrder[b.weekday]||9)));
+    const groups=training.reduce((a,t)=>((a[t.team]??=[]).push(t),a),{});
+    $('trainingRows').innerHTML=Object.entries(groups).map(([team,items])=>`<section class="training-team-group"><div class="training-team-head"><div><strong>${esc(team)} · ${esc(items[0]?.label||'Mannschaft')}</strong><div class="meta">${items.length} Trainingseinheit${items.length===1?'':'en'}</div></div><button class="secondary" data-add-team="${esc(team)}">+ Einheit</button></div>${items.map(t=>`<div class="training-row"><div><strong>${esc(t.weekday)} · ${esc((t.start_time||'').slice(0,5))}${t.end_time?'–'+esc(t.end_time.slice(0,5)):''} Uhr</strong><div class="meta">${esc(t.location||'')}${t.note?' · '+esc(t.note):''}${t.period?' · '+esc(t.period):''} ${t.active?'':'· INAKTIV'}</div></div><div><button class="secondary" data-te="${t.id}">Bearbeiten</button> <button class="delete" data-td="${t.id}">Löschen</button></div></div>`).join('')}</section>`).join('')||'<p>Noch keine Trainingszeiten angelegt.</p>';
+    document.querySelectorAll('[data-add-team]').forEach(b=>b.onclick=()=>{const old=training.find(x=>x.team===b.dataset.addTeam);openTraining({scope:old?.scope||'Jugend',team:b.dataset.addTeam,label:old?.label||'',location:old?.location||''})});
     document.querySelectorAll('[data-te]').forEach(b=>b.onclick=()=>openTraining(training.find(x=>x.id===b.dataset.te)));
     document.querySelectorAll('[data-td]').forEach(b=>b.onclick=()=>deleteTraining(b.dataset.td));
   }
@@ -227,15 +229,15 @@
     $('trainingScope').value=profile?.role==='jugend_redaktion'?'Jugend':(t.scope||'Jugend');
     $('trainingTeam').value=t.team||''; $('trainingLabel').value=t.label||''; $('trainingDay').value=t.weekday||'Montag';
     $('trainingStart').value=(t.start_time||'').slice(0,5); $('trainingEnd').value=(t.end_time||'').slice(0,5);
-    $('trainingLocation').value=t.location||''; $('trainingNote').value=t.note||''; $('trainingActive').checked=t.active!==false;
+    $('trainingLocation').value=t.location||''; $('trainingNote').value=t.note||''; $('trainingPeriod').value=t.period||''; $('trainingActive').checked=t.active!==false;
     $('trainingMsg').textContent=''; $('trainingEditor').showModal();
   }
   $('trainingForm').onsubmit=async e=>{
     e.preventDefault(); $('trainingMsg').textContent='Speichere …';
     const id=$('trainingId').value;
-    const payload={scope:profile?.role==='jugend_redaktion'?'Jugend':$('trainingScope').value,team:$('trainingTeam').value.trim(),label:$('trainingLabel').value.trim()||null,weekday:$('trainingDay').value,start_time:$('trainingStart').value||null,end_time:$('trainingEnd').value||null,location:$('trainingLocation').value.trim()||null,note:$('trainingNote').value.trim()||null,active:$('trainingActive').checked,updated_by:user.id,sort_order:dayOrder[$('trainingDay').value]||99};
+    const payload={scope:profile?.role==='jugend_redaktion'?'Jugend':$('trainingScope').value,team:$('trainingTeam').value.trim(),label:$('trainingLabel').value.trim()||null,weekday:$('trainingDay').value,start_time:$('trainingStart').value||null,end_time:$('trainingEnd').value||null,location:$('trainingLocation').value.trim()||null,note:$('trainingNote').value.trim()||null,period:$('trainingPeriod').value.trim()||null,active:$('trainingActive').checked,updated_by:user.id,sort_order:dayOrder[$('trainingDay').value]||99};
     const r=id?await sb.from('training_times').update(payload).eq('id',id):await sb.from('training_times').insert({...payload,created_by:user.id});
     if(r.error){$('trainingMsg').textContent=r.error.message;return} $('trainingEditor').close(); loadTraining();
   };
-  async function deleteTraining(id){if(profile?.role!=='admin'||!confirm('Trainingszeit wirklich löschen?'))return;const {error}=await sb.from('training_times').delete().eq('id',id);if(error)alert(error.message);else loadTraining()}
+  async function deleteTraining(id){if(!['admin','editor','jugend_redaktion'].includes(profile?.role)||!confirm('Trainingszeit wirklich löschen?'))return;const {error}=await sb.from('training_times').delete().eq('id',id);if(error)alert(error.message);else loadTraining()}
 })();
