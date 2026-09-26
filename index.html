@@ -10,7 +10,17 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/home.css">
   <link rel="stylesheet" href="css/svk-live-v33.css">  
-<link rel="stylesheet" href="assets/css/svk-global-header.css?v=43"></head>
+<link rel="stylesheet" href="assets/css/svk-global-header.css?v=43">
+<style id="svk-stadionheft-v46">
+.stadionheft-current{margin:0 0 28px;position:relative;overflow:hidden;border-radius:24px;background:linear-gradient(125deg,#062f67 0%,#0758a9 58%,#087bd0 100%);color:#fff;box-shadow:0 16px 38px rgba(5,47,103,.18)}
+.stadionheft-current::after{content:"SVK";position:absolute;right:-18px;bottom:-50px;font-size:clamp(110px,18vw,220px);font-weight:900;line-height:1;color:rgba(255,255,255,.055);pointer-events:none}
+.stadionheft-current__inner{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;gap:28px;padding:30px 34px}
+.stadionheft-current__eyebrow{display:inline-flex;align-items:center;gap:8px;margin-bottom:8px;font-size:.78rem;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:#bfe1ff}.stadionheft-current__eyebrow::before{content:"";width:9px;height:9px;border-radius:50%;background:#fff;box-shadow:0 0 0 5px rgba(255,255,255,.13)}
+.stadionheft-current h3{margin:0 0 8px;font-size:clamp(1.55rem,3vw,2.25rem);color:#fff}.stadionheft-current p{margin:0;max-width:650px;color:rgba(255,255,255,.86);line-height:1.6}
+.stadionheft-current__actions{display:flex;align-items:center;gap:12px;flex:0 0 auto}.stadionheft-current__read{display:inline-flex;align-items:center;gap:10px;padding:13px 20px;border-radius:999px;background:#fff;color:#064c96!important;text-decoration:none!important;font-weight:900;white-space:nowrap;transition:transform .2s ease,box-shadow .2s ease}.stadionheft-current__read:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,0,0,.18)}.stadionheft-current__archive{color:#fff!important;font-weight:800;text-decoration:none!important;white-space:nowrap}.stadionheft-current__archive:hover{text-decoration:underline!important}
+@media(max-width:760px){.stadionheft-current__inner{align-items:flex-start;flex-direction:column;padding:25px 22px}.stadionheft-current__actions{width:100%;flex-wrap:wrap}.stadionheft-current__read{justify-content:center;flex:1 1 190px}}
+</style>
+</head>
 <body>
 </div>
 
@@ -78,6 +88,20 @@
           </div>
           <a class="text-link" href="news.html">Alle Meldungen ansehen →</a>
         </div>
+
+        <article class="stadionheft-current" aria-label="Aktuelle Stadionzeitung">
+          <div class="stadionheft-current__inner">
+            <div>
+              <span class="stadionheft-current__eyebrow">Aktuelle Stadionzeitung</span>
+              <h3>Die aktuelle Ausgabe online lesen</h3>
+              <p>Neuigkeiten, Spieltag und Geschichten rund um die SpVgg Kaufbeuren – unser aktuelles Stadionheft bei Stadionheft24.</p>
+            </div>
+            <div class="stadionheft-current__actions">
+              <a class="stadionheft-current__read" href="https://www.stadionheft24.de/webapp/:518172" target="_blank" rel="noopener noreferrer">Jetzt lesen <span aria-hidden="true">↗</span></a>
+              <a class="stadionheft-current__archive" href="stadionzeitung.html">Zum Archiv →</a>
+            </div>
+          </div>
+        </article>
 
         <div class="news-grid">
           <article class="news-card news-card--large">
