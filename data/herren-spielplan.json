@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-26T17:17:39.734918+00:00",
+  "updatedAt": "2026-09-26T19:50:30.815743+00:00",
   "source": "https://www.bfv.de/mannschaften/-/016PILCMSS000000VV0AG80NVUT1FLRU",
   "fixtures": [
     {
@@ -334,24 +334,24 @@
     {
       "pos": 8,
       "team": "FC Königsbrunn",
-      "played": 10,
+      "played": 11,
       "won": 3,
-      "drawn": 3,
+      "drawn": 4,
       "lost": 4,
-      "goals": "20:23",
+      "goals": "21:24",
       "diff": "-3",
-      "points": 12
+      "points": 13
     },
     {
       "pos": 9,
       "team": "SpVgg Kaufbeuren",
-      "played": 10,
+      "played": 11,
       "won": 4,
-      "drawn": 0,
+      "drawn": 1,
       "lost": 6,
-      "goals": "15:19",
+      "goals": "16:20",
       "diff": "-4",
-      "points": 12
+      "points": 13
     },
     {
       "pos": 10,
