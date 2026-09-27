@@ -8,3 +8,6 @@
 
 /* V55: klare Trennung Sommer-/Winterplan */
 .training-period-title{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:18px 0 10px;padding:12px 14px;border-radius:12px;background:#eef6ff;border:1px solid #cfe2f5}.training-period-title strong{font-size:1.05rem;color:#063b73}.empty-training{padding:24px;border:1px dashed #b9cde1;border-radius:14px;background:#f8fbff;color:#49627a}
+
+/* V68 Trainerverwaltung */
+.trainer-filter{margin:14px 0 18px;max-width:420px}.trainer-team-group{background:#fff;border:1px solid #dce5ef;border-radius:16px;padding:16px;margin:14px 0}.trainer-row{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:12px 0;border-top:1px solid #edf1f5}.trainer-row:first-of-type{border-top:0}.trainer-person{display:flex;align-items:center;gap:12px}.trainer-thumb{width:62px;height:62px;border-radius:12px;object-fit:cover;background:#e8eef6}.trainer-placeholder{display:grid;place-items:center;font-weight:800;color:#1767b7}.trainer-actions{white-space:nowrap}@media(max-width:700px){.trainer-row{align-items:flex-start;flex-direction:column}.trainer-actions{width:100%}}
