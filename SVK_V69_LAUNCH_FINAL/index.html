@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Moderner Website-Entwurf der SpVgg Kaufbeuren.">
+  <title>SpVgg Kaufbeuren</title>
+  
+  
+  
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/svk-live-v33.css">  
+<link rel="stylesheet" href="assets/css/svk-global-header.css?v=43">
+<style id="svk-stadionheft-v46">
+.stadionheft-current{margin:0 0 28px;position:relative;overflow:hidden;border-radius:24px;background:linear-gradient(125deg,#062f67 0%,#0758a9 58%,#087bd0 100%);color:#fff;box-shadow:0 16px 38px rgba(5,47,103,.18)}
+.stadionheft-current::after{content:"SVK";position:absolute;right:-18px;bottom:-50px;font-size:clamp(110px,18vw,220px);font-weight:900;line-height:1;color:rgba(255,255,255,.055);pointer-events:none}
+.stadionheft-current__inner{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;gap:28px;padding:30px 34px}
+.stadionheft-current__eyebrow{display:inline-flex;align-items:center;gap:8px;margin-bottom:8px;font-size:.78rem;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:#bfe1ff}.stadionheft-current__eyebrow::before{content:"";width:9px;height:9px;border-radius:50%;background:#fff;box-shadow:0 0 0 5px rgba(255,255,255,.13)}
+.stadionheft-current h3{margin:0 0 8px;font-size:clamp(1.55rem,3vw,2.25rem);color:#fff}.stadionheft-current p{margin:0;max-width:650px;color:rgba(255,255,255,.86);line-height:1.6}
+.stadionheft-current__actions{display:flex;align-items:center;gap:12px;flex:0 0 auto}.stadionheft-current__read{display:inline-flex;align-items:center;gap:10px;padding:13px 20px;border-radius:999px;background:#fff;color:#064c96!important;text-decoration:none!important;font-weight:900;white-space:nowrap;transition:transform .2s ease,box-shadow .2s ease}.stadionheft-current__read:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,0,0,.18)}.stadionheft-current__archive{color:#fff!important;font-weight:800;text-decoration:none!important;white-space:nowrap}.stadionheft-current__archive:hover{text-decoration:underline!important}
+@media(max-width:760px){.stadionheft-current__inner{align-items:flex-start;flex-direction:column;padding:25px 22px}.stadionheft-current__actions{width:100%;flex-wrap:wrap}.stadionheft-current__read{justify-content:center;flex:1 1 190px}}
+</style>
+</head>
+<body>
+</div>
+
+  <header class="site-header" id="start">
+    <div class="container navigation">
+      <a class="brand" href="#start" aria-label="Zur Startseite">
+        <img src="assets/images/logo-top.png" alt="SpVgg Kaufbeuren">
+      </a>
+
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="main-navigation" aria-label="Menü öffnen">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="main-nav" id="main-navigation">
+        <a href="news.html">Aktuelles</a>
+        <a href="#spiele">Spiele</a>
+        <a href="#mannschaften">Mannschaften</a>
+        <a href="jugend/index.html">Jugend</a>
+        <a href="verein/index.html">Verein</a>
+        <a href="verein/geschichte.html">Historie</a>
+        <a href="stadion.html">Stadion</a>
+        <a class="nav-button" href="fanshop.html">Fanshop</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <img class="hero__image" src="assets/images/hero-jugend.jpg" alt="Jugendmannschaften der SpVgg Kaufbeuren im Parkstadion">
+      <div class="hero__overlay"></div>
+      <div class="container hero__content">
+        <span class="kicker kicker--light">Willkommen bei der SVK</span>
+        <h1>Fußball in Kaufbeuren.<br><span>Seit Generationen.</span></h1>
+        <p>Die digitale Heimat der SpVgg Kaufbeuren – modern, übersichtlich und ganz nah an Mannschaften, Fans und Vereinsleben.</p>
+        <div class="button-row">
+          <a class="button button--primary" href="news.html">Aktuelle News</a>
+          <a class="button button--ghost" href="#spiele">Nächstes Spiel</a>
+        </div>
+      </div>
+      <a class="scroll-hint" href="#spiele" aria-label="Weiter nach unten">↓</a>
+    </section>
+
+    <section class="match-section home-live-match-section" id="spiele">
+  <div class="container">
+    <div class="section-heading section-heading--light">
+      <div>
+        <span class="kicker kicker--light">Spielbetrieb</span>
+        <h2>1. Herren · Nächstes & letztes Spiel</h2>
+      </div>
+      <a class="home-live-link" href="herren/spielplan.html">Alle Spiele der 1. Herren ansehen →</a>
+    </div>
+
+    <div id="home-live-games" class="home-live-games" aria-live="polite">
+      <div class="home-live-loading">Spieldaten werden geladen …</div>
+    </div>
+  </div>
+</section>
+
+    <section class="section" id="aktuelles">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="kicker">Aktuelles</span>
+            <h2>Neuigkeiten aus dem Verein</h2>
+          </div>
+          <a class="text-link" href="news.html">Alle Meldungen ansehen →</a>
+        </div>
+
+        <article class="stadionheft-current" aria-label="Aktuelle Stadionzeitung">
+          <div class="stadionheft-current__inner">
+            <div>
+              <span class="stadionheft-current__eyebrow">Aktuelle Stadionzeitung</span>
+              <h3>Die aktuelle Ausgabe online lesen</h3>
+              <p>Neuigkeiten, Spieltag und Geschichten rund um die SpVgg Kaufbeuren – unser aktuelles Stadionheft bei Stadionheft24.</p>
+            </div>
+            <div class="stadionheft-current__actions">
+              <a class="stadionheft-current__read" href="https://www.stadionheft24.de/webapp/:518172" target="_blank" rel="noopener noreferrer">Jetzt lesen <span aria-hidden="true">↗</span></a>
+              <a class="stadionheft-current__archive" href="stadionzeitung.html">Zum Archiv →</a>
+            </div>
+          </div>
+        </article>
+
+        <div class="news-grid">
+          <article class="news-card news-card--large">
+            <a class="news-card__image" href="news.html">
+              <img src="assets/images/news-vorbereitung.jpg" alt="Spielszene der SpVgg Kaufbeuren">
+              <span class="category">Herren</span>
+            </a>
+            <div class="news-card__body">
+              <time datetime="2026-07-05">05.07.2026</time>
+              <h3>Herren weiter in der Vorbereitung</h3>
+              <p>Remis in Raisting und erster Sieg mit 3:2 in Betzigau. Die Vorbereitung auf die neue Saison läuft weiter.</p>
+              <a href="news.html">Weiterlesen →</a>
+            </div>
+          </article>
+
+          <article class="news-card">
+            <a class="news-card__image" href="news.html">
+              <img src="assets/images/news-ticketverkauf.jpg" alt="Hinweis zum Kartenvorverkauf">
+              <span class="category">Tickets</span>
+            </a>
+            <div class="news-card__body">
+              <time datetime="2026-07-03">03.07.2026</time>
+              <h3>Kartenvorverkauf im Parkstadion</h3>
+              <p>Alle Informationen zu Terminen, Uhrzeiten und Verkaufsstellen.</p>
+              <a href="news.html">Weiterlesen →</a>
+            </div>
+          </article>
+
+          <article class="news-card">
+            <a class="news-card__image" href="news.html">
+              <img src="assets/images/news-fca-saarbruecken.jpg" alt="Ankündigung FC Augsburg gegen 1. FC Saarbrücken">
+              <span class="category">Topspiel</span>
+            </a>
+            <div class="news-card__body">
+              <time datetime="2026-07-01">01.07.2026</time>
+              <h3>Bundesligist im Parkstadion</h3>
+              <p>Der FC Augsburg trifft in Kaufbeuren auf den 1. FC Saarbrücken.</p>
+              <a href="news.html">Weiterlesen →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="mannschaften">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="kicker">Mannschaften</span>
+            <h2>Ein Verein. Viele Teams.</h2>
+          </div>
+        </div>
+
+        <div class="team-grid">
+          <a class="team-tile team-tile--men" href="herren/index.html">
+            <img src="assets/images/news-memmingen.jpg" alt="Herrenmannschaft der SpVgg Kaufbeuren">
+            <span class="team-tile__overlay"></span>
+            <div><small>1. Mannschaft & U23</small><strong>Herren</strong><em>Zum Bereich →</em></div>
+          </a>
+          <a class="team-tile" href="frauen/index.html">
+            <img src="assets/images/damen-startseite.jpg" alt="Frauenmannschaft der SpVgg Kaufbeuren vor dem Spiel">
+            <span class="team-tile__overlay"></span>
+            <div><small>Damen & U17</small><strong>Frauen / Mädchen</strong><em>Zum Bereich →</em></div>
+          </a>
+          <a class="team-tile" id="jugend" href="jugend/index.html">
+            <img src="assets/images/hero-jugend.jpg" alt="Jugendmannschaften der SpVgg Kaufbeuren">
+            <span class="team-tile__overlay"></span>
+            <div><small>U19 bis G-Jugend</small><strong>Junioren</strong><em>Alle Teams →</em></div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="club-section" id="verein">
+      <div class="container club-layout">
+        <div class="club-copy reveal">
+          <span class="kicker kicker--light">Unser Verein</span>
+          <h2>Mehr als 90 Minuten</h2>
+          <p>Die SpVgg Kaufbeuren steht für Fußball, Nachwuchsarbeit, Ehrenamt und Gemeinschaft. Alle bisherigen Vereinsbereiche bleiben erhalten und werden in der neuen Struktur übersichtlicher erreichbar.</p>
+          <div class="club-links">
+            <a href="verein/vorstand.html">Vorstandschaft <span>→</span></a>
+            <a href="verein/schiedsrichter.html">Schiedsrichter <span>→</span></a>
+            <a href="verein/downloads.html">Formulare & Downloads <span>→</span></a>
+            <a href="foerderverein/index.html">Förderverein <span>→</span></a>
+            <a href="verein/geschichte.html">Vereinsgeschichte <span>→</span></a>
+            <a href="stadion.html">Parkstadion <span>→</span></a>
+          </div>
+        </div>
+        <figure class="club-image reveal">
+          <img src="assets/images/verein-formation.jpg" alt="Vereinsformation der SpVgg Kaufbeuren">
+        </figure>
+      </div>
+    </section>
+
+    <section class="section media-section">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="kicker">Medien</span>
+            <h2>Videos, Bilder und Stadionhefte</h2>
+          </div>
+        </div>
+        <div class="media-grid">
+          <a href="videos.html"><span class="media-icon">▶</span><div><strong>SVK-Videos</strong><small>Spiele, Training und Verein</small></div></a>
+          <a href="galerie.html"><span class="media-icon">▧</span><div><strong>Fotogalerien</strong><small>Bilder aus dem Parkstadion</small></div></a>
+          <a href="stadionzeitung.html"><span class="media-icon">▤</span><div><strong>Stadionzeitungen</strong><small>Die letzten Ausgaben lesen</small></div></a>
+        </div>
+      </div>
+    </section>
+
+    
+
+
+<section class="home-history-teaser">
+  <div class="container home-history-layout">
+    <div class="home-history-copy reveal">
+      <span class="kicker">Seit 1909</span>
+      <h2>Mehr als ein Jahrhundert SVK</h2>
+      <p>
+        Von der Fußballabteilung im Turnverein über die großen Amateurliga-Jahre
+        bis zur legendären Wasserschlacht gegen den FC Bayern München:
+        Entdecke die Geschichte der SpVgg Kaufbeuren.
+      </p>
+      <a class="button button--primary" href="verein/geschichte.html">Zur Vereinsgeschichte</a>
+    </div>
+    <div class="home-history-image reveal">
+      <img src="assets/images/geschichte/verein-formation.jpg" alt="Historische Formation der SpVgg Kaufbeuren">
+    </div>
+  </div>
+</section>
+
+<section class="home-stadium-teaser">
+  <div class="container home-stadium-layout">
+    <div class="home-stadium-image reveal">
+      <img src="assets/images/stadion/parkstadion-hauptplatz.jpg" alt="Parkstadion Kaufbeuren">
+    </div>
+    <div class="home-stadium-copy reveal">
+      <span class="kicker">Unsere Heimat</span>
+      <h2>Das Parkstadion Kaufbeuren</h2>
+      <p>
+        Naturrasen, Laufbahn, Flutlicht und eine zentrale Lage am Jordanpark:
+        Entdecke die Heimspielstätte der SpVgg Kaufbeuren.
+      </p>
+      <a class="button button--primary" href="stadion.html">Stadion entdecken</a>
+    </div>
+  </div>
+</section>
+
+<section class="home-sponsors" id="partner">
+  <div class="container">
+    <div class="section-heading section-heading--center">
+      <div>
+        <span class="kicker">Gemeinsam stark</span>
+        <h2>Unsere Sponsoren</h2>
+        <p class="home-sponsors__intro">Danke an alle Unternehmen, die die SpVgg Kaufbeuren unterstützen.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="home-sponsor-marquee" aria-label="Sponsoren der SpVgg Kaufbeuren">
+    <div class="home-sponsor-track">
+      <a href="https://www.aktienbrauerei.de/" target="_blank" rel="noopener noreferrer" aria-label="Aktienbrauerei Kaufbeuren">
+  <img src="assets/images/sponsoren/aktienbrauerei.jpg" alt="Aktienbrauerei Kaufbeuren">
+</a><a href="https://www.sparkasse-allgaeu.de/" target="_blank" rel="noopener noreferrer" aria-label="Sparkasse Allgäu">
+  <img src="assets/images/sponsoren/sparkasse-allgaeu.jpg" alt="Sparkasse Allgäu">
+</a><a href="https://haumayr-kaufbeuren.de/" target="_blank" rel="noopener noreferrer" aria-label="Haumayr &amp; Sohn">
+  <img src="assets/images/sponsoren/haumayr.jpg" alt="Haumayr &amp; Sohn">
+</a><a href="https://www.ansorge-logistik.de/" target="_blank" rel="noopener noreferrer" aria-label="Ansorge Logistik">
+  <img src="assets/images/sponsoren/ansorge-logistik.png" alt="Ansorge Logistik">
+</a><a href="https://www.finsterwalder.eu/" target="_blank" rel="noopener noreferrer" aria-label="Finsterwalder">
+  <img src="assets/images/sponsoren/finsterwalder.jpg" alt="Finsterwalder">
+</a><a href="https://www.kochen-lassen.info/mittagessen/kaufbeuren/restaurants/ristorante-falcetta-im-schwabenhof/" target="_blank" rel="noopener noreferrer" aria-label="Falcetta Pizzeria">
+  <img src="assets/images/sponsoren/falcetta.jpg" alt="Falcetta Pizzeria">
+</a><a href="https://www.vrbank-augsburg-ostallgaeu.de/" target="_blank" rel="noopener noreferrer" aria-label="VR Bank Augsburg-Ostallgäu">
+  <img src="assets/images/sponsoren/vr-bank.png" alt="VR Bank Augsburg-Ostallgäu">
+</a><a href="https://www.hawe.com/" target="_blank" rel="noopener noreferrer" aria-label="HAWE Hydraulik">
+  <img src="assets/images/sponsoren/hawe.jpg" alt="HAWE Hydraulik">
+</a><a href="https://elektrotechnik-heinle.de/" target="_blank" rel="noopener noreferrer" aria-label="Heinle Elektrotechnik">
+  <img src="assets/images/sponsoren/heinle.jpg" alt="Heinle Elektrotechnik">
+</a><a href="https://www.aktienbrauerei.de/" target="_blank" rel="noopener noreferrer" aria-label="Aktienbrauerei Kaufbeuren">
+  <img src="assets/images/sponsoren/aktienbrauerei.jpg" alt="Aktienbrauerei Kaufbeuren">
+</a><a href="https://www.sparkasse-allgaeu.de/" target="_blank" rel="noopener noreferrer" aria-label="Sparkasse Allgäu">
+  <img src="assets/images/sponsoren/sparkasse-allgaeu.jpg" alt="Sparkasse Allgäu">
+</a><a href="https://haumayr-kaufbeuren.de/" target="_blank" rel="noopener noreferrer" aria-label="Haumayr &amp; Sohn">
+  <img src="assets/images/sponsoren/haumayr.jpg" alt="Haumayr &amp; Sohn">
+</a><a href="https://www.ansorge-logistik.de/" target="_blank" rel="noopener noreferrer" aria-label="Ansorge Logistik">
+  <img src="assets/images/sponsoren/ansorge-logistik.png" alt="Ansorge Logistik">
+</a><a href="https://www.finsterwalder.eu/" target="_blank" rel="noopener noreferrer" aria-label="Finsterwalder">
+  <img src="assets/images/sponsoren/finsterwalder.jpg" alt="Finsterwalder">
+</a><a href="https://www.kochen-lassen.info/mittagessen/kaufbeuren/restaurants/ristorante-falcetta-im-schwabenhof/" target="_blank" rel="noopener noreferrer" aria-label="Falcetta Pizzeria">
+  <img src="assets/images/sponsoren/falcetta.jpg" alt="Falcetta Pizzeria">
+</a><a href="https://www.vrbank-augsburg-ostallgaeu.de/" target="_blank" rel="noopener noreferrer" aria-label="VR Bank Augsburg-Ostallgäu">
+  <img src="assets/images/sponsoren/vr-bank.png" alt="VR Bank Augsburg-Ostallgäu">
+</a><a href="https://www.hawe.com/" target="_blank" rel="noopener noreferrer" aria-label="HAWE Hydraulik">
+  <img src="assets/images/sponsoren/hawe.jpg" alt="HAWE Hydraulik">
+</a><a href="https://elektrotechnik-heinle.de/" target="_blank" rel="noopener noreferrer" aria-label="Heinle Elektrotechnik">
+  <img src="assets/images/sponsoren/heinle.jpg" alt="Heinle Elektrotechnik">
+</a>
+    </div>
+  </div>
+
+  <div class="container home-sponsors__button">
+    <a class="button button--primary" href="sponsoren.html">Alle Sponsoren ansehen</a>
+  </div>
+</section>
+
+    <section class="fan-cta">
+      <div class="container fan-cta__inner">
+        <div>
+          <span class="kicker kicker--light">Blau-weiße Leidenschaft</span>
+          <h2>Zeig deine Farben.</h2>
+          <p>Entdecke Fanartikel der SpVgg Kaufbeuren.</p>
+        </div>
+        <a class="button button--white" href="news.html">Zum Fanshop</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="kontakt">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <img src="assets/images/logo-top.png" alt="SpVgg Kaufbeuren">
+        <p>Tradition, Nachwuchs und Fußballleidenschaft in Kaufbeuren.</p>
+      </div>
+      <div><h3>Verein</h3><a href="#aktuelles">News</a><a href="#mannschaften">Mannschaften</a><a href="verein/index.html">Vereinsleben</a></div>
+      <div><h3>Service</h3><a href="verein/kontakt.html">Kontakt</a><a href="trainingsgelaende/index.html">Anfahrt</a><a href="news.html">News</a></div>
+      <div><h3>Rechtliches</h3><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></div>
+    </div>
+    <div class="container footer__bottom"><span>© 2026 SpVgg Kaufbeuren</span><a href="#start">Nach oben ↑</a></div>
+  </footer>
+
+  <script src="js/home.js"></script>
+  <script src="js/sponsor-final.js"></script>
+  <script src="js/svk-live-core-v33.js"></script>
+  <script src="js/svk-home-v33.js"></script>
+<script src="assets/js/svk-global-header.js?v=43"></script></body>
+</html>
