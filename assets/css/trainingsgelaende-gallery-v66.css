@@ -1,1 +1,21 @@
 .tg-gallery-section{padding:88px 0 96px;background:#f4f7fb}.tg-gallery-heading{margin-bottom:30px}.tg-gallery{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:16px}.tg-gallery figure{grid-column:span 4;margin:0;overflow:hidden;border-radius:22px;background:#dce5f0;box-shadow:0 14px 34px rgba(4,30,61,.10);aspect-ratio:4/3}.tg-gallery__hero{grid-column:span 8!important;grid-row:span 2;aspect-ratio:auto!important;min-height:520px}.tg-gallery img{width:100%;height:100%;display:block;object-fit:cover;transition:transform .35s ease}.tg-gallery figure:hover img{transform:scale(1.025)}.tg-gallery-more{margin-top:20px}.tg-gallery-more summary{cursor:pointer;display:inline-flex;align-items:center;min-height:48px;padding:0 18px;border:1px solid #cbd8e7;border-radius:14px;background:#fff;color:#083f7d;font-weight:800;list-style:none}.tg-gallery-more summary::-webkit-details-marker{display:none}.tg-gallery-more[open] summary{margin-bottom:20px}.tg-gallery--more figure{grid-column:span 4}.tg-gallery--more figure:first-child,.tg-gallery--more figure:nth-child(5){grid-column:span 6}@media(max-width:900px){.tg-gallery figure,.tg-gallery--more figure,.tg-gallery--more figure:first-child,.tg-gallery--more figure:nth-child(5){grid-column:span 6}.tg-gallery__hero{grid-column:span 12!important;min-height:390px}}@media(max-width:620px){.tg-gallery-section{padding:60px 0 68px}.tg-gallery{gap:10px}.tg-gallery figure,.tg-gallery--more figure,.tg-gallery--more figure:first-child,.tg-gallery--more figure:nth-child(5){grid-column:span 12;aspect-ratio:4/3}.tg-gallery__hero{min-height:300px!important}.tg-gallery figure{border-radius:16px}}
+
+/* V67: echte Platzfotos in den drei Platzkarten */
+.tg-photo {
+  min-height: 295px;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+.tg-photo--one {
+  background-image: linear-gradient(180deg, rgba(0,32,74,.04), rgba(0,32,74,.14)), url('../images/trainingsgelaende/abend/trainingsgelaende-04.jpeg') !important;
+}
+.tg-photo--two {
+  background-image: linear-gradient(180deg, rgba(0,32,74,.03), rgba(0,32,74,.12)), url('../images/trainingsgelaende/abend/trainingsgelaende-06.jpeg') !important;
+}
+.tg-photo--three {
+  background-image: linear-gradient(180deg, rgba(0,32,74,.03), rgba(0,32,74,.16)), url('../images/trainingsgelaende/abend/trainingsgelaende-09.jpeg') !important;
+}
+@media (max-width: 720px) {
+  .tg-photo { min-height: 230px; }
+}
