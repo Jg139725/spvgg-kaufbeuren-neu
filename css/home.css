@@ -112,3 +112,7 @@
   .home-history-image,
   .home-history-image img{min-height:280px}
 }
+
+
+/* V65: Im Footer das originale blau-weiße Vereinslogo verwenden. */
+.footer__brand img{filter:none!important;opacity:1!important}
