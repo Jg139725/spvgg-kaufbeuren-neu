@@ -1,27 +1,23 @@
-
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
   const motion = document.querySelector(".h2p-media.has-video");
   const video = motion?.querySelector("video");
   if (!motion || !video) return;
 
-  async function playMotion(){
-    motion.classList.add("is-playing");
-    video.currentTime = 0;
-    try { await video.play(); } catch {}
-  }
-
-  function stopMotion(){
-    video.pause();
-    video.currentTime = 0;
+  const showPhoto = () => {
     motion.classList.remove("is-playing");
-  }
+    video.pause();
+  };
 
-  motion.addEventListener("mouseenter", playMotion);
-  motion.addEventListener("mouseleave", stopMotion);
-  motion.addEventListener("focusin", playMotion);
-  motion.addEventListener("focusout", stopMotion);
-  motion.addEventListener("click", () => {
-    if (motion.classList.contains("is-playing")) stopMotion();
-    else playMotion();
-  });
+  video.addEventListener("ended", showPhoto, { once: true });
+  video.addEventListener("error", showPhoto, { once: true });
+
+  // Beim Öffnen des Spielerprofils läuft die Animation genau einmal automatisch.
+  video.currentTime = 0;
+  motion.classList.add("is-playing");
+  try {
+    await video.play();
+  } catch (error) {
+    // Falls ein Browser Autoplay blockiert, bleibt direkt das normale Spielerfoto sichtbar.
+    showPhoto();
+  }
 });

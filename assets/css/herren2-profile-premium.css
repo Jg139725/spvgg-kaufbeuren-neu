@@ -76,11 +76,7 @@ a{text-decoration:none}
   transition:opacity .25s ease;
 }
 .h2p-media video{opacity:0}
-.h2p-media.has-video:hover img,
-.h2p-media.has-video:focus img,
 .h2p-media.has-video.is-playing img{opacity:0}
-.h2p-media.has-video:hover video,
-.h2p-media.has-video:focus video,
 .h2p-media.has-video.is-playing video{opacity:1}
 .h2p-video-hint{
   position:absolute;
