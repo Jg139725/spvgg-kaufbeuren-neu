@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-27T22:22:36.730354+00:00",
+  "updatedAt": "2026-09-28T01:00:36.856561+00:00",
   "source": "https://www.bfv.de/mannschaften/-/016PILCMSS000000VV0AG80NVUT1FLRU",
   "fixtures": [
     {
@@ -369,17 +369,6 @@
     },
     {
       "pos": 12,
-      "team": "FC Bad Wörishofen",
-      "played": 11,
-      "won": 3,
-      "drawn": 2,
-      "lost": 6,
-      "goals": "11:22",
-      "diff": "-11",
-      "points": 11
-    },
-    {
-      "pos": 13,
       "team": "FC Oberstdorf",
       "played": 10,
       "won": 3,
@@ -387,6 +376,17 @@
       "lost": 5,
       "goals": "18:21",
       "diff": "-3",
+      "points": 11
+    },
+    {
+      "pos": 13,
+      "team": "FC Bad Wörishofen",
+      "played": 11,
+      "won": 3,
+      "drawn": 2,
+      "lost": 6,
+      "goals": "11:22",
+      "diff": "-11",
       "points": 11
     },
     {
