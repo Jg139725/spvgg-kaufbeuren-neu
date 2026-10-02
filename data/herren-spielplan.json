@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-02T12:52:55.716787+00:00",
+  "updatedAt": "2026-10-02T18:32:48.621819+00:00",
   "source": "https://www.bfv.de/mannschaften/-/016PILCMSS000000VV0AG80NVUT1FLRU",
   "fixtures": [
     {
@@ -293,24 +293,24 @@
     {
       "pos": 5,
       "team": "SV Egg a. d. Günz",
-      "played": 11,
+      "played": 12,
       "won": 6,
       "drawn": 3,
-      "lost": 2,
-      "goals": "27:17",
-      "diff": "10",
+      "lost": 3,
+      "goals": "27:19",
+      "diff": "8",
       "points": 21
     },
     {
       "pos": 6,
       "team": "VfL Kaufering",
-      "played": 11,
-      "won": 5,
+      "played": 12,
+      "won": 6,
       "drawn": 2,
       "lost": 4,
-      "goals": "27:20",
-      "diff": "7",
-      "points": 17
+      "goals": "29:20",
+      "diff": "9",
+      "points": 20
     },
     {
       "pos": 7,
