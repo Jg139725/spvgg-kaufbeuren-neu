@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-03T13:33:06.727265+00:00",
+  "updatedAt": "2026-10-03T18:01:59.234905+00:00",
   "source": "https://www.bfv.de/mannschaften/-/016PILCMSS000000VV0AG80NVUT1FLRU",
   "fixtures": [
     {
@@ -249,23 +249,23 @@
     {
       "pos": 1,
       "team": "FC Thalhofen",
-      "played": 10,
-      "won": 8,
+      "played": 11,
+      "won": 9,
       "drawn": 1,
       "lost": 1,
-      "goals": "30:14",
-      "diff": "16",
-      "points": 25
+      "goals": "35:14",
+      "diff": "21",
+      "points": 28
     },
     {
       "pos": 2,
       "team": "TV Erkheim",
-      "played": 11,
+      "played": 12,
       "won": 7,
       "drawn": 1,
-      "lost": 3,
-      "goals": "31:19",
-      "diff": "12",
+      "lost": 4,
+      "goals": "31:24",
+      "diff": "7",
       "points": 22
     },
     {
@@ -325,47 +325,47 @@
     },
     {
       "pos": 8,
+      "team": "FC Königsbrunn",
+      "played": 12,
+      "won": 4,
+      "drawn": 4,
+      "lost": 4,
+      "goals": "23:25",
+      "diff": "-2",
+      "points": 16
+    },
+    {
+      "pos": 9,
+      "team": "SpVgg Kaufbeuren",
+      "played": 12,
+      "won": 5,
+      "drawn": 1,
+      "lost": 6,
+      "goals": "17:20",
+      "diff": "-3",
+      "points": 16
+    },
+    {
+      "pos": 10,
       "team": "TSV 1892 Haunstetten",
       "played": 12,
       "won": 4,
       "drawn": 3,
       "lost": 5,
-      "goals": "21:23",
-      "diff": "-2",
+      "goals": "22:23",
+      "diff": "-1",
       "points": 15
     },
     {
-      "pos": 9,
-      "team": "FC Königsbrunn",
-      "played": 12,
-      "won": 3,
-      "drawn": 5,
-      "lost": 4,
-      "goals": "22:25",
-      "diff": "-3",
-      "points": 14
-    },
-    {
-      "pos": 10,
+      "pos": 11,
       "team": "TSV Kammlach",
       "played": 12,
       "won": 4,
       "drawn": 2,
       "lost": 6,
-      "goals": "19:28",
-      "diff": "-9",
+      "goals": "19:29",
+      "diff": "-10",
       "points": 14
-    },
-    {
-      "pos": 11,
-      "team": "SpVgg Kaufbeuren",
-      "played": 11,
-      "won": 4,
-      "drawn": 1,
-      "lost": 6,
-      "goals": "16:20",
-      "diff": "-4",
-      "points": 13
     },
     {
       "pos": 12,
@@ -392,12 +392,12 @@
     {
       "pos": 14,
       "team": "FC Wiggensbach",
-      "played": 11,
+      "played": 12,
       "won": 2,
       "drawn": 2,
-      "lost": 7,
-      "goals": "11:22",
-      "diff": "-11",
+      "lost": 8,
+      "goals": "11:23",
+      "diff": "-12",
       "points": 8
     },
     {
@@ -416,11 +416,11 @@
       "team": "SVO Germaringen",
       "played": 11,
       "won": 1,
-      "drawn": 4,
-      "lost": 6,
-      "goals": "13:27",
-      "diff": "-14",
-      "points": 7
+      "drawn": 3,
+      "lost": 7,
+      "goals": "13:28",
+      "diff": "-15",
+      "points": 6
     }
   ]
 }
