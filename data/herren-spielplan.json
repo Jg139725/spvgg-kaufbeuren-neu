@@ -1,15 +1,7 @@
 {
-  "updatedAt": "2026-10-03T18:01:59.234905+00:00",
+  "updatedAt": "2026-10-03T21:29:16.052089+00:00",
   "source": "https://www.bfv.de/mannschaften/-/016PILCMSS000000VV0AG80NVUT1FLRU",
   "fixtures": [
-    {
-      "date": "2026-10-03",
-      "time": "15:30",
-      "home": "FC Wiggensbach",
-      "away": "SpVgg Kaufbeuren",
-      "score": "",
-      "venue": "Max Swoboda-Stadion"
-    },
     {
       "date": "2026-10-09",
       "time": "19:00",
@@ -49,6 +41,14 @@
       "away": "TSV Kammlach",
       "score": "",
       "venue": "Parkstadion Kaufbeuren"
+    },
+    {
+      "date": "2026-11-08",
+      "time": "14:00",
+      "home": "SpVgg Kaufbeuren",
+      "away": "TSV Kammlach",
+      "score": "",
+      "venue": ""
     },
     {
       "date": "2026-11-14",
@@ -177,7 +177,7 @@
       "time": "15:30",
       "home": "FC Wiggensbach",
       "away": "SpVgg Kaufbeuren",
-      "score": "",
+      "score": "0:3",
       "venue": "Max Swoboda-Stadion"
     },
     {
@@ -221,6 +221,14 @@
       "venue": "Parkstadion Kaufbeuren"
     },
     {
+      "date": "2026-11-08",
+      "time": "14:00",
+      "home": "SpVgg Kaufbeuren",
+      "away": "TSV Kammlach",
+      "score": "",
+      "venue": ""
+    },
+    {
       "date": "2026-11-14",
       "time": "14:00",
       "home": "SSV Niedersonthofen",
@@ -230,20 +238,20 @@
     }
   ],
   "nextGame": {
+    "date": "2026-10-09",
+    "time": "19:00",
+    "home": "SpVgg Kaufbeuren",
+    "away": "FC Thalhofen",
+    "score": "",
+    "venue": "Parkstadion Kaufbeuren"
+  },
+  "lastGame": {
     "date": "2026-10-03",
     "time": "15:30",
     "home": "FC Wiggensbach",
     "away": "SpVgg Kaufbeuren",
-    "score": "",
+    "score": "0:3",
     "venue": "Max Swoboda-Stadion"
-  },
-  "lastGame": {
-    "date": "2026-09-26",
-    "time": "16:00",
-    "home": "SpVgg Kaufbeuren",
-    "away": "FC Königsbrunn",
-    "score": "1:1",
-    "venue": "Parkstadion Kaufbeuren"
   },
   "table": [
     {
@@ -253,8 +261,8 @@
       "won": 9,
       "drawn": 1,
       "lost": 1,
-      "goals": "35:14",
-      "diff": "21",
+      "goals": "36:14",
+      "diff": "22",
       "points": 28
     },
     {
@@ -264,8 +272,8 @@
       "won": 7,
       "drawn": 1,
       "lost": 4,
-      "goals": "31:24",
-      "diff": "7",
+      "goals": "31:25",
+      "diff": "6",
       "points": 22
     },
     {
@@ -325,6 +333,17 @@
     },
     {
       "pos": 8,
+      "team": "SpVgg Kaufbeuren",
+      "played": 12,
+      "won": 5,
+      "drawn": 1,
+      "lost": 6,
+      "goals": "19:20",
+      "diff": "-1",
+      "points": 16
+    },
+    {
+      "pos": 9,
       "team": "FC Königsbrunn",
       "played": 12,
       "won": 4,
@@ -332,17 +351,6 @@
       "lost": 4,
       "goals": "23:25",
       "diff": "-2",
-      "points": 16
-    },
-    {
-      "pos": 9,
-      "team": "SpVgg Kaufbeuren",
-      "played": 12,
-      "won": 5,
-      "drawn": 1,
-      "lost": 6,
-      "goals": "17:20",
-      "diff": "-3",
       "points": 16
     },
     {
@@ -396,8 +404,8 @@
       "won": 2,
       "drawn": 2,
       "lost": 8,
-      "goals": "11:23",
-      "diff": "-12",
+      "goals": "11:25",
+      "diff": "-14",
       "points": 8
     },
     {
