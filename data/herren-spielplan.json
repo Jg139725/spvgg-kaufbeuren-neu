@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-04T14:53:01.317675+00:00",
+  "updatedAt": "2026-10-04T18:41:03.717078+00:00",
   "source": "https://www.bfv.de/mannschaften/-/016PILCMSS000000VV0AG80NVUT1FLRU",
   "fixtures": [
     {
@@ -267,6 +267,17 @@
     },
     {
       "pos": 2,
+      "team": "SV Mering",
+      "played": 12,
+      "won": 7,
+      "drawn": 4,
+      "lost": 1,
+      "goals": "27:18",
+      "diff": "9",
+      "points": 25
+    },
+    {
+      "pos": 3,
       "team": "TV Erkheim",
       "played": 12,
       "won": 7,
@@ -277,25 +288,14 @@
       "points": 22
     },
     {
-      "pos": 3,
-      "team": "SV Mering",
-      "played": 11,
-      "won": 6,
-      "drawn": 4,
-      "lost": 1,
-      "goals": "25:18",
-      "diff": "7",
-      "points": 22
-    },
-    {
       "pos": 4,
       "team": "TSV Legau",
-      "played": 11,
+      "played": 12,
       "won": 7,
       "drawn": 1,
-      "lost": 3,
-      "goals": "30:15",
-      "diff": "15",
+      "lost": 4,
+      "goals": "32:21",
+      "diff": "11",
       "points": 22
     },
     {
@@ -323,13 +323,13 @@
     {
       "pos": 7,
       "team": "TSV Merching",
-      "played": 10,
-      "won": 5,
+      "played": 11,
+      "won": 6,
       "drawn": 2,
       "lost": 3,
-      "goals": "17:10",
-      "diff": "7",
-      "points": 17
+      "goals": "18:10",
+      "diff": "8",
+      "points": 20
     },
     {
       "pos": 8,
@@ -378,27 +378,38 @@
     {
       "pos": 12,
       "team": "FC Oberstdorf",
-      "played": 10,
+      "played": 11,
       "won": 3,
       "drawn": 2,
-      "lost": 5,
-      "goals": "18:21",
-      "diff": "-3",
+      "lost": 6,
+      "goals": "18:23",
+      "diff": "-5",
       "points": 11
     },
     {
       "pos": 13,
       "team": "FC Bad Wörishofen",
-      "played": 11,
+      "played": 12,
       "won": 3,
       "drawn": 2,
-      "lost": 6,
-      "goals": "11:22",
-      "diff": "-11",
+      "lost": 7,
+      "goals": "11:23",
+      "diff": "-12",
       "points": 11
     },
     {
       "pos": 14,
+      "team": "SSV Niedersonthofen",
+      "played": 12,
+      "won": 3,
+      "drawn": 1,
+      "lost": 8,
+      "goals": "21:34",
+      "diff": "-13",
+      "points": 10
+    },
+    {
+      "pos": 15,
       "team": "FC Wiggensbach",
       "played": 12,
       "won": 2,
@@ -407,17 +418,6 @@
       "goals": "11:25",
       "diff": "-14",
       "points": 8
-    },
-    {
-      "pos": 15,
-      "team": "SSV Niedersonthofen",
-      "played": 11,
-      "won": 2,
-      "drawn": 1,
-      "lost": 8,
-      "goals": "15:32",
-      "diff": "-17",
-      "points": 7
     },
     {
       "pos": 16,
