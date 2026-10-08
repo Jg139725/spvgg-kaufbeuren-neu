@@ -1,0 +1,1 @@
+V72: Admin-Trainer-Initialisierung nach Login erneut ausführen; Fanshop-Zwischenseite leitet direkt zu Textilstar; Startseitenlink aktualisiert. Nur die Dateien im Paket hochladen. Hinweis: Berechtigungen in Supabase/RLS müssen weiterhin stimmen.
