@@ -1,0 +1,35 @@
+/* SVK V74 – Redaktion on phones, tablets and desktops */
+body{overflow-x:clip}
+.wrap{width:min(1120px,calc(100% - 28px))}
+#app,.card{max-width:100%}
+#app{min-width:0}
+.cms-tabs{display:flex;flex-wrap:wrap;gap:8px}
+.cms-tabs button{white-space:normal;min-height:42px}
+.toolbar,.actions,.training-team-head,.trainer-team-head{flex-wrap:wrap}
+#foerdervereinPanel{min-width:0}
+#foerdervereinPanel form{display:grid;gap:12px}
+#foerdervereinPanel label{display:block;min-width:0}
+#foerdervereinPanel input,#foerdervereinPanel textarea{display:block;width:100%;max-width:100%}
+dialog{max-height:calc(100dvh - 32px);overflow-y:auto}
+@media(max-width:720px){
+ .wrap{width:calc(100% - 20px);margin:16px auto}
+ #app,.card{padding:clamp(14px,4vw,22px);border-radius:14px}
+ .card{margin:clamp(20px,8vh,70px) auto}
+ #app>header{gap:12px}
+ .cms-tabs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
+ .cms-tabs button{padding:11px 8px;font-size:14px}
+ .toolbar{align-items:stretch;flex-direction:column}
+ .toolbar button,.actions button{min-height:42px}
+ .time-grid{grid-template-columns:minmax(0,1fr)}
+ .training-team-head,.training-row,.trainer-row{flex-direction:column;align-items:stretch}
+ .trainer-actions{white-space:normal;display:flex;flex-wrap:wrap;gap:8px}
+ .trainer-person{min-width:0}
+ .row{min-width:0}
+}
+@media(max-width:420px){
+ .cms-tabs{grid-template-columns:minmax(0,1fr)}
+ .cms-tabs button{text-align:left}
+ .wrap{width:calc(100% - 16px)}
+ .actions{flex-direction:column;align-items:stretch}
+ .actions button{width:100%}
+}

@@ -1,0 +1,50 @@
+/* SVK V74 – Responsive layer. No sponsor animation or JavaScript changed. */
+:root{--svk-page-gutter:clamp(14px,3vw,36px)}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%;scroll-padding-top:18px}
+body{min-width:0;overflow-x:clip}
+*,*::before,*::after{box-sizing:border-box}
+img,video,svg,canvas{max-width:100%}
+img,video{height:auto}
+iframe{max-width:100%}
+pre,code{overflow-wrap:anywhere}
+p,h1,h2,h3,h4,li,a{overflow-wrap:break-word}
+input,select,textarea,button{max-width:100%}
+:where(.container,.wrap,.page-container,.content-container,.site-container){max-width:100%}
+:where(main,section,article,.container,.wrap,.grid,.row){min-width:0}
+:where(.container,.wrap,.page-container,.content-container,.site-container)>*{min-width:0}
+:where(.hero,.sub-hero,.banner,.card,.section){max-width:100%}
+:where(.grid,.cards,.card-grid,.team-grid,.news-grid,.player-grid,.sponsor-grid,.fv-grid){min-width:0}
+:where(.grid,.cards,.card-grid,.team-grid,.news-grid,.player-grid,.sponsor-grid,.fv-grid)>*{min-width:0}
+:where(table){max-width:100%}
+:where(.table-wrap,.table-responsive,.table-container){max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
+:where(a,button,input,select,textarea):focus-visible{outline:3px solid #1682e4;outline-offset:3px}
+@media(max-width:1024px){
+ :where(.container,.wrap,.page-container,.content-container,.site-container){width:calc(100% - 32px);margin-inline:auto}
+ :where(.grid,.cards,.card-grid,.team-grid,.news-grid,.player-grid,.sponsor-grid,.fv-grid){column-gap:clamp(12px,2vw,22px)}
+}
+@media(max-width:767px){
+ :where(.container,.wrap,.page-container,.content-container,.site-container){width:calc(100% - 28px);margin-inline:auto}
+ :where(h1){font-size:clamp(1.7rem,7vw,2.8rem)}
+ :where(h2){font-size:clamp(1.35rem,5vw,2rem)}
+ :where(.grid,.cards,.card-grid,.team-grid,.news-grid,.player-grid,.fv-grid){grid-template-columns:repeat(2,minmax(0,1fr))}
+ :where(.sub-hero,.hero){background-size:cover;background-position:center}
+ :where(.sub-hero .wrap,.hero .container){padding-block:clamp(20px,5vw,46px)}
+ :where(.footer-grid,.footer__grid,.sub-footer-row){flex-wrap:wrap;gap:18px}
+ :where(.sub-footer-links){flex-wrap:wrap}
+ :where(.fv-board-people,.fv-dynamic){max-width:100%}
+ :where(.fv-news-card){padding:16px}
+ :where(.fv-news-card img){width:100%;height:auto;max-height:300px;object-fit:cover}
+ :where(.fv-sponsor){max-width:100%}
+}
+@media(max-width:520px){
+ :where(.grid,.cards,.card-grid,.team-grid,.news-grid,.player-grid,.fv-grid){grid-template-columns:minmax(0,1fr)}
+ :where(.container,.wrap,.page-container,.content-container,.site-container){width:calc(100% - 24px)}
+ :where(.sub-section,.section){padding-block:clamp(22px,7vw,48px)}
+ :where(.quick-card,.card){max-width:100%}
+ :where(.footer__bottom,.sub-footer-row){flex-direction:column;align-items:flex-start}
+ :where(.svk63-filters,.filter-bar,.tabs){overflow-x:auto;max-width:100%;-webkit-overflow-scrolling:touch}
+}
+@media(prefers-reduced-motion:reduce){
+ html{scroll-behavior:auto!important}
+ /* Existing sponsor animations remain intact unless visitor explicitly requests reduced motion */
+}
