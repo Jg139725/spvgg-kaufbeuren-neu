@@ -52,7 +52,20 @@ $('fvForm').onsubmit=async e=>{
    image_url=sb.storage.from('foerderverein-images').getPublicUrl(path).data.publicUrl;
   }
   const people=$('fvPeople').value.split('\n').map(x=>x.trim()).filter(Boolean).map(x=>{const [role,name]=x.split('|').map(t=>t?.trim());return {role:role||'',name:name||''}});
-  const sponsors=$('fvSponsors').value.split('\n').map(x=>x.trim()).filter(Boolean).map(x=>{const [name,url]=x.split('|').map(t=>t?.trim());if(url&&(!/^https:\/\//i.test(url)))throw Error('Sponsor-Links müssen mit https:// beginnen.');return {name:name||'',url:url||''}});
+  const previous=record?.sponsors||[];
+  const sponsors=$('fvSponsors').value.split('\n').map(x=>x.trim()).filter(Boolean).map((x,i)=>{const [name,url]=x.split('|').map(t=>t?.trim());if(!name)throw Error('Sponsorname fehlt.');if(url&&!/^https:\/\//i.test(url))throw Error('Sponsor-Links müssen mit https:// beginnen.');const old=previous.find(y=>y.name===name)||{};return {name,url:url||'',logo_url:old.logo_url||''}});
+  const logoFile=$('fvLogoFile').files[0];
+  if(logoFile){
+    const idx=Number($('fvLogoIndex').value)-1;
+    if(!Number.isInteger(idx)||idx<0||idx>=sponsors.length)throw Error('Bitte gültige Sponsor-Zeilennummer eingeben.');
+    if(!['image/jpeg','image/png','image/webp'].includes(logoFile.type)||logoFile.size>5e6)throw Error('Nur JPG, PNG oder WebP bis 5 MB.');
+    const {data:{user}}=await sb.auth.getUser();
+    const ext=logoFile.type==='image/png'?'png':logoFile.type==='image/webp'?'webp':'jpg';
+    const path=user.id+'/sponsors/'+crypto.randomUUID()+'.'+ext;
+    const uploaded=await sb.storage.from('foerderverein-images').upload(path,logoFile,{contentType:logoFile.type});
+    if(uploaded.error)throw uploaded.error;
+    sponsors[idx].logo_url=sb.storage.from('foerderverein-images').getPublicUrl(path).data.publicUrl;
+  }
   const {error}=await sb.from('foerderverein_content').upsert({id:1,caption:$('fvCaption').value,people,sponsors,image_url,updated_at:new Date().toISOString()});
   if(error)throw error;$('fvStatus').textContent='Gespeichert.';await load();
  }catch(err){$('fvStatus').textContent=err.message}
