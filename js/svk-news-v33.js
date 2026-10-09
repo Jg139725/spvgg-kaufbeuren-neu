@@ -4,6 +4,7 @@
  let news=[];
  const group=(category="")=>{
   const c=String(category||"").toLowerCase();
+  if(c.includes("förderverein")||c.includes("foerderverein"))return"Förderverein";
   if(c.includes("u23")||c.includes("herren 2")||c.includes("2. herren"))return"U23";
   if(c.includes("frau")||c.includes("damen"))return"Frauen";
   if(c.includes("jugend")||c.includes("u19")||c.includes("u17")||c.includes("u15")||c.includes("u13")||c.includes("u12")||c.includes("u11")||c.includes("u10")||c.includes("u9")||c.includes("u09")||c.includes("u8")||c.includes("u08")||c.includes("bambini")||c.includes("mäd"))return"Jugend";

@@ -72,7 +72,7 @@
       const {data,error}=await sb.from('profiles').select('*').eq('id',u.id).single();
       if(error) throw error;
       profile=data;
-      if(!profile||!['editor','admin','jugend_redaktion'].includes(profile.role)){
+      if(!profile||!['editor','admin','jugend_redaktion','foerderverein_redaktion'].includes(profile.role)){
         await sb.auth.signOut();
         msg('Login funktioniert, aber dieser Benutzer hat keine Redaktionsberechtigung.','error');
         return;
@@ -176,22 +176,25 @@
   });
 
   async function load(){
-    let q=sb.from('news').select('*').order('date',{ascending:false}); if(profile?.role==='jugend_redaktion') q=q.eq('category','Jugend'); const {data,error}=await q;
+    let q=sb.from('news').select('*').order('date',{ascending:false}); if(profile?.role==='jugend_redaktion') q=q.eq('category','Jugend'); if(profile?.role==='foerderverein_redaktion') q=q.eq('category','Förderverein'); const {data,error}=await q;
     if(error)return $('posts').innerHTML='<p>'+esc(error.message)+'</p>';
     posts=data||[];
     $('posts').innerHTML=posts.map(p=>`<div class="row"><div><strong>${esc(p.title)}</strong><div class="meta">${esc(p.date)} · <span class="tag">${esc(p.category)}</span> · ${p.status==='published'?'Veröffentlicht':'Entwurf'}</div></div><div><button class="secondary" data-e="${p.id}">Bearbeiten</button>${profile.role==='admin'?` <button class="delete" data-d="${p.id}">Löschen</button>`:''}</div></div>`).join('')||'<p>Noch keine Beiträge.</p>';
     document.querySelectorAll('[data-e]').forEach(b=>b.onclick=()=>open(posts.find(x=>x.id===b.dataset.e)));
     document.querySelectorAll('[data-d]').forEach(b=>b.onclick=()=>del(b.dataset.d));
   }
-  function open(p={}){ if(profile?.role==='jugend_redaktion' && p.category && p.category!=='Jugend') return;
-    $('postForm').reset();$('postId').value=p.id||'';$('category').value=profile?.role==='jugend_redaktion'?'Jugend':(p.category||'Herren');$('date').value=p.date||new Date().toISOString().slice(0,10);$('title').value=p.title||'';$('teaser').value=p.teaser||'';$('content').value=p.content||'';$('status').value=p.status||'draft';$('editorMsg').textContent='';$('editor').showModal();
+  function open(p={}){ if(profile?.role==='jugend_redaktion' && p.category && p.category!=='Jugend') return; if(profile?.role==='foerderverein_redaktion' && p.category && p.category!=='Förderverein') return;
+    $('postForm').reset();$('postId').value=p.id||'';$('category').value=profile?.role==='jugend_redaktion'?'Jugend':profile?.role==='foerderverein_redaktion'?'Förderverein':(p.category||'Herren');$('date').value=p.date||new Date().toISOString().slice(0,10);$('title').value=p.title||'';$('teaser').value=p.teaser||'';$('content').value=p.content||'';$('status').value=p.status||'draft';$('editorMsg').textContent='';$('editor').showModal();
   }
   $('new').onclick=()=>open();$('cancel').onclick=()=>$('editor').close();
   async function upload(file){if(!file)return null;const ext=file.name.split('.').pop();const path=`${user.id}/${Date.now()}-${crypto.randomUUID()}.${ext}`;const{error}=await sb.storage.from('news-images').upload(path,file);if(error)throw error;return sb.storage.from('news-images').getPublicUrl(path).data.publicUrl}
-  $('postForm').onsubmit=async e=>{e.preventDefault();try{$('editorMsg').textContent='Speichere …';const id=$('postId').value,old=posts.find(x=>x.id===id),img=await upload($('image').files[0]);const status=$('status').value,payload={category:profile?.role==='jugend_redaktion'?'Jugend':$('category').value,date:$('date').value,title:$('title').value.trim(),teaser:$('teaser').value.trim(),content:$('content').value.trim(),status,image_url:img||old?.image_url||null,published_at:status==='published'?(old?.published_at||new Date().toISOString()):null,updated_by:user.id};const r=id?await sb.from('news').update(payload).eq('id',id):await sb.from('news').insert({...payload,created_by:user.id});if(r.error)throw r.error;$('editor').close();load()}catch(err){$('editorMsg').textContent=detailedError(err,'Speichern')}};
+  $('postForm').onsubmit=async e=>{e.preventDefault();try{$('editorMsg').textContent='Speichere …';const id=$('postId').value,old=posts.find(x=>x.id===id),img=await upload($('image').files[0]);const status=$('status').value,payload={category:profile?.role==='jugend_redaktion'?'Jugend':profile?.role==='foerderverein_redaktion'?'Förderverein':$('category').value,date:$('date').value,title:$('title').value.trim(),teaser:$('teaser').value.trim(),content:$('content').value.trim(),status,image_url:img||old?.image_url||null,published_at:status==='published'?(old?.published_at||new Date().toISOString()):null,updated_by:user.id};const r=id?await sb.from('news').update(payload).eq('id',id):await sb.from('news').insert({...payload,created_by:user.id});if(r.error)throw r.error;$('editor').close();load()}catch(err){$('editorMsg').textContent=detailedError(err,'Speichern')}};
   async function del(id){if(profile.role!=='admin'||!confirm('Beitrag wirklich löschen?'))return;const{error}=await sb.from('news').delete().eq('id',id);if(error)alert(error.message);else load()}
 
   function applyRoleUI(){
+    const fv=profile?.role==='foerderverein_redaktion';
+    if(fv){$('category').value='Förderverein';$('category').disabled=true; ['tabTraining','tabTrainers'].forEach(id=>$(id)?.classList.add('hidden'));}
+    else {$('category').disabled=false; ['tabTraining','tabTrainers'].forEach(id=>$(id)?.classList.remove('hidden'));}
     if(profile?.role==='jugend_redaktion'){
       $('category').value='Jugend'; $('category').disabled=true;
       [...$('trainingScope').options].forEach(o=>o.disabled=o.value!=='Jugend');
@@ -206,7 +209,7 @@
     if(which==='training'){ loadTraining(); loadTrainingPlan(); }
   }
   $('tabNews').onclick=()=>switchPanel('news');
-  $('tabTraining').onclick=()=>switchPanel('training');
+  $('tabTraining').onclick=()=>{if(profile?.role!=='foerderverein_redaktion')switchPanel('training')};
   $('newTraining').onclick=()=>openTraining({period:visibleTrainingPeriod});
   $('trainingCancel').onclick=()=>$('trainingEditor').close();
 

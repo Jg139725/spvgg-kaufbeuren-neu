@@ -227,3 +227,5 @@
     installHeader();
   }
 })();
+/* V73 – Copyright-Hinweis */
+document.addEventListener("DOMContentLoaded",()=>{if(!document.getElementById("svk-copyright")){const f=document.createElement("div");f.id="svk-copyright";f.style.cssText="padding:15px;text-align:center;background:#071d3c;color:#fff;font:13px system-ui,sans-serif";f.textContent="© "+new Date().getFullYear()+" SpVgg Kaufbeuren e. V. · Alle Rechte vorbehalten.";document.body.append(f)}});
