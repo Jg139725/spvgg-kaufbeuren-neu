@@ -1,0 +1,6 @@
+SVK Damen CMS V78
+1. SQL-Datei in Supabase Database SQL Editor ausführen.
+2. Dateien unter Beibehaltung der Ordnerstruktur in GitHub hochladen.
+3. damen-redaktion.html öffnen und mit Admin oder Damen-Konto anmelden.
+4. Vorhandene Spielerinnen werden beim ersten Speichern übernommen.
+Hinweis: Bild-Upload benötigt passende Storage INSERT Policy für admin UND damen_redaktion im Bucket news-images. Bestehende SQL V77 erlaubt dort nur Damenredaktion. Für Admin muss diese Policy ergänzt werden.
