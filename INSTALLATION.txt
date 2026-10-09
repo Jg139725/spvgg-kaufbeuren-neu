@@ -1,7 +1,11 @@
-Nur Sponsoren-Update V75
+SVK Sponsoren V76 – NUR DIESE 5 DATEIEN IN GITHUB ERSETZEN/HINZUFÜGEN
 
-Die enthaltenen Dateien mit gleicher Ordnerstruktur in das bestehende GitHub-Repository hochladen und vorhandene Dateien ersetzen. NICHT das ganze Repository loeschen.
+1. ZIP entpacken.
+2. Alle enthaltenen HTML-/JS-Dateien mit der gleichen Ordnerstruktur in das bestehende GitHub-Repository hochladen.
+3. Bestehende Dateien ersetzen. Andere Dateien nicht löschen.
+4. Admin > Förderverein öffnen: neun alte Sponsoren + bereits gespeicherte Sponsoren werden zusammengeführt.
+5. Förderverein speichern klicken, damit die vollständige Liste in Supabase gespeichert wird.
+6. Danach Sponsoren per + hinzufügen, bearbeiten oder löschen.
 
-Voraussetzung: Supabase-Foerderverein-Setup V73 ist bereits installiert (SQL und Storage). Falls nicht, zuerst die vorhandene V73-Anleitung beachten.
-
-Anschliessend Startseite, Sponsoren-Unterseite und Adminbereich live testen.
+Voraussetzung: Supabase-Setup V73 und Storage-Bucket foerderverein-images.
+Bitte Live-Funktion und Berechtigungen nach Deployment testen.
