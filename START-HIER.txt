@@ -1,0 +1,7 @@
+SVK Sponsoren V75 – aufgeraeumtes Paket
+
+Dieses Paket enthaelt die bestehende Website mit allen benoetigten Assets und den Sponsoren-Aenderungen. Entfernt wurden nur alte README-, Upload- und Installations-Texte im Hauptverzeichnis.
+
+WICHTIG: Beim Aktualisieren von GitHub die bestehenden Dateien ersetzen und die Ordnerstruktur beibehalten. Bereits im Repository vorhandene alte Anleitungsdateien werden durch Hochladen nicht automatisch geloescht.
+
+Supabase-Einrichtung und Zugriffsrechte muessen separat korrekt eingerichtet sein.
