@@ -1,0 +1,6 @@
+SVK V79
+1. SQL-Datei in Supabase Database SQL Editor ausfuehren.
+2. admin/index.html und assets/js/damen-integrated-v79.js nach GitHub hochladen.
+3. Bestehendes Redaktionssystem unter /admin/ oeffnen.
+4. Damen-Tab mit Admin-Konto testen, erst danach speichern.
+WICHTIG: Keine bestehenden Dateien oder Tabellen loeschen.
