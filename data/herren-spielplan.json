@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-09T16:24:16.186536+00:00",
+  "updatedAt": "2026-10-09T21:46:57.943359+00:00",
   "source": "https://www.bfv.de/mannschaften/-/016PILCMSS000000VV0AG80NVUT1FLRU",
   "fixtures": [
     {
@@ -265,13 +265,13 @@
     {
       "pos": 1,
       "team": "FC Thalhofen",
-      "played": 11,
+      "played": 12,
       "won": 9,
-      "drawn": 1,
+      "drawn": 2,
       "lost": 1,
       "goals": "36:14",
       "diff": "22",
-      "points": 28
+      "points": 29
     },
     {
       "pos": 2,
@@ -342,13 +342,13 @@
     {
       "pos": 8,
       "team": "SpVgg Kaufbeuren",
-      "played": 12,
+      "played": 13,
       "won": 5,
-      "drawn": 1,
+      "drawn": 2,
       "lost": 6,
       "goals": "19:20",
       "diff": "-1",
-      "points": 16
+      "points": 17
     },
     {
       "pos": 9,
