@@ -1,0 +1,7 @@
+SVK Damenredaktion V77
+1. Die drei Dateien aus admin/ und assets/js/ mit gleicher Ordnerstruktur in GitHub ersetzen.
+2. Supabase Dashboard > Authentication > Users: herzfotografen@web.de einladen/anlegen, Passwort nur sicher ueber Auth vergeben.
+3. SQL aus supabase/SVK_V77_DAMEN_REDAKTION.sql im SQL Editor ausfuehren.
+4. Als Damen-Benutzerin anmelden und Berichte, Trainingszeiten, Trainerteam testen.
+5. Spielerinnen-Kader und frei editierbare Damenseiten-Texte sind noch NICHT Bestandteil dieses Updates; diese brauchen ein separates CMS-Modul.
+Hinweis: Supabase-RLS-Regeln muessen im Liveprojekt geprueft werden.

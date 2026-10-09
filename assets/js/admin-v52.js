@@ -72,7 +72,7 @@
       const {data,error}=await sb.from('profiles').select('*').eq('id',u.id).single();
       if(error) throw error;
       profile=data;
-      if(!profile||!['editor','admin','jugend_redaktion','foerderverein_redaktion'].includes(profile.role)){
+      if(!profile||!['editor','admin','jugend_redaktion','foerderverein_redaktion','damen_redaktion'].includes(profile.role)){
         await sb.auth.signOut();
         msg('Login funktioniert, aber dieser Benutzer hat keine Redaktionsberechtigung.','error');
         return;
@@ -176,25 +176,26 @@
   });
 
   async function load(){
-    let q=sb.from('news').select('*').order('date',{ascending:false}); if(profile?.role==='jugend_redaktion') q=q.eq('category','Jugend'); if(profile?.role==='foerderverein_redaktion') q=q.eq('category','Förderverein'); const {data,error}=await q;
+    let q=sb.from('news').select('*').order('date',{ascending:false}); if(profile?.role==='jugend_redaktion') q=q.eq('category','Jugend'); if(profile?.role==='foerderverein_redaktion') q=q.eq('category','Förderverein'); if(profile?.role==='damen_redaktion') q=q.eq('category','Frauen'); const {data,error}=await q;
     if(error)return $('posts').innerHTML='<p>'+esc(error.message)+'</p>';
     posts=data||[];
     $('posts').innerHTML=posts.map(p=>`<div class="row"><div><strong>${esc(p.title)}</strong><div class="meta">${esc(p.date)} · <span class="tag">${esc(p.category)}</span> · ${p.status==='published'?'Veröffentlicht':'Entwurf'}</div></div><div><button class="secondary" data-e="${p.id}">Bearbeiten</button>${profile.role==='admin'?` <button class="delete" data-d="${p.id}">Löschen</button>`:''}</div></div>`).join('')||'<p>Noch keine Beiträge.</p>';
     document.querySelectorAll('[data-e]').forEach(b=>b.onclick=()=>open(posts.find(x=>x.id===b.dataset.e)));
     document.querySelectorAll('[data-d]').forEach(b=>b.onclick=()=>del(b.dataset.d));
   }
-  function open(p={}){ if(profile?.role==='jugend_redaktion' && p.category && p.category!=='Jugend') return; if(profile?.role==='foerderverein_redaktion' && p.category && p.category!=='Förderverein') return;
-    $('postForm').reset();$('postId').value=p.id||'';$('category').value=profile?.role==='jugend_redaktion'?'Jugend':profile?.role==='foerderverein_redaktion'?'Förderverein':(p.category||'Herren');$('date').value=p.date||new Date().toISOString().slice(0,10);$('title').value=p.title||'';$('teaser').value=p.teaser||'';$('content').value=p.content||'';$('status').value=p.status||'draft';$('editorMsg').textContent='';$('editor').showModal();
+  function open(p={}){ if(profile?.role==='jugend_redaktion' && p.category && p.category!=='Jugend') return; if(profile?.role==='foerderverein_redaktion' && p.category && p.category!=='Förderverein') return; if(profile?.role==='damen_redaktion' && p.category && p.category!=='Frauen') return;
+    $('postForm').reset();$('postId').value=p.id||'';$('category').value=profile?.role==='jugend_redaktion'?'Jugend':profile?.role==='foerderverein_redaktion'?'Förderverein':profile?.role==='damen_redaktion'?'Frauen':(p.category||'Herren');$('date').value=p.date||new Date().toISOString().slice(0,10);$('title').value=p.title||'';$('teaser').value=p.teaser||'';$('content').value=p.content||'';$('status').value=p.status||'draft';$('editorMsg').textContent='';$('editor').showModal();
   }
   $('new').onclick=()=>open();$('cancel').onclick=()=>$('editor').close();
   async function upload(file){if(!file)return null;const ext=file.name.split('.').pop();const path=`${user.id}/${Date.now()}-${crypto.randomUUID()}.${ext}`;const{error}=await sb.storage.from('news-images').upload(path,file);if(error)throw error;return sb.storage.from('news-images').getPublicUrl(path).data.publicUrl}
-  $('postForm').onsubmit=async e=>{e.preventDefault();try{$('editorMsg').textContent='Speichere …';const id=$('postId').value,old=posts.find(x=>x.id===id),img=await upload($('image').files[0]);const status=$('status').value,payload={category:profile?.role==='jugend_redaktion'?'Jugend':profile?.role==='foerderverein_redaktion'?'Förderverein':$('category').value,date:$('date').value,title:$('title').value.trim(),teaser:$('teaser').value.trim(),content:$('content').value.trim(),status,image_url:img||old?.image_url||null,published_at:status==='published'?(old?.published_at||new Date().toISOString()):null,updated_by:user.id};const r=id?await sb.from('news').update(payload).eq('id',id):await sb.from('news').insert({...payload,created_by:user.id});if(r.error)throw r.error;$('editor').close();load()}catch(err){$('editorMsg').textContent=detailedError(err,'Speichern')}};
+  $('postForm').onsubmit=async e=>{e.preventDefault();try{$('editorMsg').textContent='Speichere …';const id=$('postId').value,old=posts.find(x=>x.id===id),img=await upload($('image').files[0]);const status=$('status').value,payload={category:profile?.role==='jugend_redaktion'?'Jugend':profile?.role==='foerderverein_redaktion'?'Förderverein':profile?.role==='damen_redaktion'?'Frauen':$('category').value,date:$('date').value,title:$('title').value.trim(),teaser:$('teaser').value.trim(),content:$('content').value.trim(),status,image_url:img||old?.image_url||null,published_at:status==='published'?(old?.published_at||new Date().toISOString()):null,updated_by:user.id};const r=id?await sb.from('news').update(payload).eq('id',id):await sb.from('news').insert({...payload,created_by:user.id});if(r.error)throw r.error;$('editor').close();load()}catch(err){$('editorMsg').textContent=detailedError(err,'Speichern')}};
   async function del(id){if(profile.role!=='admin'||!confirm('Beitrag wirklich löschen?'))return;const{error}=await sb.from('news').delete().eq('id',id);if(error)alert(error.message);else load()}
 
   function applyRoleUI(){
     const fv=profile?.role==='foerderverein_redaktion';
     if(fv){$('category').value='Förderverein';$('category').disabled=true; ['tabTraining','tabTrainers'].forEach(id=>$(id)?.classList.add('hidden'));}
     else {$('category').disabled=false; ['tabTraining','tabTrainers'].forEach(id=>$(id)?.classList.remove('hidden'));}
+    if(profile?.role==='damen_redaktion'){ $('category').value='Frauen'; $('category').disabled=true; $('trainingScope').value='Frauen'; [...$('trainingScope').options].forEach(o=>o.disabled=o.value!=='Frauen'); $('tabFoerderverein')?.classList.add('hidden'); }
     if(profile?.role==='jugend_redaktion'){
       $('category').value='Jugend'; $('category').disabled=true;
       [...$('trainingScope').options].forEach(o=>o.disabled=o.value!=='Jugend');
@@ -246,7 +247,7 @@
   const dayOrder={Montag:1,Dienstag:2,Mittwoch:3,Donnerstag:4,Freitag:5,Samstag:6,Sonntag:7};
   async function loadTraining(){
     let q=sb.from('training_times').select('*').order('sort_order',{ascending:true}).order('start_time',{ascending:true});
-    if(profile?.role==='jugend_redaktion') q=q.eq('scope','Jugend');
+    if(profile?.role==='jugend_redaktion') q=q.eq('scope','Jugend'); if(profile?.role==='damen_redaktion') q=q.eq('scope','Frauen');
     const {data,error}=await q;
     if(error){$('trainingRows').innerHTML='<p>'+esc(error.message)+'</p>';return}
     training=(data||[]).filter(t => (t.period||'Sommerzeit')===visibleTrainingPeriod);
@@ -259,7 +260,7 @@
   }
   function openTraining(t={}){
     $('trainingForm').reset(); $('trainingId').value=t.id||'';
-    $('trainingScope').value=profile?.role==='jugend_redaktion'?'Jugend':(t.scope||'Jugend');
+    $('trainingScope').value=profile?.role==='jugend_redaktion'?'Jugend':profile?.role==='damen_redaktion'?'Frauen':(t.scope||'Jugend');
     $('trainingTeam').value=t.team||''; $('trainingLabel').value=t.label||''; $('trainingDay').value=t.weekday||'Montag';
     $('trainingStart').value=(t.start_time||'').slice(0,5); $('trainingEnd').value=(t.end_time||'').slice(0,5);
     $('trainingLocation').value=t.location||''; $('trainingNote').value=t.note||''; $('trainingPeriod').value=t.period||visibleTrainingPeriod||'Sommerzeit'; $('trainingActive').checked=t.active!==false;
@@ -268,9 +269,9 @@
   $('trainingForm').onsubmit=async e=>{
     e.preventDefault(); $('trainingMsg').textContent='Speichere …';
     const id=$('trainingId').value;
-    const payload={scope:profile?.role==='jugend_redaktion'?'Jugend':$('trainingScope').value,team:$('trainingTeam').value.trim(),label:$('trainingLabel').value.trim()||null,weekday:$('trainingDay').value,start_time:$('trainingStart').value||null,end_time:$('trainingEnd').value||null,location:$('trainingLocation').value.trim()||null,note:$('trainingNote').value.trim()||null,period:(id ? (training.find(x=>String(x.id)===String(id))?.period||visibleTrainingPeriod) : visibleTrainingPeriod),active:$('trainingActive').checked,updated_by:user.id,sort_order:dayOrder[$('trainingDay').value]||99};
+    const payload={scope:profile?.role==='jugend_redaktion'?'Jugend':profile?.role==='damen_redaktion'?'Frauen':$('trainingScope').value,team:$('trainingTeam').value.trim(),label:$('trainingLabel').value.trim()||null,weekday:$('trainingDay').value,start_time:$('trainingStart').value||null,end_time:$('trainingEnd').value||null,location:$('trainingLocation').value.trim()||null,note:$('trainingNote').value.trim()||null,period:(id ? (training.find(x=>String(x.id)===String(id))?.period||visibleTrainingPeriod) : visibleTrainingPeriod),active:$('trainingActive').checked,updated_by:user.id,sort_order:dayOrder[$('trainingDay').value]||99};
     const r=id?await sb.from('training_times').update(payload).eq('id',id):await sb.from('training_times').insert({...payload,created_by:user.id});
     if(r.error){$('trainingMsg').textContent=r.error.message;return} $('trainingEditor').close(); loadTraining();
   };
-  async function deleteTraining(id){if(!['admin','editor','jugend_redaktion'].includes(profile?.role)||!confirm('Trainingszeit wirklich löschen?'))return;const {error}=await sb.from('training_times').delete().eq('id',id);if(error)alert(error.message);else loadTraining()}
+  async function deleteTraining(id){if(!['admin','editor','jugend_redaktion','damen_redaktion'].includes(profile?.role)||!confirm('Trainingszeit wirklich löschen?'))return;const {error}=await sb.from('training_times').delete().eq('id',id);if(error)alert(error.message);else loadTraining()}
 })();
