@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-10T10:41:30.413652+00:00",
+  "updatedAt": "2026-10-10T10:46:14.646453+00:00",
   "source": "https://www.bfv.de/mannschaften/-/016PILCMSS000000VV0AG80NVUT1FLRU",
   "fixtures": [
     {
@@ -185,7 +185,7 @@
       "time": "19:00",
       "home": "SpVgg Kaufbeuren",
       "away": "FC Thalhofen",
-      "score": "",
+      "score": "2:2",
       "venue": "Parkstadion Kaufbeuren"
     },
     {
@@ -246,12 +246,12 @@
     "venue": ""
   },
   "lastGame": {
-    "date": "2026-10-03",
-    "time": "15:30",
-    "home": "FC Wiggensbach",
-    "away": "SpVgg Kaufbeuren",
-    "score": "0:3",
-    "venue": "Max Swoboda-Stadion"
+    "date": "2026-10-09",
+    "time": "19:00",
+    "home": "SpVgg Kaufbeuren",
+    "away": "FC Thalhofen",
+    "score": "2:2",
+    "venue": "Parkstadion Kaufbeuren"
   },
   "table": [
     {

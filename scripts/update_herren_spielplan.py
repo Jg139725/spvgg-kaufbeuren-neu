@@ -166,6 +166,7 @@ def main():
     confirmed_results = [
       ("2026-09-19","14:00","TSV 1892 Haunstetten","SpVgg Kaufbeuren","2:3",""),
       ("2026-09-26","16:00","SpVgg Kaufbeuren","FC Königsbrunn","1:1","Parkstadion Kaufbeuren"),
+      ("2026-10-09","19:00","SpVgg Kaufbeuren","FC Thalhofen","2:2","Parkstadion Kaufbeuren"),
     ]
     for a,b,c,d,score,venue in confirmed_results:
         add_game(games, {"date":a,"time":b,"home":c,"away":d,"score":score,"venue":venue})

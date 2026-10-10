@@ -1,0 +1,19 @@
+SVK Spielplan-Fix – 10.10.2026
+
+Dieses Paket enthält NUR zwei Dateien.
+
+1. data/herren-spielplan.json
+   - Ergebnis 09.10.2026: SpVgg Kaufbeuren 2:2 FC Thalhofen
+   - lastGame entsprechend aktualisiert.
+
+2. scripts/update_herren_spielplan.py
+   - Das bestätigte Ergebnis wird als Sicherheits-Fallback übernommen,
+     falls der BFV-Parser es noch nicht lesen kann.
+   - Die bestehende automatische Aktualisierung bleibt aktiv.
+
+Installation: Beide Dateien im GitHub-Repository an exakt denselben Pfaden ersetzen.
+Danach GitHub Actions > '1. Herren Spielplan und Tabelle aktualisieren' > Run workflow ausführen.
+Seite neu laden.
+
+Hinweis: Der Parser selbst wurde nicht vollständig neu entwickelt; die
+BFV-Datenübernahme sollte bei künftigen Spielen weiterhin geprüft werden.
