@@ -1,15 +1,7 @@
 {
-  "updatedAt": "2026-10-09T21:46:57.943359+00:00",
+  "updatedAt": "2026-10-10T01:49:18.931216+00:00",
   "source": "https://www.bfv.de/mannschaften/-/016PILCMSS000000VV0AG80NVUT1FLRU",
   "fixtures": [
-    {
-      "date": "2026-10-09",
-      "time": "19:00",
-      "home": "SpVgg Kaufbeuren",
-      "away": "FC Thalhofen",
-      "score": "",
-      "venue": "Parkstadion Kaufbeuren"
-    },
     {
       "date": "2026-10-17",
       "time": "15:00",
@@ -246,12 +238,12 @@
     }
   ],
   "nextGame": {
-    "date": "2026-10-09",
-    "time": "19:00",
-    "home": "SpVgg Kaufbeuren",
-    "away": "FC Thalhofen",
+    "date": "2026-10-17",
+    "time": "15:00",
+    "home": "TV Erkheim",
+    "away": "SpVgg Kaufbeuren",
     "score": "",
-    "venue": "Parkstadion Kaufbeuren"
+    "venue": ""
   },
   "lastGame": {
     "date": "2026-10-03",
@@ -269,20 +261,20 @@
       "won": 9,
       "drawn": 2,
       "lost": 1,
-      "goals": "36:14",
+      "goals": "38:16",
       "diff": "22",
       "points": 29
     },
     {
       "pos": 2,
       "team": "SV Mering",
-      "played": 12,
+      "played": 13,
       "won": 7,
-      "drawn": 4,
+      "drawn": 5,
       "lost": 1,
-      "goals": "27:18",
+      "goals": "30:21",
       "diff": "9",
-      "points": 25
+      "points": 26
     },
     {
       "pos": 3,
@@ -308,6 +300,17 @@
     },
     {
       "pos": 5,
+      "team": "VfL Kaufering",
+      "played": 13,
+      "won": 6,
+      "drawn": 3,
+      "lost": 4,
+      "goals": "32:23",
+      "diff": "9",
+      "points": 21
+    },
+    {
+      "pos": 6,
       "team": "SV Egg a. d. Günz",
       "played": 12,
       "won": 6,
@@ -316,17 +319,6 @@
       "goals": "27:19",
       "diff": "8",
       "points": 21
-    },
-    {
-      "pos": 6,
-      "team": "VfL Kaufering",
-      "played": 12,
-      "won": 6,
-      "drawn": 2,
-      "lost": 4,
-      "goals": "29:20",
-      "diff": "9",
-      "points": 20
     },
     {
       "pos": 7,
@@ -346,7 +338,7 @@
       "won": 5,
       "drawn": 2,
       "lost": 6,
-      "goals": "19:20",
+      "goals": "21:22",
       "diff": "-1",
       "points": 17
     },
