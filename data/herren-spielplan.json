@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-10T10:46:14.646453+00:00",
+  "updatedAt": "2026-10-10T15:28:22.539918+00:00",
   "source": "https://www.bfv.de/mannschaften/-/016PILCMSS000000VV0AG80NVUT1FLRU",
   "fixtures": [
     {
@@ -279,13 +279,13 @@
     {
       "pos": 3,
       "team": "TV Erkheim",
-      "played": 12,
-      "won": 7,
+      "played": 13,
+      "won": 8,
       "drawn": 1,
       "lost": 4,
-      "goals": "31:25",
-      "diff": "6",
-      "points": 22
+      "goals": "33:25",
+      "diff": "8",
+      "points": 25
     },
     {
       "pos": 4,
@@ -378,16 +378,27 @@
     {
       "pos": 12,
       "team": "FC Oberstdorf",
-      "played": 11,
+      "played": 12,
       "won": 3,
       "drawn": 2,
-      "lost": 6,
-      "goals": "18:23",
-      "diff": "-5",
+      "lost": 7,
+      "goals": "18:25",
+      "diff": "-7",
       "points": 11
     },
     {
       "pos": 13,
+      "team": "FC Wiggensbach",
+      "played": 13,
+      "won": 3,
+      "drawn": 2,
+      "lost": 8,
+      "goals": "12:25",
+      "diff": "-13",
+      "points": 11
+    },
+    {
+      "pos": 14,
       "team": "FC Bad Wörishofen",
       "played": 12,
       "won": 3,
@@ -398,7 +409,7 @@
       "points": 11
     },
     {
-      "pos": 14,
+      "pos": 15,
       "team": "SSV Niedersonthofen",
       "played": 12,
       "won": 3,
@@ -409,25 +420,14 @@
       "points": 10
     },
     {
-      "pos": 15,
-      "team": "FC Wiggensbach",
-      "played": 12,
-      "won": 2,
-      "drawn": 2,
-      "lost": 8,
-      "goals": "11:25",
-      "diff": "-14",
-      "points": 8
-    },
-    {
       "pos": 16,
       "team": "SVO Germaringen",
-      "played": 11,
+      "played": 12,
       "won": 1,
       "drawn": 3,
-      "lost": 7,
-      "goals": "13:28",
-      "diff": "-15",
+      "lost": 8,
+      "goals": "13:29",
+      "diff": "-16",
       "points": 6
     }
   ]
