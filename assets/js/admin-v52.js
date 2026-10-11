@@ -194,7 +194,7 @@
   function applyRoleUI(){
     const fv=profile?.role==='foerderverein_redaktion';
     const herren=profile?.role==='herren_news_redaktion';
-    if(herren){$('category').value='Herren';$('category').disabled=true; ['tabTraining','tabTrainers','tabFoerderverein'].forEach(id=>{const el=$(id);if(el){el.classList.add('hidden');el.style.display='none';}});}
+    if(herren){$('category').value='Herren';$('category').disabled=true; ['tabTraining','tabTrainers','tabFoerderverein','tabDamenCms'].forEach(id=>{const el=$(id);if(el){el.classList.add('hidden');el.style.display='none';}}); ['trainingPanel','trainersPanel','foerdervereinPanel','damenCmsPanel'].forEach(id=>$(id)?.classList.add('hidden'));}
     if(fv){$('category').value='Förderverein';$('category').disabled=true; ['tabTraining','tabTrainers'].forEach(id=>$(id)?.classList.add('hidden'));}
     else if(!herren) {$('category').disabled=false; ['tabTraining','tabTrainers'].forEach(id=>$(id)?.classList.remove('hidden'));}
     if(profile?.role==='damen_redaktion'){ $('category').value='Frauen'; $('category').disabled=true; $('trainingScope').value='Frauen'; [...$('trainingScope').options].forEach(o=>o.disabled=o.value!=='Frauen'); $('tabFoerderverein')?.classList.add('hidden'); }
