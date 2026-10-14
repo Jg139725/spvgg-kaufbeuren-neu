@@ -189,14 +189,6 @@
       "venue": "Parkstadion Kaufbeuren"
     },
     {
-      "date": "2026-10-11",
-      "time": "",
-      "home": "FC Wiggensbach",
-      "away": "SpVgg Kaufbeuren",
-      "score": "0:3",
-      "venue": ""
-    },
-    {
       "date": "2026-10-17",
       "time": "15:00",
       "home": "TV Erkheim",
@@ -254,12 +246,12 @@
     "venue": ""
   },
   "lastGame": {
-    "date": "2026-10-11",
-    "time": "",
-    "home": "FC Wiggensbach",
-    "away": "SpVgg Kaufbeuren",
-    "score": "0:3",
-    "venue": ""
+    "date": "2026-10-09",
+    "time": "19:00",
+    "home": "SpVgg Kaufbeuren",
+    "away": "FC Thalhofen",
+    "score": "2:2",
+    "venue": "Parkstadion Kaufbeuren"
   },
   "table": [
     {
