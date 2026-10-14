@@ -199,7 +199,7 @@ def main():
     # Ein bereits angepfiffenes/abgelaufenes Spiel darf nie wieder als "Nächstes Spiel"
     # erscheinen, nur weil die BFV-Mannschaftsseite mit dem Ergebnis hinterherhinkt.
     # Drei Stunden Puffer decken reguläre Spielzeit, Halbzeit und übliche Verzögerungen ab.
-    completed = [g for g in games if valid_score(g.get("score")) and kickoff(g) and kickoff(g) <= now_local]
+    # BFV-Berichte können Veröffentlichungsdaten statt Spieltage liefern.\n    # Ein bekanntes Spielpaar nicht zusätzlich mit einem späteren Datum übernehmen.\n    known_pairs = {}\n    for g in games:\n        if valid_score(g.get("score")):\n            pair = (g.get("home"), g.get("away"), g.get("score"))\n            known_pairs.setdefault(pair, []).append(g)\n    completed = []\n    for g in games:\n        if not valid_score(g.get("score")) or not kickoff(g) or kickoff(g) > now_local:\n            continue\n        pair = (g.get("home"), g.get("away"), g.get("score"))\n        earlier = [x for x in known_pairs[pair] if x.get("date", "") < g.get("date", "") and 0 < (datetime.fromisoformat(g["date"]) - datetime.fromisoformat(x["date"])).days <= 7]\n        if earlier:\n            continue\n        completed.append(g)
     future = []
     for g in games:
         ko = kickoff(g)
