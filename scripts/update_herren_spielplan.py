@@ -126,7 +126,9 @@ def parse_reports(session, soup, games, raw_html=""):
 
     # Sicherheitsanker für den aktuellsten Bericht; Ergebnis wird aus der BFV-Seite gelesen.
     seed = "https://www.bfv.de/spiele/spielbericht/0324UVF6CG000000VS5489BVVU7OHUMA"
-    if seed not in links: links.insert(0, seed)
+    latest_report = "https://www.bfv.de/spiele/spielbericht/032DVL4O10000000VS5489BVVV1OSFNH"
+    for report in (seed, latest_report):
+        if report not in links: links.insert(0, report)
 
     for u in links[:24]:
         try:
@@ -167,6 +169,7 @@ def main():
       ("2026-09-19","14:00","TSV 1892 Haunstetten","SpVgg Kaufbeuren","2:3",""),
       ("2026-09-26","16:00","SpVgg Kaufbeuren","FC Königsbrunn","1:1","Parkstadion Kaufbeuren"),
       ("2026-10-09","19:00","SpVgg Kaufbeuren","FC Thalhofen","2:2","Parkstadion Kaufbeuren"),
+      ("2026-10-17","15:00","TV Erkheim","SpVgg Kaufbeuren","4:4","Hauptplatz TV Erkheim"),
     ]
     for a,b,c,d,score,venue in confirmed_results:
         add_game(games, {"date":a,"time":b,"home":c,"away":d,"score":score,"venue":venue})
@@ -199,7 +202,22 @@ def main():
     # Ein bereits angepfiffenes/abgelaufenes Spiel darf nie wieder als "Nächstes Spiel"
     # erscheinen, nur weil die BFV-Mannschaftsseite mit dem Ergebnis hinterherhinkt.
     # Drei Stunden Puffer decken reguläre Spielzeit, Halbzeit und übliche Verzögerungen ab.
-    # BFV-Berichte können Veröffentlichungsdaten statt Spieltage liefern.\n    # Ein bekanntes Spielpaar nicht zusätzlich mit einem späteren Datum übernehmen.\n    known_pairs = {}\n    for g in games:\n        if valid_score(g.get("score")):\n            pair = (g.get("home"), g.get("away"), g.get("score"))\n            known_pairs.setdefault(pair, []).append(g)\n    completed = []\n    for g in games:\n        if not valid_score(g.get("score")) or not kickoff(g) or kickoff(g) > now_local:\n            continue\n        pair = (g.get("home"), g.get("away"), g.get("score"))\n        earlier = [x for x in known_pairs[pair] if x.get("date", "") < g.get("date", "") and 0 < (datetime.fromisoformat(g["date"]) - datetime.fromisoformat(x["date"])).days <= 7]\n        if earlier:\n            continue\n        completed.append(g)
+    # BFV-Berichte können Veröffentlichungsdaten statt Spieltage liefern.
+    # Ein bekanntes Spielpaar nicht zusätzlich mit einem späteren Datum übernehmen.
+    known_pairs = {}
+    for g in games:
+        if valid_score(g.get("score")):
+            pair = (g.get("home"), g.get("away"), g.get("score"))
+            known_pairs.setdefault(pair, []).append(g)
+    completed = []
+    for g in games:
+        if not valid_score(g.get("score")) or not kickoff(g) or kickoff(g) > now_local:
+            continue
+        pair = (g.get("home"), g.get("away"), g.get("score"))
+        earlier = [x for x in known_pairs[pair] if x.get("date", "") < g.get("date", "") and 0 < (datetime.fromisoformat(g["date"]) - datetime.fromisoformat(x["date"])).days <= 7]
+        if earlier:
+            continue
+        completed.append(g)
     future = []
     for g in games:
         ko = kickoff(g)
