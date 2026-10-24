@@ -112,7 +112,7 @@
     }
     msg('Recovery-E-Mail wird angefordert …','working');
     try{
-      const redirectTo=new URL('admin/', window.location.href).href;
+      const redirectTo=new URL('./', window.location.href).href;
       const {error}=await sb.auth.resetPasswordForEmail(email,{redirectTo});
       if(error) throw error;
       msg('E-Mail wurde angefordert. Öffne den Link in der Mail – danach erscheint hier automatisch die Maske für ein neues Passwort.','ok');
