@@ -1,15 +1,7 @@
 {
-  "updatedAt": "2026-10-24T12:47:43.179119+00:00",
+  "updatedAt": "2026-10-24T16:43:26.496869+00:00",
   "source": "https://www.bfv.de/mannschaften/-/016PILCMSS000000VV0AG80NVUT1FLRU",
   "fixtures": [
-    {
-      "date": "2026-10-24",
-      "time": "16:00",
-      "home": "SpVgg Kaufbeuren",
-      "away": "FC Oberstdorf",
-      "score": "",
-      "venue": "Parkstadion Kaufbeuren"
-    },
     {
       "date": "2026-10-30",
       "time": "19:00",
@@ -217,7 +209,7 @@
       "time": "16:00",
       "home": "SpVgg Kaufbeuren",
       "away": "FC Oberstdorf",
-      "score": "",
+      "score": "1:1",
       "venue": "Parkstadion Kaufbeuren"
     },
     {
@@ -262,20 +254,20 @@
     }
   ],
   "nextGame": {
+    "date": "2026-10-30",
+    "time": "19:00",
+    "home": "SVO Germaringen",
+    "away": "SpVgg Kaufbeuren",
+    "score": "",
+    "venue": ""
+  },
+  "lastGame": {
     "date": "2026-10-24",
     "time": "16:00",
     "home": "SpVgg Kaufbeuren",
     "away": "FC Oberstdorf",
-    "score": "",
+    "score": "1:1",
     "venue": "Parkstadion Kaufbeuren"
-  },
-  "lastGame": {
-    "date": "2026-10-17",
-    "time": "15:00",
-    "home": "TV Erkheim",
-    "away": "SpVgg Kaufbeuren",
-    "score": "4:4",
-    "venue": "Hauptplatz TV Erkheim"
   },
   "table": [
     {
@@ -325,12 +317,12 @@
     {
       "pos": 5,
       "team": "TV Erkheim",
-      "played": 14,
+      "played": 15,
       "won": 8,
       "drawn": 2,
-      "lost": 4,
-      "goals": "37:29",
-      "diff": "8",
+      "lost": 5,
+      "goals": "38:31",
+      "diff": "7",
       "points": 26
     },
     {
@@ -357,6 +349,17 @@
     },
     {
       "pos": 8,
+      "team": "SpVgg Kaufbeuren",
+      "played": 15,
+      "won": 5,
+      "drawn": 4,
+      "lost": 6,
+      "goals": "26:27",
+      "diff": "-1",
+      "points": 19
+    },
+    {
+      "pos": 9,
       "team": "FC Königsbrunn",
       "played": 14,
       "won": 5,
@@ -365,17 +368,6 @@
       "goals": "26:30",
       "diff": "-4",
       "points": 19
-    },
-    {
-      "pos": 9,
-      "team": "SpVgg Kaufbeuren",
-      "played": 14,
-      "won": 5,
-      "drawn": 3,
-      "lost": 6,
-      "goals": "25:26",
-      "diff": "-1",
-      "points": 18
     },
     {
       "pos": 10,
@@ -402,35 +394,35 @@
     {
       "pos": 12,
       "team": "SVO Germaringen",
-      "played": 14,
-      "won": 3,
+      "played": 15,
+      "won": 4,
       "drawn": 3,
       "lost": 8,
-      "goals": "17:32",
-      "diff": "-15",
-      "points": 12
+      "goals": "19:33",
+      "diff": "-14",
+      "points": 15
     },
     {
       "pos": 13,
       "team": "FC Oberstdorf",
-      "played": 14,
+      "played": 15,
       "won": 3,
-      "drawn": 2,
+      "drawn": 3,
       "lost": 9,
-      "goals": "18:29",
+      "goals": "19:30",
       "diff": "-11",
-      "points": 11
+      "points": 12
     },
     {
       "pos": 14,
       "team": "FC Wiggensbach",
-      "played": 14,
+      "played": 15,
       "won": 3,
-      "drawn": 2,
+      "drawn": 3,
       "lost": 9,
       "goals": "15:28",
       "diff": "-13",
-      "points": 11
+      "points": 12
     },
     {
       "pos": 15,
@@ -446,13 +438,13 @@
     {
       "pos": 16,
       "team": "SSV Niedersonthofen",
-      "played": 14,
+      "played": 15,
       "won": 3,
-      "drawn": 1,
+      "drawn": 2,
       "lost": 10,
       "goals": "24:39",
       "diff": "-15",
-      "points": 10
+      "points": 11
     }
   ]
 }
