@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-24T16:43:26.496869+00:00",
+  "updatedAt": "2026-10-24T19:34:56.998614+00:00",
   "source": "https://www.bfv.de/mannschaften/-/016PILCMSS000000VV0AG80NVUT1FLRU",
   "fixtures": [
     {
@@ -39,6 +39,14 @@
       "time": "14:00",
       "home": "SpVgg Kaufbeuren",
       "away": "TSV Merching",
+      "score": "",
+      "venue": ""
+    },
+    {
+      "date": "2027-03-14",
+      "time": "14:00",
+      "home": "SV Egg a. d. Günz",
+      "away": "SpVgg Kaufbeuren",
       "score": "",
       "venue": ""
     }
@@ -251,6 +259,14 @@
       "away": "TSV Merching",
       "score": "",
       "venue": ""
+    },
+    {
+      "date": "2027-03-14",
+      "time": "14:00",
+      "home": "SV Egg a. d. Günz",
+      "away": "SpVgg Kaufbeuren",
+      "score": "",
+      "venue": ""
     }
   ],
   "nextGame": {
@@ -305,6 +321,17 @@
     },
     {
       "pos": 4,
+      "team": "TV Erkheim",
+      "played": 15,
+      "won": 8,
+      "drawn": 3,
+      "lost": 4,
+      "goals": "38:30",
+      "diff": "8",
+      "points": 27
+    },
+    {
+      "pos": 5,
       "team": "VfL Kaufering",
       "played": 15,
       "won": 8,
@@ -313,17 +340,6 @@
       "goals": "38:23",
       "diff": "15",
       "points": 27
-    },
-    {
-      "pos": 5,
-      "team": "TV Erkheim",
-      "played": 15,
-      "won": 8,
-      "drawn": 2,
-      "lost": 5,
-      "goals": "38:31",
-      "diff": "7",
-      "points": 26
     },
     {
       "pos": 6,
@@ -351,12 +367,12 @@
       "pos": 8,
       "team": "SpVgg Kaufbeuren",
       "played": 15,
-      "won": 5,
-      "drawn": 4,
+      "won": 6,
+      "drawn": 3,
       "lost": 6,
-      "goals": "26:27",
-      "diff": "-1",
-      "points": 19
+      "goals": "26:26",
+      "diff": "0",
+      "points": 21
     },
     {
       "pos": 9,
@@ -395,26 +411,15 @@
       "pos": 12,
       "team": "SVO Germaringen",
       "played": 15,
-      "won": 4,
-      "drawn": 3,
+      "won": 3,
+      "drawn": 4,
       "lost": 8,
-      "goals": "19:33",
-      "diff": "-14",
-      "points": 15
+      "goals": "18:33",
+      "diff": "-15",
+      "points": 13
     },
     {
       "pos": 13,
-      "team": "FC Oberstdorf",
-      "played": 15,
-      "won": 3,
-      "drawn": 3,
-      "lost": 9,
-      "goals": "19:30",
-      "diff": "-11",
-      "points": 12
-    },
-    {
-      "pos": 14,
       "team": "FC Wiggensbach",
       "played": 15,
       "won": 3,
@@ -425,7 +430,7 @@
       "points": 12
     },
     {
-      "pos": 15,
+      "pos": 14,
       "team": "FC Bad Wörishofen",
       "played": 15,
       "won": 3,
@@ -433,6 +438,17 @@
       "lost": 10,
       "goals": "13:36",
       "diff": "-23",
+      "points": 11
+    },
+    {
+      "pos": 15,
+      "team": "FC Oberstdorf",
+      "played": 15,
+      "won": 3,
+      "drawn": 2,
+      "lost": 10,
+      "goals": "18:30",
+      "diff": "-12",
       "points": 11
     },
     {
