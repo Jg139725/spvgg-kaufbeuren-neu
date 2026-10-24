@@ -227,8 +227,24 @@
     installHeader();
   }
 })();
-/* V73 – Copyright-Hinweis */
-document.addEventListener("DOMContentLoaded",()=>{if(!document.getElementById("svk-copyright")){const f=document.createElement("div");f.id="svk-copyright";f.style.cssText="padding:15px;text-align:center;background:#071d3c;color:#fff;font:13px system-ui,sans-serif";f.textContent="© "+new Date().getFullYear()+" SpVgg Kaufbeuren e. V. · Alle Rechte vorbehalten.";document.body.append(f)}});
+/* Site-wide copyright credit. */
+(() => {
+  function installCopyright() {
+    let footer = document.getElementById("svk-copyright");
+    if (!footer) {
+      footer = document.createElement("div");
+      footer.id = "svk-copyright";
+      footer.style.cssText = "padding:15px;text-align:center;background:#071d3c;color:#fff;font:13px/1.6 system-ui,sans-serif;overflow-wrap:anywhere";
+      document.body.append(footer);
+    }
+    footer.textContent = "© " + new Date().getFullYear() + " SpVgg Kaufbeuren e. V. · Alle Rechte vorbehalten. · © Herzfotografen";
+  }
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", installCopyright);
+  } else {
+    installCopyright();
+  }
+})();
 
 // Shared public statistics and magazine loader.
 window.addEventListener('load',()=>{const own=[...document.scripts].find(s=>/svk-global-header\.js/.test(s.src));if(!own)return;const base=new URL('./',own.src);const run=()=>{if(document.querySelector('script[src*="svk-visitor-magazine.js"]'))return;const s=document.createElement('script');s.src=new URL('svk-visitor-magazine.js?v=83',base);document.body.append(s);};if(window.SVK_SUPABASE)run();else{const s=document.createElement('script');s.src=new URL('supabase-config.js',base);s.onload=run;document.body.append(s);}});
