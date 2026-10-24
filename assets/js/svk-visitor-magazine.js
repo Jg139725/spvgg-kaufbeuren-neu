@@ -10,10 +10,20 @@
  if(isArchive||card){
   const host=isArchive?document.querySelector('.issue-wrap'):card;
   try{
+   const settingsResponse=await fetch(cfg.url+'/rest/v1/stadium_settings?select=url&id=eq.true',{headers});
+   if(!settingsResponse.ok)throw Error('Link nicht erreichbar');
+   const settings=await settingsResponse.json();let target=null;
+   if(settings[0]?.url){try{const u=new URL(settings[0].url);if(u.protocol==='https:'&&!u.username&&!u.password&&!(u.origin===location.origin&&/\/stadionzeitung(?:\.html)?\/?$/.test(u.pathname)))target=u.href;}catch{}}
+   if(target){
+    if(isArchive){const a=document.createElement('a');a.href=target;a.textContent='Stadionzeitung öffnen →';a.rel='noopener';host.replaceChildren(a);location.replace(target);return;}
+    const a=card.querySelector('.stadionheft-current__read');a.href=target;a.textContent='Stadionzeitung lesen ↗';card.querySelector('h3').textContent='Unsere Stadionzeitung online lesen';card.querySelector('p').textContent='Neuigkeiten und Geschichten rund um die SpVgg Kaufbeuren – hier geht es zur Stadionzeitung.';
+   }
+   if(!target){
    const r=await fetch(cfg.url+'/rest/v1/stadium_issues?select=title,issue_date,file_path&issue_date=lte.'+new Date().toLocaleDateString('sv-SE',{timeZone:'Europe/Berlin'})+'&order=issue_date.desc,created_at.desc',{headers});if(!r.ok)throw Error();
    const issues=await r.json(),first=issues[0];
    if(isArchive){host.innerHTML='<h2>Stadionzeitungen</h2>'+(!first?'<p>Noch keine Ausgabe hochgeladen.</p>':issues.map((x,i)=>`<article class="issue-current" style="margin-bottom:20px"><span class="k">${i===0?'Aktuelle Ausgabe':esc(x.issue_date)}</span><h2>${esc(x.title)}</h2><a href="${pdf(x.file_path)}" target="_blank" rel="noopener">PDF lesen ↗</a></article>`).join(''));}
    else if(first){card.querySelector('h3').textContent=first.title;const a=card.querySelector('.stadionheft-current__read');a.href=pdf(first.file_path);a.textContent='Aktuelle Ausgabe lesen ↗';}
+   }
   }catch{if(isArchive)host.innerHTML='<p>Die Stadionzeitungen konnten nicht geladen werden. Bitte versuche es später erneut.</p>';}
  }
  if(location.pathname.includes('/admin/')||/redaktion/.test(location.pathname)||navigator.globalPrivacyControl||navigator.doNotTrack==='1')return;
