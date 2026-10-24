@@ -80,6 +80,7 @@
       $('login').classList.add('hidden');
       $('app').classList.remove('hidden');
       applyRoleUI();
+      window.svkAdminExtras?.(sb,profile);
       await load();
     }catch(err){
       msg(detailedError(err,'Profil laden'),'error');
@@ -171,6 +172,7 @@
       return;
     }
     if(event==='SIGNED_OUT'||!s){
+      document.getElementById('svkExtras')?.remove();
       showLogin();
     }
   });

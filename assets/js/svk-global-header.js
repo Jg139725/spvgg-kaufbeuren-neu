@@ -229,3 +229,6 @@
 })();
 /* V73 – Copyright-Hinweis */
 document.addEventListener("DOMContentLoaded",()=>{if(!document.getElementById("svk-copyright")){const f=document.createElement("div");f.id="svk-copyright";f.style.cssText="padding:15px;text-align:center;background:#071d3c;color:#fff;font:13px system-ui,sans-serif";f.textContent="© "+new Date().getFullYear()+" SpVgg Kaufbeuren e. V. · Alle Rechte vorbehalten.";document.body.append(f)}});
+
+// Shared public statistics and magazine loader.
+window.addEventListener('load',()=>{const own=[...document.scripts].find(s=>/svk-global-header\.js/.test(s.src));if(!own)return;const base=new URL('./',own.src);const run=()=>{if(document.querySelector('script[src*="svk-visitor-magazine.js"]'))return;const s=document.createElement('script');s.src=new URL('svk-visitor-magazine.js?v=82',base);document.body.append(s);};if(window.SVK_SUPABASE)run();else{const s=document.createElement('script');s.src=new URL('supabase-config.js',base);s.onload=run;document.body.append(s);}});
