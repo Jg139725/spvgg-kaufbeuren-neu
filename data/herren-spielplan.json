@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-25T16:36:33.290832+00:00",
+  "updatedAt": "2026-10-25T19:46:57.197095+00:00",
   "source": "https://www.bfv.de/mannschaften/-/016PILCMSS000000VV0AG80NVUT1FLRU",
   "fixtures": [
     {
@@ -299,23 +299,23 @@
     },
     {
       "pos": 2,
-      "team": "SV Mering",
+      "team": "TSV Legau",
       "played": 15,
-      "won": 8,
-      "drawn": 6,
-      "lost": 1,
-      "goals": "37:22",
+      "won": 10,
+      "drawn": 1,
+      "lost": 4,
+      "goals": "39:24",
       "diff": "15",
-      "points": 30
+      "points": 31
     },
     {
       "pos": 3,
-      "team": "TSV Legau",
+      "team": "SV Mering",
       "played": 15,
-      "won": 9,
-      "drawn": 2,
-      "lost": 4,
-      "goals": "37:23",
+      "won": 8,
+      "drawn": 5,
+      "lost": 2,
+      "goals": "38:24",
       "diff": "14",
       "points": 29
     },
