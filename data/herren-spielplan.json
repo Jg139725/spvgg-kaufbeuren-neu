@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-25T11:53:25.762088+00:00",
+  "updatedAt": "2026-10-25T16:36:33.290832+00:00",
   "source": "https://www.bfv.de/mannschaften/-/016PILCMSS000000VV0AG80NVUT1FLRU",
   "fixtures": [
     {
@@ -289,35 +289,35 @@
     {
       "pos": 1,
       "team": "FC Thalhofen",
-      "played": 13,
-      "won": 10,
+      "played": 14,
+      "won": 11,
       "drawn": 2,
       "lost": 1,
-      "goals": "41:17",
-      "diff": "24",
-      "points": 32
+      "goals": "46:20",
+      "diff": "26",
+      "points": 35
     },
     {
       "pos": 2,
       "team": "SV Mering",
-      "played": 14,
+      "played": 15,
       "won": 8,
-      "drawn": 5,
+      "drawn": 6,
       "lost": 1,
       "goals": "37:22",
       "diff": "15",
-      "points": 29
+      "points": 30
     },
     {
       "pos": 3,
       "team": "TSV Legau",
-      "played": 14,
+      "played": 15,
       "won": 9,
-      "drawn": 1,
+      "drawn": 2,
       "lost": 4,
       "goals": "37:23",
       "diff": "14",
-      "points": 28
+      "points": 29
     },
     {
       "pos": 4,
@@ -344,27 +344,38 @@
     {
       "pos": 6,
       "team": "SV Egg a. d. Günz",
-      "played": 14,
+      "played": 15,
       "won": 7,
-      "drawn": 3,
+      "drawn": 4,
       "lost": 4,
-      "goals": "32:23",
+      "goals": "34:25",
       "diff": "9",
-      "points": 24
+      "points": 25
     },
     {
       "pos": 7,
       "team": "TSV Merching",
-      "played": 13,
+      "played": 14,
       "won": 7,
       "drawn": 2,
-      "lost": 4,
-      "goals": "20:13",
-      "diff": "7",
+      "lost": 5,
+      "goals": "22:16",
+      "diff": "6",
       "points": 23
     },
     {
       "pos": 8,
+      "team": "FC Königsbrunn",
+      "played": 15,
+      "won": 6,
+      "drawn": 4,
+      "lost": 5,
+      "goals": "29:32",
+      "diff": "-3",
+      "points": 22
+    },
+    {
+      "pos": 9,
       "team": "SpVgg Kaufbeuren",
       "played": 15,
       "won": 5,
@@ -375,36 +386,25 @@
       "points": 19
     },
     {
-      "pos": 9,
-      "team": "FC Königsbrunn",
-      "played": 14,
-      "won": 5,
-      "drawn": 4,
-      "lost": 5,
-      "goals": "26:30",
-      "diff": "-4",
-      "points": 19
-    },
-    {
       "pos": 10,
       "team": "TSV 1892 Haunstetten",
-      "played": 14,
+      "played": 15,
       "won": 5,
-      "drawn": 3,
+      "drawn": 4,
       "lost": 6,
-      "goals": "26:27",
+      "goals": "28:29",
       "diff": "-1",
-      "points": 18
+      "points": 19
     },
     {
       "pos": 11,
       "team": "TSV Kammlach",
-      "played": 14,
+      "played": 15,
       "won": 5,
       "drawn": 2,
-      "lost": 7,
-      "goals": "24:33",
-      "diff": "-9",
+      "lost": 8,
+      "goals": "27:38",
+      "diff": "-11",
       "points": 17
     },
     {
