@@ -1,23 +1,216 @@
 {
   "team": "SpVgg Kaufbeuren Frauen",
   "competition": "Frauen BOL",
-  "updatedAt": "2026-09-14T15:22:00+02:00",
+  "source": "BFV",
+  "sourceUrl": "https://www.bfv.de/mannschaften/-/016PA7VSOC000000VV0AG80NVV8OQVTB",
+  "fixtures": [
+    {
+      "id": "031FPO45LK000000VS5489BUVSJ4CRAP",
+      "date": "2026-10-31",
+      "time": "13:00",
+      "home": "SpVgg Kaufbeuren",
+      "away": "TSV Sielenbach",
+      "score": null,
+      "venue": "Parkstadion Kaufbeuren | Berliner Platz 6 | 87600 Kaufbeuren",
+      "status": "",
+      "cancelled": false,
+      "url": "https://www.bfv.de/ergebnisse/spiel/-/031FPO45LK000000VS5489BUVSJ4CRAP"
+    },
+    {
+      "id": "031FPO4434000000VS5489BUVSJ4CRAP",
+      "date": "2026-11-14",
+      "time": "15:00",
+      "home": "SV Wattenweiler 1",
+      "away": "SpVgg Kaufbeuren",
+      "score": null,
+      "venue": "Hauptplatz SV Wattenweiler | Zum Sportplatz | 86476 Wattenweiler",
+      "status": "",
+      "cancelled": false,
+      "url": "https://www.bfv.de/ergebnisse/spiel/-/031FPO4434000000VS5489BUVSJ4CRAP"
+    },
+    {
+      "id": "031FPO43T4000000VS5489BUVSJ4CRAP",
+      "date": "2026-11-21",
+      "time": "15:00",
+      "home": "SV Wechingen 1",
+      "away": "SpVgg Kaufbeuren",
+      "score": null,
+      "venue": "SV Wechingen | St.-Veit-Str. 10 | 86759 Wechingen",
+      "status": "",
+      "cancelled": false,
+      "url": "https://www.bfv.de/ergebnisse/spiel/-/031FPO43T4000000VS5489BUVSJ4CRAP"
+    },
+    {
+      "id": "032E1MQ4C4000000VS5489BUVSGKI48U",
+      "date": "2027-02-13",
+      "time": "13:00",
+      "home": "SpVgg Kaufbeuren",
+      "away": "SC Biberbach",
+      "score": null,
+      "venue": "Sportpark Haken KR | Wolftrigelstr. 11 | 87600 Kaufbeuren",
+      "status": "",
+      "cancelled": false,
+      "url": "https://www.bfv.de/ergebnisse/spiel/-/032E1MQ4C4000000VS5489BUVSGKI48U"
+    },
+    {
+      "id": "031FPO43NO000000VS5489BUVSJ4CRAP",
+      "date": "2027-03-13",
+      "time": "16:00",
+      "home": "SpVgg Kaufbeuren",
+      "away": "SV Mering",
+      "score": null,
+      "venue": "Parkstadion Kaufbeuren | Berliner Platz 6 | 87600 Kaufbeuren",
+      "status": "",
+      "cancelled": false,
+      "url": "https://www.bfv.de/ergebnisse/spiel/-/031FPO43NO000000VS5489BUVSJ4CRAP"
+    }
+  ],
   "nextGame": {
-    "date": "2026-09-19",
-    "time": "18:30",
-    "home": "TSV Ottobeuren",
-    "away": "SpVgg Kaufbeuren",
+    "id": "031FPO45LK000000VS5489BUVSJ4CRAP",
+    "date": "2026-10-31",
+    "time": "13:00",
+    "home": "SpVgg Kaufbeuren",
+    "away": "TSV Sielenbach",
     "score": null,
-    "venue": "Ottobeuren"
+    "venue": "Parkstadion Kaufbeuren | Berliner Platz 6 | 87600 Kaufbeuren",
+    "status": "",
+    "cancelled": false,
+    "url": "https://www.bfv.de/ergebnisse/spiel/-/031FPO45LK000000VS5489BUVSJ4CRAP"
   },
   "lastGame": {
-    "date": "2026-09-06",
-    "time": "12:30",
-    "home": "FC Augsburg 1",
+    "id": "031FPO44I8000000VS5489BUVSJ4CRAP",
+    "date": "2026-10-25",
+    "time": "11:00",
+    "home": "FSV Wehringen 1",
     "away": "SpVgg Kaufbeuren",
-    "score": "0:0",
-    "venue": ""
+    "score": "0:4",
+    "venue": "",
+    "status": "",
+    "cancelled": false,
+    "url": "https://www.bfv.de/ergebnisse/spiel/-/031FPO44I8000000VS5489BUVSJ4CRAP"
   },
-  "source": "BFV",
-  "sourceUrl": "https://www.bfv.de/mannschaften/spvgg-kaufbeuren/016PA7VSOC000000VV0AG80NVV8OQVTB"
+  "table": [
+    {
+      "pos": 1,
+      "team": "FC Augsburg 1",
+      "played": 6,
+      "won": 4,
+      "drawn": 2,
+      "lost": 0,
+      "goals": "22:4",
+      "diff": "18",
+      "points": 14
+    },
+    {
+      "pos": 2,
+      "team": "SpVgg Kaufbeuren",
+      "played": 6,
+      "won": 4,
+      "drawn": 1,
+      "lost": 1,
+      "goals": "13:3",
+      "diff": "10",
+      "points": 13
+    },
+    {
+      "pos": 3,
+      "team": "FSV Wehringen 1",
+      "played": 6,
+      "won": 3,
+      "drawn": 2,
+      "lost": 1,
+      "goals": "7:6",
+      "diff": "1",
+      "points": 11
+    },
+    {
+      "pos": 4,
+      "team": "TSV Ottobeuren",
+      "played": 6,
+      "won": 3,
+      "drawn": 1,
+      "lost": 2,
+      "goals": "17:13",
+      "diff": "4",
+      "points": 10
+    },
+    {
+      "pos": 5,
+      "team": "TSV Sielenbach",
+      "played": 5,
+      "won": 3,
+      "drawn": 0,
+      "lost": 2,
+      "goals": "17:11",
+      "diff": "6",
+      "points": 9
+    },
+    {
+      "pos": 6,
+      "team": "SV Wattenweiler 1",
+      "played": 5,
+      "won": 2,
+      "drawn": 1,
+      "lost": 2,
+      "goals": "9:8",
+      "diff": "1",
+      "points": 7
+    },
+    {
+      "pos": 7,
+      "team": "TSV Buchenberg",
+      "played": 6,
+      "won": 2,
+      "drawn": 1,
+      "lost": 3,
+      "goals": "9:7",
+      "diff": "2",
+      "points": 7
+    },
+    {
+      "pos": 8,
+      "team": "SV Wechingen 1",
+      "played": 5,
+      "won": 2,
+      "drawn": 0,
+      "lost": 3,
+      "goals": "7:11",
+      "diff": "-4",
+      "points": 6
+    },
+    {
+      "pos": 9,
+      "team": "TSV 1861 Nördlingen",
+      "played": 5,
+      "won": 1,
+      "drawn": 1,
+      "lost": 3,
+      "goals": "3:9",
+      "diff": "-6",
+      "points": 4
+    },
+    {
+      "pos": 10,
+      "team": "SSV Glött",
+      "played": 5,
+      "won": 0,
+      "drawn": 2,
+      "lost": 3,
+      "goals": "3:13",
+      "diff": "-10",
+      "points": 2
+    },
+    {
+      "pos": 11,
+      "team": "SV Mering",
+      "played": 5,
+      "won": 0,
+      "drawn": 1,
+      "lost": 4,
+      "goals": "3:25",
+      "diff": "-22",
+      "points": 1
+    }
+  ],
+  "updatedAt": "2026-10-28T14:18:15+00:00"
 }

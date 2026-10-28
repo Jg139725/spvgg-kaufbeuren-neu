@@ -1,0 +1,38 @@
+name: Damen Spielplan und Tabelle aktualisieren
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "33 * * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: frauen-spielplan-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - name: Abhängigkeiten installieren
+        run: pip install requests beautifulsoup4
+      - name: Parser prüfen
+        run: python -m unittest discover -s tests
+      - name: BFV-Daten aktualisieren
+        run: python scripts/update_frauen_spiele.py
+      - name: Änderungen speichern
+        run: |
+          set -e
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/frauen-spiele.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Damen-Spielplan und Tabelle automatisch aktualisiert"
+          git pull --rebase origin main
+          git push origin HEAD:main
