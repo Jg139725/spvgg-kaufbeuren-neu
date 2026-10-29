@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-29T02:35:30.848199+00:00",
+  "updatedAt": "2026-10-29T10:13:46.486316+00:00",
   "source": "https://www.bfv.de/mannschaften/-/016PILCMSS000000VV0AG80NVUT1FLRU",
   "fixtures": [
     {
@@ -221,6 +221,14 @@
       "venue": "Parkstadion Kaufbeuren"
     },
     {
+      "date": "2026-10-29",
+      "time": "",
+      "home": "TV Erkheim",
+      "away": "SpVgg Kaufbeuren",
+      "score": "4:4",
+      "venue": ""
+    },
+    {
       "date": "2026-10-30",
       "time": "19:00",
       "home": "SVO Germaringen",
@@ -278,12 +286,12 @@
     "venue": ""
   },
   "lastGame": {
-    "date": "2026-10-24",
-    "time": "16:00",
-    "home": "SpVgg Kaufbeuren",
-    "away": "FC Oberstdorf",
-    "score": "1:1",
-    "venue": "Parkstadion Kaufbeuren"
+    "date": "2026-10-29",
+    "time": "",
+    "home": "TV Erkheim",
+    "away": "SpVgg Kaufbeuren",
+    "score": "4:4",
+    "venue": ""
   },
   "table": [
     {
