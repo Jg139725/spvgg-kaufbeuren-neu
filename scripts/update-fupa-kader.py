@@ -10,6 +10,9 @@ import sys
 import unicodedata
 from pathlib import Path
 from urllib.request import Request, urlopen
+import sys as _sys, os as _os
+_sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))
+from fupa_bilder_lokal import localize_text
 
 ROOT = Path(__file__).resolve().parents[1]
 PAGE = ROOT / "herren/erste.html"
@@ -39,6 +42,8 @@ def roster(markup):
             name = html.unescape(" ".join(names[:2]))
             source = re.search(r'<source srcSet="(https://image\.fupa\.net/player/[^" ,]+)', card)
             image = html.unescape(source.group(1)) if source else None
+            if image:
+                image = localize_text(image)  # Foto lokal speichern statt direkt von FuPa laden (DSGVO)
             number = re.search(r'class="sc-26zsra-4 [^"]+">(\d+)</div>', card)
             entries.append((name, path, image, number.group(1) if number else None))
         sections[position] = entries
