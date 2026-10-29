@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+@font-face{font-family:'Inter';font-style:normal;font-weight:100 900;font-display:swap;src:url('../fonts/inter-latin-wght-normal.woff2') format('woff2');}
 :root{--blue:#0753a5;--navy:#021f46;--light:#f1f5fa;--text:#122033;--muted:#68778b;--white:#fff}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,Arial,sans-serif;color:var(--text);background:#fff}a{text-decoration:none;color:inherit}.wrap{width:min(1180px,calc(100% - 36px));margin:auto}
 header{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.97);border-bottom:1px solid #e4eaf1;backdrop-filter:blur(12px)}.bar{height:82px;display:flex;align-items:center;justify-content:space-between}.brand img{width:245px;max-height:58px;object-fit:contain}.nav{display:flex;gap:23px;align-items:center;font-size:14px;font-weight:700}.nav a:hover{color:var(--blue)}.pill{background:var(--blue);color:#fff!important;padding:11px 16px;border-radius:99px}.menu{display:none;border:0;background:none;font-size:26px}

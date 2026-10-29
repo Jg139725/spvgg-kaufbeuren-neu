@@ -1,1 +1,0 @@
-Kompletten Inhalt ins Hauptverzeichnis des GitHub-Repos hochladen und gleichnamige Dateien ersetzen. Danach committen und Safari mit Cmd+Option+R neu laden.
