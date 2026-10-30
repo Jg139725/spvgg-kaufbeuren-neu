@@ -1,11 +1,19 @@
 {
-  "updatedAt": "2026-10-30T16:02:17.445923+00:00",
+  "updatedAt": "2026-10-30T20:54:36.760954+00:00",
   "source": "https://www.bfv.de/mannschaften/-/016PILCMSS000000VV0AG80NVUT1FLRU",
   "fixtures": [
     {
       "date": "2026-10-30",
       "time": "19:00",
       "home": "SVO Germaringen",
+      "away": "SpVgg Kaufbeuren",
+      "score": "",
+      "venue": ""
+    },
+    {
+      "date": "2026-10-30",
+      "time": "19:00",
+      "home": "Ticker SVO Germaringen",
       "away": "SpVgg Kaufbeuren",
       "score": "",
       "venue": ""
@@ -237,6 +245,14 @@
       "venue": ""
     },
     {
+      "date": "2026-10-30",
+      "time": "19:00",
+      "home": "Ticker SVO Germaringen",
+      "away": "SpVgg Kaufbeuren",
+      "score": "",
+      "venue": ""
+    },
+    {
       "date": "2026-11-07",
       "time": "14:00",
       "home": "SpVgg Kaufbeuren",
@@ -307,6 +323,17 @@
     },
     {
       "pos": 2,
+      "team": "SV Mering",
+      "played": 16,
+      "won": 9,
+      "drawn": 5,
+      "lost": 2,
+      "goals": "41:26",
+      "diff": "15",
+      "points": 32
+    },
+    {
+      "pos": 3,
       "team": "TSV Legau",
       "played": 15,
       "won": 10,
@@ -315,17 +342,6 @@
       "goals": "39:24",
       "diff": "15",
       "points": 31
-    },
-    {
-      "pos": 3,
-      "team": "SV Mering",
-      "played": 15,
-      "won": 8,
-      "drawn": 5,
-      "lost": 2,
-      "goals": "38:24",
-      "diff": "14",
-      "points": 29
     },
     {
       "pos": 4,
@@ -373,6 +389,17 @@
     },
     {
       "pos": 8,
+      "team": "SpVgg Kaufbeuren",
+      "played": 16,
+      "won": 6,
+      "drawn": 4,
+      "lost": 6,
+      "goals": "29:29",
+      "diff": "0",
+      "points": 22
+    },
+    {
+      "pos": 9,
       "team": "FC Königsbrunn",
       "played": 15,
       "won": 6,
@@ -383,25 +410,14 @@
       "points": 22
     },
     {
-      "pos": 9,
-      "team": "SpVgg Kaufbeuren",
-      "played": 15,
-      "won": 5,
-      "drawn": 4,
-      "lost": 6,
-      "goals": "26:27",
-      "diff": "-1",
-      "points": 19
-    },
-    {
       "pos": 10,
       "team": "TSV 1892 Haunstetten",
-      "played": 15,
+      "played": 16,
       "won": 5,
       "drawn": 4,
-      "lost": 6,
-      "goals": "28:29",
-      "diff": "-1",
+      "lost": 7,
+      "goals": "30:32",
+      "diff": "-2",
       "points": 19
     },
     {
@@ -418,12 +434,12 @@
     {
       "pos": 12,
       "team": "SVO Germaringen",
-      "played": 15,
+      "played": 16,
       "won": 4,
       "drawn": 3,
-      "lost": 8,
-      "goals": "19:33",
-      "diff": "-14",
+      "lost": 9,
+      "goals": "21:36",
+      "diff": "-15",
       "points": 15
     },
     {
