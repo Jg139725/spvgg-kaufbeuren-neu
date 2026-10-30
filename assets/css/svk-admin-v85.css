@@ -1,0 +1,66 @@
+/* SVK V85 – Redaktion: Vereinsdesign, Rolle sichtbar, handyfreundliche Navigation.
+   Nur Aussehen – Funktionen, IDs und Rechte bleiben unverändert. */
+@font-face{font-family:'Inter';font-style:normal;font-weight:100 900;font-display:swap;src:url('../fonts/inter-latin-wght-normal.woff2') format('woff2')}
+:root{--svk-navy:#031b37;--svk-blue:#0756b0;--svk-sky:#0a74d6;--svk-bg:#eef3fa;--svk-line:#dbe4ef;--svk-ink:#0d1b2e;--svk-muted:#5b6b80}
+body{font-family:Inter,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;background:var(--svk-bg);color:var(--svk-ink)}
+button,input,select,textarea{font-family:inherit}
+
+/* ---------- Anmeldung ---------- */
+#login.card,#recovery.card{max-width:440px;margin:clamp(28px,9vh,90px) auto;padding:36px 30px 28px;text-align:left;border-radius:20px;box-shadow:0 18px 50px rgba(3,27,55,.10);border:1px solid var(--svk-line)}
+#login.card::before,#recovery.card::before{content:"";display:block;width:74px;height:74px;margin:0 auto 14px;background:url('../images/svk-wappen.png') center/contain no-repeat}
+#login h1,#recovery h1{text-align:center;font-size:26px;letter-spacing:-.02em;margin:0 0 6px;color:var(--svk-navy)}
+#login>p:first-of-type,#recovery>p:first-of-type{text-align:center;color:var(--svk-muted);margin:0 0 22px}
+#loginForm,#recoveryForm{display:grid;gap:12px}
+#loginForm input,#recoveryForm input{width:100%;box-sizing:border-box;height:48px;padding:0 14px;border:1px solid #cbd6e3;border-radius:12px;font-size:16px;background:#fbfdff}
+#loginForm input:focus,#recoveryForm input:focus{outline:none;border-color:var(--svk-sky);box-shadow:0 0 0 3px rgba(10,116,214,.18)}
+#loginBtn,#savePasswordBtn{width:100%;height:48px;border-radius:12px;font-size:16px;font-weight:700;background:var(--svk-blue)}
+#forgotPassword,#testConnection{background:none!important;border:0!important;color:var(--svk-blue)!important;font-weight:600;padding:6px 4px;margin:4px 8px 0 0;font-size:14px}
+#login .svk-login-foot{margin-top:18px;padding-top:14px;border-top:1px solid var(--svk-line);font-size:13px;color:var(--svk-muted);text-align:center}
+#login .svk-login-foot a{color:var(--svk-blue);font-weight:600;text-decoration:none}
+
+/* ---------- Kopfbereich ---------- */
+#app>header{background:linear-gradient(120deg,var(--svk-navy),var(--svk-blue) 60%,var(--svk-sky));border-radius:18px;padding:20px 22px;display:flex!important;flex-direction:row!important;align-items:center!important;gap:16px;text-align:left}
+#app>header::before{content:"";flex:0 0 52px;height:52px;background:#fff url('../images/svk-wappen.png') center/62% no-repeat;border-radius:50%;box-shadow:0 4px 14px rgba(0,0,0,.18)}
+#app>header>div:not(.svk-head-actions){flex:1;min-width:0}
+#app>header h1{margin:2px 0 0;font-size:clamp(20px,3vw,28px);letter-spacing:-.02em}
+#app>header>div>span:first-child{letter-spacing:.12em;font-size:11px;opacity:.85}
+.svk-whoami{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:8px;font-size:13px;color:#dce9f8}
+.svk-whoami b{color:#fff}
+.svk-role{display:inline-block;padding:3px 10px;border-radius:999px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.28);color:#fff;font-weight:700;font-size:12px}
+.svk-head-actions{display:flex;gap:8px;flex-wrap:wrap;margin-left:auto}
+.svk-head-actions a,#logout{display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:0 14px;border-radius:10px;font-weight:700;font-size:14px;text-decoration:none;white-space:nowrap}
+.svk-head-actions a{background:#fff;color:var(--svk-navy)}
+#logout{background:rgba(255,255,255,.14)!important;border:1px solid rgba(255,255,255,.35)!important;color:#fff!important}
+
+/* ---------- Reiter ---------- */
+.cms-tabs{position:sticky;top:0;z-index:20;background:var(--svk-bg);padding:12px 0 10px;margin:4px 0 8px;display:flex!important;flex-wrap:nowrap!important;gap:8px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.cms-tabs::-webkit-scrollbar{display:none}
+.cms-tabs button{flex:0 0 auto;white-space:nowrap!important;min-height:42px;padding:0 16px!important;border-radius:999px!important;font-size:14px!important;text-align:center!important;border:1px solid var(--svk-line)!important}
+.cms-tabs button.secondary{background:#fff!important;color:var(--svk-navy)!important}
+.cms-tabs button.active,.cms-tabs button:not(.secondary){background:var(--svk-blue)!important;color:#fff!important;border-color:var(--svk-blue)!important}
+
+/* ---------- Berichtsliste ---------- */
+#posts .row{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:12px;border:1px solid var(--svk-line);border-radius:14px;background:#fff;margin:10px 0}
+.row-main{display:flex;align-items:center;gap:14px;min-width:0;flex:1}
+.row-main strong{display:block;line-height:1.3;overflow-wrap:anywhere}
+.row-thumb{flex:0 0 76px;width:76px;height:56px;border-radius:10px;object-fit:cover;background:#e7eef7}
+.row-thumb--empty{display:flex;align-items:center;justify-content:center;font-weight:900;font-size:13px;color:#9db3cc;letter-spacing:.08em}
+.status{display:inline-block;padding:2px 9px;border-radius:999px;font-size:12px;font-weight:700;margin-left:4px}
+.status--live{background:#e3f6ea;color:#176b38}
+.status--draft{background:#fff4d6;color:#8a5a00}
+
+/* ---------- Handy ---------- */
+@media(max-width:720px){
+ #app>header{display:grid!important;grid-template-columns:44px minmax(0,1fr);align-items:center!important;padding:16px;border-radius:16px;gap:10px 12px}
+ #app>header::before{width:44px;height:44px}
+ #app>header>div>span:first-child{display:none}
+ #app>header h1{font-size:21px}
+ .svk-whoami{margin-top:4px;font-size:12px;gap:6px}
+ .svk-head-actions{grid-column:1/-1;width:100%;margin:4px 0 0}
+ .svk-head-actions a,#logout{flex:1;min-height:42px}
+ .cms-tabs{margin:2px -4px 6px;padding:10px 4px}
+ #posts .row{flex-direction:column;align-items:stretch}
+ #posts .row>div:last-child{display:flex;gap:8px}
+ #posts .row>div:last-child button{flex:1;min-height:42px}
+ .row-thumb{flex-basis:64px;width:64px;height:48px}
+}
