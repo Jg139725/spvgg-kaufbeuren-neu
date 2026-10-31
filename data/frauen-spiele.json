@@ -5,18 +5,6 @@
   "sourceUrl": "https://www.bfv.de/mannschaften/-/016PA7VSOC000000VV0AG80NVV8OQVTB",
   "fixtures": [
     {
-      "id": "031FPO45LK000000VS5489BUVSJ4CRAP",
-      "date": "2026-10-31",
-      "time": "13:00",
-      "home": "SpVgg Kaufbeuren",
-      "away": "TSV Sielenbach",
-      "score": null,
-      "venue": "Parkstadion Kaufbeuren | Berliner Platz 6 | 87600 Kaufbeuren",
-      "status": "",
-      "cancelled": false,
-      "url": "https://www.bfv.de/ergebnisse/spiel/-/031FPO45LK000000VS5489BUVSJ4CRAP"
-    },
-    {
       "id": "031FPO4434000000VS5489BUVSJ4CRAP",
       "date": "2026-11-14",
       "time": "15:00",
@@ -66,16 +54,16 @@
     }
   ],
   "nextGame": {
-    "id": "031FPO45LK000000VS5489BUVSJ4CRAP",
-    "date": "2026-10-31",
-    "time": "13:00",
-    "home": "SpVgg Kaufbeuren",
-    "away": "TSV Sielenbach",
+    "id": "031FPO4434000000VS5489BUVSJ4CRAP",
+    "date": "2026-11-14",
+    "time": "15:00",
+    "home": "SV Wattenweiler 1",
+    "away": "SpVgg Kaufbeuren",
     "score": null,
-    "venue": "Parkstadion Kaufbeuren | Berliner Platz 6 | 87600 Kaufbeuren",
+    "venue": "Hauptplatz SV Wattenweiler | Zum Sportplatz | 86476 Wattenweiler",
     "status": "",
     "cancelled": false,
-    "url": "https://www.bfv.de/ergebnisse/spiel/-/031FPO45LK000000VS5489BUVSJ4CRAP"
+    "url": "https://www.bfv.de/ergebnisse/spiel/-/031FPO4434000000VS5489BUVSJ4CRAP"
   },
   "lastGame": {
     "id": "031FPO44I8000000VS5489BUVSJ4CRAP",
@@ -147,17 +135,6 @@
     },
     {
       "pos": 6,
-      "team": "SV Wattenweiler 1",
-      "played": 5,
-      "won": 2,
-      "drawn": 1,
-      "lost": 2,
-      "goals": "9:8",
-      "diff": "1",
-      "points": 7
-    },
-    {
-      "pos": 7,
       "team": "TSV Buchenberg",
       "played": 6,
       "won": 2,
@@ -168,15 +145,26 @@
       "points": 7
     },
     {
-      "pos": 8,
-      "team": "SV Wechingen 1",
+      "pos": 7,
+      "team": "SV Wattenweiler 1",
       "played": 5,
       "won": 2,
-      "drawn": 0,
+      "drawn": 1,
+      "lost": 2,
+      "goals": "9:8",
+      "diff": "1",
+      "points": 7
+    },
+    {
+      "pos": 8,
+      "team": "SV Wechingen 1",
+      "played": 6,
+      "won": 2,
+      "drawn": 1,
       "lost": 3,
       "goals": "7:11",
       "diff": "-4",
-      "points": 6
+      "points": 7
     },
     {
       "pos": 9,
@@ -203,14 +191,14 @@
     {
       "pos": 11,
       "team": "SV Mering",
-      "played": 5,
+      "played": 6,
       "won": 0,
-      "drawn": 1,
+      "drawn": 2,
       "lost": 4,
       "goals": "3:25",
       "diff": "-22",
-      "points": 1
+      "points": 2
     }
   ],
-  "updatedAt": "2026-10-28T14:18:15+00:00"
+  "updatedAt": "2026-10-31T15:27:30+00:00"
 }
