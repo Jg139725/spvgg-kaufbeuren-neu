@@ -1,23 +1,7 @@
 {
-  "updatedAt": "2026-10-30T20:54:36.760954+00:00",
+  "updatedAt": "2026-10-31T00:53:08.545209+00:00",
   "source": "https://www.bfv.de/mannschaften/-/016PILCMSS000000VV0AG80NVUT1FLRU",
   "fixtures": [
-    {
-      "date": "2026-10-30",
-      "time": "19:00",
-      "home": "SVO Germaringen",
-      "away": "SpVgg Kaufbeuren",
-      "score": "",
-      "venue": ""
-    },
-    {
-      "date": "2026-10-30",
-      "time": "19:00",
-      "home": "Ticker SVO Germaringen",
-      "away": "SpVgg Kaufbeuren",
-      "score": "",
-      "venue": ""
-    },
     {
       "date": "2026-11-07",
       "time": "14:00",
@@ -241,7 +225,7 @@
       "time": "19:00",
       "home": "SVO Germaringen",
       "away": "SpVgg Kaufbeuren",
-      "score": "",
+      "score": "2:3",
       "venue": ""
     },
     {
@@ -294,19 +278,19 @@
     }
   ],
   "nextGame": {
+    "date": "2026-11-07",
+    "time": "14:00",
+    "home": "SpVgg Kaufbeuren",
+    "away": "TSV Kammlach",
+    "score": "",
+    "venue": "Parkstadion Kaufbeuren"
+  },
+  "lastGame": {
     "date": "2026-10-30",
     "time": "19:00",
     "home": "SVO Germaringen",
     "away": "SpVgg Kaufbeuren",
-    "score": "",
-    "venue": ""
-  },
-  "lastGame": {
-    "date": "2026-10-29",
-    "time": "",
-    "home": "TV Erkheim",
-    "away": "SpVgg Kaufbeuren",
-    "score": "4:4",
+    "score": "2:3",
     "venue": ""
   },
   "table": [
