@@ -116,3 +116,6 @@
 
 /* V65: Im Footer das originale blau-weiße Vereinslogo verwenden. */
 .footer__brand img{filter:none!important;opacity:1!important}
+
+/* Footer: Vereinslogo (dunkle Schrift) auf dunklem Grund lesbar machen */
+.footer__brand img{width:250px;max-width:100%;background:#fff;border-radius:14px;padding:10px 16px;box-sizing:border-box}
