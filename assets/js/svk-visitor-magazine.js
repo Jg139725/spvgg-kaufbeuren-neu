@@ -39,6 +39,7 @@
  }
  try{const consent=sessionStorage.getItem('svk-stats');if(consent==='yes'){record();return;}if(consent==='no')return;}catch{return;}
  const banner=document.createElement('aside');banner.setAttribute('aria-label','Optionale Besucherstatistik');banner.style.cssText='position:fixed;bottom:16px;left:16px;right:16px;z-index:9999;background:white;color:#123;padding:18px;border:1px solid #abc;border-radius:14px;box-shadow:0 5px 25px #0002;max-width:620px';
- banner.innerHTML=`<p style="margin:0 0 12px">Dürfen wir deinen Besuch für die SVK-Besucherstatistik zählen? Ohne Namen, ohne gespeicherte IP-Adresse und nur für diesen Besuch. <a href="${new URL('datenschutz.html',base)}">Datenschutz</a></p><button type="button" data-choice="no">Ablehnen</button> <button type="button" data-choice="yes">Erlauben</button>`;
+ const btn='flex:1 1 140px;min-height:44px;padding:10px 18px;border:2px solid #0753a5;border-radius:10px;background:#fff;color:#0753a5;font:inherit;font-weight:800;cursor:pointer';
+ banner.innerHTML=`<p style="margin:0 0 12px">Dürfen wir deinen Besuch für die SVK-Besucherstatistik zählen? Ohne Namen, ohne gespeicherte IP-Adresse und nur für diesen Besuch. <a href="${new URL('datenschutz.html',base)}">Datenschutz</a></p><div style="display:flex;flex-wrap:wrap;gap:10px"><button type="button" data-choice="no" style="${btn}">Ablehnen</button><button type="button" data-choice="yes" style="${btn}">Erlauben</button></div>`;
  banner.onclick=e=>{const c=e.target.dataset.choice;if(!c)return;try{sessionStorage.setItem('svk-stats',c);}catch{}banner.remove();if(c==='yes')record();};document.body.append(banner);
 })();
