@@ -51,6 +51,18 @@
       "status": "",
       "cancelled": false,
       "url": "https://www.bfv.de/ergebnisse/spiel/-/031FPO43NO000000VS5489BUVSJ4CRAP"
+    },
+    {
+      "id": "031FPO49PK000000VS5489BUVSJ4CRAP",
+      "date": "2027-03-20",
+      "time": "16:00",
+      "home": "SpVgg Kaufbeuren",
+      "away": "FC Augsburg 1",
+      "score": null,
+      "venue": "Parkstadion Kaufbeuren | Berliner Platz 6 | 87600 Kaufbeuren",
+      "status": "",
+      "cancelled": false,
+      "url": "https://www.bfv.de/ergebnisse/spiel/-/031FPO49PK000000VS5489BUVSJ4CRAP"
     }
   ],
   "nextGame": {
@@ -66,20 +78,31 @@
     "url": "https://www.bfv.de/ergebnisse/spiel/-/031FPO4434000000VS5489BUVSJ4CRAP"
   },
   "lastGame": {
-    "id": "031FPO44I8000000VS5489BUVSJ4CRAP",
-    "date": "2026-10-25",
-    "time": "11:00",
-    "home": "FSV Wehringen 1",
-    "away": "SpVgg Kaufbeuren",
-    "score": "0:4",
+    "id": "031FPO45LK000000VS5489BUVSJ4CRAP",
+    "date": "2026-10-31",
+    "time": "13:00",
+    "home": "SpVgg Kaufbeuren",
+    "away": "TSV Sielenbach",
+    "score": null,
     "venue": "",
     "status": "",
     "cancelled": false,
-    "url": "https://www.bfv.de/ergebnisse/spiel/-/031FPO44I8000000VS5489BUVSJ4CRAP"
+    "url": "https://www.bfv.de/ergebnisse/spiel/-/031FPO45LK000000VS5489BUVSJ4CRAP"
   },
   "table": [
     {
       "pos": 1,
+      "team": "SpVgg Kaufbeuren",
+      "played": 7,
+      "won": 5,
+      "drawn": 1,
+      "lost": 1,
+      "goals": "17:4",
+      "diff": "13",
+      "points": 16
+    },
+    {
+      "pos": 2,
       "team": "FC Augsburg 1",
       "played": 6,
       "won": 4,
@@ -88,17 +111,6 @@
       "goals": "22:4",
       "diff": "18",
       "points": 14
-    },
-    {
-      "pos": 2,
-      "team": "SpVgg Kaufbeuren",
-      "played": 6,
-      "won": 4,
-      "drawn": 1,
-      "lost": 1,
-      "goals": "13:3",
-      "diff": "10",
-      "points": 13
     },
     {
       "pos": 3,
@@ -124,17 +136,39 @@
     },
     {
       "pos": 5,
-      "team": "TSV Sielenbach",
-      "played": 5,
+      "team": "SV Wechingen 1",
+      "played": 6,
       "won": 3,
       "drawn": 0,
-      "lost": 2,
-      "goals": "17:11",
-      "diff": "6",
+      "lost": 3,
+      "goals": "8:11",
+      "diff": "-3",
       "points": 9
     },
     {
       "pos": 6,
+      "team": "TSV Sielenbach",
+      "played": 6,
+      "won": 3,
+      "drawn": 0,
+      "lost": 3,
+      "goals": "18:15",
+      "diff": "3",
+      "points": 9
+    },
+    {
+      "pos": 7,
+      "team": "SV Wattenweiler 1",
+      "played": 6,
+      "won": 2,
+      "drawn": 1,
+      "lost": 3,
+      "goals": "10:10",
+      "diff": "0",
+      "points": 7
+    },
+    {
+      "pos": 8,
       "team": "TSV Buchenberg",
       "played": 6,
       "won": 2,
@@ -145,29 +179,18 @@
       "points": 7
     },
     {
-      "pos": 7,
-      "team": "SV Wattenweiler 1",
-      "played": 5,
-      "won": 2,
-      "drawn": 1,
-      "lost": 2,
-      "goals": "9:8",
-      "diff": "1",
-      "points": 7
-    },
-    {
-      "pos": 8,
-      "team": "SV Wechingen 1",
-      "played": 6,
-      "won": 2,
-      "drawn": 1,
-      "lost": 3,
-      "goals": "7:11",
-      "diff": "-4",
-      "points": 7
-    },
-    {
       "pos": 9,
+      "team": "SSV Glött",
+      "played": 6,
+      "won": 1,
+      "drawn": 2,
+      "lost": 3,
+      "goals": "5:14",
+      "diff": "-9",
+      "points": 5
+    },
+    {
+      "pos": 10,
       "team": "TSV 1861 Nördlingen",
       "played": 5,
       "won": 1,
@@ -178,27 +201,16 @@
       "points": 4
     },
     {
-      "pos": 10,
-      "team": "SSV Glött",
-      "played": 5,
-      "won": 0,
-      "drawn": 2,
-      "lost": 3,
-      "goals": "3:13",
-      "diff": "-10",
-      "points": 2
-    },
-    {
       "pos": 11,
       "team": "SV Mering",
       "played": 6,
       "won": 0,
-      "drawn": 2,
-      "lost": 4,
-      "goals": "3:25",
-      "diff": "-22",
-      "points": 2
+      "drawn": 1,
+      "lost": 5,
+      "goals": "3:26",
+      "diff": "-23",
+      "points": 1
     }
   ],
-  "updatedAt": "2026-10-31T15:27:30+00:00"
+  "updatedAt": "2026-10-31T19:26:30+00:00"
 }
