@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-31T00:53:08.545209+00:00",
+  "updatedAt": "2026-10-31T07:06:16.549876+00:00",
   "source": "https://www.bfv.de/mannschaften/-/016PILCMSS000000VV0AG80NVUT1FLRU",
   "fixtures": [
     {
@@ -39,6 +39,14 @@
       "time": "14:00",
       "home": "SV Egg a. d. Günz",
       "away": "SpVgg Kaufbeuren",
+      "score": "",
+      "venue": ""
+    },
+    {
+      "date": "2027-03-20",
+      "time": "14:00",
+      "home": "SpVgg Kaufbeuren",
+      "away": "SV Mering",
       "score": "",
       "venue": ""
     }
@@ -273,6 +281,14 @@
       "time": "14:00",
       "home": "SV Egg a. d. Günz",
       "away": "SpVgg Kaufbeuren",
+      "score": "",
+      "venue": ""
+    },
+    {
+      "date": "2027-03-20",
+      "time": "14:00",
+      "home": "SpVgg Kaufbeuren",
+      "away": "SV Mering",
       "score": "",
       "venue": ""
     }
