@@ -50,7 +50,7 @@ input,select,textarea,button{max-width:100%}
 }
 
 /* Lange deutsche Wörter in Überschriften sauber trennen statt mitten im Wort umzubrechen */
-h1,h2,h3{-webkit-hyphens:auto;hyphens:auto;hyphenate-limit-chars:14 6 6}
+h1,h2,h3{-webkit-hyphens:manual;hyphens:manual}@media(max-width:600px){h1,h2,h3{-webkit-hyphens:auto;hyphens:auto;hyphenate-limit-chars:14 6 6;-webkit-hyphenate-limit-before:6;-webkit-hyphenate-limit-after:6}}.hero h1,.hero h1 *{-webkit-hyphens:manual!important;hyphens:manual!important;overflow-wrap:normal;word-break:normal}
 @media(max-width:640px){
  .stadium-heading>div{max-width:100%;min-width:0}
 }
