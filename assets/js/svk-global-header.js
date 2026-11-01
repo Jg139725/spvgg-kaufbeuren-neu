@@ -143,6 +143,7 @@
       <a href="${base}verein/vorstand.html">Vorstand</a>
       <a href="${base}verein/geschichte.html">Historie</a>
       <a href="${base}verein/kontakt.html">Ansprechpartner</a>
+      <a href="${base}foerderverein/index.html">Förderverein</a>
       <a href="${base}verein/downloads.html">Mitglied werden</a>
       <a href="${base}verein/satzung.html">Satzung</a>
     `;
