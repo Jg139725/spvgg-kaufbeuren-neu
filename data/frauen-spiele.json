@@ -5,18 +5,6 @@
   "sourceUrl": "https://www.bfv.de/mannschaften/-/016PA7VSOC000000VV0AG80NVV8OQVTB",
   "fixtures": [
     {
-      "id": "031FPO4434000000VS5489BUVSJ4CRAP",
-      "date": "2026-11-14",
-      "time": "15:00",
-      "home": "SV Wattenweiler 1",
-      "away": "SpVgg Kaufbeuren",
-      "score": null,
-      "venue": "Hauptplatz SV Wattenweiler | Zum Sportplatz | 86476 Wattenweiler",
-      "status": "",
-      "cancelled": false,
-      "url": "https://www.bfv.de/ergebnisse/spiel/-/031FPO4434000000VS5489BUVSJ4CRAP"
-    },
-    {
       "id": "031FPO43T4000000VS5489BUVSJ4CRAP",
       "date": "2026-11-21",
       "time": "15:00",
@@ -63,19 +51,31 @@
       "status": "",
       "cancelled": false,
       "url": "https://www.bfv.de/ergebnisse/spiel/-/031FPO49PK000000VS5489BUVSJ4CRAP"
+    },
+    {
+      "id": "031FPO491S000000VS5489BUVSJ4CRAP",
+      "date": "2027-04-03",
+      "time": "17:00",
+      "home": "TSV Sielenbach",
+      "away": "SpVgg Kaufbeuren",
+      "score": null,
+      "venue": "Sportplatz TSV Sielenbach | Gartenstr. 22 | 86577 Sielenbach",
+      "status": "",
+      "cancelled": false,
+      "url": "https://www.bfv.de/ergebnisse/spiel/-/031FPO491S000000VS5489BUVSJ4CRAP"
     }
   ],
   "nextGame": {
-    "id": "031FPO4434000000VS5489BUVSJ4CRAP",
-    "date": "2026-11-14",
+    "id": "031FPO43T4000000VS5489BUVSJ4CRAP",
+    "date": "2026-11-21",
     "time": "15:00",
-    "home": "SV Wattenweiler 1",
+    "home": "SV Wechingen 1",
     "away": "SpVgg Kaufbeuren",
     "score": null,
-    "venue": "Hauptplatz SV Wattenweiler | Zum Sportplatz | 86476 Wattenweiler",
+    "venue": "SV Wechingen | St.-Veit-Str. 10 | 86759 Wechingen",
     "status": "",
     "cancelled": false,
-    "url": "https://www.bfv.de/ergebnisse/spiel/-/031FPO4434000000VS5489BUVSJ4CRAP"
+    "url": "https://www.bfv.de/ergebnisse/spiel/-/031FPO43T4000000VS5489BUVSJ4CRAP"
   },
   "lastGame": {
     "id": "031FPO45LK000000VS5489BUVSJ4CRAP",
@@ -212,5 +212,5 @@
       "points": 1
     }
   ],
-  "updatedAt": "2026-10-31T22:40:02+00:00"
+  "updatedAt": "2026-11-03T17:58:47+00:00"
 }
