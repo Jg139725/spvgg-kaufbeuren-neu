@@ -92,6 +92,17 @@
   "table": [
     {
       "pos": 1,
+      "team": "FC Augsburg 1",
+      "played": 7,
+      "won": 5,
+      "drawn": 2,
+      "lost": 0,
+      "goals": "23:4",
+      "diff": "19",
+      "points": 17
+    },
+    {
+      "pos": 2,
       "team": "SpVgg Kaufbeuren",
       "played": 7,
       "won": 5,
@@ -100,17 +111,6 @@
       "goals": "17:4",
       "diff": "13",
       "points": 16
-    },
-    {
-      "pos": 2,
-      "team": "FC Augsburg 1",
-      "played": 6,
-      "won": 4,
-      "drawn": 2,
-      "lost": 0,
-      "goals": "22:4",
-      "diff": "18",
-      "points": 14
     },
     {
       "pos": 3,
@@ -148,12 +148,12 @@
     {
       "pos": 6,
       "team": "TSV Sielenbach",
-      "played": 6,
+      "played": 7,
       "won": 3,
       "drawn": 0,
-      "lost": 3,
-      "goals": "18:15",
-      "diff": "3",
+      "lost": 4,
+      "goals": "18:16",
+      "diff": "2",
       "points": 9
     },
     {
@@ -212,5 +212,5 @@
       "points": 1
     }
   ],
-  "updatedAt": "2026-11-03T17:58:47+00:00"
+  "updatedAt": "2026-11-04T22:02:18+00:00"
 }
