@@ -92,17 +92,6 @@
   "table": [
     {
       "pos": 1,
-      "team": "FC Augsburg 1",
-      "played": 7,
-      "won": 5,
-      "drawn": 2,
-      "lost": 0,
-      "goals": "23:4",
-      "diff": "19",
-      "points": 17
-    },
-    {
-      "pos": 2,
       "team": "SpVgg Kaufbeuren",
       "played": 7,
       "won": 5,
@@ -111,6 +100,17 @@
       "goals": "17:4",
       "diff": "13",
       "points": 16
+    },
+    {
+      "pos": 2,
+      "team": "FC Augsburg 1",
+      "played": 7,
+      "won": 4,
+      "drawn": 3,
+      "lost": 0,
+      "goals": "23:5",
+      "diff": "18",
+      "points": 15
     },
     {
       "pos": 3,
@@ -136,6 +136,17 @@
     },
     {
       "pos": 5,
+      "team": "TSV Sielenbach",
+      "played": 7,
+      "won": 3,
+      "drawn": 1,
+      "lost": 3,
+      "goals": "19:16",
+      "diff": "3",
+      "points": 10
+    },
+    {
+      "pos": 6,
       "team": "SV Wechingen 1",
       "played": 6,
       "won": 3,
@@ -143,17 +154,6 @@
       "lost": 3,
       "goals": "8:11",
       "diff": "-3",
-      "points": 9
-    },
-    {
-      "pos": 6,
-      "team": "TSV Sielenbach",
-      "played": 7,
-      "won": 3,
-      "drawn": 0,
-      "lost": 4,
-      "goals": "18:16",
-      "diff": "2",
       "points": 9
     },
     {
@@ -212,5 +212,5 @@
       "points": 1
     }
   ],
-  "updatedAt": "2026-11-04T22:02:18+00:00"
+  "updatedAt": "2026-11-05T02:39:08+00:00"
 }
