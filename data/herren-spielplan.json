@@ -3,20 +3,12 @@
   "source": "https://www.bfv.de/mannschaften/-/016PILCMSS000000VV0AG80NVUT1FLRU",
   "fixtures": [
     {
-      "date": "2026-11-07",
-      "time": "14:00",
-      "home": "SpVgg Kaufbeuren",
-      "away": "TSV Kammlach",
-      "score": "",
-      "venue": "Parkstadion Kaufbeuren"
-    },
-    {
       "date": "2026-11-08",
       "time": "14:00",
       "home": "SpVgg Kaufbeuren",
       "away": "TSV Kammlach",
       "score": "",
-      "venue": ""
+      "venue": "Parkstadion Kaufbeuren"
     },
     {
       "date": "2026-11-14",
@@ -245,20 +237,12 @@
       "venue": ""
     },
     {
-      "date": "2026-11-07",
-      "time": "14:00",
-      "home": "SpVgg Kaufbeuren",
-      "away": "TSV Kammlach",
-      "score": "",
-      "venue": "Parkstadion Kaufbeuren"
-    },
-    {
       "date": "2026-11-08",
       "time": "14:00",
       "home": "SpVgg Kaufbeuren",
       "away": "TSV Kammlach",
       "score": "",
-      "venue": ""
+      "venue": "Parkstadion Kaufbeuren"
     },
     {
       "date": "2026-11-14",
@@ -294,7 +278,7 @@
     }
   ],
   "nextGame": {
-    "date": "2026-11-07",
+    "date": "2026-11-08",
     "time": "14:00",
     "home": "SpVgg Kaufbeuren",
     "away": "TSV Kammlach",

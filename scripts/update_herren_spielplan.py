@@ -181,7 +181,7 @@ def main():
       ("2026-10-17","15:00","TV Erkheim","SpVgg Kaufbeuren",""),
       ("2026-10-24","16:00","SpVgg Kaufbeuren","FC Oberstdorf","Parkstadion Kaufbeuren"),
       ("2026-10-30","19:00","SVO Germaringen","SpVgg Kaufbeuren",""),
-      ("2026-11-07","14:00","SpVgg Kaufbeuren","TSV Kammlach","Parkstadion Kaufbeuren"),
+      ("2026-11-08","14:00","SpVgg Kaufbeuren","TSV Kammlach","Parkstadion Kaufbeuren"),
       ("2026-11-14","14:00","SSV Niedersonthofen","SpVgg Kaufbeuren","")
     ]
     for a,b,c,d,e in fallback:
