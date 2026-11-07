@@ -114,6 +114,17 @@
     },
     {
       "pos": 3,
+      "team": "TSV Sielenbach",
+      "played": 8,
+      "won": 4,
+      "drawn": 1,
+      "lost": 3,
+      "goals": "21:16",
+      "diff": "5",
+      "points": 13
+    },
+    {
+      "pos": 4,
       "team": "FSV Wehringen 1",
       "played": 6,
       "won": 3,
@@ -124,7 +135,18 @@
       "points": 11
     },
     {
-      "pos": 4,
+      "pos": 5,
+      "team": "SV Wechingen 1",
+      "played": 7,
+      "won": 3,
+      "drawn": 1,
+      "lost": 3,
+      "goals": "8:11",
+      "diff": "-3",
+      "points": 10
+    },
+    {
+      "pos": 6,
       "team": "TSV Ottobeuren",
       "played": 6,
       "won": 3,
@@ -135,37 +157,15 @@
       "points": 10
     },
     {
-      "pos": 5,
-      "team": "TSV Sielenbach",
-      "played": 7,
-      "won": 3,
-      "drawn": 1,
-      "lost": 3,
-      "goals": "19:16",
-      "diff": "3",
-      "points": 10
-    },
-    {
-      "pos": 6,
-      "team": "SV Wechingen 1",
-      "played": 6,
-      "won": 3,
-      "drawn": 0,
-      "lost": 3,
-      "goals": "8:11",
-      "diff": "-3",
-      "points": 9
-    },
-    {
       "pos": 7,
       "team": "SV Wattenweiler 1",
-      "played": 6,
+      "played": 7,
       "won": 2,
-      "drawn": 1,
+      "drawn": 2,
       "lost": 3,
       "goals": "10:11",
       "diff": "-1",
-      "points": 7
+      "points": 8
     },
     {
       "pos": 8,
@@ -192,12 +192,12 @@
     {
       "pos": 10,
       "team": "TSV 1861 Nördlingen",
-      "played": 5,
+      "played": 6,
       "won": 1,
       "drawn": 1,
-      "lost": 3,
-      "goals": "3:9",
-      "diff": "-6",
+      "lost": 4,
+      "goals": "3:11",
+      "diff": "-8",
       "points": 4
     },
     {
@@ -212,5 +212,5 @@
       "points": 1
     }
   ],
-  "updatedAt": "2026-11-05T02:39:08+00:00"
+  "updatedAt": "2026-11-07T14:16:51+00:00"
 }
