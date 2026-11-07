@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-07T08:57:31.595105+00:00",
+  "updatedAt": "2026-11-07T15:47:13.188282+00:00",
   "source": "https://www.bfv.de/mannschaften/-/016PILCMSS000000VV0AG80NVUT1FLRU",
   "fixtures": [
     {
@@ -418,23 +418,23 @@
     {
       "pos": 12,
       "team": "SVO Germaringen",
-      "played": 16,
-      "won": 4,
+      "played": 17,
+      "won": 5,
       "drawn": 3,
       "lost": 9,
-      "goals": "21:36",
-      "diff": "-15",
-      "points": 15
+      "goals": "22:36",
+      "diff": "-14",
+      "points": 18
     },
     {
       "pos": 13,
       "team": "FC Oberstdorf",
-      "played": 16,
+      "played": 17,
       "won": 3,
       "drawn": 4,
-      "lost": 9,
-      "goals": "21:32",
-      "diff": "-11",
+      "lost": 10,
+      "goals": "21:33",
+      "diff": "-12",
       "points": 13
     },
     {
