@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-07T15:47:13.188282+00:00",
+  "updatedAt": "2026-11-07T20:20:18.851247+00:00",
   "source": "https://www.bfv.de/mannschaften/-/016PILCMSS000000VV0AG80NVUT1FLRU",
   "fixtures": [
     {
@@ -297,27 +297,38 @@
     {
       "pos": 1,
       "team": "FC Thalhofen",
-      "played": 15,
+      "played": 16,
       "won": 12,
       "drawn": 2,
-      "lost": 1,
-      "goals": "50:21",
-      "diff": "29",
+      "lost": 2,
+      "goals": "50:22",
+      "diff": "28",
       "points": 38
     },
     {
       "pos": 2,
       "team": "SV Mering",
-      "played": 16,
-      "won": 9,
+      "played": 17,
+      "won": 10,
       "drawn": 5,
       "lost": 2,
-      "goals": "41:26",
-      "diff": "15",
-      "points": 32
+      "goals": "45:27",
+      "diff": "18",
+      "points": 35
     },
     {
       "pos": 3,
+      "team": "VfL Kaufering",
+      "played": 17,
+      "won": 10,
+      "drawn": 3,
+      "lost": 4,
+      "goals": "44:26",
+      "diff": "18",
+      "points": 33
+    },
+    {
+      "pos": 4,
       "team": "TSV Legau",
       "played": 16,
       "won": 10,
@@ -328,18 +339,18 @@
       "points": 31
     },
     {
-      "pos": 4,
-      "team": "VfL Kaufering",
+      "pos": 5,
+      "team": "TSV Merching",
       "played": 16,
-      "won": 9,
+      "won": 8,
       "drawn": 3,
-      "lost": 4,
-      "goals": "40:23",
-      "diff": "17",
-      "points": 30
+      "lost": 5,
+      "goals": "26:19",
+      "diff": "7",
+      "points": 27
     },
     {
-      "pos": 5,
+      "pos": 6,
       "team": "TV Erkheim",
       "played": 16,
       "won": 8,
@@ -350,37 +361,26 @@
       "points": 27
     },
     {
-      "pos": 6,
-      "team": "FC Königsbrunn",
-      "played": 16,
-      "won": 7,
-      "drawn": 4,
-      "lost": 5,
-      "goals": "30:32",
-      "diff": "-2",
-      "points": 25
-    },
-    {
       "pos": 7,
-      "team": "SV Egg a. d. Günz",
-      "played": 16,
+      "team": "FC Königsbrunn",
+      "played": 17,
       "won": 7,
       "drawn": 4,
-      "lost": 5,
-      "goals": "34:26",
-      "diff": "8",
+      "lost": 6,
+      "goals": "31:36",
+      "diff": "-5",
       "points": 25
     },
     {
       "pos": 8,
-      "team": "TSV Merching",
-      "played": 15,
+      "team": "SV Egg a. d. Günz",
+      "played": 17,
       "won": 7,
-      "drawn": 3,
-      "lost": 5,
-      "goals": "25:19",
+      "drawn": 4,
+      "lost": 6,
+      "goals": "35:29",
       "diff": "6",
-      "points": 24
+      "points": 25
     },
     {
       "pos": 9,
@@ -396,12 +396,12 @@
     {
       "pos": 10,
       "team": "TSV 1892 Haunstetten",
-      "played": 16,
+      "played": 17,
       "won": 5,
       "drawn": 4,
-      "lost": 7,
-      "goals": "30:32",
-      "diff": "-2",
+      "lost": 8,
+      "goals": "33:36",
+      "diff": "-3",
       "points": 19
     },
     {
@@ -422,29 +422,29 @@
       "won": 5,
       "drawn": 3,
       "lost": 9,
-      "goals": "22:36",
-      "diff": "-14",
+      "goals": "24:37",
+      "diff": "-13",
       "points": 18
     },
     {
       "pos": 13,
+      "team": "FC Wiggensbach",
+      "played": 17,
+      "won": 4,
+      "drawn": 4,
+      "lost": 9,
+      "goals": "21:32",
+      "diff": "-11",
+      "points": 16
+    },
+    {
+      "pos": 14,
       "team": "FC Oberstdorf",
       "played": 17,
       "won": 3,
       "drawn": 4,
       "lost": 10,
-      "goals": "21:33",
-      "diff": "-12",
-      "points": 13
-    },
-    {
-      "pos": 14,
-      "team": "FC Wiggensbach",
-      "played": 16,
-      "won": 3,
-      "drawn": 4,
-      "lost": 9,
-      "goals": "18:31",
+      "goals": "22:35",
       "diff": "-13",
       "points": 13
     },
