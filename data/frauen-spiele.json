@@ -119,12 +119,23 @@
       "won": 4,
       "drawn": 1,
       "lost": 3,
-      "goals": "21:16",
+      "goals": "22:17",
       "diff": "5",
       "points": 13
     },
     {
       "pos": 4,
+      "team": "SV Wechingen 1",
+      "played": 7,
+      "won": 4,
+      "drawn": 0,
+      "lost": 3,
+      "goals": "10:11",
+      "diff": "-1",
+      "points": 12
+    },
+    {
+      "pos": 5,
       "team": "FSV Wehringen 1",
       "played": 6,
       "won": 3,
@@ -135,40 +146,40 @@
       "points": 11
     },
     {
-      "pos": 5,
-      "team": "SV Wechingen 1",
+      "pos": 6,
+      "team": "TSV Ottobeuren",
       "played": 7,
       "won": 3,
       "drawn": 1,
       "lost": 3,
-      "goals": "8:11",
-      "diff": "-3",
-      "points": 10
-    },
-    {
-      "pos": 6,
-      "team": "TSV Ottobeuren",
-      "played": 6,
-      "won": 3,
-      "drawn": 1,
-      "lost": 2,
-      "goals": "17:13",
-      "diff": "4",
+      "goals": "19:16",
+      "diff": "3",
       "points": 10
     },
     {
       "pos": 7,
-      "team": "SV Wattenweiler 1",
+      "team": "SSV Glött",
       "played": 7,
       "won": 2,
       "drawn": 2,
       "lost": 3,
-      "goals": "10:11",
-      "diff": "-1",
+      "goals": "9:16",
+      "diff": "-7",
       "points": 8
     },
     {
       "pos": 8,
+      "team": "SV Wattenweiler 1",
+      "played": 7,
+      "won": 2,
+      "drawn": 1,
+      "lost": 4,
+      "goals": "10:13",
+      "diff": "-3",
+      "points": 7
+    },
+    {
+      "pos": 9,
       "team": "TSV Buchenberg",
       "played": 6,
       "won": 2,
@@ -179,24 +190,13 @@
       "points": 7
     },
     {
-      "pos": 9,
-      "team": "SSV Glött",
-      "played": 6,
-      "won": 1,
-      "drawn": 2,
-      "lost": 3,
-      "goals": "6:14",
-      "diff": "-8",
-      "points": 5
-    },
-    {
       "pos": 10,
       "team": "TSV 1861 Nördlingen",
       "played": 6,
       "won": 1,
       "drawn": 1,
       "lost": 4,
-      "goals": "3:11",
+      "goals": "4:12",
       "diff": "-8",
       "points": 4
     },
@@ -212,5 +212,5 @@
       "points": 1
     }
   ],
-  "updatedAt": "2026-11-07T14:16:51+00:00"
+  "updatedAt": "2026-11-07T22:53:11+00:00"
 }
