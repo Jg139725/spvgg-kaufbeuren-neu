@@ -1,15 +1,7 @@
 {
-  "updatedAt": "2026-11-08T13:43:30.656768+00:00",
+  "updatedAt": "2026-11-08T18:54:17.762534+00:00",
   "source": "https://www.bfv.de/mannschaften/-/016PILCMSS000000VV0AG80NVUT1FLRU",
   "fixtures": [
-    {
-      "date": "2026-11-08",
-      "time": "14:00",
-      "home": "SpVgg Kaufbeuren",
-      "away": "TSV Kammlach",
-      "score": "",
-      "venue": "Parkstadion Kaufbeuren"
-    },
     {
       "date": "2026-11-14",
       "time": "14:00",
@@ -39,6 +31,14 @@
       "time": "14:00",
       "home": "SpVgg Kaufbeuren",
       "away": "SV Mering",
+      "score": "",
+      "venue": ""
+    },
+    {
+      "date": "2027-03-29",
+      "time": "15:00",
+      "home": "VfL Kaufering",
+      "away": "SpVgg Kaufbeuren",
       "score": "",
       "venue": ""
     }
@@ -241,7 +241,7 @@
       "time": "14:00",
       "home": "SpVgg Kaufbeuren",
       "away": "TSV Kammlach",
-      "score": "",
+      "score": "5:3",
       "venue": "Parkstadion Kaufbeuren"
     },
     {
@@ -275,23 +275,31 @@
       "away": "SV Mering",
       "score": "",
       "venue": ""
+    },
+    {
+      "date": "2027-03-29",
+      "time": "15:00",
+      "home": "VfL Kaufering",
+      "away": "SpVgg Kaufbeuren",
+      "score": "",
+      "venue": ""
     }
   ],
   "nextGame": {
+    "date": "2026-11-14",
+    "time": "14:00",
+    "home": "SSV Niedersonthofen",
+    "away": "SpVgg Kaufbeuren",
+    "score": "",
+    "venue": ""
+  },
+  "lastGame": {
     "date": "2026-11-08",
     "time": "14:00",
     "home": "SpVgg Kaufbeuren",
     "away": "TSV Kammlach",
-    "score": "",
+    "score": "5:3",
     "venue": "Parkstadion Kaufbeuren"
-  },
-  "lastGame": {
-    "date": "2026-10-30",
-    "time": "19:00",
-    "home": "SVO Germaringen",
-    "away": "SpVgg Kaufbeuren",
-    "score": "2:3",
-    "venue": ""
   },
   "table": [
     {
@@ -318,6 +326,17 @@
     },
     {
       "pos": 3,
+      "team": "TSV Legau",
+      "played": 17,
+      "won": 11,
+      "drawn": 1,
+      "lost": 5,
+      "goals": "44:28",
+      "diff": "16",
+      "points": 34
+    },
+    {
+      "pos": 4,
       "team": "VfL Kaufering",
       "played": 17,
       "won": 10,
@@ -326,17 +345,6 @@
       "goals": "44:26",
       "diff": "18",
       "points": 33
-    },
-    {
-      "pos": 4,
-      "team": "TSV Legau",
-      "played": 17,
-      "won": 10,
-      "drawn": 2,
-      "lost": 5,
-      "goals": "39:26",
-      "diff": "13",
-      "points": 32
     },
     {
       "pos": 5,
@@ -356,8 +364,8 @@
       "won": 8,
       "drawn": 3,
       "lost": 6,
-      "goals": "41:35",
-      "diff": "6",
+      "goals": "42:37",
+      "diff": "5",
       "points": 27
     },
     {
@@ -386,26 +394,15 @@
       "pos": 9,
       "team": "SpVgg Kaufbeuren",
       "played": 17,
-      "won": 6,
+      "won": 7,
       "drawn": 4,
-      "lost": 7,
-      "goals": "29:31",
-      "diff": "-2",
-      "points": 22
+      "lost": 6,
+      "goals": "34:32",
+      "diff": "2",
+      "points": 25
     },
     {
       "pos": 10,
-      "team": "TSV Kammlach",
-      "played": 17,
-      "won": 6,
-      "drawn": 3,
-      "lost": 8,
-      "goals": "32:41",
-      "diff": "-9",
-      "points": 21
-    },
-    {
-      "pos": 11,
       "team": "TSV 1892 Haunstetten",
       "played": 17,
       "won": 5,
@@ -414,6 +411,17 @@
       "goals": "33:36",
       "diff": "-3",
       "points": 19
+    },
+    {
+      "pos": 11,
+      "team": "TSV Kammlach",
+      "played": 17,
+      "won": 5,
+      "drawn": 3,
+      "lost": 9,
+      "goals": "33:46",
+      "diff": "-13",
+      "points": 18
     },
     {
       "pos": 12,
@@ -444,8 +452,8 @@
       "won": 4,
       "drawn": 2,
       "lost": 11,
-      "goals": "26:43",
-      "diff": "-17",
+      "goals": "28:44",
+      "diff": "-16",
       "points": 14
     },
     {
@@ -464,11 +472,11 @@
       "team": "FC Bad Wörishofen",
       "played": 17,
       "won": 3,
-      "drawn": 4,
-      "lost": 10,
-      "goals": "15:38",
-      "diff": "-23",
-      "points": 13
+      "drawn": 3,
+      "lost": 11,
+      "goals": "17:43",
+      "diff": "-26",
+      "points": 12
     }
   ]
 }
