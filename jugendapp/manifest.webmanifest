@@ -1,0 +1,17 @@
+{
+  "name": "SVK Jugend",
+  "short_name": "SVK Jugend",
+  "description": "Jugendabteilung SpVgg Kaufbeuren – Spielverlegungen und Trainer",
+  "lang": "de",
+  "start_url": "/jugendapp/",
+  "scope": "/jugendapp/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#031c3d",
+  "theme_color": "#031c3d",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
