@@ -1,0 +1,55 @@
+name: Jugend Spielplan (BFV) aktualisieren
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "41 */3 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: jugend-spiele-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Repository laden
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Python einrichten
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Abhängigkeiten installieren
+        run: pip install requests pdfplumber
+
+      - name: BFV-Vereinsspielplan auslesen
+        run: python scripts/update_jugend_spiele.py
+
+      - name: Änderungen speichern
+        shell: bash
+        run: |
+          set -e
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet -- data/jugend-spiele.json && ! git ls-files --others --exclude-standard | grep -q '^data/jugend-spiele.json$'; then
+            echo "Keine Änderungen an den Jugendspielen."
+            exit 0
+          fi
+          cp data/jugend-spiele.json /tmp/jugend-spiele.json
+          git fetch origin main
+          git reset --hard origin/main
+          cp /tmp/jugend-spiele.json data/jugend-spiele.json
+          git add data/jugend-spiele.json
+          if git diff --cached --quiet; then
+            echo "Keine Änderungen nach Synchronisierung."
+            exit 0
+          fi
+          git commit -m "Jugend-Spielplan (BFV) automatisch aktualisiert"
+          git push origin HEAD:main

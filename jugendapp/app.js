@@ -27,6 +27,7 @@
 
   const me = { user: null, profile: null, mitglied: null, leitung: false, teams: [] };
   let verlegungen = [], staff = [], mitglieder = [], setupMissing = false;
+  let bfv = { games: [], updatedAt: null };
 
   // ---------- Helpers ----------
   const esc = s => String(s ?? '').replace(/[&<>"']/g, m => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' }[m]));
@@ -158,11 +159,12 @@
     const opts = myTeamList().map(t => `<option value="${t[0]}">${t[1]}</option>`).join('');
     $('vTeam').innerHTML = opts;
     $('fTeam').innerHTML = (myTeamList().length > 1 ? '<option value="">Alle Mannschaften</option>' : '') + opts;
+    $('sTeam').innerHTML = (myTeamList().length > 1 ? '<option value="">Alle Mannschaften</option>' : '') + opts;
     $('vStatus').innerHTML = Object.entries(STATUS).map(([k, v]) => `<option value="${k}">${v.label}</option>`).join('');
     show('app');
     if (!appReady) { bindApp(); appReady = true; }
     setupInstall();
-    await Promise.all([loadVerlegungen(), loadStaff(), me.leitung ? loadMitglieder() : null]);
+    await Promise.all([loadBfv(), loadVerlegungen(), loadStaff(), me.leitung ? loadMitglieder() : null]);
   }
 
   // ---------- Navigation ----------
@@ -176,6 +178,8 @@
     document.querySelectorAll('.bottom-nav button').forEach(b => b.onclick = () => showTab(b.dataset.tab));
     $('fStatus').onchange = renderVerlegungen; $('fTeam').onchange = renderVerlegungen;
     $('tSearch').oninput = renderStaff;
+    $('sTeam').onchange = renderSpiele; $('sNurAenderungen').onchange = renderSpiele;
+    $('vGame').onchange = () => { const g = bfv.games.find(x => x.id === $('vGame').value); if (g) fillFromGame(g); };
     $('copyAllMails').onclick = async () => {
       const mails = [...new Set(staff.filter(s => s.email && s.active !== false).map(s => s.email))];
       if (!mails.length) return alert('Keine E-Mail-Adressen hinterlegt.');
@@ -190,6 +194,7 @@
       ({
         'new': () => openEditor(),
         'edit': () => openEditor(x),
+        'verlegen': () => openEditorFromGame(bfv.games.find(g => g.id === a.dataset.game)),
         'next': () => advance(x),
         'msg-gegner': () => openGegnerMessage(x),
         'msg-trainer': () => openTrainerMessage(x),
@@ -252,6 +257,7 @@
       <div class="dates"><span class="${moved ? 'old' : ''}">${esc(when(x.alt_datum, x.alt_uhrzeit))}</span>${moved ? ` → <span class="new">${esc(when(x.neu_datum, x.neu_uhrzeit))}</span>${x.neu_ort ? ' <span class="meta">(' + esc(x.neu_ort) + ')</span>' : ''}` : ''}</div>
       ${x.kontakt_name ? `<div class="meta">Kontakt Gegner: ${esc(x.kontakt_name)}</div>` : ''}
       ${x.notizen ? `<div class="meta">📝 ${esc(x.notizen)}</div>` : ''}
+      ${bfvHint(x)}
       ${L && x.created_by ? `<div class="by">Eingetragen von ${esc(byName(x.created_by))}</div>` : ''}
       <div class="card-actions">
         ${L && st.next ? `<button class="small next" data-action="next" data-id="${x.id}">✓ ${esc(st.nextLabel)}</button>` : ''}
@@ -281,6 +287,8 @@
     const pending = mitglieder.filter(m => !m.freigegeben).length;
     if (me.leitung && pending) html += `<button class="stat" data-action="goto" data-tab="zugaenge" style="border-color:#f5c26b"><b>${pending}</b><span>Zugang wartet auf Freigabe</span></button>`;
     $('stats').innerHTML = html;
+    const ng = upcomingGames().slice(0, 3);
+    $('nextGames').innerHTML = ng.map(gameRow).join('') || `<div class="empty">${bfv.updatedAt ? 'Keine anstehenden Spiele im BFV-Spielplan.' : 'Der BFV-Spielplan wird geladen …'}</div>`;
     const todo = verlegungen.filter(x => ACTIVE.includes(x.status))
       .sort((a, b) => ACTIVE.indexOf(a.status) - ACTIVE.indexOf(b.status) || String(a.alt_datum).localeCompare(String(b.alt_datum))).slice(0, 5);
     $('todo').innerHTML = todo.map(card).join('') || `<div class="empty">${me.leitung ? 'Alles erledigt 👍 Keine offenen Spielverlegungen.' : 'Keine offenen Verlegungen für dein Team.'}</div>`;
@@ -302,6 +310,10 @@
     $('vKName').value = x.kontakt_name || ''; $('vKTel').value = x.kontakt_telefon || ''; $('vKMail').value = x.kontakt_email || '';
     $('vStatus').value = x.status || 'offen'; $('vNotiz').value = x.notizen || '';
     $('vDelete').hidden = !x.id;
+    const games = upcomingGames();
+    $('vGameWrap').hidden = !!x.id || !games.length;
+    $('vGame').innerHTML = '<option value="">– Spiel auswählen oder unten selbst eintragen –</option>' + games.map(g =>
+      `<option value="${esc(g.id)}">${esc(fmtDate(g.date))} ${esc(g.time)} · ${esc(teamsLabel(g))} ${g.heim ? 'vs.' : '@'} ${esc(g.gegner)}</option>`).join('');
     $('vGegner').onchange = () => {
       if ($('vKName').value || $('vKTel').value || $('vKMail').value) return;
       const prev = verlegungen.find(v => v.gegner === $('vGegner').value && (v.kontakt_telefon || v.kontakt_email));
@@ -416,6 +428,88 @@
     const fromApp = mitglieder.filter(m => m.freigegeben && (m.teams || []).includes(x.team_key) && (m.telefon || m.email) && !fromStaff.some(s => s.name.startsWith(m.name)))
       .map(m => ({ name: m.name + ' (App)', phone: m.telefon, email: m.email }));
     openMessage({ title: 'Trainer der ' + teamName(x.team_key) + ' informieren', text: trainerText(x), subject: `Spielverlegung ${teamName(x.team_key)} – ${x.gegner}`, targets: [...fromStaff, ...fromApp] });
+  }
+
+  // ---------- BFV-Spielplan ----------
+  async function loadBfv() {
+    try {
+      const r = await fetch('/data/jugend-spiele.json?t=' + Date.now(), { cache: 'no-store' });
+      if (!r.ok) throw new Error(r.status);
+      const d = await r.json();
+      bfv = { games: (d.games || []), updatedAt: d.updatedAt };
+    } catch { bfv = { games: [], updatedAt: null }; }
+    renderSpiele(); renderStart(); renderVerlegungen();
+  }
+
+  const today = () => new Date(Date.now() - new Date().getTimezoneOffset() * 60000).toISOString().slice(0, 10);
+  const allowedTeamKeys = () => myTeamList().map(t => t[0]);
+  // Teams der App, zu denen ein BFV-Spiel gehören kann – gefiltert auf die eigenen Teams
+  const gameTeams = g => (g.teams || []).filter(k => allowedTeamKeys().includes(k));
+  const teamsLabel = g => { const t = gameTeams(g); return t.length ? t.map(teamName).join('/') : (g.altersklasse || ''); };
+  function upcomingGames(teamKey) {
+    const t = today();
+    return bfv.games.filter(g => g.date >= t && gameTeams(g).length && (!teamKey || gameTeams(g).includes(teamKey)));
+  }
+  const norm = s => String(s || '').toLowerCase().replace(/\(sg\)|[^a-z0-9äöüß]+/g, ' ').replace(/\s+/g, ' ').trim();
+  const sameClub = (a, b) => { const x = norm(a), y = norm(b); return !!x && !!y && (x === y || x.includes(y) || y.includes(x)); };
+  const runningFor = g => verlegungen.find(v => ACTIVE.includes(v.status) && sameClub(v.gegner, g.gegner) && (g.teams || []).includes(v.team_key) && (v.alt_datum === g.date || v.neu_datum === g.date));
+
+  function gameRow(g) {
+    const run = runningFor(g);
+    const venue = g.venue ? `<a href="https://maps.google.com/?q=${encodeURIComponent(g.venue)}" target="_blank" rel="noopener">📍 ${esc(g.venue.split(',')[0])}</a>` : '';
+    const home = g.heim ? `<span class="svk">${esc(teamsLabel(g))}</span>` : esc(g.home);
+    const away = g.heim ? esc(g.away) : `<span class="svk">${esc(teamsLabel(g))}</span>`;
+    return `<div class="game">
+      <div class="game-time">${esc(g.time)}<small>${esc(fmtDate(g.date))}</small></div>
+      <div class="game-main">
+        <div class="game-teams">${home} – ${away}</div>
+        <div class="game-meta"><span class="tag">${esc(g.altersklasse)}</span><span class="tag">${esc(g.wettbewerb || g.typ)}</span>${g.geaendert ? '<span class="tag changed">beim BFV geändert</span>' : ''}${run ? `<span class="tag running">Verlegung: ${esc(STATUS[run.status].label)}</span>` : ''}</div>
+        ${venue ? `<div class="game-meta">${venue}</div>` : ''}
+      </div>
+      ${run ? '' : `<button class="small ghost" data-action="verlegen" data-game="${esc(g.id)}">Verlegen</button>`}
+    </div>`;
+  }
+
+  function renderSpiele() {
+    const ft = $('sTeam').value, only = $('sNurAenderungen').checked;
+    const list = upcomingGames(ft).filter(g => !only || g.geaendert);
+    let html = '', day = '';
+    list.forEach(g => { if (g.date !== day) { day = g.date; html += `<div class="day-head">${esc(fmtDate(g.date, true))}</div>`; } html += gameRow(g); });
+    $('sList').innerHTML = html || `<div class="empty">${bfv.updatedAt ? 'Keine anstehenden Spiele in dieser Auswahl.' : 'Spielplan konnte nicht geladen werden.'}</div>`;
+    $('bfvStand').textContent = bfv.updatedAt
+      ? 'Quelle: offizieller BFV-Vereinsspielplan, Stand ' + new Date(bfv.updatedAt).toLocaleString('de-DE', { dateStyle: 'short', timeStyle: 'short' }) + ' Uhr. Wird alle 3 Stunden automatisch aktualisiert. Bei D- bis F-Junioren unterscheidet der BFV nicht zwischen z. B. U13 und U12 – deshalb steht dort beides.'
+      : '';
+  }
+
+  function fillFromGame(g) {
+    const teams = gameTeams(g);
+    if (teams.length && !teams.includes($('vTeam').value)) $('vTeam').value = teams[0];
+    const typ = { 'Punktspiel': 'Punktspiel', 'Pokal': 'Pokal', 'Freundschaftsspiel': 'Freundschaftsspiel', 'Hallenturnier': 'Turnier', 'Turnier': 'Turnier' }[g.typ] || 'Punktspiel';
+    $('vComp').value = typ;
+    $('vGegner').value = g.gegner; $('vHeim').value = String(!!g.heim);
+    $('vAltDatum').value = g.date; $('vAltZeit').value = g.time;
+    $('vGegner').onchange && $('vGegner').onchange();
+  }
+  function openEditorFromGame(g) {
+    if (!g) return;
+    openEditor();
+    $('vGame').value = g.id; fillFromGame(g);
+    if (gameTeams(g).length > 1) setMsg($('vMsg'), 'Bitte prüfen: Der BFV führt hier nur die Altersklasse (' + g.altersklasse + '). Stimmt die Mannschaft?');
+  }
+
+  // Abgleich einer Verlegung mit dem aktuellen BFV-Spielplan
+  function bfvHint(x) {
+    if (!bfv.games.length || !ACTIVE.includes(x.status) && x.status !== 'erledigt') return '';
+    const cand = bfv.games.filter(g => (g.teams || []).includes(x.team_key) && sameClub(g.gegner, x.gegner));
+    if (!cand.length) return '';
+    if (x.neu_datum) {
+      const neu = cand.find(g => g.date === x.neu_datum && (!x.neu_uhrzeit || g.time === x.neu_uhrzeit.slice(0, 5)));
+      if (neu) return x.status === 'erledigt' ? '' : `<div class="bfv-ok">✓ Der BFV-Spielplan zeigt schon den neuen Termin (${esc(fmtDate(neu.date))}, ${esc(neu.time)} Uhr)${me.leitung ? ' – kann auf „Erledigt“' : ''}.</div>`;
+    }
+    const alt = cand.find(g => g.date === x.alt_datum);
+    if (alt && alt.geaendert) return '<div class="bfv-warn">⚠ Der BFV hat dieses Spiel als geändert markiert – bitte Termin prüfen.</div>';
+    if (alt && ['beantragt'].includes(x.status)) return '<div class="by">BFV zeigt noch den alten Termin.</div>';
+    return '';
   }
 
   // ---------- Trainer ----------

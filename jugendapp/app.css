@@ -125,3 +125,22 @@ body:not(.is-leitung) .leitung-only{display:none!important}
 .z-row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
 .z-row select{width:auto}
 @media (min-width:900px){.bottom-nav{left:50%;transform:translateX(-50%);max-width:640px;bottom:14px;border:1px solid var(--line);border-radius:18px}}
+
+/* ---- BFV-Spielplan (V2) ---- */
+.day-head{font-size:.8rem;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--blue);margin:16px 0 6px}
+.game{display:grid;grid-template-columns:54px 1fr auto;gap:10px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:14px;padding:10px 12px;margin-bottom:8px}
+.game-time{font-weight:800;color:var(--navy);font-size:1.05rem;text-align:center;line-height:1.1}
+.game-time small{display:block;font-size:.68rem;font-weight:600;color:var(--muted)}
+.game-main{min-width:0}
+.game-teams{font-weight:700;color:var(--navy);overflow-wrap:anywhere}
+.game-teams .svk{color:var(--blue)}
+.game-meta{font-size:.8rem;color:var(--muted);overflow-wrap:anywhere}
+.game-meta a{color:var(--muted)}
+.tag{display:inline-block;font-size:.7rem;font-weight:700;padding:1px 7px;border-radius:99px;background:var(--soft);color:var(--navy);margin-right:4px}
+.tag.changed{background:#fff4e0;color:var(--warn)}
+.tag.running{background:#efe8ff;color:#5b3fc4}
+.bfv-ok{font-size:.82rem;font-weight:700;color:var(--ok);margin-top:6px}
+.bfv-warn{font-size:.82rem;font-weight:700;color:var(--warn);margin-top:6px}
+label.check{display:flex;align-items:center;gap:6px;margin:0;flex:0 0 auto;font-weight:600}
+label.check input{width:auto;margin:0}
+.bottom-nav button{font-size:.68rem}

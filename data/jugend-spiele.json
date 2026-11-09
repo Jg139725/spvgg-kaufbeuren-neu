@@ -1,0 +1,320 @@
+{
+  "updatedAt": "2026-11-09T20:43:28.509226+00:00",
+  "source": "https://service.bfv.de/rest/pdfexport/vereinsspiele?id=00ES8GNJE4000007VV0AG08LVUPGND5I",
+  "zeitraumAb": "2026-11-13",
+  "games": [
+    {
+      "altersklasse": "B-Junioren",
+      "typ": "Punktspiel",
+      "wettbewerb": "Bezirksoberliga",
+      "date": "2026-11-13",
+      "time": "19:00",
+      "home": "SpVgg Kaufbeuren",
+      "away": "TSV 1874 Kottern",
+      "venue": "Parkstadion Kaufbeuren,Berliner Platz 6,87600 Kaufbeuren",
+      "geaendert": false,
+      "heim": true,
+      "svk_team": "SpVgg Kaufbeuren",
+      "gegner": "TSV 1874 Kottern",
+      "teams": [
+        "u17"
+      ],
+      "id": "2026-11-13-19-00-b-junioren-spvgg-kaufbeuren-tsv-1874-kottern"
+    },
+    {
+      "altersklasse": "A-Junioren",
+      "typ": "Punktspiel",
+      "wettbewerb": "Kreisliga",
+      "date": "2026-11-14",
+      "time": "14:00",
+      "home": "SG Stauden",
+      "away": "SpVgg Kaufbeuren",
+      "venue": "Alfred-Leichtle-Stadion,Mindelheimer Str. 9,86868 Mittelneufnach",
+      "geaendert": false,
+      "heim": false,
+      "svk_team": "SpVgg Kaufbeuren",
+      "gegner": "SG Stauden",
+      "teams": [
+        "u19"
+      ],
+      "id": "2026-11-14-14-00-a-junioren-sg-stauden-spvgg-kaufbeuren"
+    },
+    {
+      "altersklasse": "C-Junioren",
+      "typ": "Punktspiel",
+      "wettbewerb": "Bezirksoberliga",
+      "date": "2026-11-15",
+      "time": "13:00",
+      "home": "SpVgg Kaufbeuren",
+      "away": "SV Steinheim",
+      "venue": "Sportpark Haken Platz 2,Wolftrigelstr. 11,87600 Kaufbeuren",
+      "geaendert": false,
+      "heim": true,
+      "svk_team": "SpVgg Kaufbeuren",
+      "gegner": "SV Steinheim",
+      "teams": [
+        "u15"
+      ],
+      "id": "2026-11-15-13-00-c-junioren-spvgg-kaufbeuren-sv-steinheim"
+    },
+    {
+      "altersklasse": "B-Junioren",
+      "typ": "Punktspiel",
+      "wettbewerb": "Bezirksoberliga",
+      "date": "2026-11-20",
+      "time": "18:00",
+      "home": "(SG) Donau/Lech",
+      "away": "SpVgg Kaufbeuren",
+      "venue": "Sportplatz Feldheim,Raiffeisenstr.,86694 Niederschönenfeld",
+      "geaendert": false,
+      "heim": false,
+      "svk_team": "SpVgg Kaufbeuren",
+      "gegner": "(SG) Donau/Lech",
+      "teams": [
+        "u17"
+      ],
+      "id": "2026-11-20-18-00-b-junioren-sg-donau-lech-spvgg-kaufbeuren"
+    },
+    {
+      "altersklasse": "A-Junioren",
+      "typ": "Punktspiel",
+      "wettbewerb": "Kreisliga",
+      "date": "2026-11-21",
+      "time": "11:00",
+      "home": "SpVgg Kaufbeuren",
+      "away": "(SG) TSV Ottobeuren",
+      "venue": "Parkstadion Kaufbeuren,Berliner Platz 6,87600 Kaufbeuren",
+      "geaendert": false,
+      "heim": true,
+      "svk_team": "SpVgg Kaufbeuren",
+      "gegner": "(SG) TSV Ottobeuren",
+      "teams": [
+        "u19"
+      ],
+      "id": "2026-11-21-11-00-a-junioren-spvgg-kaufbeuren-sg-tsv-ottobeuren"
+    },
+    {
+      "altersklasse": "C-Junioren",
+      "typ": "Punktspiel",
+      "wettbewerb": "Bezirksoberliga",
+      "date": "2026-11-21",
+      "time": "11:30",
+      "home": "TSV Schwabmünchen U15",
+      "away": "SpVgg Kaufbeuren",
+      "venue": "siegmund arena Platz 2,Riedstr. 59,86830 Schwabmünchen",
+      "geaendert": false,
+      "heim": false,
+      "svk_team": "SpVgg Kaufbeuren",
+      "gegner": "TSV Schwabmünchen U15",
+      "teams": [
+        "u15"
+      ],
+      "id": "2026-11-21-11-30-c-junioren-tsv-schwabm-nchen-u15-spvgg-kaufbeuren"
+    },
+    {
+      "altersklasse": "A-Junioren",
+      "typ": "Punktspiel",
+      "wettbewerb": "Kreisliga",
+      "date": "2026-11-22",
+      "time": "12:00",
+      "home": "SpVgg Kaufbeuren",
+      "away": "(SG) TSV Ottobeuren",
+      "venue": "",
+      "geaendert": false,
+      "heim": true,
+      "svk_team": "SpVgg Kaufbeuren",
+      "gegner": "(SG) TSV Ottobeuren",
+      "teams": [
+        "u19"
+      ],
+      "id": "2026-11-22-12-00-a-junioren-spvgg-kaufbeuren-sg-tsv-ottobeuren"
+    },
+    {
+      "altersklasse": "E-Junioren",
+      "typ": "Hallenturnier",
+      "wettbewerb": "Hallen-Kreisturnier",
+      "date": "2026-11-29",
+      "time": "10:08",
+      "home": "FC 98 Auerbach-Stetten",
+      "away": "SpVgg Kaufbeuren",
+      "venue": "Sporthalle KF-Schelmenhof,Josef-Fischer-Str. 5,87600 Kaufbeuren",
+      "geaendert": false,
+      "heim": false,
+      "svk_team": "SpVgg Kaufbeuren",
+      "gegner": "FC 98 Auerbach-Stetten",
+      "teams": [
+        "u11",
+        "u10"
+      ],
+      "id": "2026-11-29-10-08-e-junioren-fc-98-auerbach-stetten-spvgg-kaufbeuren"
+    },
+    {
+      "altersklasse": "E-Junioren",
+      "typ": "Hallenturnier",
+      "wettbewerb": "Hallen-Kreisturnier",
+      "date": "2026-11-29",
+      "time": "10:48",
+      "home": "SpVgg Kaufbeuren",
+      "away": "FSV Kirchdorf",
+      "venue": "Sporthalle KF-Schelmenhof,Josef-Fischer-Str. 5,87600 Kaufbeuren",
+      "geaendert": false,
+      "heim": true,
+      "svk_team": "SpVgg Kaufbeuren",
+      "gegner": "FSV Kirchdorf",
+      "teams": [
+        "u11",
+        "u10"
+      ],
+      "id": "2026-11-29-10-48-e-junioren-spvgg-kaufbeuren-fsv-kirchdorf"
+    },
+    {
+      "altersklasse": "E-Junioren",
+      "typ": "Hallenturnier",
+      "wettbewerb": "Hallen-Kreisturnier",
+      "date": "2026-11-29",
+      "time": "11:28",
+      "home": "FC 07 Memmingen",
+      "away": "SpVgg Kaufbeuren",
+      "venue": "Sporthalle KF-Schelmenhof,Josef-Fischer-Str. 5,87600 Kaufbeuren",
+      "geaendert": false,
+      "heim": false,
+      "svk_team": "SpVgg Kaufbeuren",
+      "gegner": "FC 07 Memmingen",
+      "teams": [
+        "u11",
+        "u10"
+      ],
+      "id": "2026-11-29-11-28-e-junioren-fc-07-memmingen-spvgg-kaufbeuren"
+    },
+    {
+      "altersklasse": "E-Junioren",
+      "typ": "Hallenturnier",
+      "wettbewerb": "Hallen-Kreisturnier",
+      "date": "2026-11-29",
+      "time": "12:00",
+      "home": "SpVgg Kaufbeuren",
+      "away": "FSV Dirlewang",
+      "venue": "Sporthalle KF-Schelmenhof,Josef-Fischer-Str. 5,87600 Kaufbeuren",
+      "geaendert": false,
+      "heim": true,
+      "svk_team": "SpVgg Kaufbeuren",
+      "gegner": "FSV Dirlewang",
+      "teams": [
+        "u11",
+        "u10"
+      ],
+      "id": "2026-11-29-12-00-e-junioren-spvgg-kaufbeuren-fsv-dirlewang"
+    },
+    {
+      "altersklasse": "E-Junioren",
+      "typ": "Hallenturnier",
+      "wettbewerb": "Hallen-Kreisturnier",
+      "date": "2026-11-29",
+      "time": "12:24",
+      "home": "TSV Ottobeuren",
+      "away": "SpVgg Kaufbeuren",
+      "venue": "Sporthalle KF-Schelmenhof,Josef-Fischer-Str. 5,87600 Kaufbeuren",
+      "geaendert": false,
+      "heim": false,
+      "svk_team": "SpVgg Kaufbeuren",
+      "gegner": "TSV Ottobeuren",
+      "teams": [
+        "u11",
+        "u10"
+      ],
+      "id": "2026-11-29-12-24-e-junioren-tsv-ottobeuren-spvgg-kaufbeuren"
+    },
+    {
+      "altersklasse": "E-Junioren",
+      "typ": "Hallenturnier",
+      "wettbewerb": "Hallen-Kreisturnier",
+      "date": "2026-11-29",
+      "time": "12:48",
+      "home": "SpVgg Kaufbeuren",
+      "away": "SG Amberg-Wiedergeltingen 1",
+      "venue": "Sporthalle KF-Schelmenhof,Josef-Fischer-Str. 5,87600 Kaufbeuren",
+      "geaendert": false,
+      "heim": true,
+      "svk_team": "SpVgg Kaufbeuren",
+      "gegner": "SG Amberg-Wiedergeltingen 1",
+      "teams": [
+        "u11",
+        "u10"
+      ],
+      "id": "2026-11-29-12-48-e-junioren-spvgg-kaufbeuren-sg-amberg-wiedergeltingen-1"
+    },
+    {
+      "altersklasse": "C-Junioren",
+      "typ": "Punktspiel",
+      "wettbewerb": "Bezirksoberliga",
+      "date": "2026-11-29",
+      "time": "13:00",
+      "home": "SpVgg Kaufbeuren",
+      "away": "TSV Meitingen",
+      "venue": "Sportpark Haken Platz 2,Wolftrigelstr. 11,87600 Kaufbeuren",
+      "geaendert": false,
+      "heim": true,
+      "svk_team": "SpVgg Kaufbeuren",
+      "gegner": "TSV Meitingen",
+      "teams": [
+        "u15"
+      ],
+      "id": "2026-11-29-13-00-c-junioren-spvgg-kaufbeuren-tsv-meitingen"
+    },
+    {
+      "altersklasse": "E-Junioren",
+      "typ": "Hallenturnier",
+      "wettbewerb": "Hallen-Kreisturnier",
+      "date": "2026-11-29",
+      "time": "13:12",
+      "home": "SpVgg Kaufbeuren",
+      "away": "(SG) Bedernau",
+      "venue": "Sporthalle KF-Schelmenhof,Josef-Fischer-Str. 5,87600 Kaufbeuren",
+      "geaendert": false,
+      "heim": true,
+      "svk_team": "SpVgg Kaufbeuren",
+      "gegner": "(SG) Bedernau",
+      "teams": [
+        "u11",
+        "u10"
+      ],
+      "id": "2026-11-29-13-12-e-junioren-spvgg-kaufbeuren-sg-bedernau"
+    },
+    {
+      "altersklasse": "B-Junioren",
+      "typ": "Punktspiel",
+      "wettbewerb": "Bezirksoberliga",
+      "date": "2026-11-29",
+      "time": "15:30",
+      "home": "SpVgg Kaufbeuren",
+      "away": "FC Thalhofen",
+      "venue": "Parkstadion Kaufbeuren,Berliner Platz 6,87600 Kaufbeuren",
+      "geaendert": false,
+      "heim": true,
+      "svk_team": "SpVgg Kaufbeuren",
+      "gegner": "FC Thalhofen",
+      "teams": [
+        "u17"
+      ],
+      "id": "2026-11-29-15-30-b-junioren-spvgg-kaufbeuren-fc-thalhofen"
+    },
+    {
+      "altersklasse": "B-Junioren",
+      "typ": "Freundschaftsspiel",
+      "wettbewerb": "Freundschaftsspiele",
+      "date": "2027-02-07",
+      "time": "13:00",
+      "home": "SpVgg Kaufbeuren",
+      "away": "SC Eltersdorf U16",
+      "venue": "Sportpark Haken KR,Wolftrigelstr. 11,87600 Kaufbeuren",
+      "geaendert": false,
+      "heim": true,
+      "svk_team": "SpVgg Kaufbeuren",
+      "gegner": "SC Eltersdorf U16",
+      "teams": [
+        "u17"
+      ],
+      "id": "2027-02-07-13-00-b-junioren-spvgg-kaufbeuren-sc-eltersdorf-u16"
+    }
+  ]
+}

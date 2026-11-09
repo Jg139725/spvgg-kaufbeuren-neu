@@ -13,7 +13,7 @@
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="icons/icon-192.png">
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
-<link rel="stylesheet" href="app.css?v=1">
+<link rel="stylesheet" href="app.css?v=2">
 </head>
 <body>
 
@@ -78,6 +78,8 @@
       <h2 id="hello">Servus!</h2>
       <p id="myTeams" class="muted"></p>
       <div class="stats" id="stats"></div>
+      <div class="row-head"><h3>Nächste Spiele</h3><button class="small ghost" data-action="goto" data-tab="spiele">Alle Spiele</button></div>
+      <div id="nextGames" class="list"></div>
       <div class="row-head"><h3 id="todoTitle">Als Nächstes zu tun</h3><button class="small" data-action="new">+ Verlegung</button></div>
       <div id="todo" class="list"></div>
     </section>
@@ -90,6 +92,16 @@
       </div>
       <div id="vList" class="list"></div>
       <p class="hint" id="flowHint"></p>
+    </section>
+
+    <section id="tab-spiele" class="tab" hidden>
+      <div class="row-head"><h2>Spielplan</h2></div>
+      <div class="filters">
+        <select id="sTeam"></select>
+        <label class="check"><input type="checkbox" id="sNurAenderungen"> nur geänderte</label>
+      </div>
+      <div id="sList"></div>
+      <p class="hint" id="bfvStand"></p>
     </section>
 
     <section id="tab-trainer" class="tab" hidden>
@@ -112,6 +124,7 @@
   <nav class="bottom-nav" role="tablist">
     <button data-tab="start" class="active"><span class="ni">🏠</span>Start</button>
     <button data-tab="verlegungen"><span class="ni">📅</span>Verlegungen<span id="badgeOpen" class="badge" hidden></span></button>
+    <button data-tab="spiele"><span class="ni">⚽</span>Spiele</button>
     <button data-tab="trainer"><span class="ni">👥</span>Trainer</button>
     <button data-tab="zugaenge" class="leitung-only"><span class="ni">🔑</span>Zugänge<span id="badgeZ" class="badge" hidden></span></button>
   </nav>
@@ -122,6 +135,7 @@
   <form id="vForm" method="dialog">
     <input type="hidden" id="vId">
     <h2 id="vTitle">Spielverlegung</h2>
+    <label id="vGameWrap">Spiel aus dem BFV-Spielplan<select id="vGame"><option value="">– Spiel auswählen oder unten selbst eintragen –</option></select></label>
     <div class="grid2">
       <label>Mannschaft<select id="vTeam" required></select></label>
       <label>Wettbewerb<select id="vComp"><option>Punktspiel</option><option>Pokal</option><option>Freundschaftsspiel</option><option>Turnier</option></select></label>
@@ -183,6 +197,6 @@
 
 <script src="/assets/vendor/supabase-2.57.4.min.js"></script>
 <script src="/assets/js/supabase-config.js"></script>
-<script src="app.js?v=1"></script>
+<script src="app.js?v=2"></script>
 </body>
 </html>
