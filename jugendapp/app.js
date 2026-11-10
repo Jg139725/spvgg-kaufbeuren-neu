@@ -168,6 +168,8 @@
     }
     me.leitung = LEITUNG_ROLES.includes(profile?.role) || (me.mitglied?.freigegeben && me.mitglied?.rolle === 'leitung');
     me.teams = me.mitglied?.freigegeben ? (me.mitglied.teams || []) : [];
+    // Zugänge freigeben darf nur, wer in der Datenbank als Freigeber markiert ist (Spalte darf_freigeben, SQL V93)
+    me.freigeber = me.mitglied && 'darf_freigeben' in me.mitglied ? !!(me.mitglied.freigegeben && me.mitglied.darf_freigeben) : me.leitung;
 
     if (!me.leitung && !me.mitglied?.freigegeben) {
       $('waitingText').textContent = setupMissing
@@ -185,6 +187,7 @@
   let appReady = false;
   async function openApp() {
     document.body.classList.toggle('is-leitung', me.leitung);
+    document.body.classList.toggle('is-freigeber', !!me.freigeber);
     $('roleLabel').textContent = me.leitung ? 'Jugendleitung' : 'Trainer · ' + me.teams.map(teamName).join(', ');
     $('hello').textContent = 'Servus ' + (myName().split(' ')[0]) + '!';
     $('myTeams').textContent = me.leitung ? 'Du siehst alle Jugendmannschaften.' : 'Dein Team: ' + me.teams.map(teamName).join(', ');
@@ -326,7 +329,7 @@
     let html = items.map(([s, t]) => `<button class="stat" data-action="goto" data-tab="verlegungen" data-filter="aktiv"><b>${count(s)}</b><span>${esc(STATUS[s].label)} – ${t}</span></button>`).join('');
     html += `<button class="stat" data-action="goto" data-tab="trainer"><b>${staff.filter(s => s.active !== false).length}</b><span>Trainer & Betreuer</span></button>`;
     const pending = mitglieder.filter(m => !m.freigegeben).length;
-    if (me.leitung && pending) html += `<button class="stat" data-action="goto" data-tab="zugaenge" style="border-color:#f5c26b"><b>${pending}</b><span>Zugang wartet auf Freigabe</span></button>`;
+    if (me.freigeber && pending) html += `<button class="stat" data-action="goto" data-tab="zugaenge" style="border-color:#f5c26b"><b>${pending}</b><span>Zugang wartet auf Freigabe</span></button>`;
     $('stats').innerHTML = html;
     renderMyTasks();
     const ng = upcomingGames().slice(0, 3);
@@ -817,7 +820,7 @@
 
   function renderMitglieder() {
     const pending = mitglieder.filter(m => !m.freigegeben).length;
-    $('badgeZ').hidden = !pending; $('badgeZ').textContent = pending;
+    $('badgeZ').hidden = !pending || !me.freigeber; $('badgeZ').textContent = pending;
     $('zList').innerHTML = mitglieder.map(m => `<article class="card z-card ${m.freigegeben ? '' : 'pending'}" data-z="${m.user_id}">
       <div class="card-head"><div><input class="z-name" data-zname value="${esc(m.name)}" aria-label="Name"><div class="meta">${esc(m.email || '')}${m.telefon ? ' · <a href="' + telHref(m.telefon) + '">' + esc(m.telefon) + '</a>' : ''}</div></div>
       <span class="pill ${m.freigegeben ? 's-erledigt' : 's-angefragt'}">${m.freigegeben ? 'Freigegeben' : 'Wartet'}</span></div>

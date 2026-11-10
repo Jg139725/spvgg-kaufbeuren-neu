@@ -209,3 +209,5 @@ dialog.chat-dialog{padding:0;overflow:hidden}
 .task-title{font-size:1rem}
 .z-name{font-weight:700;color:var(--navy);border:1px dashed transparent;padding:.2em .4em;margin-left:-.4em;width:auto;max-width:100%}
 .z-name:hover,.z-name:focus{border-color:var(--line);background:#fff}
+
+body:not(.is-freigeber) .freigeber-only{display:none!important}
