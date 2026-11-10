@@ -818,27 +818,61 @@
     mitglieder = data || []; renderMitglieder(); renderStart(); renderVerlegungen();
   }
 
+  function mitgliedCard(m) {
+    const pending = !m.freigegeben, self = m.user_id === me.user.id;
+    const teams = m.teams || [];
+    const summary = m.rolle === 'leitung' ? 'Jugendleitung · sieht alles' : (teams.length ? 'Trainer · ' + teams.map(teamName).join(', ') : 'Trainer · noch kein Team');
+    const contact = [
+      m.telefon ? `<a class="btn icon" href="${telHref(m.telefon)}" aria-label="Anrufen">📞</a>` : '',
+      m.telefon && waNumber(m.telefon) ? `<a class="btn icon wa" href="${waHref(m.telefon)}" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>` : '',
+      m.email ? `<a class="btn icon" href="mailto:${esc(m.email)}" aria-label="E-Mail">✉</a>` : ''
+    ].join('');
+    return `<details class="zc ${pending ? 'pending' : ''}" data-z="${m.user_id}" ${pending ? 'open' : ''}>
+      <summary>
+        <div class="avatar">${esc(initials(m.name))}</div>
+        <div class="zc-info"><strong>${esc(m.name)}${self ? ' <span class="meta">(du)</span>' : ''}</strong><span class="meta">${esc(pending ? (m.email || 'wartet auf Freigabe') : summary)}</span></div>
+        <span class="pill ${pending ? 's-angefragt' : m.darf_freigeben ? 's-zugestimmt' : 's-erledigt'}">${pending ? 'Wartet' : m.darf_freigeben ? 'Admin' : 'Aktiv'}</span>
+      </summary>
+      <div class="zc-body">
+        <label>Name<input data-zname value="${esc(m.name)}"></label>
+        ${pending && m.telefon ? `<div class="meta">${esc(m.telefon)}</div>` : ''}
+        ${contact ? `<div class="icons zc-contact">${contact}</div>` : ''}
+        <div class="field-label">Rolle</div>
+        <div class="seg zc-role" data-rolewrap>
+          <button type="button" class="chip ${m.rolle !== 'leitung' ? 'active' : ''}" data-role="trainer">Trainer</button>
+          <button type="button" class="chip ${m.rolle === 'leitung' ? 'active' : ''}" data-role="leitung">Jugendleitung</button>
+        </div>
+        <div class="field-label" data-teamslabel ${m.rolle === 'leitung' ? 'hidden' : ''}>Teams (was er sehen darf)</div>
+        <div class="team-chips" data-teams ${m.rolle === 'leitung' ? 'hidden' : ''}>${TEAMS.map(t => `<label class="tchip"><input type="checkbox" value="${t[0]}" ${teams.includes(t[0]) ? 'checked' : ''}><span>${t[1]}</span></label>`).join('')}</div>
+        <div class="zc-actions">
+          ${pending
+            ? `<button class="ghost danger" data-action="z-delete" data-id="${m.user_id}">Ablehnen</button><button data-action="z-save" data-approve="1" data-id="${m.user_id}">✓ Freigeben</button>`
+            : `${self ? '' : `<button class="ghost" data-action="z-block" data-id="${m.user_id}">Sperren</button>`}<button data-action="z-save" data-id="${m.user_id}">Speichern</button>`}
+        </div>
+      </div>
+    </details>`;
+  }
+
   function renderMitglieder() {
-    const pending = mitglieder.filter(m => !m.freigegeben).length;
-    $('badgeZ').hidden = !pending || !me.freigeber; $('badgeZ').textContent = pending;
-    $('zList').innerHTML = mitglieder.map(m => `<article class="card z-card ${m.freigegeben ? '' : 'pending'}" data-z="${m.user_id}">
-      <div class="card-head"><div><input class="z-name" data-zname value="${esc(m.name)}" aria-label="Name"><div class="meta">${esc(m.email || '')}${m.telefon ? ' · <a href="' + telHref(m.telefon) + '">' + esc(m.telefon) + '</a>' : ''}</div></div>
-      <span class="pill ${m.freigegeben ? 's-erledigt' : 's-angefragt'}">${m.freigegeben ? 'Freigegeben' : 'Wartet'}</span></div>
-      <div class="teams">${TEAMS.map(t => `<label><input type="checkbox" value="${t[0]}" ${(m.teams || []).includes(t[0]) ? 'checked' : ''}>${t[1]}</label>`).join('')}</div>
-      <div class="z-row">
-        <select data-role><option value="trainer" ${m.rolle === 'trainer' ? 'selected' : ''}>Trainer (nur eigene Teams)</option><option value="leitung" ${m.rolle === 'leitung' ? 'selected' : ''}>Jugendleitung (alles)</option></select>
-        <span class="spacer"></span>
-        ${m.freigegeben
-          ? `<button class="small" data-action="z-save" data-id="${m.user_id}">Speichern</button><button class="small ghost" data-action="z-block" data-id="${m.user_id}">Sperren</button>`
-          : `<button class="small" data-action="z-save" data-approve="1" data-id="${m.user_id}">✓ Freigeben</button><button class="small ghost danger" data-action="z-delete" data-id="${m.user_id}">Ablehnen</button>`}
-      </div></article>`).join('') || '<div class="empty">Noch keine Zugänge beantragt. Schick deinen Trainern einfach den Link zur App – sie können sich dort selbst registrieren.</div>';
+    const pending = mitglieder.filter(m => !m.freigegeben), aktiv = mitglieder.filter(m => m.freigegeben);
+    $('badgeZ').hidden = !pending.length || !me.freigeber; $('badgeZ').textContent = pending.length;
+    let html = '';
+    if (pending.length) html += `<div class="day-head">Wartet auf Freigabe (${pending.length})</div>` + pending.map(mitgliedCard).join('');
+    if (aktiv.length) html += `<div class="day-head">Freigegeben (${aktiv.length}) – antippen zum Bearbeiten</div>` + aktiv.map(mitgliedCard).join('');
+    $('zList').innerHTML = html || '<div class="empty">Noch keine Zugänge beantragt. Schick deinen Trainern einfach den Link zur App – sie können sich dort selbst registrieren.</div>';
+    $('zList').querySelectorAll('[data-rolewrap]').forEach(w => w.querySelectorAll('[data-role]').forEach(b => b.onclick = () => {
+      w.querySelectorAll('[data-role]').forEach(x => x.classList.toggle('active', x === b));
+      const card = w.closest('.zc'), lead = b.dataset.role === 'leitung';
+      card.querySelector('[data-teams]').hidden = lead; card.querySelector('[data-teamslabel]').hidden = lead;
+    }));
   }
 
   async function saveMitglied(id, approve) {
     const el = document.querySelector(`[data-z="${id}"]`);
-    const teams = [...el.querySelectorAll('.teams input:checked')].map(i => i.value);
-    const rolle = el.querySelector('[data-role]').value;
+    let teams = [...el.querySelectorAll('[data-teams] input:checked')].map(i => i.value);
+    const rolle = el.querySelector('[data-role].active')?.dataset.role || 'trainer';
     if (rolle === 'trainer' && !teams.length) return alert('Bitte mindestens ein Team auswählen.');
+    if (rolle === 'leitung') teams = TEAMS.map(t => t[0]);
     const name = el.querySelector('[data-zname]').value.trim();
     const upd = { teams, rolle, updated_at: new Date().toISOString() };
     if (name) upd.name = name;

@@ -211,3 +211,27 @@ dialog.chat-dialog{padding:0;overflow:hidden}
 .z-name:hover,.z-name:focus{border-color:var(--line);background:#fff}
 
 body:not(.is-freigeber) .freigeber-only{display:none!important}
+
+/* ---- Zugänge fürs Handy (V8) ---- */
+#zList{display:block}
+.zc{background:#fff;border:1px solid var(--line);border-radius:16px;margin-bottom:10px;overflow:hidden}
+.zc.pending{border-color:#f5c26b}
+.zc summary{list-style:none;display:flex;align-items:center;gap:10px;padding:12px;cursor:pointer}
+.zc summary::-webkit-details-marker{display:none}
+.zc .avatar{width:42px;height:42px;flex:0 0 42px}
+.zc-info{flex:1;min-width:0}
+.zc-info strong{display:block;color:var(--navy);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.zc-info .meta{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.zc .pill{flex:0 0 auto}
+.zc-body{padding:0 12px 14px;border-top:1px solid var(--line)}
+.zc-contact{margin-top:6px}
+.zc-role{margin-top:2px}
+.team-chips{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.tchip{margin:0;position:relative}
+.tchip input{position:absolute;opacity:0;pointer-events:none}
+.tchip span{display:flex;align-items:center;justify-content:center;min-height:40px;border:1px solid var(--line);border-radius:10px;font-weight:700;color:var(--navy);background:#fff;font-size:.9rem}
+.tchip input:checked+span{background:var(--navy);border-color:var(--navy);color:#fff}
+.tchip input:focus-visible+span{outline:2px solid var(--blue);outline-offset:2px}
+.zc-actions{display:flex;gap:8px;margin-top:14px}
+.zc-actions button{flex:1}
+@media (max-width:360px){.team-chips{grid-template-columns:repeat(3,1fr)}}
