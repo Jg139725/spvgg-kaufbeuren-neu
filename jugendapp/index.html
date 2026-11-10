@@ -13,7 +13,7 @@
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="icons/icon-192.png">
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
-<link rel="stylesheet" href="app.css?v=4">
+<link rel="stylesheet" href="app.css?v=5">
 </head>
 <body>
 
@@ -79,11 +79,11 @@
       <h2 id="hello">Servus!</h2>
       <p id="myTeams" class="muted"></p>
       <div class="stats" id="stats"></div>
-      <div class="row-head"><h3>Meine Aufgaben</h3><button class="small ghost" data-action="a-new">+ Aufgabe</button></div>
+      <div class="row-head"><h3>Meine Aufgaben</h3><button class="small ghost inline" data-action="a-new">+ Aufgabe</button></div>
       <div id="myTasks" class="list"></div>
-      <div class="row-head"><h3>Nächste Spiele</h3><button class="small ghost" data-action="goto" data-tab="spiele">Alle Spiele</button></div>
+      <div class="row-head"><h3>Nächste Spiele</h3><button class="small ghost inline" data-action="goto" data-tab="spiele">Alle Spiele</button></div>
       <div id="nextGames" class="list"></div>
-      <div class="row-head"><h3 id="todoTitle">Als Nächstes zu tun</h3><button class="small" data-action="new">+ Verlegung</button></div>
+      <div class="row-head"><h3 id="todoTitle">Als Nächstes zu tun</h3><button class="small ghost inline" data-action="new">+ Verlegung</button></div>
       <div id="todo" class="list"></div>
     </section>
 
@@ -98,7 +98,8 @@
     </section>
 
     <section id="tab-aufgaben" class="tab" hidden>
-      <div class="row-head"><h2>Aufgaben</h2><button data-action="a-new">+ Neue Aufgabe</button></div>
+      <div class="row-head"><h2>Aufgaben</h2><button data-action="a-new" class="desk-only">+ Neue Aufgabe</button></div>
+      <p id="aSetup" class="warn" hidden>Die Aufgaben werden gerade in der Datenbank eingerichtet. Sobald das erledigt ist, kannst du hier Aufgaben anlegen – die App musst du dafür nicht neu installieren.</p>
       <div class="chips seg" id="aScope">
         <button type="button" class="chip active" data-scope="mir">Für mich</button>
         <button type="button" class="chip" data-scope="von">Von mir</button>
@@ -109,6 +110,7 @@
         <select id="aPerson" class="leitung-only"><option value="">Alle Personen</option></select>
       </div>
       <div id="aList" class="list"></div>
+      <button class="fab" data-action="a-new" aria-label="Neue Aufgabe">＋</button>
     </section>
 
     <section id="tab-spiele" class="tab" hidden>
@@ -260,6 +262,6 @@
 
 <script src="/assets/vendor/supabase-2.57.4.min.js"></script>
 <script src="/assets/js/supabase-config.js"></script>
-<script src="app.js?v=4"></script>
+<script src="app.js?v=5"></script>
 </body>
 </html>

@@ -193,3 +193,19 @@ dialog.chat-dialog{width:min(620px,100vw);height:min(92vh,900px);max-height:none
 .chat-input button{border-radius:50%;width:44px;height:44px;padding:0;flex:0 0 44px}
 dialog.chat-dialog form.chat-input{padding:10px 12px;padding-bottom:max(10px,env(safe-area-inset-bottom));overflow:visible}
 dialog.chat-dialog{padding:0;overflow:hidden}
+
+/* ---- Layout-Feinschliff (V5) ---- */
+.row-head h3{font-size:1.05rem}
+@media (max-width:520px){.row-head>button.inline{width:auto}.desk-only{display:none!important}}
+#tab-start .row-head{margin-top:22px}
+.fab{position:fixed;right:18px;bottom:calc(84px + env(safe-area-inset-bottom));z-index:7;width:58px;height:58px;border-radius:50%;font-size:1.9rem;line-height:1;padding:0;box-shadow:0 8px 24px rgba(7,87,183,.35)}
+@media (min-width:521px){.fab{display:none}}
+#tab-aufgaben{padding-bottom:70px}
+.seg{display:flex;background:#fff;border:1px solid var(--line);border-radius:14px;padding:4px;gap:4px}
+.seg .chip{flex:1;border:0;border-radius:10px;justify-content:center;min-height:38px;background:none;font-weight:700;color:var(--muted)}
+.seg .chip.active{background:var(--navy);color:#fff}
+.task{transition:transform .1s}
+.task:active{transform:scale(.99)}
+.task-title{font-size:1rem}
+.z-name{font-weight:700;color:var(--navy);border:1px dashed transparent;padding:.2em .4em;margin-left:-.4em;width:auto;max-width:100%}
+.z-name:hover,.z-name:focus{border-color:var(--line);background:#fff}

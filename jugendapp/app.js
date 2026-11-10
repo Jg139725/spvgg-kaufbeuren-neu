@@ -490,6 +490,7 @@
   async function loadAufgaben() {
     const { data, error } = await sb.from(T_A).select('*').order('created_at', { ascending: false });
     aufgabenMissing = missing(error);
+    $('aSetup').hidden = !aufgabenMissing;
     aufgaben = error ? [] : (data || []);
     const ids = aufgaben.map(a => a.id);
     msgMeta = {};
@@ -577,7 +578,7 @@
   }
 
   function openAufgabeEditor(a = {}) {
-    if (aufgabenMissing) return alert('Die Aufgaben sind in der Datenbank noch nicht eingerichtet.');
+    if (aufgabenMissing) { showTab('aufgaben'); $('aSetup').hidden = false; return; }
     $('aForm').reset(); setMsg($('aMsg'), '');
     $('aId').value = a.id || '';
     $('aTitle').textContent = a.id ? 'Aufgabe bearbeiten' : 'Neue Aufgabe';
@@ -818,7 +819,7 @@
     const pending = mitglieder.filter(m => !m.freigegeben).length;
     $('badgeZ').hidden = !pending; $('badgeZ').textContent = pending;
     $('zList').innerHTML = mitglieder.map(m => `<article class="card z-card ${m.freigegeben ? '' : 'pending'}" data-z="${m.user_id}">
-      <div class="card-head"><div><div class="card-title">${esc(m.name)}</div><div class="meta">${esc(m.email || '')}${m.telefon ? ' · <a href="' + telHref(m.telefon) + '">' + esc(m.telefon) + '</a>' : ''}</div></div>
+      <div class="card-head"><div><input class="z-name" data-zname value="${esc(m.name)}" aria-label="Name"><div class="meta">${esc(m.email || '')}${m.telefon ? ' · <a href="' + telHref(m.telefon) + '">' + esc(m.telefon) + '</a>' : ''}</div></div>
       <span class="pill ${m.freigegeben ? 's-erledigt' : 's-angefragt'}">${m.freigegeben ? 'Freigegeben' : 'Wartet'}</span></div>
       <div class="teams">${TEAMS.map(t => `<label><input type="checkbox" value="${t[0]}" ${(m.teams || []).includes(t[0]) ? 'checked' : ''}>${t[1]}</label>`).join('')}</div>
       <div class="z-row">
@@ -835,7 +836,9 @@
     const teams = [...el.querySelectorAll('.teams input:checked')].map(i => i.value);
     const rolle = el.querySelector('[data-role]').value;
     if (rolle === 'trainer' && !teams.length) return alert('Bitte mindestens ein Team auswählen.');
+    const name = el.querySelector('[data-zname]').value.trim();
     const upd = { teams, rolle, updated_at: new Date().toISOString() };
+    if (name) upd.name = name;
     if (approve) upd.freigegeben = true;
     const { error } = await sb.from(T_M).update(upd).eq('user_id', id);
     if (error) return alert(error.message);
