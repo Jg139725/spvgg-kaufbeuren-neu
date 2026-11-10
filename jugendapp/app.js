@@ -725,7 +725,7 @@
   async function renderPushCard() {
     const el = $('pushCard'); if (!el) return;
     // erst anzeigen, wenn der Server-Teil eingerichtet ist (Tabelle vorhanden)
-    if (renderPushCard.ready === undefined) { const { error } = await sb.from('jugend_push_abos').select('id').limit(1); renderPushCard.ready = !error; }
+    if (renderPushCard.ready === undefined) { try { const { error } = await sb.from('jugend_push_abos').select('id').limit(1); renderPushCard.ready = !error; } catch { renderPushCard.ready = false; } }
     if (!renderPushCard.ready) { el.innerHTML = ''; return; }
     let html = '';
     if (isIOS() && !isStandalone()) {
