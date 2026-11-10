@@ -68,10 +68,40 @@
     e.preventDefault();
     setMsg($('loginMsg'), 'Anmelden …');
     const { error } = await sb.auth.signInWithPassword({ email: $('email').value.trim(), password: $('password').value });
-    if (error) return setMsg($('loginMsg'), /invalid/i.test(error.message) ? 'E-Mail oder Passwort falsch.' : /confirm/i.test(error.message) ? 'Bitte zuerst den Link in der Bestätigungs-E-Mail anklicken.' : error.message, 'error');
-    setMsg($('loginMsg'), '');
+    if (error) {
+      if (/confirm/i.test(error.message)) { showResend('Deine E-Mail ist noch nicht bestätigt. Fordere eine neue Bestätigungs-Mail an und klicke den Link darin innerhalb von 1 Stunde.'); return; }
+      return setMsg($('loginMsg'), /invalid/i.test(error.message) ? 'E-Mail oder Passwort falsch.' : error.message, 'error');
+    }
+    setMsg($('loginMsg'), ''); $('resendBtn').hidden = true;
     start();
   };
+
+  // Bestätigungs-Mail erneut senden (Link ist nur ca. 1 Stunde gültig)
+  function showResend(text) {
+    $('loginForm').hidden = false; $('registerForm').hidden = true;
+    setMsg($('loginMsg'), text, 'error');
+    $('resendBtn').hidden = false;
+  }
+  $('resendBtn').onclick = async () => {
+    const email = $('email').value.trim();
+    if (!email) return setMsg($('loginMsg'), 'Bitte oben deine E-Mail eintragen und dann erneut tippen.', 'error');
+    $('resendBtn').disabled = true;
+    const { error } = await sb.auth.resend({ type: 'signup', email, options: { emailRedirectTo: location.origin + '/jugendapp/' } });
+    $('resendBtn').disabled = false;
+    setMsg($('loginMsg'), error
+      ? (/seconds|rate/i.test(error.message) ? 'Bitte kurz warten und es dann noch einmal versuchen.' : error.message)
+      : 'Neue Bestätigungs-Mail ist unterwegs (auch im Spam/Junk-Ordner schauen). Bitte den Link innerhalb von 1 Stunde anklicken.', error ? 'error' : 'ok');
+  };
+  // Fehler aus dem Bestätigungslink (z. B. abgelaufen) abfangen
+  (() => {
+    const h = new URLSearchParams(location.hash.slice(1) || location.search.slice(1));
+    const code = h.get('error_code') || '', desc = h.get('error_description') || '';
+    if (!code && !h.get('error')) return;
+    history.replaceState(null, '', location.pathname);
+    window.__linkError = /expired/i.test(code + desc)
+      ? 'Der Bestätigungslink ist abgelaufen. Trag unten deine E-Mail ein und fordere eine neue Mail an.'
+      : 'Der Link hat nicht funktioniert (' + (desc || code) + '). Fordere unten eine neue Mail an.';
+  })();
 
   $('forgot').onclick = async () => {
     const email = $('email').value.trim();
@@ -111,7 +141,7 @@
   // ---------- Start / Rolle bestimmen ----------
   async function start() {
     const { data: { session } } = await sb.auth.getSession();
-    if (!session) { show('login'); return; }
+    if (!session) { show('login'); if (window.__linkError) { showResend(window.__linkError); window.__linkError = null; } return; }
     me.user = session.user;
     const [{ data: profile }, mRes] = await Promise.all([
       sb.from('profiles').select('id,full_name,role').eq('id', me.user.id).maybeSingle(),
