@@ -1,5 +1,5 @@
 /* SVK Jugend-App – Service Worker: App-Hülle offline verfügbar, Daten immer live von Supabase. */
-const CACHE = 'svk-jugend-v5';
+const CACHE = 'svk-jugend-v6';
 const SHELL = [
   '/jugendapp/', '/jugendapp/index.html', '/jugendapp/app.css', '/jugendapp/app.js',
   '/jugendapp/manifest.webmanifest', '/jugendapp/icons/icon-192.png',

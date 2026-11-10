@@ -538,7 +538,7 @@
     let list = aufgaben.filter(a => aScope === 'mir' ? isMine(a) : aScope === 'von' ? a.created_by === me.user.id : true);
     if (st === 'aktiv') list = list.filter(a => a.status !== 'erledigt'); else if (st === 'erledigt') list = list.filter(a => a.status === 'erledigt');
     if (pid && aScope === 'alle') list = list.filter(a => (a.zugewiesen_an || []).includes(pid));
-    $('aList').innerHTML = sortTasks(list).map(taskRow).join('') || `<div class="empty">${aufgabenMissing ? 'Aufgaben sind in der Datenbank noch nicht eingerichtet (SQL V92).' : aScope === 'mir' ? 'Dir ist gerade nichts zugewiesen 👍' : 'Keine Aufgaben in dieser Auswahl.'}</div>`;
+    $('aList').innerHTML = sortTasks(list).map(taskRow).join('') || (aufgabenMissing ? '' : `<div class="empty">${aScope === 'mir' ? 'Dir ist gerade nichts zugewiesen 👍' : 'Keine Aufgaben in dieser Auswahl.'}</div>`);
     const offen = aufgaben.filter(a => isMine(a) && a.status !== 'erledigt').length, neu = aufgaben.some(unread);
     $('badgeA').hidden = !offen && !neu; $('badgeA').textContent = offen || '•';
   }
