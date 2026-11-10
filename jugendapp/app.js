@@ -28,6 +28,8 @@
   const me = { user: null, profile: null, mitglied: null, leitung: false, teams: [] };
   let verlegungen = [], staff = [], mitglieder = [], setupMissing = false;
   let bfv = { games: [], updatedAt: null };
+  let personen = [], aufgaben = [], msgMeta = {}, aScope = 'mir', detailId = null, aufgabenMissing = false;
+  const T_A = 'jugend_aufgaben', T_N = 'jugend_aufgaben_nachrichten';
 
   // ---------- Helpers ----------
   const esc = s => String(s ?? '').replace(/[&<>"']/g, m => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' }[m]));
@@ -159,6 +161,11 @@
       if (!ins.error) { me.mitglied = ins.data || { ...row, freigegeben: false }; try { localStorage.removeItem(PENDING_KEY); } catch {} }
     }
 
+    if (!me.mitglied && !setupMissing && LEITUNG_ROLES.includes(profile?.role)) {
+      const row = { user_id: me.user.id, name: profile.full_name || me.user.email.split('@')[0], email: me.user.email, rolle: 'leitung', freigegeben: true, teams: TEAMS.map(t => t[0]) };
+      const ins = await sb.from(T_M).insert(row).select().maybeSingle();
+      if (!ins.error) me.mitglied = ins.data || row;
+    }
     me.leitung = LEITUNG_ROLES.includes(profile?.role) || (me.mitglied?.freigegeben && me.mitglied?.rolle === 'leitung');
     me.teams = me.mitglied?.freigegeben ? (me.mitglied.teams || []) : [];
 
@@ -194,7 +201,8 @@
     show('app');
     if (!appReady) { bindApp(); appReady = true; }
     setupInstall();
-    await Promise.all([loadBfv(), loadVerlegungen(), loadStaff(), me.leitung ? loadMitglieder() : null]);
+    await Promise.all([loadBfv(), loadVerlegungen(), loadStaff(), me.leitung ? loadMitglieder() : null, loadPersonen().then(loadAufgaben)]);
+    subscribeLive();
   }
 
   // ---------- Navigation ----------
@@ -209,6 +217,7 @@
     $('fStatus').onchange = renderVerlegungen; $('fTeam').onchange = renderVerlegungen;
     $('tSearch').oninput = renderStaff;
     $('sTeam').onchange = renderSpiele; $('sNurAenderungen').onchange = renderSpiele;
+ bindAufgaben();
     $('vGame').onchange = () => { const g = bfv.games.find(x => x.id === $('vGame').value); if (g) fillFromGame(g); };
     $('copyAllMails').onclick = async () => {
       const mails = [...new Set(staff.filter(s => s.email && s.active !== false).map(s => s.email))];
@@ -224,6 +233,8 @@
       ({
         'new': () => openEditor(),
         'edit': () => openEditor(x),
+        'a-new': () => openAufgabeEditor(),
+        'a-open': () => openDetail(a.dataset.id),
         'verlegen': () => openEditorFromGame(bfv.games.find(g => g.id === a.dataset.game)),
         'next': () => advance(x),
         'msg-gegner': () => openGegnerMessage(x),
@@ -317,6 +328,7 @@
     const pending = mitglieder.filter(m => !m.freigegeben).length;
     if (me.leitung && pending) html += `<button class="stat" data-action="goto" data-tab="zugaenge" style="border-color:#f5c26b"><b>${pending}</b><span>Zugang wartet auf Freigabe</span></button>`;
     $('stats').innerHTML = html;
+    renderMyTasks();
     const ng = upcomingGames().slice(0, 3);
     $('nextGames').innerHTML = ng.map(gameRow).join('') || `<div class="empty">${bfv.updatedAt ? 'Keine anstehenden Spiele im BFV-Spielplan.' : 'Der BFV-Spielplan wird geladen …'}</div>`;
     const todo = verlegungen.filter(x => ACTIVE.includes(x.status))
@@ -458,6 +470,230 @@
     const fromApp = mitglieder.filter(m => m.freigegeben && (m.teams || []).includes(x.team_key) && (m.telefon || m.email) && !fromStaff.some(s => s.name.startsWith(m.name)))
       .map(m => ({ name: m.name + ' (App)', phone: m.telefon, email: m.email }));
     openMessage({ title: 'Trainer der ' + teamName(x.team_key) + ' informieren', text: trainerText(x), subject: `Spielverlegung ${teamName(x.team_key)} – ${x.gegner}`, targets: [...fromStaff, ...fromApp] });
+  }
+
+  // ---------- Aufgaben + Chat ----------
+  const A_STATUS = { offen: 'Offen', in_bearbeitung: 'In Bearbeitung', erledigt: 'Erledigt' };
+  const person = id => personen.find(p => p.user_id === id) || (id === me.user?.id ? { user_id: id, name: myName() } : null);
+  const pName = id => id === me.user.id ? 'Du' : (person(id)?.name || 'Unbekannt');
+  const seenKey = id => 'svkJugendSeen:' + id;
+  const getSeen = id => { try { return localStorage.getItem(seenKey(id)) || ''; } catch { return ''; } };
+  const setSeen = (id, ts) => { try { localStorage.setItem(seenKey(id), ts); } catch {} };
+  const fmtTs = ts => { const d = new Date(ts), t = new Date(); return (d.toDateString() === t.toDateString() ? '' : d.toLocaleDateString('de-DE', { day: '2-digit', month: '2-digit' }) + ' ') + d.toLocaleTimeString('de-DE', { hour: '2-digit', minute: '2-digit' }); };
+
+  async function loadPersonen() {
+    const { data, error } = await sb.rpc('jugend_personen');
+    personen = error ? [] : (data || []);
+    $('aPerson').innerHTML = '<option value="">Alle Personen</option>' + personen.map(p => `<option value="${p.user_id}">${esc(p.name)}</option>`).join('');
+  }
+
+  async function loadAufgaben() {
+    const { data, error } = await sb.from(T_A).select('*').order('created_at', { ascending: false });
+    aufgabenMissing = missing(error);
+    aufgaben = error ? [] : (data || []);
+    const ids = aufgaben.map(a => a.id);
+    msgMeta = {};
+    if (ids.length) {
+      const { data: msgs } = await sb.from(T_N).select('aufgabe_id,user_id,created_at').in('aufgabe_id', ids).order('created_at');
+      (msgs || []).forEach(m => {
+        const x = msgMeta[m.aufgabe_id] ||= { count: 0, last: '', lastOther: '' };
+        x.count++; x.last = m.created_at;
+        if (m.user_id !== me.user.id) x.lastOther = m.created_at;
+      });
+    }
+    renderAufgaben(); renderStart();
+  }
+
+  const isMine = a => (a.zugewiesen_an || []).includes(me.user.id);
+  const unread = a => { const m = msgMeta[a.id]; return !!(m && m.lastOther && m.lastOther > getSeen(a.id)); };
+
+  function taskRow(a) {
+    const t = today(), late = a.faellig_am && a.status !== 'erledigt' && a.faellig_am < t;
+    const m = msgMeta[a.id];
+    const wer = (a.zugewiesen_an || []);
+    return `<div class="task ${a.status === 'erledigt' ? 'done' : ''}" data-action="a-open" data-id="${a.id}">
+      <div class="task-check ${a.status}">${a.status === 'erledigt' ? '✓' : ''}</div>
+      <div class="task-main">
+        <div class="task-title">${a.wichtig ? '<span class="prio">! </span>' : ''}${esc(a.titel)}</div>
+        <div class="task-meta">
+          <span class="pill s-${a.status}">${A_STATUS[a.status]}</span>
+          ${wer.length ? `<span>👤 ${esc(wer.map(pName).join(', '))}</span>` : '<span>👤 niemand zugewiesen</span>'}
+          ${a.faellig_am ? `<span class="${late ? 'late' : ''}">📅 ${esc(fmtDate(a.faellig_am))}${late ? ' – überfällig' : ''}</span>` : ''}
+          ${a.team_key ? `<span>⚽ ${esc(teamName(a.team_key))}</span>` : ''}
+          ${a.created_by !== me.user.id ? `<span>von ${esc(pName(a.created_by))}</span>` : ''}
+        </div>
+      </div>
+      <div class="task-right">${unread(a) ? '<span class="unread" title="Neue Nachricht"></span>' : ''}${m ? `<span class="meta">💬 ${m.count}</span>` : ''}</div>
+    </div>`;
+  }
+
+  function sortTasks(list) {
+    const o = { in_bearbeitung: 0, offen: 1, erledigt: 2 };
+    return list.sort((a, b) => (o[a.status] - o[b.status]) || (b.wichtig - a.wichtig) || String(a.faellig_am || '9999').localeCompare(String(b.faellig_am || '9999')) || String(b.created_at).localeCompare(String(a.created_at)));
+  }
+
+  function renderAufgaben() {
+    const st = $('aStatus').value, pid = $('aPerson').value;
+    let list = aufgaben.filter(a => aScope === 'mir' ? isMine(a) : aScope === 'von' ? a.created_by === me.user.id : true);
+    if (st === 'aktiv') list = list.filter(a => a.status !== 'erledigt'); else if (st === 'erledigt') list = list.filter(a => a.status === 'erledigt');
+    if (pid && aScope === 'alle') list = list.filter(a => (a.zugewiesen_an || []).includes(pid));
+    $('aList').innerHTML = sortTasks(list).map(taskRow).join('') || `<div class="empty">${aufgabenMissing ? 'Aufgaben sind in der Datenbank noch nicht eingerichtet (SQL V92).' : aScope === 'mir' ? 'Dir ist gerade nichts zugewiesen 👍' : 'Keine Aufgaben in dieser Auswahl.'}</div>`;
+    const offen = aufgaben.filter(a => isMine(a) && a.status !== 'erledigt').length, neu = aufgaben.some(unread);
+    $('badgeA').hidden = !offen && !neu; $('badgeA').textContent = offen || '•';
+  }
+
+  function renderMyTasks() {
+    if (!$('myTasks')) return;
+    const list = sortTasks(aufgaben.filter(a => isMine(a) && a.status !== 'erledigt')).slice(0, 4);
+    $('myTasks').innerHTML = list.map(taskRow).join('') || `<div class="empty">${aufgabenMissing ? 'Aufgaben werden gerade eingerichtet.' : 'Keine offenen Aufgaben für dich.'}</div>`;
+  }
+
+  function bindAufgaben() {
+    $('aScope').querySelectorAll('[data-scope]').forEach(b => b.onclick = () => {
+      aScope = b.dataset.scope;
+      $('aScope').querySelectorAll('[data-scope]').forEach(x => x.classList.toggle('active', x === b));
+      renderAufgaben();
+    });
+    $('aStatus').onchange = renderAufgaben; $('aPerson').onchange = renderAufgaben;
+    $('aCancel').onclick = () => $('aEditor').close();
+    $('aForm').onsubmit = saveAufgabe;
+    $('aDelete').onclick = deleteAufgabe;
+    $('dClose').onclick = () => $('aDetail').close();
+    $('aDetail').addEventListener('close', () => { detailId = null; renderAufgaben(); renderMyTasks(); });
+    $('dEdit').onclick = () => { const a = aufgaben.find(x => x.id === detailId); if (a) { $('aDetail').close(); openAufgabeEditor(a); } };
+    $('dStatus').querySelectorAll('[data-status]').forEach(b => b.onclick = () => setAufgabeStatus(detailId, b.dataset.status));
+    $('dForm').onsubmit = sendNachricht;
+    $('dText').addEventListener('keydown', e => { if (e.key === 'Enter' && !e.shiftKey && !/mobile|android|iphone/i.test(navigator.userAgent)) { e.preventDefault(); sendNachricht(e); } });
+    $('dText').addEventListener('input', () => { const t = $('dText'); t.style.height = 'auto'; t.style.height = Math.min(t.scrollHeight, 120) + 'px'; });
+  }
+
+  let aWer = [];
+  function paintWer() {
+    const list = personen.length ? personen : [{ user_id: me.user.id, name: myName() }];
+    $('aWer').innerHTML = list.map(p => `<button type="button" class="chip ${aWer.includes(p.user_id) ? 'active' : ''}" data-uid="${p.user_id}"><span class="av">${esc(initials(p.name))}</span>${esc(p.user_id === me.user.id ? 'Ich' : p.name)}</button>`).join('');
+    $('aWer').querySelectorAll('[data-uid]').forEach(b => b.onclick = () => {
+      const id = b.dataset.uid; aWer = aWer.includes(id) ? aWer.filter(x => x !== id) : [...aWer, id]; paintWer();
+    });
+  }
+
+  function openAufgabeEditor(a = {}) {
+    if (aufgabenMissing) return alert('Die Aufgaben sind in der Datenbank noch nicht eingerichtet.');
+    $('aForm').reset(); setMsg($('aMsg'), '');
+    $('aId').value = a.id || '';
+    $('aTitle').textContent = a.id ? 'Aufgabe bearbeiten' : 'Neue Aufgabe';
+    $('aTitel').value = a.titel || ''; $('aBeschreibung').value = a.beschreibung || '';
+    $('aFaellig').value = a.faellig_am || ''; $('aWichtig').checked = !!a.wichtig;
+    $('aTeam').innerHTML = '<option value="">– keine –</option>' + TEAMS.map(t => `<option value="${t[0]}">${t[1]}</option>`).join('');
+    $('aTeam').value = a.team_key || '';
+    aWer = [...(a.zugewiesen_an || [])];
+    paintWer();
+    $('aDelete').hidden = !a.id || !(me.leitung || a.created_by === me.user.id);
+    $('aEditor').showModal();
+    setTimeout(() => $('aTitel').focus(), 50);
+  }
+
+  async function saveAufgabe(e) {
+    e.preventDefault();
+    const id = $('aId').value, before = aufgaben.find(x => x.id === id);
+    const payload = {
+      titel: $('aTitel').value.trim(), beschreibung: $('aBeschreibung').value.trim(),
+      faellig_am: $('aFaellig').value || null, team_key: $('aTeam').value || null,
+      wichtig: $('aWichtig').checked, zugewiesen_an: aWer,
+      updated_by: me.user.id, updated_at: new Date().toISOString()
+    };
+    if (!payload.titel) return setMsg($('aMsg'), 'Bitte eintragen, was zu tun ist.', 'error');
+    setMsg($('aMsg'), 'Speichere …');
+    const r = id ? await sb.from(T_A).update(payload).eq('id', id).select().single()
+                 : await sb.from(T_A).insert({ ...payload, status: 'offen', created_by: me.user.id }).select().single();
+    if (r.error) return setMsg($('aMsg'), r.error.message, 'error');
+    $('aEditor').close();
+    const neuZu = aWer.filter(u => u !== me.user.id && !(before?.zugewiesen_an || []).includes(u));
+    await loadAufgaben();
+    if (neuZu.length) notifyAssigned(r.data, neuZu);
+  }
+
+  function notifyAssigned(a, ids) {
+    const targets = ids.map(person).filter(p => p && (p.telefon || p.email)).map(p => ({ name: p.name, phone: p.telefon, email: p.email }));
+    if (!targets.length) return;
+    openMessage({
+      title: 'Bescheid geben?',
+      text: `Hallo, ich habe dir in der SVK-Jugend-App eine Aufgabe gegeben:\n\n„${a.titel}“${a.faellig_am ? '\nBis: ' + when(a.faellig_am, null, true) : ''}\n\n${location.origin}/jugendapp/\n\nGrüße\n${myName()}`,
+      subject: 'Neue Aufgabe: ' + a.titel, targets
+    });
+  }
+
+  async function deleteAufgabe() {
+    const id = $('aId').value;
+    if (!id || !confirm('Aufgabe samt Chat löschen?')) return;
+    const { error } = await sb.from(T_A).delete().eq('id', id);
+    if (error) return setMsg($('aMsg'), error.message, 'error');
+    $('aEditor').close(); loadAufgaben();
+  }
+
+  async function setAufgabeStatus(id, status) {
+    const a = aufgaben.find(x => x.id === id);
+    if (!a || a.status === status) return;
+    const { error } = await sb.from(T_A).update({ status, erledigt_am: status === 'erledigt' ? new Date().toISOString() : null, updated_by: me.user.id, updated_at: new Date().toISOString() }).eq('id', id);
+    if (error) return alert(error.message);
+    await sb.from(T_N).insert({ aufgabe_id: id, user_id: me.user.id, text: '§status:' + status });
+    a.status = status; paintDetail(); loadMessages(); loadAufgaben();
+  }
+
+  function paintDetail() {
+    const a = aufgaben.find(x => x.id === detailId); if (!a) return;
+    $('dTitel').textContent = (a.wichtig ? '! ' : '') + a.titel;
+    const wer = (a.zugewiesen_an || []).map(pName).join(', ') || 'niemand';
+    $('dMeta').textContent = `Für: ${wer}${a.faellig_am ? ' · bis ' + fmtDate(a.faellig_am) : ''}${a.team_key ? ' · ' + teamName(a.team_key) : ''} · von ${pName(a.created_by)}`;
+    $('dStatus').querySelectorAll('[data-status]').forEach(b => b.classList.toggle('on', b.dataset.status === a.status));
+    $('dEdit').hidden = !(me.leitung || a.created_by === me.user.id);
+  }
+
+  async function openDetail(id) {
+    if (!aufgaben.find(x => x.id === id)) return;
+    detailId = id; paintDetail();
+    $('dBody').innerHTML = '<div class="sys">Lade …</div>';
+    $('aDetail').showModal();
+    await loadMessages();
+  }
+
+  async function loadMessages() {
+    const id = detailId; if (!id) return;
+    const a = aufgaben.find(x => x.id === id);
+    const { data, error } = await sb.from(T_N).select('*').eq('aufgabe_id', id).order('created_at');
+    if (id !== detailId) return;
+    let html = a?.beschreibung ? `<div class="chat-desc">${esc(a.beschreibung)}</div>` : '';
+    html += `<div class="sys">${esc(pName(a.created_by))} hat die Aufgabe am ${esc(fmtTs(a.created_at))} angelegt</div>`;
+    (error ? [] : data || []).forEach(m => {
+      if (m.text.startsWith('§status:')) { html += `<div class="sys">${esc(pName(m.user_id))}: ${esc(A_STATUS[m.text.slice(8)] || m.text.slice(8))} · ${esc(fmtTs(m.created_at))}</div>`; return; }
+      const mine = m.user_id === me.user.id;
+      html += `<div class="bubble ${mine ? 'mine' : ''}"><span class="who">${esc(pName(m.user_id))}</span>${esc(m.text)}<span class="t">${esc(fmtTs(m.created_at))}</span></div>`;
+    });
+    $('dBody').innerHTML = html;
+    $('dBody').scrollTop = $('dBody').scrollHeight;
+    const last = (data || []).at(-1)?.created_at; if (last) setSeen(id, last);
+  }
+
+  async function sendNachricht(e) {
+    e && e.preventDefault();
+    const text = $('dText').value.trim(); if (!text || !detailId) return;
+    $('dText').value = ''; $('dText').style.height = 'auto';
+    const { error } = await sb.from(T_N).insert({ aufgabe_id: detailId, user_id: me.user.id, text });
+    if (error) { $('dText').value = text; return alert(error.message); }
+    await loadMessages(); loadAufgaben();
+  }
+
+  // Live-Aktualisierung (Supabase Realtime), Fallback: beim Zurückkehren in die App neu laden
+  let liveTimer = null;
+  const reloadSoon = () => { clearTimeout(liveTimer); liveTimer = setTimeout(() => { loadAufgaben(); if (detailId) loadMessages(); }, 400); };
+  function subscribeLive() {
+    if (subscribeLive.done) return; subscribeLive.done = true;
+    try {
+      sb.channel('jugend-aufgaben')
+        .on('postgres_changes', { event: '*', schema: 'public', table: T_A }, reloadSoon)
+        .on('postgres_changes', { event: 'INSERT', schema: 'public', table: T_N }, reloadSoon)
+        .subscribe();
+    } catch {}
+    document.addEventListener('visibilitychange', () => { if (!document.hidden && !$('app').hidden) reloadSoon(); });
   }
 
   // ---------- BFV-Spielplan ----------
