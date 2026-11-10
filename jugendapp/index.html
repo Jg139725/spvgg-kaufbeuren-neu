@@ -13,7 +13,7 @@
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="icons/icon-192.png">
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
-<link rel="stylesheet" href="app.css?v=8">
+<link rel="stylesheet" href="app.css?v=10">
 </head>
 <body>
 
@@ -78,6 +78,7 @@
     <section id="tab-start" class="tab">
       <h2 id="hello">Servus!</h2>
       <p id="myTeams" class="muted"></p>
+      <div id="pushCard"></div>
       <div class="stats" id="stats"></div>
       <div class="row-head"><h3>Meine Aufgaben</h3><button class="small ghost inline" data-action="a-new">+ Aufgabe</button></div>
       <div id="myTasks" class="list"></div>
@@ -160,7 +161,7 @@
       <label>Mannschaft<select id="vTeam" required></select></label>
       <label>Wettbewerb<select id="vComp"><option>Punktspiel</option><option>Pokal</option><option>Freundschaftsspiel</option><option>Turnier</option></select></label>
     </div>
-    <label>Gegner<input id="vGegner" required placeholder="z. B. TSV Mindelheim" list="clubList"></label>
+    <label>Gegner<input id="vGegner" autocomplete="off" required placeholder="z. B. TSV Mindelheim" list="clubList"></label>
     <datalist id="clubList"></datalist>
     <div class="grid2">
       <label>Spielort<select id="vHeim"><option value="true">Heimspiel</option><option value="false">Auswärtsspiel</option></select></label>
@@ -171,9 +172,9 @@
     </fieldset>
     <fieldset><legend>Neuer Termin (Vorschlag)</legend>
       <div class="grid2"><label>Datum<input id="vNeuDatum" type="date"></label><label>Uhrzeit<input id="vNeuZeit" type="time"></label></div>
-      <label>Ort (falls anders)<input id="vNeuOrt" placeholder="optional, z. B. Kunstrasen"></label>
+      <label>Ort (falls anders)<input id="vNeuOrt" autocomplete="off" placeholder="optional, z. B. Kunstrasen"></label>
     </fieldset>
-    <label>Grund<input id="vGrund" placeholder="z. B. Hallenturnier, Platzsperre, Ferien"></label>
+    <label>Grund<input id="vGrund" autocomplete="off" placeholder="z. B. Hallenturnier, Platzsperre, Ferien"></label>
     <fieldset><legend>Ansprechpartner beim Gegner</legend>
       <label>Name<input id="vKName" placeholder="z. B. Jugendleiter / Trainer"></label>
       <div class="grid2"><label>Telefon<input id="vKTel" type="tel"></label><label>E-Mail<input id="vKMail" type="email"></label></div>
@@ -195,8 +196,8 @@
   <form id="aForm" method="dialog">
     <input type="hidden" id="aId">
     <h2 id="aTitle">Neue Aufgabe</h2>
-    <label>Was ist zu tun?<input id="aTitel" required maxlength="200" placeholder="z. B. Hallenzeiten für Januar anfragen"></label>
-    <label>Details (optional)<textarea id="aBeschreibung" rows="3" placeholder="Infos, Ansprechpartner, Links …"></textarea></label>
+    <label>Was ist zu tun?<input id="aTitel" autocomplete="off" required maxlength="200" placeholder="z. B. Hallenzeiten für Januar anfragen"></label>
+    <label>Details (optional)<textarea id="aBeschreibung" autocomplete="off" rows="3" placeholder="Infos, Ansprechpartner, Links …"></textarea></label>
     <div class="field-label">Wer soll es machen?</div>
     <div id="aWer" class="chips pick"></div>
     <div class="grid2">
@@ -229,7 +230,7 @@
     </div>
     <div class="chat-body" id="dBody"></div>
     <form id="dForm" class="chat-input">
-      <textarea id="dText" rows="1" placeholder="Nachricht schreiben …" maxlength="4000"></textarea>
+      <textarea id="dText" autocomplete="off" rows="1" placeholder="Nachricht schreiben …" maxlength="4000"></textarea>
       <button type="submit" aria-label="Senden">➤</button>
     </form>
   </div>
@@ -262,6 +263,6 @@
 
 <script src="/assets/vendor/supabase-2.57.4.min.js"></script>
 <script src="/assets/js/supabase-config.js"></script>
-<script src="app.js?v=9"></script>
+<script src="app.js?v=10"></script>
 </body>
 </html>

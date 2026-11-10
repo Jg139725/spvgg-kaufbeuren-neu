@@ -235,3 +235,18 @@ body:not(.is-freigeber) .freigeber-only{display:none!important}
 .zc-actions{display:flex;gap:8px;margin-top:14px}
 .zc-actions button{flex:1}
 @media (max-width:360px){.team-chips{grid-template-columns:repeat(3,1fr)}}
+
+/* ---- iPhone: kein Auto-Zoom beim Tippen (Eingabefelder mind. 16px), kein seitliches Verschieben (V10) ---- */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+html,body{overflow-x:hidden;max-width:100%}
+input,select,textarea{font-size:16px!important}
+dialog{max-width:calc(100vw - 16px);overscroll-behavior:contain}
+dialog form{overflow-x:hidden}
+
+.push-card{display:flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);border-left:4px solid var(--blue);border-radius:14px;padding:12px;margin:6px 0 4px}
+.push-card.ok{border-left-color:var(--ok)}
+.push-card.off{border-left-color:var(--bad)}
+.push-card>div{flex:1;min-width:0}
+.push-card b{display:block;color:var(--navy)}
+.push-card .meta{display:block}
+.push-ico{font-size:1.4rem}

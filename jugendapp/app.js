@@ -24,6 +24,7 @@
   const ACTIVE = ['offen', 'angefragt', 'zugestimmt', 'beantragt'];
   const T_V = 'jugend_spielverlegungen', T_M = 'jugend_app_mitglieder';
   const PENDING_KEY = 'svkJugendPendingRegistration';
+  const VAPID_PUBLIC = 'BKGfQfl8pEOot8K7WB_N6oG8fBF1xG6JNfI1SkLJ0b2HI8_6jbt67L_swOGdkXcG-ADHyxUTmtrTz833b5Abg4Q';
 
   const me = { user: null, profile: null, mitglied: null, leitung: false, teams: [] };
   let verlegungen = [], staff = [], mitglieder = [], setupMissing = false;
@@ -206,6 +207,8 @@
     setupInstall();
     await Promise.all([loadBfv(), loadVerlegungen(), loadStaff(), me.leitung ? loadMitglieder() : null, loadPersonen().then(loadAufgaben)]);
     subscribeLive();
+    renderPushCard();
+    openFromHash();
   }
 
   // ---------- Navigation ----------
@@ -616,7 +619,7 @@
     $('aEditor').close();
     const neuZu = aWer.filter(u => u !== me.user.id && !(before?.zugewiesen_an || []).includes(u));
     await loadAufgaben();
-    if (neuZu.length) notifyAssigned(r.data, neuZu);
+    if (neuZu.length) { sendPush('neu', r.data.id, { an: neuZu }); notifyAssigned(r.data, neuZu); }
   }
 
   function notifyAssigned(a, ids) {
@@ -643,6 +646,7 @@
     const { error } = await sb.from(T_A).update({ status, erledigt_am: status === 'erledigt' ? new Date().toISOString() : null, updated_by: me.user.id, updated_at: new Date().toISOString() }).eq('id', id);
     if (error) return alert(error.message);
     await sb.from(T_N).insert({ aufgabe_id: id, user_id: me.user.id, text: '§status:' + status });
+    sendPush('status', id);
     a.status = status; paintDetail(); loadMessages(); loadAufgaben();
   }
 
@@ -686,6 +690,7 @@
     $('dText').value = ''; $('dText').style.height = 'auto';
     const { error } = await sb.from(T_N).insert({ aufgabe_id: detailId, user_id: me.user.id, text });
     if (error) { $('dText').value = text; return alert(error.message); }
+    sendPush('nachricht', detailId, { text });
     await loadMessages(); loadAufgaben();
   }
 
@@ -702,6 +707,76 @@
     } catch {}
     document.addEventListener('visibilitychange', () => { if (!document.hidden && !$('app').hidden) reloadSoon(); });
   }
+
+  // ---------- Push-Benachrichtigungen ----------
+  // Läuft im Hintergrund – Fehler beim Senden stören die App nicht
+  function sendPush(typ, aufgabe_id, extra = {}) {
+    try { sb.functions.invoke('jugend-push', { body: { typ, aufgabe_id, ...extra } }).catch(() => {}); } catch {}
+  }
+  const pushSupported = () => 'serviceWorker' in navigator && 'PushManager' in window && 'Notification' in window;
+  const isIOS = () => /iphone|ipad|ipod/i.test(navigator.userAgent);
+  const isStandalone = () => matchMedia('(display-mode: standalone)').matches || navigator.standalone === true;
+  const b64ToU8 = b => { const p = '='.repeat((4 - b.length % 4) % 4), r = atob((b + p).replace(/-/g, '+').replace(/_/g, '/')); return Uint8Array.from([...r].map(c => c.charCodeAt(0))); };
+
+  async function currentSubscription() {
+    try { const reg = await navigator.serviceWorker.ready; return await reg.pushManager.getSubscription(); } catch { return null; }
+  }
+
+  async function renderPushCard() {
+    const el = $('pushCard'); if (!el) return;
+    // erst anzeigen, wenn der Server-Teil eingerichtet ist (Tabelle vorhanden)
+    if (renderPushCard.ready === undefined) { const { error } = await sb.from('jugend_push_abos').select('id').limit(1); renderPushCard.ready = !error; }
+    if (!renderPushCard.ready) { el.innerHTML = ''; return; }
+    let html = '';
+    if (isIOS() && !isStandalone()) {
+      html = `<div class="push-card"><span class="push-ico">🔔</span><div><b>Benachrichtigungen aufs iPhone</b><span class="meta">Dafür die App zuerst zum Home-Bildschirm hinzufügen und von dort öffnen.</span></div><button class="small ghost" id="pushHow">So geht’s</button></div>`;
+    } else if (!pushSupported()) {
+      html = '';
+    } else if (Notification.permission === 'denied') {
+      html = `<div class="push-card off"><span class="push-ico">🔕</span><div><b>Benachrichtigungen blockiert</b><span class="meta">In den Handy-Einstellungen bei „SVK Jugend“ wieder erlauben.</span></div></div>`;
+    } else {
+      const sub = Notification.permission === 'granted' ? await currentSubscription() : null;
+      html = sub
+        ? `<div class="push-card ok"><span class="push-ico">🔔</span><div><b>Benachrichtigungen an</b><span class="meta">Du bekommst neue Aufgaben, Statusänderungen und Nachrichten aufs Handy.</span></div><button class="small ghost" id="pushOff">Aus</button></div>`
+        : `<div class="push-card"><span class="push-ico">🔔</span><div><b>Benachrichtigungen einschalten</b><span class="meta">Neue Aufgaben und Nachrichten aufs Handy – auch wenn die App zu ist.</span></div><button class="small" id="pushOn">Einschalten</button></div>`;
+    }
+    el.innerHTML = html;
+    $('pushHow') && ($('pushHow').onclick = () => $('iosHelp').showModal());
+    $('pushOn') && ($('pushOn').onclick = enablePush);
+    $('pushOff') && ($('pushOff').onclick = disablePush);
+  }
+
+  async function enablePush() {
+    try {
+      const perm = await Notification.requestPermission();
+      if (perm !== 'granted') { renderPushCard(); return; }
+      const reg = await navigator.serviceWorker.ready;
+      let sub = await reg.pushManager.getSubscription();
+      if (!sub) sub = await reg.pushManager.subscribe({ userVisibleOnly: true, applicationServerKey: b64ToU8(VAPID_PUBLIC) });
+      const j = sub.toJSON();
+      const { error } = await sb.from('jugend_push_abos').upsert({ user_id: me.user.id, endpoint: j.endpoint, p256dh: j.keys.p256dh, auth: j.keys.auth, geraet: navigator.userAgent.slice(0, 200) }, { onConflict: 'endpoint' });
+      if (error) throw error;
+      new Notification('SVK Jugend', { body: 'Benachrichtigungen sind eingeschaltet ✓', icon: 'icons/icon-192.png' });
+    } catch (e) { alert('Benachrichtigungen konnten nicht eingeschaltet werden: ' + (e.message || e)); }
+    renderPushCard();
+  }
+
+  async function disablePush() {
+    const sub = await currentSubscription();
+    if (sub) { await sb.from('jugend_push_abos').delete().eq('endpoint', sub.endpoint); await sub.unsubscribe().catch(() => {}); }
+    renderPushCard();
+  }
+
+  // Aus einer Benachrichtigung direkt die Aufgabe öffnen
+  function openFromHash(href) {
+    const h = (href ? new URL(href).hash : location.hash) || '';
+    const m = h.match(/aufgabe=([0-9a-f-]{36})/i);
+    if (!m) return;
+    history.replaceState(null, '', location.pathname);
+    const go = () => { if (aufgaben.find(a => a.id === m[1])) openDetail(m[1]); else loadAufgaben().then(() => openDetail(m[1])); };
+    go();
+  }
+  if ('serviceWorker' in navigator) navigator.serviceWorker.addEventListener('message', e => { if (e.data?.typ === 'open' && !$('app').hidden) openFromHash(e.data.url); });
 
   // ---------- BFV-Spielplan ----------
   async function loadBfv() {
