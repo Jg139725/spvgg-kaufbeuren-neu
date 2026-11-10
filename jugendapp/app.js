@@ -574,13 +574,15 @@
   let aWer = [];
   function paintWer() {
     const list = personen.length ? personen : [{ user_id: me.user.id, name: myName() }];
+    // eigene Person zuerst, dann alphabetisch
+    list.sort((x, y) => (y.user_id === me.user.id) - (x.user_id === me.user.id) || x.name.localeCompare(y.name, 'de'));
     $('aWer').innerHTML = list.map(p => `<button type="button" class="chip ${aWer.includes(p.user_id) ? 'active' : ''}" data-uid="${p.user_id}"><span class="av">${esc(initials(p.name))}</span>${esc(p.user_id === me.user.id ? 'Ich' : p.name)}</button>`).join('');
     $('aWer').querySelectorAll('[data-uid]').forEach(b => b.onclick = () => {
       const id = b.dataset.uid; aWer = aWer.includes(id) ? aWer.filter(x => x !== id) : [...aWer, id]; paintWer();
     });
   }
 
-  function openAufgabeEditor(a = {}) {
+  async function openAufgabeEditor(a = {}) {
     if (aufgabenMissing) { showTab('aufgaben'); $('aSetup').hidden = false; return; }
     $('aForm').reset(); setMsg($('aMsg'), '');
     $('aId').value = a.id || '';
@@ -591,6 +593,7 @@
     $('aTeam').value = a.team_key || '';
     aWer = [...(a.zugewiesen_an || [])];
     paintWer();
+    loadPersonen().then(paintWer); // immer aktuelle Personenliste (neu freigegebene Trainer sofort sichtbar)
     $('aDelete').hidden = !a.id || !(me.leitung || a.created_by === me.user.id);
     $('aEditor').showModal();
     setTimeout(() => $('aTitel').focus(), 50);
@@ -688,7 +691,7 @@
 
   // Live-Aktualisierung (Supabase Realtime), Fallback: beim Zurückkehren in die App neu laden
   let liveTimer = null;
-  const reloadSoon = () => { clearTimeout(liveTimer); liveTimer = setTimeout(() => { loadAufgaben(); if (detailId) loadMessages(); }, 400); };
+  const reloadSoon = () => { clearTimeout(liveTimer); liveTimer = setTimeout(() => { loadPersonen(); loadAufgaben(); if (detailId) loadMessages(); }, 400); };
   function subscribeLive() {
     if (subscribeLive.done) return; subscribeLive.done = true;
     try {
@@ -879,7 +882,7 @@
     if (approve) upd.freigegeben = true;
     const { error } = await sb.from(T_M).update(upd).eq('user_id', id);
     if (error) return alert(error.message);
-    await loadMitglieder();
+    await loadMitglieder(); loadPersonen();
     const m = mitglieder.find(x => x.user_id === id);
     if (approve && m) openMessage({
       title: m.name + ' Bescheid geben',
