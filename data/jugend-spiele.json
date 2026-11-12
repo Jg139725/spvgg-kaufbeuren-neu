@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-09T20:43:28.509226+00:00",
+  "updatedAt": "2026-11-12T11:47:45.289378+00:00",
   "source": "https://service.bfv.de/rest/pdfexport/vereinsspiele?id=00ES8GNJE4000007VV0AG08LVUPGND5I",
   "zeitraumAb": "2026-11-13",
   "games": [
@@ -315,6 +315,24 @@
         "u17"
       ],
       "id": "2027-02-07-13-00-b-junioren-spvgg-kaufbeuren-sc-eltersdorf-u16"
+    },
+    {
+      "altersklasse": "B-Junioren",
+      "typ": "Freundschaftsspiel",
+      "wettbewerb": "Freundschaftsspiele",
+      "date": "2027-02-13",
+      "time": "11:00",
+      "home": "FC Kempten",
+      "away": "SpVgg Kaufbeuren",
+      "venue": "Illerstadion Kempten / Kunstrasen,Jahnweg 9,87437 Kempten (Allgäu)",
+      "geaendert": false,
+      "heim": false,
+      "svk_team": "SpVgg Kaufbeuren",
+      "gegner": "FC Kempten",
+      "teams": [
+        "u17"
+      ],
+      "id": "2027-02-13-11-00-b-junioren-fc-kempten-spvgg-kaufbeuren"
     }
   ]
 }
