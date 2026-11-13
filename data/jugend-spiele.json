@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-11-12T11:47:45.289378+00:00",
+  "updatedAt": "2026-11-13T19:59:53.264263+00:00",
   "source": "https://service.bfv.de/rest/pdfexport/vereinsspiele?id=00ES8GNJE4000007VV0AG08LVUPGND5I",
-  "zeitraumAb": "2026-11-13",
+  "zeitraumAb": "2026-11-14",
   "games": [
     {
       "altersklasse": "B-Junioren",
@@ -47,7 +47,7 @@
       "time": "13:00",
       "home": "SpVgg Kaufbeuren",
       "away": "SV Steinheim",
-      "venue": "Sportpark Haken Platz 2,Wolftrigelstr. 11,87600 Kaufbeuren",
+      "venue": "Sportpark Haken KR,Wolftrigelstr. 11,87600 Kaufbeuren",
       "geaendert": false,
       "heim": true,
       "svk_team": "SpVgg Kaufbeuren",
@@ -101,7 +101,7 @@
       "time": "11:30",
       "home": "TSV Schwabmünchen U15",
       "away": "SpVgg Kaufbeuren",
-      "venue": "siegmund arena Platz 2,Riedstr. 59,86830 Schwabmünchen",
+      "venue": "siegmund arena Platz 3,Riedstr. 59,86830 Schwabmünchen",
       "geaendert": false,
       "heim": false,
       "svk_team": "SpVgg Kaufbeuren",
