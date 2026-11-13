@@ -5,18 +5,6 @@
   "sourceUrl": "https://www.bfv.de/mannschaften/-/016PA7VSOC000000VV0AG80NVV8OQVTB",
   "fixtures": [
     {
-      "id": "031FPO43T4000000VS5489BUVSJ4CRAP",
-      "date": "2026-11-21",
-      "time": "15:00",
-      "home": "SV Wechingen 1",
-      "away": "SpVgg Kaufbeuren",
-      "score": null,
-      "venue": "SV Wechingen | St.-Veit-Str. 10 | 86759 Wechingen",
-      "status": "",
-      "cancelled": false,
-      "url": "https://www.bfv.de/ergebnisse/spiel/-/031FPO43T4000000VS5489BUVSJ4CRAP"
-    },
-    {
       "id": "032E1MQ4C4000000VS5489BUVSGKI48U",
       "date": "2027-02-13",
       "time": "13:00",
@@ -63,19 +51,31 @@
       "status": "",
       "cancelled": false,
       "url": "https://www.bfv.de/ergebnisse/spiel/-/031FPO491S000000VS5489BUVSJ4CRAP"
+    },
+    {
+      "id": "031FPO48PS000000VS5489BUVSJ4CRAP",
+      "date": "2027-04-10",
+      "time": "16:00",
+      "home": "SpVgg Kaufbeuren",
+      "away": "TSV Ottobeuren",
+      "score": null,
+      "venue": "Parkstadion Kaufbeuren | Berliner Platz 6 | 87600 Kaufbeuren",
+      "status": "",
+      "cancelled": false,
+      "url": "https://www.bfv.de/ergebnisse/spiel/-/031FPO48PS000000VS5489BUVSJ4CRAP"
     }
   ],
   "nextGame": {
-    "id": "031FPO43T4000000VS5489BUVSJ4CRAP",
-    "date": "2026-11-21",
-    "time": "15:00",
-    "home": "SV Wechingen 1",
-    "away": "SpVgg Kaufbeuren",
+    "id": "032E1MQ4C4000000VS5489BUVSGKI48U",
+    "date": "2027-02-13",
+    "time": "13:00",
+    "home": "SpVgg Kaufbeuren",
+    "away": "SC Biberbach",
     "score": null,
-    "venue": "SV Wechingen | St.-Veit-Str. 10 | 86759 Wechingen",
+    "venue": "Sportpark Haken KR | Wolftrigelstr. 11 | 87600 Kaufbeuren",
     "status": "",
     "cancelled": false,
-    "url": "https://www.bfv.de/ergebnisse/spiel/-/031FPO43T4000000VS5489BUVSJ4CRAP"
+    "url": "https://www.bfv.de/ergebnisse/spiel/-/032E1MQ4C4000000VS5489BUVSGKI48U"
   },
   "lastGame": {
     "id": "031FPO45LK000000VS5489BUVSJ4CRAP",
@@ -212,5 +212,5 @@
       "points": 1
     }
   ],
-  "updatedAt": "2026-11-08T17:11:05+00:00"
+  "updatedAt": "2026-11-13T16:39:11+00:00"
 }
