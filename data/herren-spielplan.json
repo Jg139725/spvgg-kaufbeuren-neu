@@ -1,11 +1,19 @@
 {
-  "updatedAt": "2026-11-14T06:46:19.456740+00:00",
+  "updatedAt": "2026-11-14T14:20:37.017486+00:00",
   "source": "https://www.bfv.de/mannschaften/-/016PILCMSS000000VV0AG80NVUT1FLRU",
   "fixtures": [
     {
       "date": "2026-11-14",
       "time": "14:00",
       "home": "SSV Niedersonthofen",
+      "away": "SpVgg Kaufbeuren",
+      "score": "",
+      "venue": ""
+    },
+    {
+      "date": "2026-11-14",
+      "time": "14:00",
+      "home": "Ticker SSV Niedersonthofen",
       "away": "SpVgg Kaufbeuren",
       "score": "",
       "venue": ""
@@ -248,6 +256,14 @@
       "date": "2026-11-14",
       "time": "14:00",
       "home": "SSV Niedersonthofen",
+      "away": "SpVgg Kaufbeuren",
+      "score": "",
+      "venue": ""
+    },
+    {
+      "date": "2026-11-14",
+      "time": "14:00",
+      "home": "Ticker SSV Niedersonthofen",
       "away": "SpVgg Kaufbeuren",
       "score": "",
       "venue": ""
