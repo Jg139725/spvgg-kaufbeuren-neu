@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-14T19:19:46.042835+00:00",
+  "updatedAt": "2026-11-14T23:11:29.242866+00:00",
   "source": "https://www.bfv.de/mannschaften/-/016PILCMSS000000VV0AG80NVUT1FLRU",
   "fixtures": [
     {
@@ -31,6 +31,14 @@
       "time": "15:00",
       "home": "VfL Kaufering",
       "away": "SpVgg Kaufbeuren",
+      "score": "",
+      "venue": ""
+    },
+    {
+      "date": "2027-04-03",
+      "time": "15:00",
+      "home": "SpVgg Kaufbeuren",
+      "away": "FC Bad Wörishofen",
       "score": "",
       "venue": ""
     }
@@ -281,6 +289,14 @@
       "time": "15:00",
       "home": "VfL Kaufering",
       "away": "SpVgg Kaufbeuren",
+      "score": "",
+      "venue": ""
+    },
+    {
+      "date": "2027-04-03",
+      "time": "15:00",
+      "home": "SpVgg Kaufbeuren",
+      "away": "FC Bad Wörishofen",
       "score": "",
       "venue": ""
     }
