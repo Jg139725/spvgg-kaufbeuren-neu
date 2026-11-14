@@ -125,17 +125,28 @@
     },
     {
       "pos": 4,
+      "team": "TSV Ottobeuren",
+      "played": 8,
+      "won": 4,
+      "drawn": 1,
+      "lost": 3,
+      "goals": "20:16",
+      "diff": "4",
+      "points": 13
+    },
+    {
+      "pos": 5,
       "team": "SV Wechingen 1",
       "played": 8,
       "won": 4,
       "drawn": 0,
       "lost": 4,
-      "goals": "10:13",
+      "goals": "11:14",
       "diff": "-3",
       "points": 12
     },
     {
-      "pos": 5,
+      "pos": 6,
       "team": "FSV Wehringen 1",
       "played": 6,
       "won": 3,
@@ -146,26 +157,15 @@
       "points": 11
     },
     {
-      "pos": 6,
+      "pos": 7,
       "team": "SSV Glött",
       "played": 8,
       "won": 3,
       "drawn": 2,
       "lost": 3,
-      "goals": "11:16",
+      "goals": "12:17",
       "diff": "-5",
       "points": 11
-    },
-    {
-      "pos": 7,
-      "team": "TSV Ottobeuren",
-      "played": 7,
-      "won": 3,
-      "drawn": 1,
-      "lost": 3,
-      "goals": "19:16",
-      "diff": "3",
-      "points": 10
     },
     {
       "pos": 8,
@@ -192,12 +192,12 @@
     {
       "pos": 10,
       "team": "TSV 1861 Nördlingen",
-      "played": 6,
+      "played": 7,
       "won": 1,
       "drawn": 1,
-      "lost": 4,
-      "goals": "4:12",
-      "diff": "-8",
+      "lost": 5,
+      "goals": "4:13",
+      "diff": "-9",
       "points": 4
     },
     {
@@ -212,5 +212,5 @@
       "points": 1
     }
   ],
-  "updatedAt": "2026-11-14T17:15:02+00:00"
+  "updatedAt": "2026-11-14T21:38:21+00:00"
 }
