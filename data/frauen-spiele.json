@@ -93,13 +93,13 @@
     {
       "pos": 1,
       "team": "FC Augsburg 1",
-      "played": 8,
-      "won": 5,
+      "played": 9,
+      "won": 6,
       "drawn": 3,
       "lost": 0,
-      "goals": "26:6",
-      "diff": "20",
-      "points": 18
+      "goals": "28:7",
+      "diff": "21",
+      "points": 21
     },
     {
       "pos": 2,
@@ -148,12 +148,12 @@
     {
       "pos": 6,
       "team": "FSV Wehringen 1",
-      "played": 6,
+      "played": 7,
       "won": 3,
       "drawn": 2,
-      "lost": 1,
-      "goals": "7:6",
-      "diff": "1",
+      "lost": 2,
+      "goals": "8:8",
+      "diff": "0",
       "points": 11
     },
     {
@@ -212,5 +212,5 @@
       "points": 1
     }
   ],
-  "updatedAt": "2026-11-14T21:38:21+00:00"
+  "updatedAt": "2026-11-15T17:19:55+00:00"
 }
