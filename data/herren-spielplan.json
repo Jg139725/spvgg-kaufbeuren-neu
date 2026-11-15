@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-15T17:52:16.404703+00:00",
+  "updatedAt": "2026-11-15T23:00:00.844780+00:00",
   "source": "https://www.bfv.de/mannschaften/-/016PILCMSS000000VV0AG80NVUT1FLRU",
   "fixtures": [
     {
@@ -333,12 +333,12 @@
       "pos": 2,
       "team": "SV Mering",
       "played": 18,
-      "won": 10,
-      "drawn": 6,
+      "won": 11,
+      "drawn": 5,
       "lost": 2,
-      "goals": "45:27",
-      "diff": "18",
-      "points": 36
+      "goals": "48:28",
+      "diff": "20",
+      "points": 38
     },
     {
       "pos": 3,
@@ -369,8 +369,8 @@
       "won": 9,
       "drawn": 3,
       "lost": 5,
-      "goals": "30:19",
-      "diff": "11",
+      "goals": "32:19",
+      "diff": "13",
       "points": 30
     },
     {
@@ -391,8 +391,8 @@
       "won": 8,
       "drawn": 3,
       "lost": 7,
-      "goals": "42:41",
-      "diff": "1",
+      "goals": "42:43",
+      "diff": "-1",
       "points": 27
     },
     {
@@ -424,42 +424,42 @@
       "won": 6,
       "drawn": 4,
       "lost": 8,
-      "goals": "34:36",
-      "diff": "-2",
+      "goals": "36:37",
+      "diff": "-1",
       "points": 22
     },
     {
       "pos": 11,
       "team": "SVO Germaringen",
       "played": 18,
-      "won": 6,
-      "drawn": 3,
+      "won": 5,
+      "drawn": 4,
       "lost": 9,
-      "goals": "25:37",
-      "diff": "-12",
-      "points": 21
+      "goals": "25:38",
+      "diff": "-13",
+      "points": 19
     },
     {
       "pos": 12,
       "team": "TSV Kammlach",
       "played": 18,
       "won": 5,
-      "drawn": 3,
-      "lost": 10,
-      "goals": "33:47",
-      "diff": "-14",
-      "points": 18
+      "drawn": 4,
+      "lost": 9,
+      "goals": "34:47",
+      "diff": "-13",
+      "points": 19
     },
     {
       "pos": 13,
       "team": "FC Wiggensbach",
       "played": 18,
       "won": 4,
-      "drawn": 5,
-      "lost": 9,
-      "goals": "21:32",
-      "diff": "-11",
-      "points": 17
+      "drawn": 4,
+      "lost": 10,
+      "goals": "22:35",
+      "diff": "-13",
+      "points": 16
     },
     {
       "pos": 14,
@@ -490,8 +490,8 @@
       "won": 3,
       "drawn": 3,
       "lost": 12,
-      "goals": "17:44",
-      "diff": "-27",
+      "goals": "18:46",
+      "diff": "-28",
       "points": 12
     }
   ]
