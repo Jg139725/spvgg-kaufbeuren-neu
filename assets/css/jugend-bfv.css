@@ -1,4 +1,4 @@
-/* Jugendseiten: nächste Spiele + Tabelle (assets/js/jugend-bfv.js) */
+/* Mannschaftsseiten: nächste Spiele, Ergebnisse, Tabelle (assets/js/jugend-bfv.js) */
 .jugend-bfv{margin-top:50px}
 .jugend-bfv[hidden]{display:none}
 .jbfv-group{margin-bottom:34px}
@@ -58,3 +58,17 @@
   .jbfv-table th:last-child,.jbfv-table td:last-child{padding-right:14px}
   .jbfv-table-head{padding:16px 14px 12px}
 }
+
+/* Eigenständiger Abschnitt auf Seiten ohne Jugend-Layout (1. Herren, U23) */
+.jbfv-standalone{padding:70px 0;background:#f2f6fb}
+.jbfv-standalone[hidden]{display:none}
+.jbfv-standalone .jugend-bfv{width:min(1180px,calc(100% - 40px));margin:0 auto}
+.jbfv-standalone *{box-sizing:border-box}
+.jbfv-standalone .jbfv-head .section-kicker{display:block;color:#0753a5;font-size:12px;font-weight:900;letter-spacing:.14em;text-transform:uppercase}
+.jbfv-standalone .jbfv-head h2{font-size:clamp(34px,4vw,48px);line-height:1.05;letter-spacing:-.045em;margin:8px 0 30px;color:#021f46}
+.jbfv-inline{margin-top:0}
+.jbfv-inline *{box-sizing:border-box}
+.jbfv-more{margin:4px 0 0}
+.jbfv-more a{display:inline-block;padding:12px 18px;border-radius:10px;background:#0753a5;color:#fff;font-size:14px;font-weight:900;text-decoration:none}
+.jbfv-more a:hover{background:#021f46}
+@media(max-width:560px){.jbfv-standalone{padding:48px 0}.jbfv-standalone .jugend-bfv{width:min(100% - 24px,1180px)}}

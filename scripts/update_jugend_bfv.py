@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
-"""Nächste Spiele und Tabellen der Jugendmannschaften aus den öffentlichen BFV-Daten.
+"""Nächste Spiele, Ergebnisse und Tabellen (Herren, Frauen, Jugend) aus den öffentlichen BFV-Daten.
 
 Quelle: BFV-Widget-Schnittstelle (dieselben Daten wie auf bfv.de)
   .../team/<Mannschafts-ID>/matches      -> Spielplan der Mannschaft
   .../competition/<Staffel-ID>/table     -> Tabelle der Staffel
 
 Ausgabe: data/jugend-bfv.json – wird von assets/js/jugend-bfv.js auf den
-Jugendseiten angezeigt (nächste 3 Spiele, letzte 3 Ergebnisse, aktuelle Tabelle).
+Mannschaftsseiten angezeigt (nächste 3 Spiele, letzte 3 Ergebnisse, aktuelle Tabelle).
 
 Die Mannschafts-IDs sind dauerhaft gültig; die Staffel wird bei jedem Lauf neu
 ermittelt, eine neue Saison braucht also keine Anpassung. Schlägt der Abruf
@@ -30,8 +30,13 @@ MAX_SPIELE = 12  # die Seite zeigt die nächsten 3; Reserve, falls der Abruf mal
 MAX_ERGEBNISSE = 3  # letzte Ergebnisse je Mannschaft
 ERGEBNIS = re.compile(r"^(\d{1,2}):(\d{1,2})(?: (n\.?E\.?|n\.?V\.?))?$")
 
-# Seite (jugend/<key>.html) -> BFV-Mannschaften, die dort angezeigt werden
+# Schlüssel der Seite -> BFV-Mannschaften, die dort angezeigt werden
+# (herren -> herren/erste.html, herren2 -> herren2/index.html, frauen -> frauen/index.html,
+#  alle übrigen -> jugend/<Schlüssel>.html)
 TEAMS = {
+    "herren": [("1. Herren", "016PILCMSS000000VV0AG80NVUT1FLRU")],
+    "herren2": [("U23", "016PIS8630000000VV0AG80NVUT1FLRU")],
+    "frauen": [("Frauen", "016PA7VSOC000000VV0AG80NVV8OQVTB")],
     "u19": [("A-Jugend", "016PACIAIS000000VV0AG80NVV8OQVTB")],
     "u17": [("B-Jugend", "016QFTGKJC000000VV0AG811VTSDEJ30")],
     "u15": [("C-Jugend", "016QFU6GAK000000VV0AG811VTSDEJ30")],

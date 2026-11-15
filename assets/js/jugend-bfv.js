@@ -1,4 +1,5 @@
-/* Nächste 3 Spiele, letzte 3 Ergebnisse + aktuelle Tabelle auf den Jugendseiten.
+/* Nächste 3 Spiele, letzte 3 Ergebnisse + aktuelle Tabelle auf den Mannschaftsseiten
+   (Jugend, 1. Herren, U23, Frauen).
    Daten: data/jugend-bfv.json (wird per GitHub Action aus den BFV-Daten erzeugt,
    siehe scripts/update_jugend_bfv.py). */
 (function () {
@@ -125,8 +126,9 @@
     });
     var hasResults = groups.some(function (g) { return g.results && g.results.length; });
     var hasTable = groups.some(function (g) { return g.table && g.table.length; });
-    var html = '<div class="youth-title"><span class="section-kicker">Spielbetrieb</span>' +
-      '<h2>' + (hasTable ? 'Spiele, Ergebnisse und Tabelle' : hasResults ? 'Spiele und Ergebnisse' : 'Nächste Spiele') + '</h2></div>';
+    var html = box.getAttribute('data-heading') === 'none' ? ''
+      : '<div class="youth-title jbfv-head"><span class="section-kicker">Spielbetrieb</span>' +
+        '<h2>' + (hasTable ? 'Spiele, Ergebnisse und Tabelle' : hasResults ? 'Spiele und Ergebnisse' : 'Nächste Spiele') + '</h2></div>';
 
     if (!filled.length) {
       html += '<div class="jbfv-group"><p class="jbfv-empty">Aktuell sind beim BFV keine Spiele angesetzt. ' +
@@ -135,6 +137,8 @@
       html += filled.map(function (g) { return groupHtml(g, filled.length > 1); }).join('');
       if (!hasTable) html += '<p class="jbfv-note">In dieser Altersklasse wird ohne Tabelle gespielt.</p>';
     }
+    var more = box.getAttribute('data-more');
+    if (more) html += '<p class="jbfv-more"><a href="' + esc(more) + '">Kompletter Spielplan</a></p>';
     if (data.updatedAt) {
       var u = new Date(data.updatedAt);
       if (!isNaN(u)) html += '<p class="jbfv-updated">Stand: ' + u.toLocaleDateString('de-DE') + ', ' +
@@ -142,6 +146,8 @@
     }
     box.innerHTML = html;
     box.hidden = false;
+    var section = box.closest('.jbfv-standalone');
+    if (section) section.hidden = false;
   }
 
   fetch('../data/jugend-bfv.json', { cache: 'no-cache' })
