@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-15T18:16:25.403024+00:00",
+  "updatedAt": "2026-11-15T23:09:20.287924+00:00",
   "source": "https://www.bfv.de",
   "teams": {
     "herren": [
@@ -309,18 +309,6 @@
           },
           {
             "pos": 11,
-            "name": "SVO Germaringen",
-            "sp": 18,
-            "s": 5,
-            "u": 4,
-            "n": 9,
-            "diff": -13,
-            "pkt": 19,
-            "svk": false,
-            "logo": "00ES8GNJCS00001AVV0AG08LVUPGND5I"
-          },
-          {
-            "pos": 12,
             "name": "TSV Kammlach",
             "sp": 18,
             "s": 5,
@@ -330,6 +318,18 @@
             "pkt": 19,
             "svk": false,
             "logo": "00ES8GNJ2S000014VV0AG08LVUPGND5I"
+          },
+          {
+            "pos": 12,
+            "name": "SVO Germaringen",
+            "sp": 18,
+            "s": 5,
+            "u": 4,
+            "n": 9,
+            "diff": -13,
+            "pkt": 19,
+            "svk": false,
+            "logo": "00ES8GNJCS00001AVV0AG08LVUPGND5I"
           },
           {
             "pos": 13,
