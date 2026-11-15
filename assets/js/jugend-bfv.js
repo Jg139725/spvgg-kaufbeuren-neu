@@ -1,4 +1,4 @@
-/* Nächste 3 Spiele + aktuelle Tabelle auf den Jugendseiten.
+/* Nächste 3 Spiele, letzte 3 Ergebnisse + aktuelle Tabelle auf den Jugendseiten.
    Daten: data/jugend-bfv.json (wird per GitHub Action aus den BFV-Daten erzeugt,
    siehe scripts/update_jugend_bfv.py). */
 (function () {
@@ -27,14 +27,17 @@
     }).slice(0, 3);
   }
 
-  function matchCard(m) {
-    var d = kickoff(m);
-    var datum = TAGE[d.getDay()] + ' ' + m.date.split('-').reverse().join('.');
-    var art = m.typ === 'Meisterschaften' ? 'Punktspiel'
+  function art(m) {
+    return m.typ === 'Meisterschaften' ? 'Punktspiel'
       : m.typ === 'Freundschaftsspiele' ? 'Freundschaftsspiel'
       : m.typ === 'Pokale' ? 'Pokal'
       : /Hallen/.test(m.typ) ? 'Hallenturnier'
       : m.typ === 'Turniere' ? 'Turnier' : m.typ;
+  }
+
+  function matchCard(m) {
+    var d = kickoff(m);
+    var datum = TAGE[d.getDay()] + ' ' + m.date.split('-').reverse().join('.');
     return '<article class="jbfv-match">' +
       '<div class="jbfv-match-top"><span class="jbfv-date">' + esc(datum) + '</span>' +
       '<span class="jbfv-badge' + (m.heim ? ' is-home' : '') + '">' + (m.heim ? 'Heim' : 'Auswärts') + '</span></div>' +
@@ -42,7 +45,22 @@
       '<p class="jbfv-teams"><span' + (m.heim ? ' class="is-svk"' : '') + '>' + esc(m.home) + '</span>' +
       '<small>gegen</small>' +
       '<span' + (m.heim ? '' : ' class="is-svk"') + '>' + esc(m.away) + '</span></p>' +
-      '<p class="jbfv-comp">' + esc(art) + '</p>' +
+      '<p class="jbfv-comp">' + esc(art(m)) + '</p>' +
+      '</article>';
+  }
+
+  function resultCard(m) {
+    var d = kickoff(m);
+    var datum = TAGE[d.getDay()] + ' ' + m.date.split('-').reverse().join('.');
+    var text = { S: 'Sieg', U: 'Unentschieden', N: 'Niederlage' }[m.ausgang] || '';
+    return '<article class="jbfv-match jbfv-result is-' + esc(m.ausgang) + '">' +
+      '<div class="jbfv-match-top"><span class="jbfv-date">' + esc(datum) + '</span>' +
+      '<span class="jbfv-badge jbfv-outcome">' + esc(text) + '</span></div>' +
+      '<p class="jbfv-time">' + esc(m.score) + (m.zusatz ? ' <small>' + esc(m.zusatz) + '</small>' : '') + '</p>' +
+      '<p class="jbfv-teams"><span' + (m.heim ? ' class="is-svk"' : '') + '>' + esc(m.home) + '</span>' +
+      '<small>gegen</small>' +
+      '<span' + (m.heim ? '' : ' class="is-svk"') + '>' + esc(m.away) + '</span></p>' +
+      '<p class="jbfv-comp">' + esc(art(m)) + ' · ' + (m.heim ? 'Heim' : 'Auswärts') + '</p>' +
       '</article>';
   }
 
@@ -71,10 +89,16 @@
   function groupHtml(g, showLabel) {
     var next = upcoming(g.matches);
     var html = '<div class="jbfv-group">';
+    var last = (g.results || []).slice(0, 3);
     if (showLabel) html += '<h3 class="jbfv-group-title">' + esc(g.label) + '</h3>';
+    html += '<h4 class="jbfv-sub">Nächste Spiele</h4>';
     html += next.length
       ? '<div class="jbfv-matches">' + next.map(matchCard).join('') + '</div>'
       : '<p class="jbfv-empty">Aktuell sind beim BFV keine Spiele angesetzt.</p>';
+    if (last.length) {
+      html += '<h4 class="jbfv-sub">Letzte Ergebnisse</h4>' +
+        '<div class="jbfv-matches">' + last.map(resultCard).join('') + '</div>';
+    }
     if (g.table && g.table.length) html += tableHtml(g);
     html += '<p class="jbfv-source">Quelle: <a href="' + esc(g.url) + '" target="_blank" rel="noopener">BFV</a></p>';
     return html + '</div>';
@@ -85,11 +109,12 @@
     if (!groups.length) return;
     // Mannschaften ohne Spiele und ohne Tabelle ausblenden, solange eine andere etwas zu zeigen hat
     var filled = groups.filter(function (g) {
-      return upcoming(g.matches).length || (g.table && g.table.length);
+      return upcoming(g.matches).length || (g.results && g.results.length) || (g.table && g.table.length);
     });
+    var hasResults = groups.some(function (g) { return g.results && g.results.length; });
     var hasTable = groups.some(function (g) { return g.table && g.table.length; });
     var html = '<div class="youth-title"><span class="section-kicker">Spielbetrieb</span>' +
-      '<h2>' + (hasTable ? 'Nächste Spiele und Tabelle' : 'Nächste Spiele') + '</h2></div>';
+      '<h2>' + (hasTable ? 'Spiele, Ergebnisse und Tabelle' : hasResults ? 'Spiele und Ergebnisse' : 'Nächste Spiele') + '</h2></div>';
 
     if (!filled.length) {
       html += '<div class="jbfv-group"><p class="jbfv-empty">Aktuell sind beim BFV keine Spiele angesetzt. ' +

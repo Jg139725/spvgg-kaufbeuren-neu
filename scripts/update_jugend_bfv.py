@@ -6,13 +6,14 @@ Quelle: BFV-Widget-Schnittstelle (dieselben Daten wie auf bfv.de)
   .../competition/<Staffel-ID>/table     -> Tabelle der Staffel
 
 Ausgabe: data/jugend-bfv.json – wird von assets/js/jugend-bfv.js auf den
-Jugendseiten angezeigt (nächste 3 Spiele + aktuelle Tabelle).
+Jugendseiten angezeigt (nächste 3 Spiele, letzte 3 Ergebnisse, aktuelle Tabelle).
 
 Die Mannschafts-IDs sind dauerhaft gültig; die Staffel wird bei jedem Lauf neu
 ermittelt, eine neue Saison braucht also keine Anpassung. Schlägt der Abruf
 einer Mannschaft fehl, bleiben deren bisherige Daten erhalten.
 """
 import json
+import re
 import sys
 import urllib.request
 from datetime import datetime, timezone, timedelta
@@ -23,6 +24,8 @@ OUT = Path("data/jugend-bfv.json")
 HEAD = {"User-Agent": "Mozilla/5.0 (compatible; SVK-Website/1.0; +https://spvgg-kaufbeuren.de)"}
 SVK = "Kaufbeuren"
 MAX_SPIELE = 12  # die Seite zeigt die nächsten 3; Reserve, falls der Abruf mal ausfällt
+MAX_ERGEBNISSE = 3  # letzte Ergebnisse je Mannschaft
+ERGEBNIS = re.compile(r"^(\d{1,2}):(\d{1,2})(?: (n\.?E\.?|n\.?V\.?))?$")
 
 # Seite (jugend/<key>.html) -> BFV-Mannschaften, die dort angezeigt werden
 TEAMS = {
@@ -60,15 +63,14 @@ def load_team(label, team_id):
     team = data.get("team") or {}
     gestern = (datetime.now(timezone.utc) - timedelta(days=1)).strftime("%Y-%m-%d")
 
-    matches = []
+    matches, results = [], []
+    heute = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     for m in data.get("matches") or []:
         home, away = clean(m.get("homeTeamName")), clean(m.get("guestTeamName"))
         if not m.get("kickoffDate") or "SPIELFREI" in (home.upper(), away.upper()):
             continue
         date = datetime.strptime(m["kickoffDate"], "%d.%m.%Y").strftime("%Y-%m-%d")
-        if date < gestern or clean(m.get("result")):
-            continue  # vergangen oder schon gespielt
-        matches.append({
+        spiel = {
             "date": date,
             "time": m.get("kickoffTime") or "",
             "home": home,
@@ -76,8 +78,22 @@ def load_team(label, team_id):
             "heim": m.get("homeTeamPermanentId") == team_id,
             "typ": clean(m.get("competitionType")),
             "wettbewerb": clean(m.get("competitionName")),
-        })
+        }
+        ergebnis = ERGEBNIS.match(clean(m.get("result")))
+        if ergebnis and date <= heute:
+            # nur echte Resultate; Absagen, Abbrüche und nicht angetretene Spiele bleiben weg
+            h, a = int(ergebnis.group(1)), int(ergebnis.group(2))
+            eigene, gegner = (h, a) if spiel["heim"] else (a, h)
+            spiel["score"] = f"{h}:{a}"
+            spiel["zusatz"] = {"nE": "n. E.", "nV": "n. V."}.get((ergebnis.group(3) or "").replace(".", ""), "")
+            spiel["ausgang"] = "S" if eigene > gegner else "N" if eigene < gegner else "U"
+            results.append(spiel)
+            continue
+        if date < gestern or clean(m.get("result")):
+            continue  # vergangen oder schon gespielt
+        matches.append(spiel)
     matches.sort(key=lambda g: (g["date"], g["time"] or "99:99"))
+    results.sort(key=lambda g: (g["date"], g["time"] or "00:00"), reverse=True)
 
     table, competition = [], clean(team.get("competitionName"))
     compound = team.get("compoundId")
@@ -108,6 +124,7 @@ def load_team(label, team_id):
         "wettbewerb": competition if table else "",
         "url": f"https://www.bfv.de/mannschaften/-/{team_id}",
         "matches": matches[:MAX_SPIELE],
+        "results": results[:MAX_ERGEBNISSE],
         "table": table,
     }
 
@@ -127,6 +144,7 @@ def main():
             try:
                 groups.append(load_team(label, team_id))
                 print(f"{key}: {label} – {len(groups[-1]['matches'])} Spiele, "
+                      f"{len(groups[-1]['results'])} Ergebnisse, "
                       f"{len(groups[-1]['table'])} Tabellenplätze")
             except Exception as e:
                 fehler += 1

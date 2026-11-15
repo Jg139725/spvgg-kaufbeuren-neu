@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-15T14:58:35.024607+00:00",
+  "updatedAt": "2026-11-15T15:07:32.988786+00:00",
   "source": "https://www.bfv.de",
   "teams": {
     "u19": [
@@ -107,6 +107,44 @@
             "heim": true,
             "typ": "Meisterschaften",
             "wettbewerb": "U 19 (A-Jun.) KL Allgäu Nord"
+          }
+        ],
+        "results": [
+          {
+            "date": "2026-11-14",
+            "time": "14:00",
+            "home": "SG Stauden",
+            "away": "SpVgg Kaufbeuren",
+            "heim": false,
+            "typ": "Meisterschaften",
+            "wettbewerb": "U 19 (A-Jun.) KL Allgäu Nord",
+            "score": "2:6",
+            "zusatz": "",
+            "ausgang": "S"
+          },
+          {
+            "date": "2026-10-25",
+            "time": "12:00",
+            "home": "SpVgg Kaufbeuren",
+            "away": "(SG) Auerbach-Stetten/Dirlewang",
+            "heim": true,
+            "typ": "Meisterschaften",
+            "wettbewerb": "U 19 (A-Jun.) KL Allgäu Nord",
+            "score": "0:0",
+            "zusatz": "",
+            "ausgang": "U"
+          },
+          {
+            "date": "2026-10-17",
+            "time": "13:30",
+            "home": "(SG) Gennachtal",
+            "away": "SpVgg Kaufbeuren",
+            "heim": false,
+            "typ": "Meisterschaften",
+            "wettbewerb": "U 19 (A-Jun.) KL Allgäu Nord",
+            "score": "0:8",
+            "zusatz": "",
+            "ausgang": "S"
           }
         ],
         "table": [
@@ -337,6 +375,44 @@
             "heim": false,
             "typ": "Meisterschaften",
             "wettbewerb": "U 17 (B-Jun.) Bezirksoberliga Schwaben"
+          }
+        ],
+        "results": [
+          {
+            "date": "2026-11-07",
+            "time": "13:00",
+            "home": "TSV 1896 Rain I",
+            "away": "SpVgg Kaufbeuren",
+            "heim": false,
+            "typ": "Meisterschaften",
+            "wettbewerb": "U 17 (B-Jun.) Bezirksoberliga Schwaben",
+            "score": "4:1",
+            "zusatz": "",
+            "ausgang": "N"
+          },
+          {
+            "date": "2026-11-01",
+            "time": "11:00",
+            "home": "FV Illertissen U16",
+            "away": "SpVgg Kaufbeuren",
+            "heim": false,
+            "typ": "Meisterschaften",
+            "wettbewerb": "U 17 (B-Jun.) Bezirksoberliga Schwaben",
+            "score": "3:1",
+            "zusatz": "",
+            "ausgang": "N"
+          },
+          {
+            "date": "2026-10-23",
+            "time": "19:00",
+            "home": "SpVgg Kaufbeuren",
+            "away": "SG Dirlewang/Auerbach-Stetten",
+            "heim": true,
+            "typ": "Meisterschaften",
+            "wettbewerb": "U 17 (B-Jun.) Bezirksoberliga Schwaben",
+            "score": "3:3",
+            "zusatz": "",
+            "ausgang": "U"
           }
         ],
         "table": [
@@ -613,6 +689,44 @@
             "wettbewerb": "U 15 (C-Jun.) Bezirksoberliga Schwaben"
           }
         ],
+        "results": [
+          {
+            "date": "2026-11-15",
+            "time": "13:00",
+            "home": "SpVgg Kaufbeuren",
+            "away": "SV Steinheim",
+            "heim": true,
+            "typ": "Meisterschaften",
+            "wettbewerb": "U 15 (C-Jun.) Bezirksoberliga Schwaben",
+            "score": "2:8",
+            "zusatz": "",
+            "ausgang": "N"
+          },
+          {
+            "date": "2026-11-01",
+            "time": "13:00",
+            "home": "SpVgg Kaufbeuren",
+            "away": "1. FC Sonthofen",
+            "heim": true,
+            "typ": "Meisterschaften",
+            "wettbewerb": "U 15 (C-Jun.) Bezirksoberliga Schwaben",
+            "score": "3:11",
+            "zusatz": "",
+            "ausgang": "N"
+          },
+          {
+            "date": "2026-10-21",
+            "time": "18:00",
+            "home": "JFG Wertachtal",
+            "away": "SpVgg Kaufbeuren",
+            "heim": false,
+            "typ": "Pokale",
+            "wettbewerb": "U15 (A-Jgd.) Verbandspokal - U15 (C-Jgd.) Verbandspokal Runde 2",
+            "score": "7:5",
+            "zusatz": "n. E.",
+            "ausgang": "N"
+          }
+        ],
         "table": [
           {
             "pos": 1,
@@ -756,6 +870,44 @@
         "wettbewerb": "U 13 (D-Jun.) KL Allgäu Nord / Herbst",
         "url": "https://www.bfv.de/mannschaften/-/016QFRT9HG000000VV0AG80NVVPVDHC8",
         "matches": [],
+        "results": [
+          {
+            "date": "2026-10-31",
+            "time": "11:00",
+            "home": "SpVgg Kaufbeuren",
+            "away": "FC Thalhofen",
+            "heim": true,
+            "typ": "Meisterschaften",
+            "wettbewerb": "U 13 (D-Jun.) KL Allgäu Nord / Herbst",
+            "score": "0:0",
+            "zusatz": "",
+            "ausgang": "U"
+          },
+          {
+            "date": "2026-10-24",
+            "time": "11:00",
+            "home": "(SG) Tannenbichl",
+            "away": "SpVgg Kaufbeuren",
+            "heim": false,
+            "typ": "Meisterschaften",
+            "wettbewerb": "U 13 (D-Jun.) KL Allgäu Nord / Herbst",
+            "score": "1:3",
+            "zusatz": "",
+            "ausgang": "S"
+          },
+          {
+            "date": "2026-10-20",
+            "time": "18:30",
+            "home": "SpVgg Kaufbeuren",
+            "away": "FC Memmingen 3",
+            "heim": true,
+            "typ": "Meisterschaften",
+            "wettbewerb": "U 13 (D-Jun.) KL Allgäu Nord / Herbst",
+            "score": "1:4",
+            "zusatz": "",
+            "ausgang": "N"
+          }
+        ],
         "table": [
           {
             "pos": 1,
@@ -866,6 +1018,44 @@
         "wettbewerb": "U 13 (D-Jun.) Kreisklasse Süd - Herbst 2025",
         "url": "https://www.bfv.de/mannschaften/-/011MIC7UJK000000VTVG0001VTR8C1K7",
         "matches": [],
+        "results": [
+          {
+            "date": "2026-10-25",
+            "time": "11:00",
+            "home": "JFG Ostallgäu Nord",
+            "away": "SpVgg Kaufbeuren U13 II",
+            "heim": false,
+            "typ": "Meisterschaften",
+            "wettbewerb": "U 13 (D-Jun.) Kreisklasse Süd - Herbst 2025",
+            "score": "8:1",
+            "zusatz": "",
+            "ausgang": "N"
+          },
+          {
+            "date": "2026-10-17",
+            "time": "11:00",
+            "home": "SpVgg Kaufbeuren U13 II",
+            "away": "FC Füssen",
+            "heim": true,
+            "typ": "Meisterschaften",
+            "wettbewerb": "U 13 (D-Jun.) Kreisklasse Süd - Herbst 2025",
+            "score": "1:4",
+            "zusatz": "",
+            "ausgang": "N"
+          },
+          {
+            "date": "2026-10-10",
+            "time": "11:00",
+            "home": "SpVgg Kaufbeuren U13 II",
+            "away": "FSV Marktoberdorf",
+            "heim": true,
+            "typ": "Meisterschaften",
+            "wettbewerb": "U 13 (D-Jun.) Kreisklasse Süd - Herbst 2025",
+            "score": "2:5",
+            "zusatz": "",
+            "ausgang": "N"
+          }
+        ],
         "table": [
           {
             "pos": 1,
@@ -952,6 +1142,44 @@
         "wettbewerb": "U13 (D-Jun.) Gruppe 11 - Herbst 2026",
         "url": "https://www.bfv.de/mannschaften/-/031AKVV2KS000000VS5489BSVU0ORN69",
         "matches": [],
+        "results": [
+          {
+            "date": "2026-11-08",
+            "time": "13:00",
+            "home": "TSV 1874 Kottern U12 III",
+            "away": "SpVgg Kaufbeuren 3",
+            "heim": false,
+            "typ": "Freundschaftsspiele",
+            "wettbewerb": "FS/DJ/K-FS/ALGÄU/1",
+            "score": "8:1",
+            "zusatz": "",
+            "ausgang": "N"
+          },
+          {
+            "date": "2026-10-24",
+            "time": "13:00",
+            "home": "TSV Oberbeuren 2",
+            "away": "SpVgg Kaufbeuren 3",
+            "heim": false,
+            "typ": "Meisterschaften",
+            "wettbewerb": "U13 (D-Jun.) Gruppe 11 - Herbst 2026",
+            "score": "1:11",
+            "zusatz": "",
+            "ausgang": "S"
+          },
+          {
+            "date": "2026-10-16",
+            "time": "17:00",
+            "home": "SpVgg Kaufbeuren 3",
+            "away": "JFG Wertachtal 2",
+            "heim": true,
+            "typ": "Meisterschaften",
+            "wettbewerb": "U13 (D-Jun.) Gruppe 11 - Herbst 2026",
+            "score": "16:0",
+            "zusatz": "",
+            "ausgang": "S"
+          }
+        ],
         "table": [
           {
             "pos": 1,
@@ -1051,6 +1279,44 @@
         "wettbewerb": "E Junioren Gruppe 4",
         "url": "https://www.bfv.de/mannschaften/-/011MICU6US000000VTVG0001VTR8C1K7",
         "matches": [],
+        "results": [
+          {
+            "date": "2026-10-24",
+            "time": "10:00",
+            "home": "BSK Olympia Neugablonz 2",
+            "away": "SpVgg Kaufbeuren",
+            "heim": false,
+            "typ": "Meisterschaften",
+            "wettbewerb": "E Junioren Gruppe 4",
+            "score": "3:2",
+            "zusatz": "",
+            "ausgang": "N"
+          },
+          {
+            "date": "2026-10-16",
+            "time": "16:00",
+            "home": "FC Jengen",
+            "away": "SpVgg Kaufbeuren",
+            "heim": false,
+            "typ": "Meisterschaften",
+            "wettbewerb": "E Junioren Gruppe 4",
+            "score": "3:2",
+            "zusatz": "",
+            "ausgang": "N"
+          },
+          {
+            "date": "2026-10-09",
+            "time": "17:00",
+            "home": "SpVgg Kaufbeuren",
+            "away": "FC Buchloe 2",
+            "heim": true,
+            "typ": "Meisterschaften",
+            "wettbewerb": "E Junioren Gruppe 4",
+            "score": "7:0",
+            "zusatz": "",
+            "ausgang": "S"
+          }
+        ],
         "table": [
           {
             "pos": 1,
@@ -1201,6 +1467,7 @@
             "wettbewerb": "Turnier2-Quali E-Jugend -Oberbeuren"
           }
         ],
+        "results": [],
         "table": []
       }
     ],
@@ -1211,6 +1478,44 @@
         "wettbewerb": "E Junioren Gruppe 17",
         "url": "https://www.bfv.de/mannschaften/-/02IDJ5S9JK000000VS5489B1VUG7QVAU",
         "matches": [],
+        "results": [
+          {
+            "date": "2026-10-21",
+            "time": "17:00",
+            "home": "SpVgg Kaufbeuren 2",
+            "away": "FC Thingau e.V. 2",
+            "heim": true,
+            "typ": "Meisterschaften",
+            "wettbewerb": "E Junioren Gruppe 17",
+            "score": "7:3",
+            "zusatz": "",
+            "ausgang": "S"
+          },
+          {
+            "date": "2026-10-09",
+            "time": "17:30",
+            "home": "FC Jengen 2",
+            "away": "SpVgg Kaufbeuren 2",
+            "heim": false,
+            "typ": "Meisterschaften",
+            "wettbewerb": "E Junioren Gruppe 17",
+            "score": "8:2",
+            "zusatz": "",
+            "ausgang": "N"
+          },
+          {
+            "date": "2026-10-07",
+            "time": "18:00",
+            "home": "SpVgg Kaufbeuren 2",
+            "away": "SV Mauerstetten 2",
+            "heim": true,
+            "typ": "Meisterschaften",
+            "wettbewerb": "E Junioren Gruppe 17",
+            "score": "7:3",
+            "zusatz": "",
+            "ausgang": "S"
+          }
+        ],
         "table": [
           {
             "pos": 1,
@@ -1310,6 +1615,7 @@
         "wettbewerb": "",
         "url": "https://www.bfv.de/mannschaften/-/02BDTKLGG8000000VS5489B1VTPVH7C1",
         "matches": [],
+        "results": [],
         "table": []
       }
     ],
@@ -1320,6 +1626,7 @@
         "wettbewerb": "",
         "url": "https://www.bfv.de/mannschaften/-/02BDTL2GMC000000VS5489B1VTPVH7C1",
         "matches": [],
+        "results": [],
         "table": []
       }
     ],
@@ -1330,6 +1637,7 @@
         "wettbewerb": "",
         "url": "https://www.bfv.de/mannschaften/-/02M579CT50000000VS5489B1VT732LUQ",
         "matches": [],
+        "results": [],
         "table": []
       },
       {
@@ -1338,6 +1646,7 @@
         "wettbewerb": "",
         "url": "https://www.bfv.de/mannschaften/-/031B9FHU5G000000VS5489BSVU0ORN69",
         "matches": [],
+        "results": [],
         "table": []
       }
     ]
