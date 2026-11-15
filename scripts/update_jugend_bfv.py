@@ -12,6 +12,7 @@ Die Mannschafts-IDs sind dauerhaft gültig; die Staffel wird bei jedem Lauf neu
 ermittelt, eine neue Saison braucht also keine Anpassung. Schlägt der Abruf
 einer Mannschaft fehl, bleiben deren bisherige Daten erhalten.
 """
+import hashlib
 import json
 import re
 import sys
@@ -21,6 +22,8 @@ from pathlib import Path
 
 API = "https://widget-prod.bfv.de/api/service/widget/v1/"
 OUT = Path("data/jugend-bfv.json")
+LOGO_DIR = Path("assets/images/vereine")  # Vereinswappen lokal, damit Besucher nichts vom BFV laden
+LOGO_URL = "https://app.bfv.de/export.media/-/action/getLogo/format/7/id/"
 HEAD = {"User-Agent": "Mozilla/5.0 (compatible; SVK-Website/1.0; +https://spvgg-kaufbeuren.de)"}
 SVK = "Kaufbeuren"
 MAX_SPIELE = 12  # die Seite zeigt die nächsten 3; Reserve, falls der Abruf mal ausfällt
@@ -54,6 +57,41 @@ def get(path):
     return body["data"]
 
 
+_platzhalter = None
+_logo_cache = {}
+
+
+def fetch(url):
+    req = urllib.request.Request(url, headers=HEAD)
+    with urllib.request.urlopen(req, timeout=40) as r:
+        return r.read()
+
+
+def logo(club_id, privat=False):
+    """Lädt das Wappen eines Vereins einmalig herunter und liefert die Vereins-ID
+    (= Dateiname) zurück – oder "", wenn der BFV kein Wappen hat."""
+    global _platzhalter
+    if not club_id or privat or not re.fullmatch(r"[0-9A-Z]{32}", club_id):
+        return ""
+    if club_id in _logo_cache:
+        return _logo_cache[club_id]
+    ziel = LOGO_DIR / f"{club_id}.png"
+    ok = ziel.exists()
+    if not ok:
+        try:
+            if _platzhalter is None:  # das Bild, das der BFV ohne Wappen ausliefert
+                _platzhalter = hashlib.md5(fetch(LOGO_URL + "0" * 32)).hexdigest()
+            bild = fetch(LOGO_URL + club_id)
+            if bild[:8] == b"\x89PNG\r\n\x1a\n" and hashlib.md5(bild).hexdigest() != _platzhalter:
+                LOGO_DIR.mkdir(parents=True, exist_ok=True)
+                ziel.write_bytes(bild)
+                ok = True
+        except Exception as e:
+            print(f"  Hinweis: Wappen {club_id} nicht geladen: {e}")
+    _logo_cache[club_id] = club_id if ok else ""
+    return _logo_cache[club_id]
+
+
 def clean(s):
     return " ".join((s or "").split())
 
@@ -63,7 +101,14 @@ def load_team(label, team_id):
     team = data.get("team") or {}
     gestern = (datetime.now(timezone.utc) - timedelta(days=1)).strftime("%Y-%m-%d")
 
-    matches, results = [], []
+    # Mannschaft -> Verein (für die Wappen in der Tabelle; dort liefert der BFV nur die Mannschaft)
+    vereine = {}
+    for m in data.get("matches") or []:
+        for seite in ("home", "guest"):
+            if m.get(f"{seite}TeamPermanentId") and m.get(f"{seite}ClubId") and not m.get(f"{seite}LogoPrivate"):
+                vereine[m[f"{seite}TeamPermanentId"]] = m[f"{seite}ClubId"]
+
+    matches, results, roh = [], [], {}
     heute = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     for m in data.get("matches") or []:
         home, away = clean(m.get("homeTeamName")), clean(m.get("guestTeamName"))
@@ -79,6 +124,7 @@ def load_team(label, team_id):
             "typ": clean(m.get("competitionType")),
             "wettbewerb": clean(m.get("competitionName")),
         }
+        roh[id(spiel)] = m
         ergebnis = ERGEBNIS.match(clean(m.get("result")))
         if ergebnis and date <= heute:
             # nur echte Resultate; Absagen, Abbrüche und nicht angetretene Spiele bleiben weg
@@ -94,6 +140,11 @@ def load_team(label, team_id):
         matches.append(spiel)
     matches.sort(key=lambda g: (g["date"], g["time"] or "99:99"))
     results.sort(key=lambda g: (g["date"], g["time"] or "00:00"), reverse=True)
+    matches, results = matches[:MAX_SPIELE], results[:MAX_ERGEBNISSE]
+    for spiel in matches + results:  # Wappen nur für Spiele, die wirklich angezeigt werden
+        m = roh[id(spiel)]
+        spiel["homeLogo"] = logo(m.get("homeClubId"), m.get("homeLogoPrivate"))
+        spiel["awayLogo"] = logo(m.get("guestClubId"), m.get("guestLogoPrivate"))
 
     table, competition = [], clean(team.get("competitionName"))
     compound = team.get("compoundId")
@@ -110,10 +161,13 @@ def load_team(label, team_id):
                 "diff": r.get("goalsDiff"),
                 "pkt": r.get("points"),
                 "svk": (r.get("team") or {}).get("permanentId") == team_id,
+                "logo": vereine.get((r.get("team") or {}).get("permanentId"), ""),
             } for r in t.get("table") or []]
             # Tabelle nur zeigen, wenn unsere Mannschaft darin steht
             if any(r["svk"] for r in rows):
                 table = rows
+                for r in table:
+                    r["logo"] = logo(r["logo"])
                 competition = clean(t.get("competitionName")) or competition
         except Exception as e:  # Tabelle ist optional (z. B. Kinderfußball ohne Wertung)
             print(f"  Hinweis: keine Tabelle für {label}: {e}")
@@ -123,8 +177,8 @@ def load_team(label, team_id):
         "bfvName": clean(team.get("name")),
         "wettbewerb": competition if table else "",
         "url": f"https://www.bfv.de/mannschaften/-/{team_id}",
-        "matches": matches[:MAX_SPIELE],
-        "results": results[:MAX_ERGEBNISSE],
+        "matches": matches,
+        "results": results,
         "table": table,
     }
 

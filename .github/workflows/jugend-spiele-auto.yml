@@ -42,16 +42,19 @@ jobs:
           set -e
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          FILES="data/jugend-spiele.json data/jugend-bfv.json"
+          FILES="data/jugend-spiele.json data/jugend-bfv.json assets/images/vereine"
           if [ -z "$(git status --porcelain -- $FILES)" ]; then
             echo "Keine Änderungen an den Jugenddaten."
             exit 0
           fi
-          mkdir -p /tmp/jugend
-          for f in $FILES; do [ -f "$f" ] && cp "$f" /tmp/jugend/; done
+          # Neue Dateien sichern, auf den aktuellen Stand von main gehen, dann wieder einspielen
+          rm -rf /tmp/jugend && mkdir -p /tmp/jugend
+          for f in $FILES; do
+            if [ -e "$f" ]; then mkdir -p "/tmp/jugend/$(dirname "$f")"; cp -R "$f" "/tmp/jugend/$f"; fi
+          done
           git fetch origin main
           git reset --hard origin/main
-          cp /tmp/jugend/*.json data/
+          cp -R /tmp/jugend/. .
           git add $FILES
           if git diff --cached --quiet; then
             echo "Keine Änderungen nach Synchronisierung."

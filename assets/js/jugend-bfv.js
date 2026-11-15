@@ -13,6 +13,22 @@
     });
   }
 
+  // Vereinswappen liegen lokal unter assets/images/vereine/<Vereins-ID>.png
+  function crest(id, name) {
+    if (id && /^[0-9A-Z]{32}$/.test(id)) {
+      return '<img class="jbfv-crest" src="../assets/images/vereine/' + id + '.png" alt="" width="34" height="34" loading="lazy">';
+    }
+    var buchstabe = String(name || '').replace(/^\(SG\)\s*/i, '').replace(/^(SpVgg|TSV|FC|SV|SG|JFG|FSV|BSK|SVO|TV|FV|1\.)\s+/i, '').charAt(0) || '?';
+    return '<span class="jbfv-crest is-empty" aria-hidden="true">' + esc(buchstabe.toUpperCase()) + '</span>';
+  }
+
+  function teams(m) {
+    return '<div class="jbfv-teams">' +
+      '<p' + (m.heim ? ' class="is-svk"' : '') + '>' + crest(m.homeLogo, m.home) + '<span>' + esc(m.home) + '</span></p>' +
+      '<p' + (m.heim ? '' : ' class="is-svk"') + '>' + crest(m.awayLogo, m.away) + '<span>' + esc(m.away) + '</span></p>' +
+      '</div>';
+  }
+
   function kickoff(m) {
     var p = m.date.split('-');
     var t = (m.time || '23:59').split(':');
@@ -42,9 +58,7 @@
       '<div class="jbfv-match-top"><span class="jbfv-date">' + esc(datum) + '</span>' +
       '<span class="jbfv-badge' + (m.heim ? ' is-home' : '') + '">' + (m.heim ? 'Heim' : 'Auswärts') + '</span></div>' +
       '<p class="jbfv-time">' + (m.time ? esc(m.time) + ' Uhr' : 'Uhrzeit offen') + '</p>' +
-      '<p class="jbfv-teams"><span' + (m.heim ? ' class="is-svk"' : '') + '>' + esc(m.home) + '</span>' +
-      '<small>gegen</small>' +
-      '<span' + (m.heim ? '' : ' class="is-svk"') + '>' + esc(m.away) + '</span></p>' +
+      teams(m) +
       '<p class="jbfv-comp">' + esc(art(m)) + '</p>' +
       '</article>';
   }
@@ -57,9 +71,7 @@
       '<div class="jbfv-match-top"><span class="jbfv-date">' + esc(datum) + '</span>' +
       '<span class="jbfv-badge jbfv-outcome">' + esc(text) + '</span></div>' +
       '<p class="jbfv-time">' + esc(m.score) + (m.zusatz ? ' <small>' + esc(m.zusatz) + '</small>' : '') + '</p>' +
-      '<p class="jbfv-teams"><span' + (m.heim ? ' class="is-svk"' : '') + '>' + esc(m.home) + '</span>' +
-      '<small>gegen</small>' +
-      '<span' + (m.heim ? '' : ' class="is-svk"') + '>' + esc(m.away) + '</span></p>' +
+      teams(m) +
       '<p class="jbfv-comp">' + esc(art(m)) + ' · ' + (m.heim ? 'Heim' : 'Auswärts') + '</p>' +
       '</article>';
   }
@@ -69,7 +81,7 @@
       var diff = r.diff > 0 ? '+' + r.diff : r.diff;
       return '<tr' + (r.svk ? ' class="is-svk"' : '') + '>' +
         '<td class="jbfv-pos">' + esc(r.pos) + '</td>' +
-        '<th scope="row">' + esc(r.name) + '</th>' +
+        '<th scope="row"><span class="jbfv-club">' + crest(r.logo, r.name) + '<span>' + esc(r.name) + '</span></span></th>' +
         '<td>' + esc(r.sp) + '</td>' +
         '<td class="jbfv-opt">' + esc(r.s) + '</td>' +
         '<td class="jbfv-opt">' + esc(r.u) + '</td>' +

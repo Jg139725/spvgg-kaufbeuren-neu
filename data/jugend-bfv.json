@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-15T15:07:32.988786+00:00",
+  "updatedAt": "2026-11-15T17:55:32.092878+00:00",
   "source": "https://www.bfv.de",
   "teams": {
     "u19": [
@@ -16,7 +16,9 @@
             "away": "(SG) TSV Ottobeuren",
             "heim": true,
             "typ": "Meisterschaften",
-            "wettbewerb": "U 19 (A-Jun.) KL Allgäu Nord"
+            "wettbewerb": "U 19 (A-Jun.) KL Allgäu Nord",
+            "homeLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I",
+            "awayLogo": "00ES8GNJ4400000EVV0AG08LVUPGND5I"
           },
           {
             "date": "2027-03-14",
@@ -25,7 +27,9 @@
             "away": "FC Thalhofen",
             "heim": true,
             "typ": "Freundschaftsspiele",
-            "wettbewerb": "FS/AJ/K-FS/ALGÄU/1"
+            "wettbewerb": "FS/AJ/K-FS/ALGÄU/1",
+            "homeLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I",
+            "awayLogo": "00ES8GNJFC00000FVV0AG08LVUPGND5I"
           },
           {
             "date": "2027-03-20",
@@ -34,7 +38,9 @@
             "away": "SpVgg Kaufbeuren",
             "heim": false,
             "typ": "Meisterschaften",
-            "wettbewerb": "U 19 (A-Jun.) KL Allgäu Nord"
+            "wettbewerb": "U 19 (A-Jun.) KL Allgäu Nord",
+            "homeLogo": "00ES8GNJCS00001AVV0AG08LVUPGND5I",
+            "awayLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I"
           },
           {
             "date": "2027-04-02",
@@ -43,7 +49,9 @@
             "away": "JFG Ostallgäu Nord",
             "heim": true,
             "typ": "Meisterschaften",
-            "wettbewerb": "U 19 (A-Jun.) KL Allgäu Nord"
+            "wettbewerb": "U 19 (A-Jun.) KL Allgäu Nord",
+            "homeLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I",
+            "awayLogo": "01GULBQIF0000000VV0AG80NVVV7LT4V"
           },
           {
             "date": "2027-04-09",
@@ -52,7 +60,9 @@
             "away": "SpVgg Kaufbeuren",
             "heim": false,
             "typ": "Meisterschaften",
-            "wettbewerb": "U 19 (A-Jun.) KL Allgäu Nord"
+            "wettbewerb": "U 19 (A-Jun.) KL Allgäu Nord",
+            "homeLogo": "00ES8GNJ2S000009VV0AG08LVUPGND5I",
+            "awayLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I"
           },
           {
             "date": "2027-04-17",
@@ -61,7 +71,9 @@
             "away": "JFG Kronburg A1",
             "heim": true,
             "typ": "Meisterschaften",
-            "wettbewerb": "U 19 (A-Jun.) KL Allgäu Nord"
+            "wettbewerb": "U 19 (A-Jun.) KL Allgäu Nord",
+            "homeLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I",
+            "awayLogo": "00N1SVOJ4S000000VTVG0001VV82EU6A"
           },
           {
             "date": "2027-04-23",
@@ -70,7 +82,9 @@
             "away": "SpVgg Kaufbeuren",
             "heim": false,
             "typ": "Meisterschaften",
-            "wettbewerb": "U 19 (A-Jun.) KL Allgäu Nord"
+            "wettbewerb": "U 19 (A-Jun.) KL Allgäu Nord",
+            "homeLogo": "0166EKF360000000VV0AG80NVTK9071E",
+            "awayLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I"
           },
           {
             "date": "2027-05-02",
@@ -79,7 +93,9 @@
             "away": "(SG) Gennachtal",
             "heim": true,
             "typ": "Meisterschaften",
-            "wettbewerb": "U 19 (A-Jun.) KL Allgäu Nord"
+            "wettbewerb": "U 19 (A-Jun.) KL Allgäu Nord",
+            "homeLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I",
+            "awayLogo": "02LA8O4TOO000000VS5489B6VUOUKLV8"
           },
           {
             "date": "2027-05-07",
@@ -88,7 +104,9 @@
             "away": "SpVgg Kaufbeuren",
             "heim": false,
             "typ": "Meisterschaften",
-            "wettbewerb": "U 19 (A-Jun.) KL Allgäu Nord"
+            "wettbewerb": "U 19 (A-Jun.) KL Allgäu Nord",
+            "homeLogo": "00ES8GNJ2S00000BVV0AG08LVUPGND5I",
+            "awayLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I"
           },
           {
             "date": "2027-06-06",
@@ -97,7 +115,9 @@
             "away": "SpVgg Kaufbeuren",
             "heim": false,
             "typ": "Meisterschaften",
-            "wettbewerb": "U 19 (A-Jun.) KL Allgäu Nord"
+            "wettbewerb": "U 19 (A-Jun.) KL Allgäu Nord",
+            "homeLogo": "00ES8GNJ4400000EVV0AG08LVUPGND5I",
+            "awayLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I"
           },
           {
             "date": "2027-06-13",
@@ -106,7 +126,9 @@
             "away": "SG Stauden",
             "heim": true,
             "typ": "Meisterschaften",
-            "wettbewerb": "U 19 (A-Jun.) KL Allgäu Nord"
+            "wettbewerb": "U 19 (A-Jun.) KL Allgäu Nord",
+            "homeLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I",
+            "awayLogo": "00ES8GNJ44000009VV0AG08LVUPGND5I"
           }
         ],
         "results": [
@@ -120,7 +142,9 @@
             "wettbewerb": "U 19 (A-Jun.) KL Allgäu Nord",
             "score": "2:6",
             "zusatz": "",
-            "ausgang": "S"
+            "ausgang": "S",
+            "homeLogo": "00ES8GNJ44000009VV0AG08LVUPGND5I",
+            "awayLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I"
           },
           {
             "date": "2026-10-25",
@@ -132,7 +156,9 @@
             "wettbewerb": "U 19 (A-Jun.) KL Allgäu Nord",
             "score": "0:0",
             "zusatz": "",
-            "ausgang": "U"
+            "ausgang": "U",
+            "homeLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I",
+            "awayLogo": "00ES8GNJ2S00000BVV0AG08LVUPGND5I"
           },
           {
             "date": "2026-10-17",
@@ -144,7 +170,9 @@
             "wettbewerb": "U 19 (A-Jun.) KL Allgäu Nord",
             "score": "0:8",
             "zusatz": "",
-            "ausgang": "S"
+            "ausgang": "S",
+            "homeLogo": "02LA8O4TOO000000VS5489B6VUOUKLV8",
+            "awayLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I"
           }
         ],
         "table": [
@@ -157,7 +185,8 @@
             "n": 1,
             "diff": 9,
             "pkt": 19,
-            "svk": false
+            "svk": false,
+            "logo": "00ES8GNJCS00001AVV0AG08LVUPGND5I"
           },
           {
             "pos": 2,
@@ -168,7 +197,8 @@
             "n": 0,
             "diff": 27,
             "pkt": 19,
-            "svk": false
+            "svk": false,
+            "logo": "00ES8GNJ2S00000BVV0AG08LVUPGND5I"
           },
           {
             "pos": 3,
@@ -179,7 +209,8 @@
             "n": 1,
             "diff": 21,
             "pkt": 19,
-            "svk": true
+            "svk": true,
+            "logo": "00ES8GNJE4000007VV0AG08LVUPGND5I"
           },
           {
             "pos": 4,
@@ -190,7 +221,8 @@
             "n": 2,
             "diff": 23,
             "pkt": 18,
-            "svk": false
+            "svk": false,
+            "logo": "00ES8GNJ4400000EVV0AG08LVUPGND5I"
           },
           {
             "pos": 5,
@@ -201,7 +233,8 @@
             "n": 4,
             "diff": 10,
             "pkt": 10,
-            "svk": false
+            "svk": false,
+            "logo": "0166EKF360000000VV0AG80NVTK9071E"
           },
           {
             "pos": 6,
@@ -212,7 +245,8 @@
             "n": 4,
             "diff": -8,
             "pkt": 8,
-            "svk": false
+            "svk": false,
+            "logo": "01GULBQIF0000000VV0AG80NVVV7LT4V"
           },
           {
             "pos": 7,
@@ -223,7 +257,8 @@
             "n": 5,
             "diff": -21,
             "pkt": 8,
-            "svk": false
+            "svk": false,
+            "logo": "00N1SVOJ4S000000VTVG0001VV82EU6A"
           },
           {
             "pos": 8,
@@ -234,7 +269,8 @@
             "n": 4,
             "diff": -8,
             "pkt": 7,
-            "svk": false
+            "svk": false,
+            "logo": "00ES8GNJ44000009VV0AG08LVUPGND5I"
           },
           {
             "pos": 9,
@@ -245,7 +281,8 @@
             "n": 6,
             "diff": -29,
             "pkt": 3,
-            "svk": false
+            "svk": false,
+            "logo": "02LA8O4TOO000000VS5489B6VUOUKLV8"
           },
           {
             "pos": 10,
@@ -256,7 +293,8 @@
             "n": 6,
             "diff": -24,
             "pkt": 2,
-            "svk": false
+            "svk": false,
+            "logo": "00ES8GNJ2S000009VV0AG08LVUPGND5I"
           }
         ]
       }
@@ -275,7 +313,9 @@
             "away": "SpVgg Kaufbeuren",
             "heim": false,
             "typ": "Meisterschaften",
-            "wettbewerb": "U 17 (B-Jun.) Bezirksoberliga Schwaben"
+            "wettbewerb": "U 17 (B-Jun.) Bezirksoberliga Schwaben",
+            "homeLogo": "00V5PERLLS000000VV0AG811VTEQ0GTM",
+            "awayLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I"
           },
           {
             "date": "2026-11-29",
@@ -284,7 +324,9 @@
             "away": "FC Thalhofen",
             "heim": true,
             "typ": "Meisterschaften",
-            "wettbewerb": "U 17 (B-Jun.) Bezirksoberliga Schwaben"
+            "wettbewerb": "U 17 (B-Jun.) Bezirksoberliga Schwaben",
+            "homeLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I",
+            "awayLogo": "00ES8GNJFC00000FVV0AG08LVUPGND5I"
           },
           {
             "date": "2027-02-05",
@@ -293,7 +335,9 @@
             "away": "SpVgg Kaufbeuren",
             "heim": false,
             "typ": "Freundschaftsspiele",
-            "wettbewerb": "FS/BJ/K-FS/ALGÄU/1"
+            "wettbewerb": "FS/BJ/K-FS/ALGÄU/1",
+            "homeLogo": "00ES8GNJCS000017VV0AG08LVUPGND5I",
+            "awayLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I"
           },
           {
             "date": "2027-02-07",
@@ -302,7 +346,9 @@
             "away": "SC Eltersdorf U16",
             "heim": true,
             "typ": "Freundschaftsspiele",
-            "wettbewerb": "FS/BJ/B-FS/B-S/1"
+            "wettbewerb": "FS/BJ/B-FS/B-S/1",
+            "homeLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I",
+            "awayLogo": "00ES8GNKR8000011VV0AG08LVUPGND5I"
           },
           {
             "date": "2027-02-13",
@@ -311,7 +357,9 @@
             "away": "SpVgg Kaufbeuren",
             "heim": false,
             "typ": "Freundschaftsspiele",
-            "wettbewerb": "FS/BJ/K-FS/ALGÄU/1"
+            "wettbewerb": "FS/BJ/K-FS/ALGÄU/1",
+            "homeLogo": "00ES8GNJE4000009VV0AG08LVUPGND5I",
+            "awayLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I"
           },
           {
             "date": "2027-03-05",
@@ -320,7 +368,9 @@
             "away": "FC 1920 Gundelfingen U17",
             "heim": true,
             "typ": "Meisterschaften",
-            "wettbewerb": "U 17 (B-Jun.) Bezirksoberliga Schwaben"
+            "wettbewerb": "U 17 (B-Jun.) Bezirksoberliga Schwaben",
+            "homeLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I",
+            "awayLogo": "00ES8GNJGK00000PVV0AG08LVUPGND5I"
           },
           {
             "date": "2027-03-14",
@@ -329,7 +379,9 @@
             "away": "SpVgg Kaufbeuren",
             "heim": false,
             "typ": "Meisterschaften",
-            "wettbewerb": "U 17 (B-Jun.) Bezirksoberliga Schwaben"
+            "wettbewerb": "U 17 (B-Jun.) Bezirksoberliga Schwaben",
+            "homeLogo": "00ES8GNJCS00000BVV0AG08LVUPGND5I",
+            "awayLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I"
           },
           {
             "date": "2027-03-19",
@@ -338,7 +390,9 @@
             "away": "TSV Bobingen U17",
             "heim": true,
             "typ": "Meisterschaften",
-            "wettbewerb": "U 17 (B-Jun.) Bezirksoberliga Schwaben"
+            "wettbewerb": "U 17 (B-Jun.) Bezirksoberliga Schwaben",
+            "homeLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I",
+            "awayLogo": "00ES8GNJ9400000KVV0AG08LVUPGND5I"
           },
           {
             "date": "2027-03-21",
@@ -347,7 +401,9 @@
             "away": "SpVgg Kaufbeuren",
             "heim": false,
             "typ": "Freundschaftsspiele",
-            "wettbewerb": "FS/BJ/K-FS/ALGÄU/1"
+            "wettbewerb": "FS/BJ/K-FS/ALGÄU/1",
+            "homeLogo": "00ES8GNJE4000009VV0AG08LVUPGND5I",
+            "awayLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I"
           },
           {
             "date": "2027-03-27",
@@ -356,7 +412,9 @@
             "away": "SpVgg Kaufbeuren",
             "heim": false,
             "typ": "Meisterschaften",
-            "wettbewerb": "U 17 (B-Jun.) Bezirksoberliga Schwaben"
+            "wettbewerb": "U 17 (B-Jun.) Bezirksoberliga Schwaben",
+            "homeLogo": "00ES8GNJ2S00000PVV0AG08LVUPGND5I",
+            "awayLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I"
           },
           {
             "date": "2027-04-04",
@@ -365,7 +423,9 @@
             "away": "TSV Schwaben Augsburg U17",
             "heim": true,
             "typ": "Meisterschaften",
-            "wettbewerb": "U 17 (B-Jun.) Bezirksoberliga Schwaben"
+            "wettbewerb": "U 17 (B-Jun.) Bezirksoberliga Schwaben",
+            "homeLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I",
+            "awayLogo": "00ES8GNJ9400000DVV0AG08LVUPGND5I"
           },
           {
             "date": "2027-04-11",
@@ -374,7 +434,9 @@
             "away": "SpVgg Kaufbeuren",
             "heim": false,
             "typ": "Meisterschaften",
-            "wettbewerb": "U 17 (B-Jun.) Bezirksoberliga Schwaben"
+            "wettbewerb": "U 17 (B-Jun.) Bezirksoberliga Schwaben",
+            "homeLogo": "00ES8GNJAC00000NVV0AG08LVUPGND5I",
+            "awayLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I"
           }
         ],
         "results": [
@@ -388,7 +450,9 @@
             "wettbewerb": "U 17 (B-Jun.) Bezirksoberliga Schwaben",
             "score": "4:1",
             "zusatz": "",
-            "ausgang": "N"
+            "ausgang": "N",
+            "homeLogo": "00ES8GNJBK000018VV0AG08LVUPGND5I",
+            "awayLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I"
           },
           {
             "date": "2026-11-01",
@@ -400,7 +464,9 @@
             "wettbewerb": "U 17 (B-Jun.) Bezirksoberliga Schwaben",
             "score": "3:1",
             "zusatz": "",
-            "ausgang": "N"
+            "ausgang": "N",
+            "homeLogo": "01CSGBH4NC000000VV0AG80NVU9EFVSV",
+            "awayLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I"
           },
           {
             "date": "2026-10-23",
@@ -412,7 +478,9 @@
             "wettbewerb": "U 17 (B-Jun.) Bezirksoberliga Schwaben",
             "score": "3:3",
             "zusatz": "",
-            "ausgang": "U"
+            "ausgang": "U",
+            "homeLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I",
+            "awayLogo": "00ES8GNJ2S00000MVV0AG08LVUPGND5I"
           }
         ],
         "table": [
@@ -425,7 +493,8 @@
             "n": 0,
             "diff": 38,
             "pkt": 31,
-            "svk": false
+            "svk": false,
+            "logo": "00ES8GNJ44000004VV0AG08LVUPGND5I"
           },
           {
             "pos": 2,
@@ -436,7 +505,8 @@
             "n": 1,
             "diff": 34,
             "pkt": 27,
-            "svk": false
+            "svk": false,
+            "logo": "00ES8GNJE400000HVV0AG08LVUPGND5I"
           },
           {
             "pos": 3,
@@ -447,7 +517,8 @@
             "n": 3,
             "diff": 28,
             "pkt": 24,
-            "svk": false
+            "svk": false,
+            "logo": "00ES8GNJ9400000DVV0AG08LVUPGND5I"
           },
           {
             "pos": 4,
@@ -458,7 +529,8 @@
             "n": 2,
             "diff": 13,
             "pkt": 22,
-            "svk": false
+            "svk": false,
+            "logo": "00ES8GNJCS00000BVV0AG08LVUPGND5I"
           },
           {
             "pos": 5,
@@ -469,7 +541,8 @@
             "n": 3,
             "diff": 2,
             "pkt": 18,
-            "svk": false
+            "svk": false,
+            "logo": "00ES8GNJ9400000KVV0AG08LVUPGND5I"
           },
           {
             "pos": 6,
@@ -480,7 +553,8 @@
             "n": 4,
             "diff": 0,
             "pkt": 17,
-            "svk": false
+            "svk": false,
+            "logo": "00ES8GNJBK000018VV0AG08LVUPGND5I"
           },
           {
             "pos": 7,
@@ -491,7 +565,8 @@
             "n": 5,
             "diff": 9,
             "pkt": 15,
-            "svk": false
+            "svk": false,
+            "logo": "00ES8GNJGK00000PVV0AG08LVUPGND5I"
           },
           {
             "pos": 8,
@@ -502,7 +577,8 @@
             "n": 4,
             "diff": -2,
             "pkt": 14,
-            "svk": false
+            "svk": false,
+            "logo": "00ES8GNJ2S00000MVV0AG08LVUPGND5I"
           },
           {
             "pos": 9,
@@ -513,7 +589,8 @@
             "n": 4,
             "diff": -1,
             "pkt": 14,
-            "svk": false
+            "svk": false,
+            "logo": "01CSGBH4NC000000VV0AG80NVU9EFVSV"
           },
           {
             "pos": 10,
@@ -524,7 +601,8 @@
             "n": 5,
             "diff": 1,
             "pkt": 13,
-            "svk": false
+            "svk": false,
+            "logo": "00ES8GNJAC00000NVV0AG08LVUPGND5I"
           },
           {
             "pos": 11,
@@ -535,7 +613,8 @@
             "n": 8,
             "diff": -32,
             "pkt": 7,
-            "svk": false
+            "svk": false,
+            "logo": "00ES8GNJ2S00000PVV0AG08LVUPGND5I"
           },
           {
             "pos": 12,
@@ -546,7 +625,8 @@
             "n": 7,
             "diff": -18,
             "pkt": 5,
-            "svk": true
+            "svk": true,
+            "logo": "00ES8GNJE4000007VV0AG08LVUPGND5I"
           },
           {
             "pos": 13,
@@ -557,7 +637,8 @@
             "n": 10,
             "diff": -24,
             "pkt": 3,
-            "svk": false
+            "svk": false,
+            "logo": "00V5PERLLS000000VV0AG811VTEQ0GTM"
           },
           {
             "pos": 14,
@@ -568,7 +649,8 @@
             "n": 9,
             "diff": -48,
             "pkt": 1,
-            "svk": false
+            "svk": false,
+            "logo": "00ES8GNJFC00000FVV0AG08LVUPGND5I"
           }
         ]
       }
@@ -587,7 +669,9 @@
             "away": "SpVgg Kaufbeuren",
             "heim": false,
             "typ": "Meisterschaften",
-            "wettbewerb": "U 15 (C-Jun.) Bezirksoberliga Schwaben"
+            "wettbewerb": "U 15 (C-Jun.) Bezirksoberliga Schwaben",
+            "homeLogo": "00ES8GNJAC00000NVV0AG08LVUPGND5I",
+            "awayLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I"
           },
           {
             "date": "2026-11-29",
@@ -596,7 +680,9 @@
             "away": "TSV Meitingen",
             "heim": true,
             "typ": "Meisterschaften",
-            "wettbewerb": "U 15 (C-Jun.) Bezirksoberliga Schwaben"
+            "wettbewerb": "U 15 (C-Jun.) Bezirksoberliga Schwaben",
+            "homeLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I",
+            "awayLogo": "00ES8GNJKC00000MVV0AG08LVUPGND5I"
           },
           {
             "date": "2027-03-06",
@@ -605,7 +691,9 @@
             "away": "SpVgg Kaufbeuren",
             "heim": false,
             "typ": "Meisterschaften",
-            "wettbewerb": "U 15 (C-Jun.) Bezirksoberliga Schwaben"
+            "wettbewerb": "U 15 (C-Jun.) Bezirksoberliga Schwaben",
+            "homeLogo": "00ES8GNJJ400001GVV0AG08LVUPGND5I",
+            "awayLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I"
           },
           {
             "date": "2027-03-14",
@@ -614,7 +702,9 @@
             "away": "FC Kempten",
             "heim": true,
             "typ": "Meisterschaften",
-            "wettbewerb": "U 15 (C-Jun.) Bezirksoberliga Schwaben"
+            "wettbewerb": "U 15 (C-Jun.) Bezirksoberliga Schwaben",
+            "homeLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I",
+            "awayLogo": "00ES8GNJE4000009VV0AG08LVUPGND5I"
           },
           {
             "date": "2027-03-20",
@@ -623,7 +713,9 @@
             "away": "SpVgg Kaufbeuren",
             "heim": false,
             "typ": "Meisterschaften",
-            "wettbewerb": "U 15 (C-Jun.) Bezirksoberliga Schwaben"
+            "wettbewerb": "U 15 (C-Jun.) Bezirksoberliga Schwaben",
+            "homeLogo": "00ES8GNJAC00000PVV0AG08LVUPGND5I",
+            "awayLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I"
           },
           {
             "date": "2027-04-11",
@@ -632,7 +724,9 @@
             "away": "TSV 1896 Rain U15",
             "heim": true,
             "typ": "Meisterschaften",
-            "wettbewerb": "U 15 (C-Jun.) Bezirksoberliga Schwaben"
+            "wettbewerb": "U 15 (C-Jun.) Bezirksoberliga Schwaben",
+            "homeLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I",
+            "awayLogo": "00ES8GNJBK000018VV0AG08LVUPGND5I"
           },
           {
             "date": "2027-04-17",
@@ -641,7 +735,9 @@
             "away": "SpVgg Kaufbeuren",
             "heim": false,
             "typ": "Meisterschaften",
-            "wettbewerb": "U 15 (C-Jun.) Bezirksoberliga Schwaben"
+            "wettbewerb": "U 15 (C-Jun.) Bezirksoberliga Schwaben",
+            "homeLogo": "00ES8GNJAC000007VV0AG08LVUPGND5I",
+            "awayLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I"
           },
           {
             "date": "2027-04-25",
@@ -650,7 +746,9 @@
             "away": "DJK Göggingen U15 I",
             "heim": true,
             "typ": "Meisterschaften",
-            "wettbewerb": "U 15 (C-Jun.) Bezirksoberliga Schwaben"
+            "wettbewerb": "U 15 (C-Jun.) Bezirksoberliga Schwaben",
+            "homeLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I",
+            "awayLogo": "00ES8GNJ7S00000QVV0AG08LVUPGND5I"
           },
           {
             "date": "2027-05-01",
@@ -659,7 +757,9 @@
             "away": "SpVgg Kaufbeuren",
             "heim": false,
             "typ": "Meisterschaften",
-            "wettbewerb": "U 15 (C-Jun.) Bezirksoberliga Schwaben"
+            "wettbewerb": "U 15 (C-Jun.) Bezirksoberliga Schwaben",
+            "homeLogo": "00ES8GNJFC000009VV0AG08LVUPGND5I",
+            "awayLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I"
           },
           {
             "date": "2027-05-09",
@@ -668,7 +768,9 @@
             "away": "TSV Neusäß U15",
             "heim": true,
             "typ": "Meisterschaften",
-            "wettbewerb": "U 15 (C-Jun.) Bezirksoberliga Schwaben"
+            "wettbewerb": "U 15 (C-Jun.) Bezirksoberliga Schwaben",
+            "homeLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I",
+            "awayLogo": "00ES8GNJKC00000TVV0AG08LVUPGND5I"
           },
           {
             "date": "2027-06-05",
@@ -677,7 +779,9 @@
             "away": "SpVgg Kaufbeuren",
             "heim": false,
             "typ": "Meisterschaften",
-            "wettbewerb": "U 15 (C-Jun.) Bezirksoberliga Schwaben"
+            "wettbewerb": "U 15 (C-Jun.) Bezirksoberliga Schwaben",
+            "homeLogo": "00ES8GNJ7S000004VV0AG08LVUPGND5I",
+            "awayLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I"
           },
           {
             "date": "2027-06-13",
@@ -686,7 +790,9 @@
             "away": "TSV Schwabmünchen U15",
             "heim": true,
             "typ": "Meisterschaften",
-            "wettbewerb": "U 15 (C-Jun.) Bezirksoberliga Schwaben"
+            "wettbewerb": "U 15 (C-Jun.) Bezirksoberliga Schwaben",
+            "homeLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I",
+            "awayLogo": "00ES8GNJAC00000NVV0AG08LVUPGND5I"
           }
         ],
         "results": [
@@ -700,7 +806,9 @@
             "wettbewerb": "U 15 (C-Jun.) Bezirksoberliga Schwaben",
             "score": "2:8",
             "zusatz": "",
-            "ausgang": "N"
+            "ausgang": "N",
+            "homeLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I",
+            "awayLogo": "00ES8GNJ7S000004VV0AG08LVUPGND5I"
           },
           {
             "date": "2026-11-01",
@@ -712,7 +820,9 @@
             "wettbewerb": "U 15 (C-Jun.) Bezirksoberliga Schwaben",
             "score": "3:11",
             "zusatz": "",
-            "ausgang": "N"
+            "ausgang": "N",
+            "homeLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I",
+            "awayLogo": "00ES8GNJFC000009VV0AG08LVUPGND5I"
           },
           {
             "date": "2026-10-21",
@@ -724,7 +834,9 @@
             "wettbewerb": "U15 (A-Jgd.) Verbandspokal - U15 (C-Jgd.) Verbandspokal Runde 2",
             "score": "7:5",
             "zusatz": "n. E.",
-            "ausgang": "N"
+            "ausgang": "N",
+            "homeLogo": "00R387708O000000VV0AG83KVT7COEQK",
+            "awayLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I"
           }
         ],
         "table": [
@@ -737,7 +849,8 @@
             "n": 1,
             "diff": 39,
             "pkt": 22,
-            "svk": false
+            "svk": false,
+            "logo": "00ES8GNJAC000007VV0AG08LVUPGND5I"
           },
           {
             "pos": 2,
@@ -748,7 +861,8 @@
             "n": 2,
             "diff": 46,
             "pkt": 21,
-            "svk": false
+            "svk": false,
+            "logo": "00ES8GNJE4000009VV0AG08LVUPGND5I"
           },
           {
             "pos": 3,
@@ -759,7 +873,8 @@
             "n": 2,
             "diff": 21,
             "pkt": 17,
-            "svk": false
+            "svk": false,
+            "logo": "00ES8GNJJ400001GVV0AG08LVUPGND5I"
           },
           {
             "pos": 4,
@@ -770,7 +885,8 @@
             "n": 1,
             "diff": 13,
             "pkt": 16,
-            "svk": false
+            "svk": false,
+            "logo": "00ES8GNJFC000009VV0AG08LVUPGND5I"
           },
           {
             "pos": 5,
@@ -781,7 +897,8 @@
             "n": 1,
             "diff": 11,
             "pkt": 16,
-            "svk": false
+            "svk": false,
+            "logo": "00ES8GNJKC00000TVV0AG08LVUPGND5I"
           },
           {
             "pos": 6,
@@ -792,7 +909,8 @@
             "n": 3,
             "diff": 9,
             "pkt": 16,
-            "svk": false
+            "svk": false,
+            "logo": "00ES8GNJBK000018VV0AG08LVUPGND5I"
           },
           {
             "pos": 7,
@@ -803,7 +921,8 @@
             "n": 3,
             "diff": 8,
             "pkt": 11,
-            "svk": false
+            "svk": false,
+            "logo": "00ES8GNJAC00000NVV0AG08LVUPGND5I"
           },
           {
             "pos": 8,
@@ -814,7 +933,8 @@
             "n": 6,
             "diff": -12,
             "pkt": 9,
-            "svk": false
+            "svk": false,
+            "logo": "00ES8GNJ7S000004VV0AG08LVUPGND5I"
           },
           {
             "pos": 9,
@@ -825,7 +945,8 @@
             "n": 6,
             "diff": -21,
             "pkt": 9,
-            "svk": false
+            "svk": false,
+            "logo": "00ES8GNJAC00000PVV0AG08LVUPGND5I"
           },
           {
             "pos": 10,
@@ -836,7 +957,8 @@
             "n": 6,
             "diff": -20,
             "pkt": 5,
-            "svk": false
+            "svk": false,
+            "logo": "00ES8GNJKC00000MVV0AG08LVUPGND5I"
           },
           {
             "pos": 11,
@@ -847,7 +969,8 @@
             "n": 6,
             "diff": -26,
             "pkt": 4,
-            "svk": false
+            "svk": false,
+            "logo": "00ES8GNJ7S00000QVV0AG08LVUPGND5I"
           },
           {
             "pos": 12,
@@ -858,7 +981,8 @@
             "n": 7,
             "diff": -68,
             "pkt": 0,
-            "svk": true
+            "svk": true,
+            "logo": "00ES8GNJE4000007VV0AG08LVUPGND5I"
           }
         ]
       }
@@ -881,7 +1005,9 @@
             "wettbewerb": "U 13 (D-Jun.) KL Allgäu Nord / Herbst",
             "score": "0:0",
             "zusatz": "",
-            "ausgang": "U"
+            "ausgang": "U",
+            "homeLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I",
+            "awayLogo": "00ES8GNJFC00000FVV0AG08LVUPGND5I"
           },
           {
             "date": "2026-10-24",
@@ -893,7 +1019,9 @@
             "wettbewerb": "U 13 (D-Jun.) KL Allgäu Nord / Herbst",
             "score": "1:3",
             "zusatz": "",
-            "ausgang": "S"
+            "ausgang": "S",
+            "homeLogo": "00ES8GNJE400000MVV0AG08LVUPGND5I",
+            "awayLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I"
           },
           {
             "date": "2026-10-20",
@@ -905,7 +1033,9 @@
             "wettbewerb": "U 13 (D-Jun.) KL Allgäu Nord / Herbst",
             "score": "1:4",
             "zusatz": "",
-            "ausgang": "N"
+            "ausgang": "N",
+            "homeLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I",
+            "awayLogo": "00ES8GNJ44000004VV0AG08LVUPGND5I"
           }
         ],
         "table": [
@@ -918,7 +1048,8 @@
             "n": 1,
             "diff": 18,
             "pkt": 19,
-            "svk": false
+            "svk": false,
+            "logo": "00ES8GNJFC00000FVV0AG08LVUPGND5I"
           },
           {
             "pos": 2,
@@ -929,7 +1060,8 @@
             "n": 1,
             "diff": 12,
             "pkt": 17,
-            "svk": false
+            "svk": false,
+            "logo": "00ES8GNJCS00001AVV0AG08LVUPGND5I"
           },
           {
             "pos": 3,
@@ -940,7 +1072,8 @@
             "n": 1,
             "diff": 12,
             "pkt": 17,
-            "svk": false
+            "svk": false,
+            "logo": "01CSGBH4NC000000VV0AG80NVU9EFVSV"
           },
           {
             "pos": 4,
@@ -951,7 +1084,8 @@
             "n": 2,
             "diff": 7,
             "pkt": 14,
-            "svk": false
+            "svk": false,
+            "logo": "00ES8GNJ44000004VV0AG08LVUPGND5I"
           },
           {
             "pos": 5,
@@ -962,7 +1096,8 @@
             "n": 3,
             "diff": 4,
             "pkt": 13,
-            "svk": false
+            "svk": false,
+            "logo": "0166EKF360000000VV0AG80NVTK9071E"
           },
           {
             "pos": 6,
@@ -973,7 +1108,8 @@
             "n": 4,
             "diff": -2,
             "pkt": 12,
-            "svk": false
+            "svk": false,
+            "logo": "00ES8GNJ7S000007VV0AG08LVUPGND5I"
           },
           {
             "pos": 7,
@@ -984,7 +1120,8 @@
             "n": 5,
             "diff": -6,
             "pkt": 7,
-            "svk": true
+            "svk": true,
+            "logo": "00ES8GNJE4000007VV0AG08LVUPGND5I"
           },
           {
             "pos": 8,
@@ -995,7 +1132,8 @@
             "n": 6,
             "diff": -4,
             "pkt": 4,
-            "svk": false
+            "svk": false,
+            "logo": "00ES8GNJE400000MVV0AG08LVUPGND5I"
           },
           {
             "pos": 9,
@@ -1006,7 +1144,8 @@
             "n": 8,
             "diff": -41,
             "pkt": 0,
-            "svk": false
+            "svk": false,
+            "logo": "00ES8GNJE400000VVV0AG08LVUPGND5I"
           }
         ]
       }
@@ -1029,7 +1168,9 @@
             "wettbewerb": "U 13 (D-Jun.) Kreisklasse Süd - Herbst 2025",
             "score": "8:1",
             "zusatz": "",
-            "ausgang": "N"
+            "ausgang": "N",
+            "homeLogo": "01GULBQIF0000000VV0AG80NVVV7LT4V",
+            "awayLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I"
           },
           {
             "date": "2026-10-17",
@@ -1041,7 +1182,9 @@
             "wettbewerb": "U 13 (D-Jun.) Kreisklasse Süd - Herbst 2025",
             "score": "1:4",
             "zusatz": "",
-            "ausgang": "N"
+            "ausgang": "N",
+            "homeLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I",
+            "awayLogo": "00ES8GNJCS000017VV0AG08LVUPGND5I"
           },
           {
             "date": "2026-10-10",
@@ -1053,7 +1196,9 @@
             "wettbewerb": "U 13 (D-Jun.) Kreisklasse Süd - Herbst 2025",
             "score": "2:5",
             "zusatz": "",
-            "ausgang": "N"
+            "ausgang": "N",
+            "homeLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I",
+            "awayLogo": "00ES8GNJE400000NVV0AG08LVUPGND5I"
           }
         ],
         "table": [
@@ -1066,7 +1211,8 @@
             "n": 0,
             "diff": 34,
             "pkt": 16,
-            "svk": false
+            "svk": false,
+            "logo": "01GULBQIF0000000VV0AG80NVVV7LT4V"
           },
           {
             "pos": 2,
@@ -1077,7 +1223,8 @@
             "n": 1,
             "diff": 18,
             "pkt": 15,
-            "svk": false
+            "svk": false,
+            "logo": "00ES8GNJE400000NVV0AG08LVUPGND5I"
           },
           {
             "pos": 3,
@@ -1088,7 +1235,8 @@
             "n": 1,
             "diff": 9,
             "pkt": 11,
-            "svk": false
+            "svk": false,
+            "logo": "00ES8GNJFC00000BVV0AG08LVUPGND5I"
           },
           {
             "pos": 4,
@@ -1099,7 +1247,8 @@
             "n": 3,
             "diff": -13,
             "pkt": 7,
-            "svk": false
+            "svk": false,
+            "logo": "00ES8GNJCS000017VV0AG08LVUPGND5I"
           },
           {
             "pos": 5,
@@ -1110,7 +1259,8 @@
             "n": 3,
             "diff": -11,
             "pkt": 4,
-            "svk": false
+            "svk": false,
+            "logo": "00ES8GNJCS00000SVV0AG08LVUPGND5I"
           },
           {
             "pos": 6,
@@ -1121,7 +1271,8 @@
             "n": 4,
             "diff": -13,
             "pkt": 3,
-            "svk": true
+            "svk": true,
+            "logo": "00ES8GNJE4000007VV0AG08LVUPGND5I"
           },
           {
             "pos": 7,
@@ -1132,7 +1283,8 @@
             "n": 5,
             "diff": -24,
             "pkt": 1,
-            "svk": false
+            "svk": false,
+            "logo": "00ES8GNJCS00001AVV0AG08LVUPGND5I"
           }
         ]
       },
@@ -1153,7 +1305,9 @@
             "wettbewerb": "FS/DJ/K-FS/ALGÄU/1",
             "score": "8:1",
             "zusatz": "",
-            "ausgang": "N"
+            "ausgang": "N",
+            "homeLogo": "00ES8GNJE400000HVV0AG08LVUPGND5I",
+            "awayLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I"
           },
           {
             "date": "2026-10-24",
@@ -1165,7 +1319,9 @@
             "wettbewerb": "U13 (D-Jun.) Gruppe 11 - Herbst 2026",
             "score": "1:11",
             "zusatz": "",
-            "ausgang": "S"
+            "ausgang": "S",
+            "homeLogo": "00ES8GNJE4000011VV0AG08LVUPGND5I",
+            "awayLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I"
           },
           {
             "date": "2026-10-16",
@@ -1177,7 +1333,9 @@
             "wettbewerb": "U13 (D-Jun.) Gruppe 11 - Herbst 2026",
             "score": "16:0",
             "zusatz": "",
-            "ausgang": "S"
+            "ausgang": "S",
+            "homeLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I",
+            "awayLogo": "00R387708O000000VV0AG83KVT7COEQK"
           }
         ],
         "table": [
@@ -1190,7 +1348,8 @@
             "n": 0,
             "diff": 48,
             "pkt": 21,
-            "svk": true
+            "svk": true,
+            "logo": "00ES8GNJE4000007VV0AG08LVUPGND5I"
           },
           {
             "pos": 2,
@@ -1201,7 +1360,8 @@
             "n": 1,
             "diff": 19,
             "pkt": 16,
-            "svk": false
+            "svk": false,
+            "logo": "00ES8GNJ2S00000DVV0AG08LVUPGND5I"
           },
           {
             "pos": 3,
@@ -1212,7 +1372,8 @@
             "n": 1,
             "diff": 14,
             "pkt": 16,
-            "svk": false
+            "svk": false,
+            "logo": "00ES8GNJ44000008VV0AG08LVUPGND5I"
           },
           {
             "pos": 4,
@@ -1223,7 +1384,8 @@
             "n": 4,
             "diff": -6,
             "pkt": 9,
-            "svk": false
+            "svk": false,
+            "logo": "00ES8GNJ7S000008VV0AG08LVUPGND5I"
           },
           {
             "pos": 5,
@@ -1234,7 +1396,8 @@
             "n": 4,
             "diff": -14,
             "pkt": 9,
-            "svk": false
+            "svk": false,
+            "logo": "00ES8GNJE4000011VV0AG08LVUPGND5I"
           },
           {
             "pos": 6,
@@ -1245,7 +1408,8 @@
             "n": 5,
             "diff": -5,
             "pkt": 6,
-            "svk": false
+            "svk": false,
+            "logo": "01GULBQIF0000000VV0AG80NVVV7LT4V"
           },
           {
             "pos": 7,
@@ -1256,7 +1420,8 @@
             "n": 6,
             "diff": -36,
             "pkt": 3,
-            "svk": false
+            "svk": false,
+            "logo": "00R387708O000000VV0AG83KVT7COEQK"
           },
           {
             "pos": 8,
@@ -1267,7 +1432,8 @@
             "n": 6,
             "diff": -20,
             "pkt": 3,
-            "svk": false
+            "svk": false,
+            "logo": "00ES8GNJ2S00000JVV0AG08LVUPGND5I"
           }
         ]
       }
@@ -1290,7 +1456,9 @@
             "wettbewerb": "E Junioren Gruppe 4",
             "score": "3:2",
             "zusatz": "",
-            "ausgang": "N"
+            "ausgang": "N",
+            "homeLogo": "00ES8GNJE400000VVV0AG08LVUPGND5I",
+            "awayLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I"
           },
           {
             "date": "2026-10-16",
@@ -1302,7 +1470,9 @@
             "wettbewerb": "E Junioren Gruppe 4",
             "score": "3:2",
             "zusatz": "",
-            "ausgang": "N"
+            "ausgang": "N",
+            "homeLogo": "00ES8GNJ2S000013VV0AG08LVUPGND5I",
+            "awayLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I"
           },
           {
             "date": "2026-10-09",
@@ -1314,7 +1484,9 @@
             "wettbewerb": "E Junioren Gruppe 4",
             "score": "7:0",
             "zusatz": "",
-            "ausgang": "S"
+            "ausgang": "S",
+            "homeLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I",
+            "awayLogo": "00ES8GNJ2S00000JVV0AG08LVUPGND5I"
           }
         ],
         "table": [
@@ -1327,7 +1499,8 @@
             "n": 0,
             "diff": 26,
             "pkt": 18,
-            "svk": false
+            "svk": false,
+            "logo": "00ES8GNJ2S000013VV0AG08LVUPGND5I"
           },
           {
             "pos": 2,
@@ -1338,7 +1511,8 @@
             "n": 1,
             "diff": 32,
             "pkt": 15,
-            "svk": false
+            "svk": false,
+            "logo": "00ES8GNJE400000VVV0AG08LVUPGND5I"
           },
           {
             "pos": 3,
@@ -1349,7 +1523,8 @@
             "n": 2,
             "diff": 26,
             "pkt": 12,
-            "svk": true
+            "svk": true,
+            "logo": "00ES8GNJE4000007VV0AG08LVUPGND5I"
           },
           {
             "pos": 4,
@@ -1360,7 +1535,8 @@
             "n": 3,
             "diff": -15,
             "pkt": 9,
-            "svk": false
+            "svk": false,
+            "logo": "00ES8GNJ2S000018VV0AG08LVUPGND5I"
           },
           {
             "pos": 5,
@@ -1371,7 +1547,8 @@
             "n": 4,
             "diff": -15,
             "pkt": 6,
-            "svk": false
+            "svk": false,
+            "logo": "00ES8GNJ7S00000BVV0AG08LVUPGND5I"
           },
           {
             "pos": 6,
@@ -1382,7 +1559,8 @@
             "n": 5,
             "diff": -10,
             "pkt": 3,
-            "svk": false
+            "svk": false,
+            "logo": "00ES8GNJ2S00000JVV0AG08LVUPGND5I"
           },
           {
             "pos": 7,
@@ -1393,7 +1571,8 @@
             "n": 6,
             "diff": -44,
             "pkt": 0,
-            "svk": false
+            "svk": false,
+            "logo": "00ES8GNJCS00000SVV0AG08LVUPGND5I"
           }
         ]
       },
@@ -1410,7 +1589,9 @@
             "away": "SpVgg Kaufbeuren",
             "heim": false,
             "typ": "Hallenturniere (Futsal)",
-            "wettbewerb": "Turnier2-Quali E-Jugend -Oberbeuren"
+            "wettbewerb": "Turnier2-Quali E-Jugend -Oberbeuren",
+            "homeLogo": "00ES8GNJ2S00000BVV0AG08LVUPGND5I",
+            "awayLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I"
           },
           {
             "date": "2026-11-29",
@@ -1419,7 +1600,9 @@
             "away": "FSV Kirchdorf",
             "heim": true,
             "typ": "Hallenturniere (Futsal)",
-            "wettbewerb": "Turnier2-Quali E-Jugend -Oberbeuren"
+            "wettbewerb": "Turnier2-Quali E-Jugend -Oberbeuren",
+            "homeLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I",
+            "awayLogo": "00ES8GNJ2S000015VV0AG08LVUPGND5I"
           },
           {
             "date": "2026-11-29",
@@ -1428,7 +1611,9 @@
             "away": "SpVgg Kaufbeuren",
             "heim": false,
             "typ": "Hallenturniere (Futsal)",
-            "wettbewerb": "Turnier2-Quali E-Jugend -Oberbeuren"
+            "wettbewerb": "Turnier2-Quali E-Jugend -Oberbeuren",
+            "homeLogo": "00ES8GNJ44000004VV0AG08LVUPGND5I",
+            "awayLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I"
           },
           {
             "date": "2026-11-29",
@@ -1437,7 +1622,9 @@
             "away": "FSV Dirlewang",
             "heim": true,
             "typ": "Hallenturniere (Futsal)",
-            "wettbewerb": "Turnier2-Quali E-Jugend -Oberbeuren"
+            "wettbewerb": "Turnier2-Quali E-Jugend -Oberbeuren",
+            "homeLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I",
+            "awayLogo": "00ES8GNJ2S00000MVV0AG08LVUPGND5I"
           },
           {
             "date": "2026-11-29",
@@ -1446,7 +1633,9 @@
             "away": "SpVgg Kaufbeuren",
             "heim": false,
             "typ": "Hallenturniere (Futsal)",
-            "wettbewerb": "Turnier2-Quali E-Jugend -Oberbeuren"
+            "wettbewerb": "Turnier2-Quali E-Jugend -Oberbeuren",
+            "homeLogo": "00ES8GNJ4400000EVV0AG08LVUPGND5I",
+            "awayLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I"
           },
           {
             "date": "2026-11-29",
@@ -1455,7 +1644,9 @@
             "away": "SG Amberg-Wiedergeltingen 1",
             "heim": true,
             "typ": "Hallenturniere (Futsal)",
-            "wettbewerb": "Turnier2-Quali E-Jugend -Oberbeuren"
+            "wettbewerb": "Turnier2-Quali E-Jugend -Oberbeuren",
+            "homeLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I",
+            "awayLogo": "02LA8O4TOO000000VS5489B6VUOUKLV8"
           },
           {
             "date": "2026-11-29",
@@ -1464,7 +1655,9 @@
             "away": "(SG) Bedernau",
             "heim": true,
             "typ": "Hallenturniere (Futsal)",
-            "wettbewerb": "Turnier2-Quali E-Jugend -Oberbeuren"
+            "wettbewerb": "Turnier2-Quali E-Jugend -Oberbeuren",
+            "homeLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I",
+            "awayLogo": "00ES8GNJ2S00000EVV0AG08LVUPGND5I"
           }
         ],
         "results": [],
@@ -1489,7 +1682,9 @@
             "wettbewerb": "E Junioren Gruppe 17",
             "score": "7:3",
             "zusatz": "",
-            "ausgang": "S"
+            "ausgang": "S",
+            "homeLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I",
+            "awayLogo": "016BJDVP04000000VV0AG80NVS865AE9"
           },
           {
             "date": "2026-10-09",
@@ -1501,7 +1696,9 @@
             "wettbewerb": "E Junioren Gruppe 17",
             "score": "8:2",
             "zusatz": "",
-            "ausgang": "N"
+            "ausgang": "N",
+            "homeLogo": "00ES8GNJ2S000013VV0AG08LVUPGND5I",
+            "awayLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I"
           },
           {
             "date": "2026-10-07",
@@ -1513,7 +1710,9 @@
             "wettbewerb": "E Junioren Gruppe 17",
             "score": "7:3",
             "zusatz": "",
-            "ausgang": "S"
+            "ausgang": "S",
+            "homeLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I",
+            "awayLogo": "00ES8GNJE400000RVV0AG08LVUPGND5I"
           }
         ],
         "table": [
@@ -1526,7 +1725,8 @@
             "n": 1,
             "diff": 26,
             "pkt": 16,
-            "svk": false
+            "svk": false,
+            "logo": "016BJDVP04000000VV0AG80NVS865AE9"
           },
           {
             "pos": 2,
@@ -1537,7 +1737,8 @@
             "n": 2,
             "diff": 26,
             "pkt": 15,
-            "svk": false
+            "svk": false,
+            "logo": "00ES8GNJFC000003VV0AG08LVUPGND5I"
           },
           {
             "pos": 3,
@@ -1548,7 +1749,8 @@
             "n": 1,
             "diff": 10,
             "pkt": 15,
-            "svk": true
+            "svk": true,
+            "logo": "00ES8GNJE4000007VV0AG08LVUPGND5I"
           },
           {
             "pos": 4,
@@ -1559,7 +1761,8 @@
             "n": 3,
             "diff": 12,
             "pkt": 10,
-            "svk": false
+            "svk": false,
+            "logo": "00ES8GNJE4000014VV0AG08LVUPGND5I"
           },
           {
             "pos": 5,
@@ -1570,7 +1773,8 @@
             "n": 4,
             "diff": 2,
             "pkt": 9,
-            "svk": false
+            "svk": false,
+            "logo": "00ES8GNJ2S000013VV0AG08LVUPGND5I"
           },
           {
             "pos": 6,
@@ -1581,7 +1785,8 @@
             "n": 3,
             "diff": -31,
             "pkt": 9,
-            "svk": false
+            "svk": false,
+            "logo": "00ES8GNJFC00000BVV0AG08LVUPGND5I"
           },
           {
             "pos": 7,
@@ -1592,7 +1797,8 @@
             "n": 5,
             "diff": 2,
             "pkt": 6,
-            "svk": false
+            "svk": false,
+            "logo": "00ES8GNJE400001DVV0AG08LVUPGND5I"
           },
           {
             "pos": 8,
@@ -1603,7 +1809,8 @@
             "n": 7,
             "diff": -47,
             "pkt": 0,
-            "svk": false
+            "svk": false,
+            "logo": "00ES8GNJE400000RVV0AG08LVUPGND5I"
           }
         ]
       }
