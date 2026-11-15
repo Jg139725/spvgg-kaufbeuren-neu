@@ -32,24 +32,30 @@ jobs:
       - name: BFV-Vereinsspielplan auslesen
         run: python scripts/update_jugend_spiele.py
 
+      - name: Nächste Spiele und Tabellen der Jugend (BFV) auslesen
+        continue-on-error: true
+        run: python scripts/update_jugend_bfv.py
+
       - name: Änderungen speichern
         shell: bash
         run: |
           set -e
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          if git diff --quiet -- data/jugend-spiele.json && ! git ls-files --others --exclude-standard | grep -q '^data/jugend-spiele.json$'; then
-            echo "Keine Änderungen an den Jugendspielen."
+          FILES="data/jugend-spiele.json data/jugend-bfv.json"
+          if [ -z "$(git status --porcelain -- $FILES)" ]; then
+            echo "Keine Änderungen an den Jugenddaten."
             exit 0
           fi
-          cp data/jugend-spiele.json /tmp/jugend-spiele.json
+          mkdir -p /tmp/jugend
+          for f in $FILES; do [ -f "$f" ] && cp "$f" /tmp/jugend/; done
           git fetch origin main
           git reset --hard origin/main
-          cp /tmp/jugend-spiele.json data/jugend-spiele.json
-          git add data/jugend-spiele.json
+          cp /tmp/jugend/*.json data/
+          git add $FILES
           if git diff --cached --quiet; then
             echo "Keine Änderungen nach Synchronisierung."
             exit 0
           fi
-          git commit -m "Jugend-Spielplan (BFV) automatisch aktualisiert"
+          git commit -m "Jugend-Spielplan und Tabellen (BFV) automatisch aktualisiert"
           git push origin HEAD:main

@@ -1,0 +1,1345 @@
+{
+  "updatedAt": "2026-11-15T14:58:35.024607+00:00",
+  "source": "https://www.bfv.de",
+  "teams": {
+    "u19": [
+      {
+        "label": "A-Jugend",
+        "bfvName": "SpVgg Kaufbeuren",
+        "wettbewerb": "U 19 (A-Jun.) KL Allgäu Nord",
+        "url": "https://www.bfv.de/mannschaften/-/016PACIAIS000000VV0AG80NVV8OQVTB",
+        "matches": [
+          {
+            "date": "2026-11-21",
+            "time": "11:00",
+            "home": "SpVgg Kaufbeuren",
+            "away": "(SG) TSV Ottobeuren",
+            "heim": true,
+            "typ": "Meisterschaften",
+            "wettbewerb": "U 19 (A-Jun.) KL Allgäu Nord"
+          },
+          {
+            "date": "2027-03-14",
+            "time": "11:00",
+            "home": "SpVgg Kaufbeuren",
+            "away": "FC Thalhofen",
+            "heim": true,
+            "typ": "Freundschaftsspiele",
+            "wettbewerb": "FS/AJ/K-FS/ALGÄU/1"
+          },
+          {
+            "date": "2027-03-20",
+            "time": "13:00",
+            "home": "SVO Germaringen",
+            "away": "SpVgg Kaufbeuren",
+            "heim": false,
+            "typ": "Meisterschaften",
+            "wettbewerb": "U 19 (A-Jun.) KL Allgäu Nord"
+          },
+          {
+            "date": "2027-04-02",
+            "time": "19:00",
+            "home": "SpVgg Kaufbeuren",
+            "away": "JFG Ostallgäu Nord",
+            "heim": true,
+            "typ": "Meisterschaften",
+            "wettbewerb": "U 19 (A-Jun.) KL Allgäu Nord"
+          },
+          {
+            "date": "2027-04-09",
+            "time": "19:00",
+            "home": "SV Amendingen",
+            "away": "SpVgg Kaufbeuren",
+            "heim": false,
+            "typ": "Meisterschaften",
+            "wettbewerb": "U 19 (A-Jun.) KL Allgäu Nord"
+          },
+          {
+            "date": "2027-04-17",
+            "time": "11:00",
+            "home": "SpVgg Kaufbeuren",
+            "away": "JFG Kronburg A1",
+            "heim": true,
+            "typ": "Meisterschaften",
+            "wettbewerb": "U 19 (A-Jun.) KL Allgäu Nord"
+          },
+          {
+            "date": "2027-04-23",
+            "time": "18:30",
+            "home": "JFG Oberes Günztal",
+            "away": "SpVgg Kaufbeuren",
+            "heim": false,
+            "typ": "Meisterschaften",
+            "wettbewerb": "U 19 (A-Jun.) KL Allgäu Nord"
+          },
+          {
+            "date": "2027-05-02",
+            "time": "12:00",
+            "home": "SpVgg Kaufbeuren",
+            "away": "(SG) Gennachtal",
+            "heim": true,
+            "typ": "Meisterschaften",
+            "wettbewerb": "U 19 (A-Jun.) KL Allgäu Nord"
+          },
+          {
+            "date": "2027-05-07",
+            "time": "19:15",
+            "home": "(SG) Auerbach-Stetten/Dirlewang",
+            "away": "SpVgg Kaufbeuren",
+            "heim": false,
+            "typ": "Meisterschaften",
+            "wettbewerb": "U 19 (A-Jun.) KL Allgäu Nord"
+          },
+          {
+            "date": "2027-06-06",
+            "time": "13:00",
+            "home": "(SG) TSV Ottobeuren",
+            "away": "SpVgg Kaufbeuren",
+            "heim": false,
+            "typ": "Meisterschaften",
+            "wettbewerb": "U 19 (A-Jun.) KL Allgäu Nord"
+          },
+          {
+            "date": "2027-06-13",
+            "time": "12:00",
+            "home": "SpVgg Kaufbeuren",
+            "away": "SG Stauden",
+            "heim": true,
+            "typ": "Meisterschaften",
+            "wettbewerb": "U 19 (A-Jun.) KL Allgäu Nord"
+          }
+        ],
+        "table": [
+          {
+            "pos": 1,
+            "name": "SVO Germaringen",
+            "sp": 8,
+            "s": 6,
+            "u": 1,
+            "n": 1,
+            "diff": 9,
+            "pkt": 19,
+            "svk": false
+          },
+          {
+            "pos": 2,
+            "name": "(SG) Auerbach-Stetten/Dirlewang",
+            "sp": 7,
+            "s": 6,
+            "u": 1,
+            "n": 0,
+            "diff": 27,
+            "pkt": 19,
+            "svk": false
+          },
+          {
+            "pos": 3,
+            "name": "SpVgg Kaufbeuren",
+            "sp": 8,
+            "s": 6,
+            "u": 1,
+            "n": 1,
+            "diff": 21,
+            "pkt": 19,
+            "svk": true
+          },
+          {
+            "pos": 4,
+            "name": "(SG) TSV Ottobeuren",
+            "sp": 8,
+            "s": 6,
+            "u": 0,
+            "n": 2,
+            "diff": 23,
+            "pkt": 18,
+            "svk": false
+          },
+          {
+            "pos": 5,
+            "name": "JFG Oberes Günztal",
+            "sp": 8,
+            "s": 3,
+            "u": 1,
+            "n": 4,
+            "diff": 10,
+            "pkt": 10,
+            "svk": false
+          },
+          {
+            "pos": 6,
+            "name": "JFG Ostallgäu Nord",
+            "sp": 8,
+            "s": 2,
+            "u": 2,
+            "n": 4,
+            "diff": -8,
+            "pkt": 8,
+            "svk": false
+          },
+          {
+            "pos": 7,
+            "name": "JFG Kronburg A1",
+            "sp": 9,
+            "s": 2,
+            "u": 2,
+            "n": 5,
+            "diff": -21,
+            "pkt": 8,
+            "svk": false
+          },
+          {
+            "pos": 8,
+            "name": "SG Stauden",
+            "sp": 7,
+            "s": 2,
+            "u": 1,
+            "n": 4,
+            "diff": -8,
+            "pkt": 7,
+            "svk": false
+          },
+          {
+            "pos": 9,
+            "name": "(SG) Gennachtal",
+            "sp": 9,
+            "s": 0,
+            "u": 3,
+            "n": 6,
+            "diff": -29,
+            "pkt": 3,
+            "svk": false
+          },
+          {
+            "pos": 10,
+            "name": "SV Amendingen",
+            "sp": 8,
+            "s": 0,
+            "u": 2,
+            "n": 6,
+            "diff": -24,
+            "pkt": 2,
+            "svk": false
+          }
+        ]
+      }
+    ],
+    "u17": [
+      {
+        "label": "B-Jugend",
+        "bfvName": "SpVgg Kaufbeuren",
+        "wettbewerb": "U 17 (B-Jun.) Bezirksoberliga Schwaben",
+        "url": "https://www.bfv.de/mannschaften/-/016QFTGKJC000000VV0AG811VTSDEJ30",
+        "matches": [
+          {
+            "date": "2026-11-20",
+            "time": "18:00",
+            "home": "(SG) Donau/Lech",
+            "away": "SpVgg Kaufbeuren",
+            "heim": false,
+            "typ": "Meisterschaften",
+            "wettbewerb": "U 17 (B-Jun.) Bezirksoberliga Schwaben"
+          },
+          {
+            "date": "2026-11-29",
+            "time": "15:30",
+            "home": "SpVgg Kaufbeuren",
+            "away": "FC Thalhofen",
+            "heim": true,
+            "typ": "Meisterschaften",
+            "wettbewerb": "U 17 (B-Jun.) Bezirksoberliga Schwaben"
+          },
+          {
+            "date": "2027-02-05",
+            "time": "17:00",
+            "home": "FC Füssen",
+            "away": "SpVgg Kaufbeuren",
+            "heim": false,
+            "typ": "Freundschaftsspiele",
+            "wettbewerb": "FS/BJ/K-FS/ALGÄU/1"
+          },
+          {
+            "date": "2027-02-07",
+            "time": "13:00",
+            "home": "SpVgg Kaufbeuren",
+            "away": "SC Eltersdorf U16",
+            "heim": true,
+            "typ": "Freundschaftsspiele",
+            "wettbewerb": "FS/BJ/B-FS/B-S/1"
+          },
+          {
+            "date": "2027-02-13",
+            "time": "11:00",
+            "home": "FC Kempten",
+            "away": "SpVgg Kaufbeuren",
+            "heim": false,
+            "typ": "Freundschaftsspiele",
+            "wettbewerb": "FS/BJ/K-FS/ALGÄU/1"
+          },
+          {
+            "date": "2027-03-05",
+            "time": "19:00",
+            "home": "SpVgg Kaufbeuren",
+            "away": "FC 1920 Gundelfingen U17",
+            "heim": true,
+            "typ": "Meisterschaften",
+            "wettbewerb": "U 17 (B-Jun.) Bezirksoberliga Schwaben"
+          },
+          {
+            "date": "2027-03-14",
+            "time": "11:00",
+            "home": "(SG) Joshofen Bergheim Ried",
+            "away": "SpVgg Kaufbeuren",
+            "heim": false,
+            "typ": "Meisterschaften",
+            "wettbewerb": "U 17 (B-Jun.) Bezirksoberliga Schwaben"
+          },
+          {
+            "date": "2027-03-19",
+            "time": "19:00",
+            "home": "SpVgg Kaufbeuren",
+            "away": "TSV Bobingen U17",
+            "heim": true,
+            "typ": "Meisterschaften",
+            "wettbewerb": "U 17 (B-Jun.) Bezirksoberliga Schwaben"
+          },
+          {
+            "date": "2027-03-21",
+            "time": "16:30",
+            "home": "FC Kempten",
+            "away": "SpVgg Kaufbeuren",
+            "heim": false,
+            "typ": "Freundschaftsspiele",
+            "wettbewerb": "FS/BJ/K-FS/ALGÄU/1"
+          },
+          {
+            "date": "2027-03-27",
+            "time": "11:00",
+            "home": "(SG) Erkheim/Ottobeuren/Sontheim",
+            "away": "SpVgg Kaufbeuren",
+            "heim": false,
+            "typ": "Meisterschaften",
+            "wettbewerb": "U 17 (B-Jun.) Bezirksoberliga Schwaben"
+          },
+          {
+            "date": "2027-04-04",
+            "time": "14:00",
+            "home": "SpVgg Kaufbeuren",
+            "away": "TSV Schwaben Augsburg U17",
+            "heim": true,
+            "typ": "Meisterschaften",
+            "wettbewerb": "U 17 (B-Jun.) Bezirksoberliga Schwaben"
+          },
+          {
+            "date": "2027-04-11",
+            "time": "13:30",
+            "home": "TSV Schwabmünchen U17",
+            "away": "SpVgg Kaufbeuren",
+            "heim": false,
+            "typ": "Meisterschaften",
+            "wettbewerb": "U 17 (B-Jun.) Bezirksoberliga Schwaben"
+          }
+        ],
+        "table": [
+          {
+            "pos": 1,
+            "name": "FC Memmingen 2",
+            "sp": 11,
+            "s": 10,
+            "u": 1,
+            "n": 0,
+            "diff": 38,
+            "pkt": 31,
+            "svk": false
+          },
+          {
+            "pos": 2,
+            "name": "TSV 1874 Kottern",
+            "sp": 10,
+            "s": 9,
+            "u": 0,
+            "n": 1,
+            "diff": 34,
+            "pkt": 27,
+            "svk": false
+          },
+          {
+            "pos": 3,
+            "name": "TSV Schwaben Augsburg U17",
+            "sp": 11,
+            "s": 8,
+            "u": 0,
+            "n": 3,
+            "diff": 28,
+            "pkt": 24,
+            "svk": false
+          },
+          {
+            "pos": 4,
+            "name": "(SG) Joshofen Bergheim Ried",
+            "sp": 10,
+            "s": 7,
+            "u": 1,
+            "n": 2,
+            "diff": 13,
+            "pkt": 22,
+            "svk": false
+          },
+          {
+            "pos": 5,
+            "name": "TSV Bobingen U17",
+            "sp": 11,
+            "s": 5,
+            "u": 3,
+            "n": 3,
+            "diff": 2,
+            "pkt": 18,
+            "svk": false
+          },
+          {
+            "pos": 6,
+            "name": "TSV 1896 Rain I",
+            "sp": 11,
+            "s": 5,
+            "u": 2,
+            "n": 4,
+            "diff": 0,
+            "pkt": 17,
+            "svk": false
+          },
+          {
+            "pos": 7,
+            "name": "FC 1920 Gundelfingen U17",
+            "sp": 10,
+            "s": 5,
+            "u": 0,
+            "n": 5,
+            "diff": 9,
+            "pkt": 15,
+            "svk": false
+          },
+          {
+            "pos": 8,
+            "name": "SG Dirlewang/Auerbach-Stetten",
+            "sp": 10,
+            "s": 4,
+            "u": 2,
+            "n": 4,
+            "diff": -2,
+            "pkt": 14,
+            "svk": false
+          },
+          {
+            "pos": 9,
+            "name": "FV Illertissen U16",
+            "sp": 10,
+            "s": 4,
+            "u": 2,
+            "n": 4,
+            "diff": -1,
+            "pkt": 14,
+            "svk": false
+          },
+          {
+            "pos": 10,
+            "name": "TSV Schwabmünchen U17",
+            "sp": 10,
+            "s": 4,
+            "u": 1,
+            "n": 5,
+            "diff": 1,
+            "pkt": 13,
+            "svk": false
+          },
+          {
+            "pos": 11,
+            "name": "(SG) Erkheim/Ottobeuren/Sontheim",
+            "sp": 11,
+            "s": 2,
+            "u": 1,
+            "n": 8,
+            "diff": -32,
+            "pkt": 7,
+            "svk": false
+          },
+          {
+            "pos": 12,
+            "name": "SpVgg Kaufbeuren",
+            "sp": 10,
+            "s": 1,
+            "u": 2,
+            "n": 7,
+            "diff": -18,
+            "pkt": 5,
+            "svk": true
+          },
+          {
+            "pos": 13,
+            "name": "(SG) Donau/Lech",
+            "sp": 11,
+            "s": 1,
+            "u": 0,
+            "n": 10,
+            "diff": -24,
+            "pkt": 3,
+            "svk": false
+          },
+          {
+            "pos": 14,
+            "name": "FC Thalhofen",
+            "sp": 10,
+            "s": 0,
+            "u": 1,
+            "n": 9,
+            "diff": -48,
+            "pkt": 1,
+            "svk": false
+          }
+        ]
+      }
+    ],
+    "u15": [
+      {
+        "label": "C-Jugend",
+        "bfvName": "SpVgg Kaufbeuren",
+        "wettbewerb": "U 15 (C-Jun.) Bezirksoberliga Schwaben",
+        "url": "https://www.bfv.de/mannschaften/-/016QFU6GAK000000VV0AG811VTSDEJ30",
+        "matches": [
+          {
+            "date": "2026-11-21",
+            "time": "11:30",
+            "home": "TSV Schwabmünchen U15",
+            "away": "SpVgg Kaufbeuren",
+            "heim": false,
+            "typ": "Meisterschaften",
+            "wettbewerb": "U 15 (C-Jun.) Bezirksoberliga Schwaben"
+          },
+          {
+            "date": "2026-11-29",
+            "time": "13:00",
+            "home": "SpVgg Kaufbeuren",
+            "away": "TSV Meitingen",
+            "heim": true,
+            "typ": "Meisterschaften",
+            "wettbewerb": "U 15 (C-Jun.) Bezirksoberliga Schwaben"
+          },
+          {
+            "date": "2027-03-06",
+            "time": "12:00",
+            "home": "TSV 1909 Gersthofen U15",
+            "away": "SpVgg Kaufbeuren",
+            "heim": false,
+            "typ": "Meisterschaften",
+            "wettbewerb": "U 15 (C-Jun.) Bezirksoberliga Schwaben"
+          },
+          {
+            "date": "2027-03-14",
+            "time": "13:00",
+            "home": "SpVgg Kaufbeuren",
+            "away": "FC Kempten",
+            "heim": true,
+            "typ": "Meisterschaften",
+            "wettbewerb": "U 15 (C-Jun.) Bezirksoberliga Schwaben"
+          },
+          {
+            "date": "2027-03-20",
+            "time": "11:00",
+            "home": "FC Stätzling U14",
+            "away": "SpVgg Kaufbeuren",
+            "heim": false,
+            "typ": "Meisterschaften",
+            "wettbewerb": "U 15 (C-Jun.) Bezirksoberliga Schwaben"
+          },
+          {
+            "date": "2027-04-11",
+            "time": "13:00",
+            "home": "SpVgg Kaufbeuren",
+            "away": "TSV 1896 Rain U15",
+            "heim": true,
+            "typ": "Meisterschaften",
+            "wettbewerb": "U 15 (C-Jun.) Bezirksoberliga Schwaben"
+          },
+          {
+            "date": "2027-04-17",
+            "time": "10:15",
+            "home": "TSV Königsbrunn",
+            "away": "SpVgg Kaufbeuren",
+            "heim": false,
+            "typ": "Meisterschaften",
+            "wettbewerb": "U 15 (C-Jun.) Bezirksoberliga Schwaben"
+          },
+          {
+            "date": "2027-04-25",
+            "time": "13:00",
+            "home": "SpVgg Kaufbeuren",
+            "away": "DJK Göggingen U15 I",
+            "heim": true,
+            "typ": "Meisterschaften",
+            "wettbewerb": "U 15 (C-Jun.) Bezirksoberliga Schwaben"
+          },
+          {
+            "date": "2027-05-01",
+            "time": "10:30",
+            "home": "1. FC Sonthofen",
+            "away": "SpVgg Kaufbeuren",
+            "heim": false,
+            "typ": "Meisterschaften",
+            "wettbewerb": "U 15 (C-Jun.) Bezirksoberliga Schwaben"
+          },
+          {
+            "date": "2027-05-09",
+            "time": "13:00",
+            "home": "SpVgg Kaufbeuren",
+            "away": "TSV Neusäß U15",
+            "heim": true,
+            "typ": "Meisterschaften",
+            "wettbewerb": "U 15 (C-Jun.) Bezirksoberliga Schwaben"
+          },
+          {
+            "date": "2027-06-05",
+            "time": "11:00",
+            "home": "SV Steinheim",
+            "away": "SpVgg Kaufbeuren",
+            "heim": false,
+            "typ": "Meisterschaften",
+            "wettbewerb": "U 15 (C-Jun.) Bezirksoberliga Schwaben"
+          },
+          {
+            "date": "2027-06-13",
+            "time": "13:00",
+            "home": "SpVgg Kaufbeuren",
+            "away": "TSV Schwabmünchen U15",
+            "heim": true,
+            "typ": "Meisterschaften",
+            "wettbewerb": "U 15 (C-Jun.) Bezirksoberliga Schwaben"
+          }
+        ],
+        "table": [
+          {
+            "pos": 1,
+            "name": "TSV Königsbrunn",
+            "sp": 9,
+            "s": 7,
+            "u": 1,
+            "n": 1,
+            "diff": 39,
+            "pkt": 22,
+            "svk": false
+          },
+          {
+            "pos": 2,
+            "name": "FC Kempten",
+            "sp": 9,
+            "s": 7,
+            "u": 0,
+            "n": 2,
+            "diff": 46,
+            "pkt": 21,
+            "svk": false
+          },
+          {
+            "pos": 3,
+            "name": "TSV 1909 Gersthofen U15",
+            "sp": 9,
+            "s": 5,
+            "u": 2,
+            "n": 2,
+            "diff": 21,
+            "pkt": 17,
+            "svk": false
+          },
+          {
+            "pos": 4,
+            "name": "1. FC Sonthofen",
+            "sp": 9,
+            "s": 4,
+            "u": 4,
+            "n": 1,
+            "diff": 13,
+            "pkt": 16,
+            "svk": false
+          },
+          {
+            "pos": 5,
+            "name": "TSV Neusäß U15",
+            "sp": 7,
+            "s": 5,
+            "u": 1,
+            "n": 1,
+            "diff": 11,
+            "pkt": 16,
+            "svk": false
+          },
+          {
+            "pos": 6,
+            "name": "TSV 1896 Rain U15",
+            "sp": 9,
+            "s": 5,
+            "u": 1,
+            "n": 3,
+            "diff": 9,
+            "pkt": 16,
+            "svk": false
+          },
+          {
+            "pos": 7,
+            "name": "TSV Schwabmünchen U15",
+            "sp": 8,
+            "s": 3,
+            "u": 2,
+            "n": 3,
+            "diff": 8,
+            "pkt": 11,
+            "svk": false
+          },
+          {
+            "pos": 8,
+            "name": "SV Steinheim",
+            "sp": 9,
+            "s": 3,
+            "u": 0,
+            "n": 6,
+            "diff": -12,
+            "pkt": 9,
+            "svk": false
+          },
+          {
+            "pos": 9,
+            "name": "FC Stätzling U14",
+            "sp": 9,
+            "s": 3,
+            "u": 0,
+            "n": 6,
+            "diff": -21,
+            "pkt": 9,
+            "svk": false
+          },
+          {
+            "pos": 10,
+            "name": "TSV Meitingen",
+            "sp": 9,
+            "s": 1,
+            "u": 2,
+            "n": 6,
+            "diff": -20,
+            "pkt": 5,
+            "svk": false
+          },
+          {
+            "pos": 11,
+            "name": "DJK Göggingen U15 I",
+            "sp": 8,
+            "s": 1,
+            "u": 1,
+            "n": 6,
+            "diff": -26,
+            "pkt": 4,
+            "svk": false
+          },
+          {
+            "pos": 12,
+            "name": "SpVgg Kaufbeuren",
+            "sp": 7,
+            "s": 0,
+            "u": 0,
+            "n": 7,
+            "diff": -68,
+            "pkt": 0,
+            "svk": true
+          }
+        ]
+      }
+    ],
+    "u13": [
+      {
+        "label": "D1-Jugend",
+        "bfvName": "SpVgg Kaufbeuren",
+        "wettbewerb": "U 13 (D-Jun.) KL Allgäu Nord / Herbst",
+        "url": "https://www.bfv.de/mannschaften/-/016QFRT9HG000000VV0AG80NVVPVDHC8",
+        "matches": [],
+        "table": [
+          {
+            "pos": 1,
+            "name": "FC Thalhofen",
+            "sp": 8,
+            "s": 6,
+            "u": 1,
+            "n": 1,
+            "diff": 18,
+            "pkt": 19,
+            "svk": false
+          },
+          {
+            "pos": 2,
+            "name": "SVO Germaringen",
+            "sp": 8,
+            "s": 5,
+            "u": 2,
+            "n": 1,
+            "diff": 12,
+            "pkt": 17,
+            "svk": false
+          },
+          {
+            "pos": 3,
+            "name": "FV Illertissen U12",
+            "sp": 8,
+            "s": 5,
+            "u": 2,
+            "n": 1,
+            "diff": 12,
+            "pkt": 17,
+            "svk": false
+          },
+          {
+            "pos": 4,
+            "name": "FC Memmingen 3",
+            "sp": 8,
+            "s": 4,
+            "u": 2,
+            "n": 2,
+            "diff": 7,
+            "pkt": 14,
+            "svk": false
+          },
+          {
+            "pos": 5,
+            "name": "JFG Oberes Günztal",
+            "sp": 8,
+            "s": 4,
+            "u": 1,
+            "n": 3,
+            "diff": 4,
+            "pkt": 13,
+            "svk": false
+          },
+          {
+            "pos": 6,
+            "name": "SV Salamander Türkheim D1",
+            "sp": 8,
+            "s": 4,
+            "u": 0,
+            "n": 4,
+            "diff": -2,
+            "pkt": 12,
+            "svk": false
+          },
+          {
+            "pos": 7,
+            "name": "SpVgg Kaufbeuren",
+            "sp": 8,
+            "s": 2,
+            "u": 1,
+            "n": 5,
+            "diff": -6,
+            "pkt": 7,
+            "svk": true
+          },
+          {
+            "pos": 8,
+            "name": "(SG) Tannenbichl",
+            "sp": 8,
+            "s": 1,
+            "u": 1,
+            "n": 6,
+            "diff": -4,
+            "pkt": 4,
+            "svk": false
+          },
+          {
+            "pos": 9,
+            "name": "BSK Olympia Neugablonz 2",
+            "sp": 8,
+            "s": 0,
+            "u": 0,
+            "n": 8,
+            "diff": -41,
+            "pkt": 0,
+            "svk": false
+          }
+        ]
+      }
+    ],
+    "u12": [
+      {
+        "label": "D2-Jugend",
+        "bfvName": "SpVgg Kaufbeuren U13 II",
+        "wettbewerb": "U 13 (D-Jun.) Kreisklasse Süd - Herbst 2025",
+        "url": "https://www.bfv.de/mannschaften/-/011MIC7UJK000000VTVG0001VTR8C1K7",
+        "matches": [],
+        "table": [
+          {
+            "pos": 1,
+            "name": "JFG Ostallgäu Nord",
+            "sp": 6,
+            "s": 5,
+            "u": 1,
+            "n": 0,
+            "diff": 34,
+            "pkt": 16,
+            "svk": false
+          },
+          {
+            "pos": 2,
+            "name": "FSV Marktoberdorf",
+            "sp": 6,
+            "s": 5,
+            "u": 0,
+            "n": 1,
+            "diff": 18,
+            "pkt": 15,
+            "svk": false
+          },
+          {
+            "pos": 3,
+            "name": "SV Stöttwang D1",
+            "sp": 6,
+            "s": 3,
+            "u": 2,
+            "n": 1,
+            "diff": 9,
+            "pkt": 11,
+            "svk": false
+          },
+          {
+            "pos": 4,
+            "name": "FC Füssen",
+            "sp": 6,
+            "s": 2,
+            "u": 1,
+            "n": 3,
+            "diff": -13,
+            "pkt": 7,
+            "svk": false
+          },
+          {
+            "pos": 5,
+            "name": "FC Blonhofen",
+            "sp": 5,
+            "s": 1,
+            "u": 1,
+            "n": 3,
+            "diff": -11,
+            "pkt": 4,
+            "svk": false
+          },
+          {
+            "pos": 6,
+            "name": "SpVgg Kaufbeuren U13 II",
+            "sp": 5,
+            "s": 1,
+            "u": 0,
+            "n": 4,
+            "diff": -13,
+            "pkt": 3,
+            "svk": true
+          },
+          {
+            "pos": 7,
+            "name": "SVO Germaringen 2",
+            "sp": 6,
+            "s": 0,
+            "u": 1,
+            "n": 5,
+            "diff": -24,
+            "pkt": 1,
+            "svk": false
+          }
+        ]
+      },
+      {
+        "label": "D3-Jugend",
+        "bfvName": "SpVgg Kaufbeuren 3",
+        "wettbewerb": "U13 (D-Jun.) Gruppe 11 - Herbst 2026",
+        "url": "https://www.bfv.de/mannschaften/-/031AKVV2KS000000VS5489BSVU0ORN69",
+        "matches": [],
+        "table": [
+          {
+            "pos": 1,
+            "name": "SpVgg Kaufbeuren 3",
+            "sp": 7,
+            "s": 7,
+            "u": 0,
+            "n": 0,
+            "diff": 48,
+            "pkt": 21,
+            "svk": true
+          },
+          {
+            "pos": 2,
+            "name": "FC Bad Wörishofen 3",
+            "sp": 7,
+            "s": 5,
+            "u": 1,
+            "n": 1,
+            "diff": 19,
+            "pkt": 16,
+            "svk": false
+          },
+          {
+            "pos": 3,
+            "name": "TSV Mindelheim D3",
+            "sp": 7,
+            "s": 5,
+            "u": 1,
+            "n": 1,
+            "diff": 14,
+            "pkt": 16,
+            "svk": false
+          },
+          {
+            "pos": 4,
+            "name": "SG Flossachtal",
+            "sp": 7,
+            "s": 3,
+            "u": 0,
+            "n": 4,
+            "diff": -6,
+            "pkt": 9,
+            "svk": false
+          },
+          {
+            "pos": 5,
+            "name": "TSV Oberbeuren 2",
+            "sp": 7,
+            "s": 3,
+            "u": 0,
+            "n": 4,
+            "diff": -14,
+            "pkt": 9,
+            "svk": false
+          },
+          {
+            "pos": 6,
+            "name": "JFG Ostallgäu Nord 3",
+            "sp": 7,
+            "s": 2,
+            "u": 0,
+            "n": 5,
+            "diff": -5,
+            "pkt": 6,
+            "svk": false
+          },
+          {
+            "pos": 7,
+            "name": "JFG Wertachtal 2",
+            "sp": 7,
+            "s": 1,
+            "u": 0,
+            "n": 6,
+            "diff": -36,
+            "pkt": 3,
+            "svk": false
+          },
+          {
+            "pos": 8,
+            "name": "FC Buchloe 3",
+            "sp": 7,
+            "s": 1,
+            "u": 0,
+            "n": 6,
+            "diff": -20,
+            "pkt": 3,
+            "svk": false
+          }
+        ]
+      }
+    ],
+    "u11": [
+      {
+        "label": "E1-Jugend",
+        "bfvName": "SpVgg Kaufbeuren",
+        "wettbewerb": "E Junioren Gruppe 4",
+        "url": "https://www.bfv.de/mannschaften/-/011MICU6US000000VTVG0001VTR8C1K7",
+        "matches": [],
+        "table": [
+          {
+            "pos": 1,
+            "name": "FC Jengen",
+            "sp": 6,
+            "s": 6,
+            "u": 0,
+            "n": 0,
+            "diff": 26,
+            "pkt": 18,
+            "svk": false
+          },
+          {
+            "pos": 2,
+            "name": "BSK Olympia Neugablonz 2",
+            "sp": 6,
+            "s": 5,
+            "u": 0,
+            "n": 1,
+            "diff": 32,
+            "pkt": 15,
+            "svk": false
+          },
+          {
+            "pos": 3,
+            "name": "SpVgg Kaufbeuren",
+            "sp": 6,
+            "s": 4,
+            "u": 0,
+            "n": 2,
+            "diff": 26,
+            "pkt": 12,
+            "svk": true
+          },
+          {
+            "pos": 4,
+            "name": "FSV Lamerdingen 2",
+            "sp": 6,
+            "s": 3,
+            "u": 0,
+            "n": 3,
+            "diff": -15,
+            "pkt": 9,
+            "svk": false
+          },
+          {
+            "pos": 5,
+            "name": "TV Waal",
+            "sp": 6,
+            "s": 2,
+            "u": 0,
+            "n": 4,
+            "diff": -15,
+            "pkt": 6,
+            "svk": false
+          },
+          {
+            "pos": 6,
+            "name": "FC Buchloe 2",
+            "sp": 6,
+            "s": 1,
+            "u": 0,
+            "n": 5,
+            "diff": -10,
+            "pkt": 3,
+            "svk": false
+          },
+          {
+            "pos": 7,
+            "name": "FC Blonhofen 2",
+            "sp": 6,
+            "s": 0,
+            "u": 0,
+            "n": 6,
+            "diff": -44,
+            "pkt": 0,
+            "svk": false
+          }
+        ]
+      },
+      {
+        "label": "E-Jugend Halle",
+        "bfvName": "SpVgg Kaufbeuren",
+        "wettbewerb": "",
+        "url": "https://www.bfv.de/mannschaften/-/02JGRP01SK000000VS5489B2VU644FQC",
+        "matches": [
+          {
+            "date": "2026-11-29",
+            "time": "10:08",
+            "home": "FC 98 Auerbach-Stetten",
+            "away": "SpVgg Kaufbeuren",
+            "heim": false,
+            "typ": "Hallenturniere (Futsal)",
+            "wettbewerb": "Turnier2-Quali E-Jugend -Oberbeuren"
+          },
+          {
+            "date": "2026-11-29",
+            "time": "10:48",
+            "home": "SpVgg Kaufbeuren",
+            "away": "FSV Kirchdorf",
+            "heim": true,
+            "typ": "Hallenturniere (Futsal)",
+            "wettbewerb": "Turnier2-Quali E-Jugend -Oberbeuren"
+          },
+          {
+            "date": "2026-11-29",
+            "time": "11:28",
+            "home": "FC 07 Memmingen",
+            "away": "SpVgg Kaufbeuren",
+            "heim": false,
+            "typ": "Hallenturniere (Futsal)",
+            "wettbewerb": "Turnier2-Quali E-Jugend -Oberbeuren"
+          },
+          {
+            "date": "2026-11-29",
+            "time": "12:00",
+            "home": "SpVgg Kaufbeuren",
+            "away": "FSV Dirlewang",
+            "heim": true,
+            "typ": "Hallenturniere (Futsal)",
+            "wettbewerb": "Turnier2-Quali E-Jugend -Oberbeuren"
+          },
+          {
+            "date": "2026-11-29",
+            "time": "12:24",
+            "home": "TSV Ottobeuren",
+            "away": "SpVgg Kaufbeuren",
+            "heim": false,
+            "typ": "Hallenturniere (Futsal)",
+            "wettbewerb": "Turnier2-Quali E-Jugend -Oberbeuren"
+          },
+          {
+            "date": "2026-11-29",
+            "time": "12:48",
+            "home": "SpVgg Kaufbeuren",
+            "away": "SG Amberg-Wiedergeltingen 1",
+            "heim": true,
+            "typ": "Hallenturniere (Futsal)",
+            "wettbewerb": "Turnier2-Quali E-Jugend -Oberbeuren"
+          },
+          {
+            "date": "2026-11-29",
+            "time": "13:12",
+            "home": "SpVgg Kaufbeuren",
+            "away": "(SG) Bedernau",
+            "heim": true,
+            "typ": "Hallenturniere (Futsal)",
+            "wettbewerb": "Turnier2-Quali E-Jugend -Oberbeuren"
+          }
+        ],
+        "table": []
+      }
+    ],
+    "u10": [
+      {
+        "label": "E2-Jugend",
+        "bfvName": "SpVgg Kaufbeuren 2",
+        "wettbewerb": "E Junioren Gruppe 17",
+        "url": "https://www.bfv.de/mannschaften/-/02IDJ5S9JK000000VS5489B1VUG7QVAU",
+        "matches": [],
+        "table": [
+          {
+            "pos": 1,
+            "name": "FC Thingau e.V. 2",
+            "sp": 7,
+            "s": 5,
+            "u": 1,
+            "n": 1,
+            "diff": 26,
+            "pkt": 16,
+            "svk": false
+          },
+          {
+            "pos": 2,
+            "name": "TSV Ruderatshofen/Aitrang",
+            "sp": 7,
+            "s": 5,
+            "u": 0,
+            "n": 2,
+            "diff": 26,
+            "pkt": 15,
+            "svk": false
+          },
+          {
+            "pos": 3,
+            "name": "SpVgg Kaufbeuren 2",
+            "sp": 6,
+            "s": 5,
+            "u": 0,
+            "n": 1,
+            "diff": 10,
+            "pkt": 15,
+            "svk": true
+          },
+          {
+            "pos": 4,
+            "name": "SV Oberostendorf",
+            "sp": 7,
+            "s": 3,
+            "u": 1,
+            "n": 3,
+            "diff": 12,
+            "pkt": 10,
+            "svk": false
+          },
+          {
+            "pos": 5,
+            "name": "FC Jengen 2",
+            "sp": 7,
+            "s": 3,
+            "u": 0,
+            "n": 4,
+            "diff": 2,
+            "pkt": 9,
+            "svk": false
+          },
+          {
+            "pos": 6,
+            "name": "SV Stöttwang E2",
+            "sp": 6,
+            "s": 3,
+            "u": 0,
+            "n": 3,
+            "diff": -31,
+            "pkt": 9,
+            "svk": false
+          },
+          {
+            "pos": 7,
+            "name": "SpVgg Rieden",
+            "sp": 7,
+            "s": 2,
+            "u": 0,
+            "n": 5,
+            "diff": 2,
+            "pkt": 6,
+            "svk": false
+          },
+          {
+            "pos": 8,
+            "name": "SV Mauerstetten 2",
+            "sp": 7,
+            "s": 0,
+            "u": 0,
+            "n": 7,
+            "diff": -47,
+            "pkt": 0,
+            "svk": false
+          }
+        ]
+      }
+    ],
+    "u09": [
+      {
+        "label": "F1-Jugend",
+        "bfvName": "SpVgg Kaufbeuren",
+        "wettbewerb": "",
+        "url": "https://www.bfv.de/mannschaften/-/02BDTKLGG8000000VS5489B1VTPVH7C1",
+        "matches": [],
+        "table": []
+      }
+    ],
+    "u08": [
+      {
+        "label": "F2-Jugend",
+        "bfvName": "SpVgg Kaufbeuren 2",
+        "wettbewerb": "",
+        "url": "https://www.bfv.de/mannschaften/-/02BDTL2GMC000000VS5489B1VTPVH7C1",
+        "matches": [],
+        "table": []
+      }
+    ],
+    "g-jugend": [
+      {
+        "label": "G1",
+        "bfvName": "SpVgg Kaufbeuren",
+        "wettbewerb": "",
+        "url": "https://www.bfv.de/mannschaften/-/02M579CT50000000VS5489B1VT732LUQ",
+        "matches": [],
+        "table": []
+      },
+      {
+        "label": "G2",
+        "bfvName": "SpVgg Kaufbeuren 2",
+        "wettbewerb": "",
+        "url": "https://www.bfv.de/mannschaften/-/031B9FHU5G000000VS5489BSVU0ORN69",
+        "matches": [],
+        "table": []
+      }
+    ]
+  }
+}
