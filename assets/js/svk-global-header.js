@@ -56,6 +56,10 @@
           <div class="svk-global-toplinks">
             <a href="${base}verein/kontakt.html">Kontakt</a>
             <a href="${base}sponsoren.html">Partner</a>
+            <a class="svk-insta-top" href="https://www.instagram.com/spvgg_kaufbeuren/" target="_blank" rel="noopener"
+               aria-label="SpVgg Kaufbeuren auf Instagram" title="SpVgg Kaufbeuren auf Instagram">
+              <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"/></svg>
+            </a>
             <a class="svk-login-link" href="${base}admin/index.html" data-svk-login="1" title="Redaktion anmelden">
               <span class="svk-login-icon" aria-hidden="true">↪</span>
               Anmelden
@@ -244,6 +248,74 @@
     document.addEventListener("DOMContentLoaded", installCopyright);
   } else {
     installCopyright();
+  }
+})();
+/* Site-wide Instagram links: Symbol in der Kopfleiste (oben) und Leiste vor dem Fußbereich. */
+(() => {
+  const ICON = '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"/></svg>';
+  const ACCOUNTS = [
+    { key: "verein", label: "Verein & Herren", handle: "spvgg_kaufbeuren" },
+    { key: "jugend", label: "Junioren", handle: "spvgg_kaufbeuren_junioren" },
+    { key: "frauen", label: "Frauen", handle: "svk_frauen" }
+  ];
+  const CSS = `
+.svk-insta-top{display:inline-flex!important;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;color:#fff!important;background:#ffffff12;border:1px solid #ffffff50}
+.svk-insta-top:hover{background:#fff;color:#075eb4!important}
+.svk-social{background:#f2f6fb;border-top:1px solid #dce5ef;padding:44px 0;font-family:Inter,Arial,sans-serif;color:#122033}
+.svk-social *{box-sizing:border-box}
+.svk-social-inner{width:min(1180px,calc(100% - 36px));margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:22px 34px;flex-wrap:wrap}
+.svk-social-text span{display:block;color:#0753a5;font-size:12px;font-weight:900;letter-spacing:.14em;text-transform:uppercase}
+.svk-social-text strong{display:block;margin-top:6px;font-size:clamp(22px,2.6vw,28px);letter-spacing:-.03em;color:#021f46}
+.svk-social-links{display:flex;gap:12px;flex-wrap:wrap}
+.svk-social-links a{display:flex;align-items:center;gap:11px;padding:11px 16px 11px 12px;border:1px solid #dce5ef;border-radius:14px;background:#fff;color:#021f46;text-decoration:none;box-shadow:0 8px 22px rgba(2,31,70,.06);transition:.2s}
+.svk-social-links a:hover{transform:translateY(-2px);border-color:#0753a5}
+.svk-social-links a.is-current{border-color:#0753a5;box-shadow:0 0 0 2px #0753a533,0 8px 22px rgba(2,31,70,.06)}
+.svk-social-icon{flex:none;display:grid;place-items:center;width:38px;height:38px;border-radius:11px;color:#fff;background:linear-gradient(135deg,#0753a5,#021f46)}
+.svk-social-links b{display:block;font-size:14px;font-weight:900;line-height:1.2}
+.svk-social-links small{display:block;margin-top:2px;color:#66758a;font-size:12px;line-height:1.2}
+@media(max-width:700px){.svk-social{padding:34px 0}.svk-social-links{width:100%;flex-direction:column}.svk-social-links a{width:100%}}
+`;
+
+  function installSocial() {
+    if (document.getElementById("svk-social")) return;
+    if (!document.querySelector(".svk-global-header")) return;
+    const style = document.createElement("style");
+    style.textContent = CSS;
+    document.head.appendChild(style);
+
+    // Redaktions- und App-Seiten bekommen nur das Symbol oben, keine Leiste
+    const path = window.location.pathname.toLowerCase();
+    if (/\/(admin|redaktion|jugendapp)\b|redaktion\.html/.test(path)) return;
+
+    const current = path.includes("/jugend/") ? "jugend" : path.includes("/frauen/") ? "frauen" : "verein";
+    // Der Kanal, der zur aktuellen Seite passt, steht vorne
+    const list = [...ACCOUNTS].sort((a, b) => (b.key === current) - (a.key === current));
+
+    const section = document.createElement("section");
+    section.id = "svk-social";
+    section.className = "svk-social";
+    section.setAttribute("aria-label", "SpVgg Kaufbeuren auf Instagram");
+    section.innerHTML = `<div class="svk-social-inner">
+      <div class="svk-social-text"><span>Instagram</span><strong>Folgt der SVK</strong></div>
+      <div class="svk-social-links">${list.map(a => `
+        <a href="https://www.instagram.com/${a.handle}/" target="_blank" rel="noopener"${a.key === current ? ' class="is-current"' : ""}>
+          <span class="svk-social-icon">${ICON}</span>
+          <span><b>${a.label}</b><small>@${a.handle}</small></span>
+        </a>`).join("")}
+      </div></div>`;
+
+    const footers = [...document.querySelectorAll("footer")].filter(f => !f.closest(".svk-global-header"));
+    const footer = footers[footers.length - 1];
+    const copyright = document.getElementById("svk-copyright");
+    if (footer) footer.before(section);
+    else if (copyright) copyright.before(section);
+    else document.body.append(section);
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", installSocial);
+  } else {
+    installSocial();
   }
 })();
 
