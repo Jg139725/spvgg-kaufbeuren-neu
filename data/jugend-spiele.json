@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-11-13T19:59:53.264263+00:00",
+  "updatedAt": "2026-11-15T15:01:18.070203+00:00",
   "source": "https://service.bfv.de/rest/pdfexport/vereinsspiele?id=00ES8GNJE4000007VV0AG08LVUPGND5I",
-  "zeitraumAb": "2026-11-14",
+  "zeitraumAb": "2026-11-20",
   "games": [
     {
       "altersklasse": "B-Junioren",
@@ -297,6 +297,24 @@
         "u17"
       ],
       "id": "2026-11-29-15-30-b-junioren-spvgg-kaufbeuren-fc-thalhofen"
+    },
+    {
+      "altersklasse": "B-Junioren",
+      "typ": "Freundschaftsspiel",
+      "wettbewerb": "Freundschaftsspiele",
+      "date": "2027-02-05",
+      "time": "17:00",
+      "home": "FC Füssen",
+      "away": "SpVgg Kaufbeuren",
+      "venue": "LVM-Fußballpark -Kunstrasen,Rotwandweg 15,87629 Füssen",
+      "geaendert": false,
+      "heim": false,
+      "svk_team": "SpVgg Kaufbeuren",
+      "gegner": "FC Füssen",
+      "teams": [
+        "u17"
+      ],
+      "id": "2027-02-05-17-00-b-junioren-fc-f-ssen-spvgg-kaufbeuren"
     },
     {
       "altersklasse": "B-Junioren",
