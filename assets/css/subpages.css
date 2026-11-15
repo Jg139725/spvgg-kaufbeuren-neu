@@ -62,7 +62,7 @@ a{text-decoration:none;color:inherit}
   box-shadow:0 14px 38px rgba(2,31,70,.07);transition:.25s
 }
 .quick-card:hover,.content-card:hover,.news-card:hover{transform:translateY(-5px);border-color:var(--svk-blue)}
-.quick-card{min-height:185px;padding:26px;display:flex;flex-direction:column;justify-content:flex-end}
+.quick-card{min-height:185px;padding:26px;display:flex;flex-direction:column;justify-content:flex-start}
 .quick-card span{color:var(--svk-blue);font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.12em}
 .quick-card strong{font-size:27px;margin:8px 0}
 .quick-card p,.content-card p,.news-card p{color:var(--svk-muted);line-height:1.6}
