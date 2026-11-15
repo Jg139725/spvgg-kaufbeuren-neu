@@ -6,3 +6,8 @@
 .score strong{font-size:17px;line-height:1.25;overflow-wrap:break-word;-webkit-hyphens:auto;hyphens:auto}
 .score b{font-size:20px;padding:10px}
 }
+/* Vereinswappen in "Aktueller Spieltag" */
+.score strong{display:flex;flex-direction:column;align-items:flex-start;gap:10px}
+.score strong:last-child{align-items:flex-end}
+.lc-crest{width:46px;height:46px;object-fit:contain;flex:none}
+.next .lc-crest{box-sizing:content-box;padding:6px;border-radius:14px;background:#fff}
