@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-15T11:16:14.710757+00:00",
+  "updatedAt": "2026-11-15T17:52:16.404703+00:00",
   "source": "https://www.bfv.de/mannschaften/-/016PILCMSS000000VV0AG80NVUT1FLRU",
   "fixtures": [
     {
@@ -332,13 +332,13 @@
     {
       "pos": 2,
       "team": "SV Mering",
-      "played": 17,
+      "played": 18,
       "won": 10,
-      "drawn": 5,
+      "drawn": 6,
       "lost": 2,
       "goals": "45:27",
       "diff": "18",
-      "points": 35
+      "points": 36
     },
     {
       "pos": 3,
@@ -364,6 +364,17 @@
     },
     {
       "pos": 5,
+      "team": "TSV Merching",
+      "played": 17,
+      "won": 9,
+      "drawn": 3,
+      "lost": 5,
+      "goals": "30:19",
+      "diff": "11",
+      "points": 30
+    },
+    {
+      "pos": 6,
       "team": "FC Königsbrunn",
       "played": 18,
       "won": 8,
@@ -374,25 +385,14 @@
       "points": 28
     },
     {
-      "pos": 6,
-      "team": "TSV Merching",
-      "played": 16,
-      "won": 8,
-      "drawn": 3,
-      "lost": 5,
-      "goals": "26:19",
-      "diff": "7",
-      "points": 27
-    },
-    {
       "pos": 7,
       "team": "TV Erkheim",
-      "played": 17,
+      "played": 18,
       "won": 8,
       "drawn": 3,
-      "lost": 6,
-      "goals": "42:37",
-      "diff": "5",
+      "lost": 7,
+      "goals": "42:41",
+      "diff": "1",
       "points": 27
     },
     {
@@ -420,46 +420,46 @@
     {
       "pos": 10,
       "team": "TSV 1892 Haunstetten",
-      "played": 17,
-      "won": 5,
+      "played": 18,
+      "won": 6,
       "drawn": 4,
       "lost": 8,
-      "goals": "33:36",
-      "diff": "-3",
-      "points": 19
+      "goals": "34:36",
+      "diff": "-2",
+      "points": 22
     },
     {
       "pos": 11,
-      "team": "TSV Kammlach",
-      "played": 17,
-      "won": 5,
+      "team": "SVO Germaringen",
+      "played": 18,
+      "won": 6,
       "drawn": 3,
       "lost": 9,
-      "goals": "33:46",
-      "diff": "-13",
-      "points": 18
+      "goals": "25:37",
+      "diff": "-12",
+      "points": 21
     },
     {
       "pos": 12,
-      "team": "SVO Germaringen",
-      "played": 17,
+      "team": "TSV Kammlach",
+      "played": 18,
       "won": 5,
       "drawn": 3,
-      "lost": 9,
-      "goals": "24:37",
-      "diff": "-13",
+      "lost": 10,
+      "goals": "33:47",
+      "diff": "-14",
       "points": 18
     },
     {
       "pos": 13,
       "team": "FC Wiggensbach",
-      "played": 17,
+      "played": 18,
       "won": 4,
-      "drawn": 4,
+      "drawn": 5,
       "lost": 9,
       "goals": "21:32",
       "diff": "-11",
-      "points": 16
+      "points": 17
     },
     {
       "pos": 14,
@@ -486,12 +486,12 @@
     {
       "pos": 16,
       "team": "FC Bad Wörishofen",
-      "played": 17,
+      "played": 18,
       "won": 3,
       "drawn": 3,
-      "lost": 11,
-      "goals": "17:43",
-      "diff": "-26",
+      "lost": 12,
+      "goals": "17:44",
+      "diff": "-27",
       "points": 12
     }
   ]
