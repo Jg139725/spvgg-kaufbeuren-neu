@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-15T23:00:00.844780+00:00",
+  "updatedAt": "2026-11-16T02:53:00.961095+00:00",
   "source": "https://www.bfv.de/mannschaften/-/016PILCMSS000000VV0AG80NVUT1FLRU",
   "fixtures": [
     {
@@ -430,23 +430,23 @@
     },
     {
       "pos": 11,
-      "team": "SVO Germaringen",
-      "played": 18,
-      "won": 5,
-      "drawn": 4,
-      "lost": 9,
-      "goals": "25:38",
-      "diff": "-13",
-      "points": 19
-    },
-    {
-      "pos": 12,
       "team": "TSV Kammlach",
       "played": 18,
       "won": 5,
       "drawn": 4,
       "lost": 9,
       "goals": "34:47",
+      "diff": "-13",
+      "points": 19
+    },
+    {
+      "pos": 12,
+      "team": "SVO Germaringen",
+      "played": 18,
+      "won": 5,
+      "drawn": 4,
+      "lost": 9,
+      "goals": "25:38",
       "diff": "-13",
       "points": 19
     },
