@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-15T15:01:18.070203+00:00",
+  "updatedAt": "2026-11-18T12:12:27.698936+00:00",
   "source": "https://service.bfv.de/rest/pdfexport/vereinsspiele?id=00ES8GNJE4000007VV0AG08LVUPGND5I",
   "zeitraumAb": "2026-11-20",
   "games": [
@@ -297,6 +297,139 @@
         "u17"
       ],
       "id": "2026-11-29-15-30-b-junioren-spvgg-kaufbeuren-fc-thalhofen"
+    },
+    {
+      "altersklasse": "F-Junioren",
+      "typ": "Hallenturnier",
+      "wettbewerb": "Hallen-Kreisturnier",
+      "date": "2026-12-06",
+      "time": "10:08",
+      "home": "FC Buchloe",
+      "away": "SpVgg Kaufbeuren",
+      "venue": "Haupt- und Realschule Buchloe,Münchener Str. 22,86807 Buchloe",
+      "geaendert": false,
+      "heim": false,
+      "svk_team": "SpVgg Kaufbeuren",
+      "gegner": "FC Buchloe",
+      "teams": [
+        "u09",
+        "u08"
+      ],
+      "id": "2026-12-06-10-08-f-junioren-fc-buchloe-spvgg-kaufbeuren"
+    },
+    {
+      "altersklasse": "F-Junioren",
+      "typ": "Hallenturnier",
+      "wettbewerb": "Hallen-Kreisturnier",
+      "date": "2026-12-06",
+      "time": "10:48",
+      "home": "SpVgg Kaufbeuren",
+      "away": "SV Oberostendorf",
+      "venue": "Haupt- und Realschule Buchloe,Münchener Str. 22,86807 Buchloe",
+      "geaendert": false,
+      "heim": true,
+      "svk_team": "SpVgg Kaufbeuren",
+      "gegner": "SV Oberostendorf",
+      "teams": [
+        "u09",
+        "u08"
+      ],
+      "id": "2026-12-06-10-48-f-junioren-spvgg-kaufbeuren-sv-oberostendorf"
+    },
+    {
+      "altersklasse": "F-Junioren",
+      "typ": "Hallenturnier",
+      "wettbewerb": "Hallen-Kreisturnier",
+      "date": "2026-12-06",
+      "time": "11:28",
+      "home": "FC Jengen",
+      "away": "SpVgg Kaufbeuren",
+      "venue": "Haupt- und Realschule Buchloe,Münchener Str. 22,86807 Buchloe",
+      "geaendert": false,
+      "heim": false,
+      "svk_team": "SpVgg Kaufbeuren",
+      "gegner": "FC Jengen",
+      "teams": [
+        "u09",
+        "u08"
+      ],
+      "id": "2026-12-06-11-28-f-junioren-fc-jengen-spvgg-kaufbeuren"
+    },
+    {
+      "altersklasse": "F-Junioren",
+      "typ": "Hallenturnier",
+      "wettbewerb": "Hallen-Kreisturnier",
+      "date": "2026-12-06",
+      "time": "12:00",
+      "home": "SpVgg Kaufbeuren",
+      "away": "FC Blonhofen",
+      "venue": "Haupt- und Realschule Buchloe,Münchener Str. 22,86807 Buchloe",
+      "geaendert": false,
+      "heim": true,
+      "svk_team": "SpVgg Kaufbeuren",
+      "gegner": "FC Blonhofen",
+      "teams": [
+        "u09",
+        "u08"
+      ],
+      "id": "2026-12-06-12-00-f-junioren-spvgg-kaufbeuren-fc-blonhofen"
+    },
+    {
+      "altersklasse": "F-Junioren",
+      "typ": "Hallenturnier",
+      "wettbewerb": "Hallen-Kreisturnier",
+      "date": "2026-12-06",
+      "time": "12:24",
+      "home": "TV Waal",
+      "away": "SpVgg Kaufbeuren",
+      "venue": "Haupt- und Realschule Buchloe,Münchener Str. 22,86807 Buchloe",
+      "geaendert": false,
+      "heim": false,
+      "svk_team": "SpVgg Kaufbeuren",
+      "gegner": "TV Waal",
+      "teams": [
+        "u09",
+        "u08"
+      ],
+      "id": "2026-12-06-12-24-f-junioren-tv-waal-spvgg-kaufbeuren"
+    },
+    {
+      "altersklasse": "F-Junioren",
+      "typ": "Hallenturnier",
+      "wettbewerb": "Hallen-Kreisturnier",
+      "date": "2026-12-06",
+      "time": "12:48",
+      "home": "SpVgg Kaufbeuren",
+      "away": "SC Lindenberg",
+      "venue": "Haupt- und Realschule Buchloe,Münchener Str. 22,86807 Buchloe",
+      "geaendert": false,
+      "heim": true,
+      "svk_team": "SpVgg Kaufbeuren",
+      "gegner": "SC Lindenberg",
+      "teams": [
+        "u09",
+        "u08"
+      ],
+      "id": "2026-12-06-12-48-f-junioren-spvgg-kaufbeuren-sc-lindenberg"
+    },
+    {
+      "altersklasse": "F-Junioren",
+      "typ": "Hallenturnier",
+      "wettbewerb": "Hallen-Kreisturnier",
+      "date": "2026-12-06",
+      "time": "13:12",
+      "home": "SpVgg Kaufbeuren",
+      "away": "SV Stöttwang",
+      "venue": "Haupt- und Realschule Buchloe,Münchener Str. 22,86807 Buchloe",
+      "geaendert": false,
+      "heim": true,
+      "svk_team": "SpVgg Kaufbeuren",
+      "gegner": "SV Stöttwang",
+      "teams": [
+        "u09",
+        "u08"
+      ],
+      "id": "2026-12-06-13-12-f-junioren-spvgg-kaufbeuren-sv-st-ttwang"
     },
     {
       "altersklasse": "B-Junioren",
