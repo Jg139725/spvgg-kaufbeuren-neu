@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-15T23:09:20.287924+00:00",
+  "updatedAt": "2026-11-18T20:53:06.860423+00:00",
   "source": "https://www.bfv.de",
   "teams": {
     "herren": [
@@ -745,6 +745,17 @@
             "awayLogo": "00ES8GNJJ400000RVV0AG08LVUPGND5I"
           },
           {
+            "date": "2027-02-28",
+            "time": "14:00",
+            "home": "TSV Gilching/Argelsried U17 W",
+            "away": "SpVgg Kaufbeuren",
+            "heim": false,
+            "typ": "Freundschaftsspiele",
+            "wettbewerb": "FS/BM/L-FS/BAY/1",
+            "homeLogo": "00ES8GNH80000005VV0AG08LVUPGND5I",
+            "awayLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I"
+          },
+          {
             "date": "2027-03-13",
             "time": "16:00",
             "home": "SpVgg Kaufbeuren",
@@ -853,17 +864,6 @@
             "wettbewerb": "Frauen BOL",
             "homeLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I",
             "awayLogo": "00ES8GNJLK000001VV0AG08LVUPGND5I"
-          },
-          {
-            "date": "2027-06-02",
-            "time": "19:00",
-            "home": "SV Wechingen 1",
-            "away": "SpVgg Kaufbeuren",
-            "heim": false,
-            "typ": "Meisterschaften",
-            "wettbewerb": "Frauen BOL",
-            "homeLogo": "00ES8GNJJ4000001VV0AG08LVUPGND5I",
-            "awayLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I"
           }
         ],
         "results": [
@@ -1994,6 +1994,18 @@
           },
           {
             "pos": 10,
+            "name": "DJK Göggingen U15 I",
+            "sp": 9,
+            "s": 2,
+            "u": 1,
+            "n": 6,
+            "diff": -24,
+            "pkt": 7,
+            "svk": false,
+            "logo": "00ES8GNJ7S00000QVV0AG08LVUPGND5I"
+          },
+          {
+            "pos": 11,
             "name": "TSV Meitingen",
             "sp": 9,
             "s": 1,
@@ -2005,25 +2017,13 @@
             "logo": "00ES8GNJKC00000MVV0AG08LVUPGND5I"
           },
           {
-            "pos": 11,
-            "name": "DJK Göggingen U15 I",
-            "sp": 8,
-            "s": 1,
-            "u": 1,
-            "n": 6,
-            "diff": -26,
-            "pkt": 4,
-            "svk": false,
-            "logo": "00ES8GNJ7S00000QVV0AG08LVUPGND5I"
-          },
-          {
             "pos": 12,
             "name": "SpVgg Kaufbeuren",
-            "sp": 7,
+            "sp": 8,
             "s": 0,
             "u": 0,
-            "n": 7,
-            "diff": -68,
+            "n": 8,
+            "diff": -70,
             "pkt": 0,
             "svk": true,
             "logo": "00ES8GNJE4000007VV0AG08LVUPGND5I"
