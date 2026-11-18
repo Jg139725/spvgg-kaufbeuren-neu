@@ -26,7 +26,7 @@
 }
 .team-choice-grid{
   display:grid;
-  grid-template-columns:1fr 1fr;
+  grid-template-columns:repeat(3,1fr);
   gap:22px;
 }
 .team-choice-card{
@@ -77,6 +77,9 @@
 .team-choice-card.second p,
 .team-choice-card.second strong{
   color:#dceaff;
+}
+@media(max-width:1000px){
+  .team-choice-grid{grid-template-columns:1fr 1fr}
 }
 @media(max-width:720px){
   .team-choice-grid{grid-template-columns:1fr}
