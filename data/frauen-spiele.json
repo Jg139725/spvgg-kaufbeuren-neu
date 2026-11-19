@@ -17,6 +17,18 @@
       "url": "https://www.bfv.de/ergebnisse/spiel/-/032E1MQ4C4000000VS5489BUVSGKI48U"
     },
     {
+      "id": "032OB6JG08000000VS5489BUVT7T9F23",
+      "date": "2027-02-28",
+      "time": "14:00",
+      "home": "TSV Gilching/ Argelsried U17 W",
+      "away": "SpVgg Kaufbeuren",
+      "score": null,
+      "venue": "Sportanlage Gilching, Kunstrasen | Talhofstr. 13 | 82205 Gilching",
+      "status": "",
+      "cancelled": false,
+      "url": "https://www.bfv.de/ergebnisse/spiel/-/032OB6JG08000000VS5489BUVT7T9F23"
+    },
+    {
       "id": "031FPO43NO000000VS5489BUVSJ4CRAP",
       "date": "2027-03-13",
       "time": "16:00",
@@ -51,18 +63,6 @@
       "status": "",
       "cancelled": false,
       "url": "https://www.bfv.de/ergebnisse/spiel/-/031FPO491S000000VS5489BUVSJ4CRAP"
-    },
-    {
-      "id": "031FPO48PS000000VS5489BUVSJ4CRAP",
-      "date": "2027-04-10",
-      "time": "16:00",
-      "home": "SpVgg Kaufbeuren",
-      "away": "TSV Ottobeuren",
-      "score": null,
-      "venue": "Parkstadion Kaufbeuren | Berliner Platz 6 | 87600 Kaufbeuren",
-      "status": "",
-      "cancelled": false,
-      "url": "https://www.bfv.de/ergebnisse/spiel/-/031FPO48PS000000VS5489BUVSJ4CRAP"
     }
   ],
   "nextGame": {
@@ -212,5 +212,5 @@
       "points": 1
     }
   ],
-  "updatedAt": "2026-11-15T17:19:55+00:00"
+  "updatedAt": "2026-11-19T02:43:53+00:00"
 }
