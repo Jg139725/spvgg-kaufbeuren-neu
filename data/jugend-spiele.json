@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-11-18T12:12:27.698936+00:00",
+  "updatedAt": "2026-11-20T20:41:40.124285+00:00",
   "source": "https://service.bfv.de/rest/pdfexport/vereinsspiele?id=00ES8GNJE4000007VV0AG08LVUPGND5I",
-  "zeitraumAb": "2026-11-20",
+  "zeitraumAb": "2026-11-21",
   "games": [
     {
       "altersklasse": "B-Junioren",
@@ -74,24 +74,6 @@
         "u17"
       ],
       "id": "2026-11-20-18-00-b-junioren-sg-donau-lech-spvgg-kaufbeuren"
-    },
-    {
-      "altersklasse": "A-Junioren",
-      "typ": "Punktspiel",
-      "wettbewerb": "Kreisliga",
-      "date": "2026-11-21",
-      "time": "11:00",
-      "home": "SpVgg Kaufbeuren",
-      "away": "(SG) TSV Ottobeuren",
-      "venue": "Parkstadion Kaufbeuren,Berliner Platz 6,87600 Kaufbeuren",
-      "geaendert": false,
-      "heim": true,
-      "svk_team": "SpVgg Kaufbeuren",
-      "gegner": "(SG) TSV Ottobeuren",
-      "teams": [
-        "u19"
-      ],
-      "id": "2026-11-21-11-00-a-junioren-spvgg-kaufbeuren-sg-tsv-ottobeuren"
     },
     {
       "altersklasse": "C-Junioren",

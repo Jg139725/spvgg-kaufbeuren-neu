@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-20T12:08:29.506079+00:00",
+  "updatedAt": "2026-11-20T20:41:50.840349+00:00",
   "source": "https://www.bfv.de",
   "teams": {
     "herren": [
@@ -938,6 +938,18 @@
           },
           {
             "pos": 4,
+            "name": "FSV Wehringen 1",
+            "sp": 8,
+            "s": 4,
+            "u": 2,
+            "n": 2,
+            "diff": 2,
+            "pkt": 14,
+            "svk": false,
+            "logo": "00ES8GNJAC000010VV0AG08LVUPGND5I"
+          },
+          {
+            "pos": 5,
             "name": "TSV Ottobeuren",
             "sp": 8,
             "s": 4,
@@ -949,7 +961,7 @@
             "logo": "00ES8GNJ4400000EVV0AG08LVUPGND5I"
           },
           {
-            "pos": 5,
+            "pos": 6,
             "name": "SV Wechingen 1",
             "sp": 8,
             "s": 4,
@@ -959,18 +971,6 @@
             "pkt": 12,
             "svk": false,
             "logo": "00ES8GNJJ4000001VV0AG08LVUPGND5I"
-          },
-          {
-            "pos": 6,
-            "name": "FSV Wehringen 1",
-            "sp": 7,
-            "s": 3,
-            "u": 2,
-            "n": 2,
-            "diff": 0,
-            "pkt": 11,
-            "svk": false,
-            "logo": "00ES8GNJAC000010VV0AG08LVUPGND5I"
           },
           {
             "pos": 7,
@@ -1023,11 +1023,11 @@
           {
             "pos": 11,
             "name": "SV Mering",
-            "sp": 6,
+            "sp": 7,
             "s": 0,
             "u": 1,
-            "n": 5,
-            "diff": -23,
+            "n": 6,
+            "diff": -25,
             "pkt": 1,
             "svk": false,
             "logo": "00ES8GNJAC00000FVV0AG08LVUPGND5I"
@@ -1042,17 +1042,6 @@
         "wettbewerb": "U 19 (A-Jun.) KL Allgäu Nord",
         "url": "https://www.bfv.de/mannschaften/-/016PACIAIS000000VV0AG80NVV8OQVTB",
         "matches": [
-          {
-            "date": "2026-11-21",
-            "time": "11:00",
-            "home": "SpVgg Kaufbeuren",
-            "away": "(SG) TSV Ottobeuren",
-            "heim": true,
-            "typ": "Meisterschaften",
-            "wettbewerb": "U 19 (A-Jun.) KL Allgäu Nord",
-            "homeLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I",
-            "awayLogo": "00ES8GNJ4400000EVV0AG08LVUPGND5I"
-          },
           {
             "date": "2027-03-14",
             "time": "11:00",
@@ -1085,6 +1074,17 @@
             "wettbewerb": "U 19 (A-Jun.) KL Allgäu Nord",
             "homeLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I",
             "awayLogo": "01GULBQIF0000000VV0AG80NVVV7LT4V"
+          },
+          {
+            "date": "2027-04-07",
+            "time": "19:00",
+            "home": "SpVgg Kaufbeuren",
+            "away": "(SG) TSV Ottobeuren",
+            "heim": true,
+            "typ": "Meisterschaften",
+            "wettbewerb": "U 19 (A-Jun.) KL Allgäu Nord",
+            "homeLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I",
+            "awayLogo": "00ES8GNJ4400000EVV0AG08LVUPGND5I"
           },
           {
             "date": "2027-04-09",
@@ -1340,17 +1340,6 @@
         "url": "https://www.bfv.de/mannschaften/-/016QFTGKJC000000VV0AG811VTSDEJ30",
         "matches": [
           {
-            "date": "2026-11-20",
-            "time": "18:00",
-            "home": "(SG) Donau/Lech",
-            "away": "SpVgg Kaufbeuren",
-            "heim": false,
-            "typ": "Meisterschaften",
-            "wettbewerb": "U 17 (B-Jun.) Bezirksoberliga Schwaben",
-            "homeLogo": "00V5PERLLS000000VV0AG811VTEQ0GTM",
-            "awayLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I"
-          },
-          {
             "date": "2026-11-29",
             "time": "15:30",
             "home": "SpVgg Kaufbeuren",
@@ -1470,9 +1459,34 @@
             "wettbewerb": "U 17 (B-Jun.) Bezirksoberliga Schwaben",
             "homeLogo": "00ES8GNJAC00000NVV0AG08LVUPGND5I",
             "awayLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I"
+          },
+          {
+            "date": "2027-04-16",
+            "time": "19:00",
+            "home": "SpVgg Kaufbeuren",
+            "away": "FC Memmingen 2",
+            "heim": true,
+            "typ": "Meisterschaften",
+            "wettbewerb": "U 17 (B-Jun.) Bezirksoberliga Schwaben",
+            "homeLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I",
+            "awayLogo": "00ES8GNJ44000004VV0AG08LVUPGND5I"
           }
         ],
         "results": [
+          {
+            "date": "2026-11-20",
+            "time": "18:00",
+            "home": "(SG) Donau/Lech",
+            "away": "SpVgg Kaufbeuren",
+            "heim": false,
+            "typ": "Meisterschaften",
+            "wettbewerb": "U 17 (B-Jun.) Bezirksoberliga Schwaben",
+            "score": "3:1",
+            "zusatz": "",
+            "ausgang": "N",
+            "homeLogo": "00V5PERLLS000000VV0AG811VTEQ0GTM",
+            "awayLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I"
+          },
           {
             "date": "2026-11-07",
             "time": "13:00",
@@ -1500,20 +1514,6 @@
             "ausgang": "N",
             "homeLogo": "01CSGBH4NC000000VV0AG80NVU9EFVSV",
             "awayLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I"
-          },
-          {
-            "date": "2026-10-23",
-            "time": "19:00",
-            "home": "SpVgg Kaufbeuren",
-            "away": "SG Dirlewang/Auerbach-Stetten",
-            "heim": true,
-            "typ": "Meisterschaften",
-            "wettbewerb": "U 17 (B-Jun.) Bezirksoberliga Schwaben",
-            "score": "3:3",
-            "zusatz": "",
-            "ausgang": "U",
-            "homeLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I",
-            "awayLogo": "00ES8GNJ2S00000MVV0AG08LVUPGND5I"
           }
         ],
         "table": [
@@ -1651,27 +1651,27 @@
           },
           {
             "pos": 12,
-            "name": "SpVgg Kaufbeuren",
-            "sp": 10,
-            "s": 1,
-            "u": 2,
-            "n": 7,
-            "diff": -18,
-            "pkt": 5,
-            "svk": true,
-            "logo": "00ES8GNJE4000007VV0AG08LVUPGND5I"
+            "name": "(SG) Donau/Lech",
+            "sp": 12,
+            "s": 2,
+            "u": 0,
+            "n": 10,
+            "diff": -22,
+            "pkt": 6,
+            "svk": false,
+            "logo": "00V5PERLLS000000VV0AG811VTEQ0GTM"
           },
           {
             "pos": 13,
-            "name": "(SG) Donau/Lech",
+            "name": "SpVgg Kaufbeuren",
             "sp": 11,
             "s": 1,
-            "u": 0,
-            "n": 10,
-            "diff": -24,
-            "pkt": 3,
-            "svk": false,
-            "logo": "00V5PERLLS000000VV0AG811VTEQ0GTM"
+            "u": 2,
+            "n": 8,
+            "diff": -20,
+            "pkt": 5,
+            "svk": true,
+            "logo": "00ES8GNJE4000007VV0AG08LVUPGND5I"
           },
           {
             "pos": 14,
