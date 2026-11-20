@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-20T03:35:04.131147+00:00",
+  "updatedAt": "2026-11-20T13:15:58.531784+00:00",
   "source": "https://www.bfv.de/mannschaften/-/016PILCMSS000000VV0AG80NVUT1FLRU",
   "fixtures": [
     {
@@ -7,6 +7,14 @@
       "time": "14:00",
       "home": "SpVgg Kaufbeuren",
       "away": "TSV Merching",
+      "score": "",
+      "venue": ""
+    },
+    {
+      "date": "2026-11-21",
+      "time": "14:00",
+      "home": "SpVgg Kaufbeuren",
+      "away": "Abgesetzt TSV Merching",
       "score": "",
       "venue": ""
     },
@@ -265,6 +273,14 @@
       "time": "14:00",
       "home": "SpVgg Kaufbeuren",
       "away": "TSV Merching",
+      "score": "",
+      "venue": ""
+    },
+    {
+      "date": "2026-11-21",
+      "time": "14:00",
+      "home": "SpVgg Kaufbeuren",
+      "away": "Abgesetzt TSV Merching",
       "score": "",
       "venue": ""
     },
