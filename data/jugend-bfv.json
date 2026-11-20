@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-18T20:53:06.860423+00:00",
+  "updatedAt": "2026-11-20T12:08:29.506079+00:00",
   "source": "https://www.bfv.de",
   "teams": {
     "herren": [
@@ -9,17 +9,6 @@
         "wettbewerb": "BZL Schwaben Süd",
         "url": "https://www.bfv.de/mannschaften/-/016PILCMSS000000VV0AG80NVUT1FLRU",
         "matches": [
-          {
-            "date": "2026-11-21",
-            "time": "14:00",
-            "home": "SpVgg Kaufbeuren",
-            "away": "TSV Merching",
-            "heim": true,
-            "typ": "Meisterschaften",
-            "wettbewerb": "BZL Schwaben Süd",
-            "homeLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I",
-            "awayLogo": "00ES8GNJAC00000EVV0AG08LVUPGND5I"
-          },
           {
             "date": "2027-03-14",
             "time": "14:00",
