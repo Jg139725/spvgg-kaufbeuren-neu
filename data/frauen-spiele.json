@@ -125,6 +125,17 @@
     },
     {
       "pos": 4,
+      "team": "FSV Wehringen 1",
+      "played": 8,
+      "won": 4,
+      "drawn": 2,
+      "lost": 2,
+      "goals": "10:8",
+      "diff": "2",
+      "points": 14
+    },
+    {
+      "pos": 5,
       "team": "TSV Ottobeuren",
       "played": 8,
       "won": 4,
@@ -135,7 +146,7 @@
       "points": 13
     },
     {
-      "pos": 5,
+      "pos": 6,
       "team": "SV Wechingen 1",
       "played": 8,
       "won": 4,
@@ -144,17 +155,6 @@
       "goals": "11:14",
       "diff": "-3",
       "points": 12
-    },
-    {
-      "pos": 6,
-      "team": "FSV Wehringen 1",
-      "played": 7,
-      "won": 3,
-      "drawn": 2,
-      "lost": 2,
-      "goals": "8:8",
-      "diff": "0",
-      "points": 11
     },
     {
       "pos": 7,
@@ -203,14 +203,14 @@
     {
       "pos": 11,
       "team": "SV Mering",
-      "played": 6,
+      "played": 7,
       "won": 0,
       "drawn": 1,
-      "lost": 5,
-      "goals": "3:26",
-      "diff": "-23",
+      "lost": 6,
+      "goals": "3:28",
+      "diff": "-25",
       "points": 1
     }
   ],
-  "updatedAt": "2026-11-19T02:43:53+00:00"
+  "updatedAt": "2026-11-20T18:42:26+00:00"
 }
