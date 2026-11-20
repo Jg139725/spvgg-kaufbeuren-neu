@@ -16,7 +16,20 @@ def iso(x): return datetime.strptime(x, "%d.%m.%Y").strftime("%Y-%m-%d")
 def key(g): return (g.get("date",""), g.get("home",""), g.get("away",""))
 def valid_score(v): return bool(re.fullmatch(r"\d{1,2}:\d{1,2}", str(v or "")))
 
+CANCEL_RE = re.compile(r"^\s*(?:Abgesetzt|Abgesagt|Ausgefallen)\s+", re.I)
+
+def strip_cancel(g):
+    """BFV schreibt bei abgesetzten Spielen 'Abgesetzt' vor den Vereinsnamen.
+       Präfix entfernen und Spiel als abgesagt markieren (keine Dublette)."""
+    for side in ("home", "away"):
+        v = g.get(side, "") or ""
+        if CANCEL_RE.match(v):
+            g[side] = CANCEL_RE.sub("", v).strip()
+            g["status"] = "abgesagt"
+    return g
+
 def add_game(games, g):
+    g = strip_cancel(g)
     if not g.get("date") or TEAM not in (g.get("home",""), g.get("away","")):
         return
     for old in games:
@@ -24,6 +37,7 @@ def add_game(games, g):
             if valid_score(g.get("score")): old["score"] = g["score"]
             if g.get("time"): old["time"] = g["time"]
             if g.get("venue"): old["venue"] = g["venue"]
+            if g.get("status"): old["status"] = g["status"]
             return
     games.append(g)
 
@@ -151,7 +165,8 @@ def main():
         if any(x in v for x in ["Unsere Neuigkeiten","Lade Daten","Alle News","Meisterschaften"]): v = ""
         add_game(games, {"date":g.get("date",""), "time":g.get("time",""),
                          "home":g.get("home",""), "away":g.get("away",""),
-                         "score":g.get("score",""), "venue":v})
+                         "score":g.get("score",""), "venue":v,
+                         **({"status":g["status"]} if g.get("status") else {})})
 
     session = requests.Session()
     r = session.get(URL, headers=HEAD, timeout=30)
@@ -186,6 +201,14 @@ def main():
     ]
     for a,b,c,d,e in fallback:
         add_game(games, {"date":a,"time":b,"home":c,"away":d,"score":"","venue":e})
+
+    # Manuell bestätigte Absagen (bleiben auch, falls BFV das Präfix wieder entfernt)
+    cancelled = [
+      ("2026-11-21","SpVgg Kaufbeuren","TSV Merching"),
+    ]
+    for g in games:
+        if (g.get("date"), g.get("home"), g.get("away")) in cancelled:
+            g["status"] = "abgesagt"
 
     games.sort(key=lambda g:(g.get("date",""), g.get("time","")))
     now_local = datetime.now().astimezone()
@@ -226,6 +249,7 @@ def main():
         if ko and ko + timedelta(hours=3) > now_local:
             future.append(g)
     future = future[:10]
+    upcoming = [g for g in future if g.get("status") != "abgesagt"]
 
     table = old.get("table", [])
     rows = []
@@ -241,7 +265,7 @@ def main():
 
     data = {"updatedAt":datetime.now(timezone.utc).isoformat(),"source":URL,
             "fixtures":future,"allGames":games,
-            "nextGame":future[0] if future else None,
+            "nextGame":upcoming[0] if upcoming else None,
             "lastGame":completed[-1] if completed else None,
             "table":table}
     OUT.parent.mkdir(parents=True, exist_ok=True)

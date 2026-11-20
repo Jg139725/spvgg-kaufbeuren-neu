@@ -8,15 +8,8 @@
       "home": "SpVgg Kaufbeuren",
       "away": "TSV Merching",
       "score": "",
-      "venue": ""
-    },
-    {
-      "date": "2026-11-21",
-      "time": "14:00",
-      "home": "SpVgg Kaufbeuren",
-      "away": "Abgesetzt TSV Merching",
-      "score": "",
-      "venue": ""
+      "venue": "",
+      "status": "abgesagt"
     },
     {
       "date": "2027-03-14",
@@ -274,15 +267,8 @@
       "home": "SpVgg Kaufbeuren",
       "away": "TSV Merching",
       "score": "",
-      "venue": ""
-    },
-    {
-      "date": "2026-11-21",
-      "time": "14:00",
-      "home": "SpVgg Kaufbeuren",
-      "away": "Abgesetzt TSV Merching",
-      "score": "",
-      "venue": ""
+      "venue": "",
+      "status": "abgesagt"
     },
     {
       "date": "2027-03-14",
@@ -318,10 +304,10 @@
     }
   ],
   "nextGame": {
-    "date": "2026-11-21",
+    "date": "2027-03-14",
     "time": "14:00",
-    "home": "SpVgg Kaufbeuren",
-    "away": "TSV Merching",
+    "home": "SV Egg a. d. Günz",
+    "away": "SpVgg Kaufbeuren",
     "score": "",
     "venue": ""
   },
