@@ -24,9 +24,9 @@
     if (path === "herren/index.html") return current.includes("/herren/") || current.includes("/herren2/");
     if (path === "jugend/index.html") return current.includes("/jugend/");
     if (path === "verein/index.html") {
-      return current.includes("/verein/") &&
-        !current.includes("live-center") &&
-        !current.includes("geschichte");
+      return (current.includes("/verein/") && !current.includes("live-center")) ||
+        current.includes("stadion") || current.includes("trainingsgelaende") ||
+        current.includes("/foerderverein/");
     }
     if (path === "verein/geschichte.html") return current.includes("geschichte");
     if (path === "stadion.html") return current.includes("stadion");
@@ -48,8 +48,6 @@
       ["Damen", "frauen/index.html"],
       ["Jugend", "jugend/index.html"],
       ["Verein", "verein/index.html"],
-      ["Historie", "verein/geschichte.html"],
-      ["Stadion", "stadion.html"],
       ["Fanshop", "fanshop.html"]
     ];
 
@@ -151,6 +149,8 @@
       <a href="${base}verein/index.html">Übersicht</a>
       <a href="${base}verein/vorstand.html">Vorstand</a>
       <a href="${base}verein/geschichte.html">Historie</a>
+      <a href="${base}stadion.html">Parkstadion</a>
+      <a href="${base}trainingsgelaende/index.html">Trainingsgelände</a>
       <a href="${base}verein/kontakt.html">Ansprechpartner</a>
       <a href="${base}foerderverein/index.html">Förderverein</a>
       <a href="${base}verein/downloads.html">Mitglied werden</a>
