@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-20T20:41:50.840349+00:00",
+  "updatedAt": "2026-11-21T11:44:03.221193+00:00",
   "source": "https://www.bfv.de",
   "teams": {
     "herren": [
@@ -1579,6 +1579,18 @@
           },
           {
             "pos": 6,
+            "name": "FV Illertissen U16",
+            "sp": 11,
+            "s": 5,
+            "u": 2,
+            "n": 4,
+            "diff": 4,
+            "pkt": 17,
+            "svk": false,
+            "logo": "01CSGBH4NC000000VV0AG80NVU9EFVSV"
+          },
+          {
+            "pos": 7,
             "name": "TSV 1896 Rain I",
             "sp": 11,
             "s": 5,
@@ -1590,7 +1602,7 @@
             "logo": "00ES8GNJBK000018VV0AG08LVUPGND5I"
           },
           {
-            "pos": 7,
+            "pos": 8,
             "name": "FC 1920 Gundelfingen U17",
             "sp": 10,
             "s": 5,
@@ -1602,7 +1614,7 @@
             "logo": "00ES8GNJGK00000PVV0AG08LVUPGND5I"
           },
           {
-            "pos": 8,
+            "pos": 9,
             "name": "SG Dirlewang/Auerbach-Stetten",
             "sp": 10,
             "s": 4,
@@ -1612,18 +1624,6 @@
             "pkt": 14,
             "svk": false,
             "logo": "00ES8GNJ2S00000MVV0AG08LVUPGND5I"
-          },
-          {
-            "pos": 9,
-            "name": "FV Illertissen U16",
-            "sp": 10,
-            "s": 4,
-            "u": 2,
-            "n": 4,
-            "diff": -1,
-            "pkt": 14,
-            "svk": false,
-            "logo": "01CSGBH4NC000000VV0AG80NVU9EFVSV"
           },
           {
             "pos": 10,
@@ -1640,11 +1640,11 @@
           {
             "pos": 11,
             "name": "(SG) Erkheim/Ottobeuren/Sontheim",
-            "sp": 11,
+            "sp": 12,
             "s": 2,
             "u": 1,
-            "n": 8,
-            "diff": -32,
+            "n": 9,
+            "diff": -37,
             "pkt": 7,
             "svk": false,
             "logo": "00ES8GNJ2S00000PVV0AG08LVUPGND5I"
@@ -1695,17 +1695,6 @@
         "wettbewerb": "U 15 (C-Jun.) Bezirksoberliga Schwaben",
         "url": "https://www.bfv.de/mannschaften/-/016QFU6GAK000000VV0AG811VTSDEJ30",
         "matches": [
-          {
-            "date": "2026-11-21",
-            "time": "11:30",
-            "home": "TSV Schwabmünchen U15",
-            "away": "SpVgg Kaufbeuren",
-            "heim": false,
-            "typ": "Meisterschaften",
-            "wettbewerb": "U 15 (C-Jun.) Bezirksoberliga Schwaben",
-            "homeLogo": "00ES8GNJAC00000NVV0AG08LVUPGND5I",
-            "awayLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I"
-          },
           {
             "date": "2026-11-29",
             "time": "13:00",
@@ -1826,9 +1815,34 @@
             "wettbewerb": "U 15 (C-Jun.) Bezirksoberliga Schwaben",
             "homeLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I",
             "awayLogo": "00ES8GNJAC00000NVV0AG08LVUPGND5I"
+          },
+          {
+            "date": "2027-06-19",
+            "time": "11:30",
+            "home": "TSV Meitingen",
+            "away": "SpVgg Kaufbeuren",
+            "heim": false,
+            "typ": "Meisterschaften",
+            "wettbewerb": "U 15 (C-Jun.) Bezirksoberliga Schwaben",
+            "homeLogo": "00ES8GNJKC00000MVV0AG08LVUPGND5I",
+            "awayLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I"
           }
         ],
         "results": [
+          {
+            "date": "2026-11-21",
+            "time": "11:30",
+            "home": "TSV Schwabmünchen U15",
+            "away": "SpVgg Kaufbeuren",
+            "heim": false,
+            "typ": "Meisterschaften",
+            "wettbewerb": "U 15 (C-Jun.) Bezirksoberliga Schwaben",
+            "score": "4:1",
+            "zusatz": "",
+            "ausgang": "N",
+            "homeLogo": "00ES8GNJAC00000NVV0AG08LVUPGND5I",
+            "awayLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I"
+          },
           {
             "date": "2026-11-15",
             "time": "13:00",
@@ -1856,20 +1870,6 @@
             "ausgang": "N",
             "homeLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I",
             "awayLogo": "00ES8GNJFC000009VV0AG08LVUPGND5I"
-          },
-          {
-            "date": "2026-10-21",
-            "time": "18:00",
-            "home": "JFG Wertachtal",
-            "away": "SpVgg Kaufbeuren",
-            "heim": false,
-            "typ": "Pokale",
-            "wettbewerb": "U15 (A-Jgd.) Verbandspokal - U15 (C-Jgd.) Verbandspokal Runde 2",
-            "score": "7:5",
-            "zusatz": "n. E.",
-            "ausgang": "N",
-            "homeLogo": "00R387708O000000VV0AG83KVT7COEQK",
-            "awayLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I"
           }
         ],
         "table": [
@@ -1899,6 +1899,30 @@
           },
           {
             "pos": 3,
+            "name": "TSV Neusäß U15",
+            "sp": 8,
+            "s": 6,
+            "u": 1,
+            "n": 1,
+            "diff": 16,
+            "pkt": 19,
+            "svk": false,
+            "logo": "00ES8GNJKC00000TVV0AG08LVUPGND5I"
+          },
+          {
+            "pos": 4,
+            "name": "TSV 1896 Rain U15",
+            "sp": 10,
+            "s": 6,
+            "u": 1,
+            "n": 3,
+            "diff": 11,
+            "pkt": 19,
+            "svk": false,
+            "logo": "00ES8GNJBK000018VV0AG08LVUPGND5I"
+          },
+          {
+            "pos": 5,
             "name": "TSV 1909 Gersthofen U15",
             "sp": 9,
             "s": 5,
@@ -1910,40 +1934,16 @@
             "logo": "00ES8GNJJ400001GVV0AG08LVUPGND5I"
           },
           {
-            "pos": 4,
+            "pos": 6,
             "name": "1. FC Sonthofen",
-            "sp": 9,
+            "sp": 10,
             "s": 4,
             "u": 4,
-            "n": 1,
-            "diff": 13,
-            "pkt": 16,
-            "svk": false,
-            "logo": "00ES8GNJFC000009VV0AG08LVUPGND5I"
-          },
-          {
-            "pos": 5,
-            "name": "TSV Neusäß U15",
-            "sp": 7,
-            "s": 5,
-            "u": 1,
-            "n": 1,
+            "n": 2,
             "diff": 11,
             "pkt": 16,
             "svk": false,
-            "logo": "00ES8GNJKC00000TVV0AG08LVUPGND5I"
-          },
-          {
-            "pos": 6,
-            "name": "TSV 1896 Rain U15",
-            "sp": 9,
-            "s": 5,
-            "u": 1,
-            "n": 3,
-            "diff": 9,
-            "pkt": 16,
-            "svk": false,
-            "logo": "00ES8GNJBK000018VV0AG08LVUPGND5I"
+            "logo": "00ES8GNJFC000009VV0AG08LVUPGND5I"
           },
           {
             "pos": 7,
@@ -1972,11 +1972,11 @@
           {
             "pos": 9,
             "name": "FC Stätzling U14",
-            "sp": 9,
+            "sp": 10,
             "s": 3,
             "u": 0,
-            "n": 6,
-            "diff": -21,
+            "n": 7,
+            "diff": -26,
             "pkt": 9,
             "svk": false,
             "logo": "00ES8GNJAC00000PVV0AG08LVUPGND5I"
