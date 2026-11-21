@@ -1,16 +1,7 @@
 {
-  "updatedAt": "2026-11-21T11:27:50.437920+00:00",
+  "updatedAt": "2026-11-21T19:32:05.183636+00:00",
   "source": "https://www.bfv.de/mannschaften/-/016PILCMSS000000VV0AG80NVUT1FLRU",
   "fixtures": [
-    {
-      "date": "2026-11-21",
-      "time": "14:00",
-      "home": "SpVgg Kaufbeuren",
-      "away": "TSV Merching",
-      "score": "",
-      "venue": "",
-      "status": "abgesagt"
-    },
     {
       "date": "2027-03-14",
       "time": "14:00",
@@ -40,6 +31,14 @@
       "time": "15:00",
       "home": "SpVgg Kaufbeuren",
       "away": "FC Bad Wörishofen",
+      "score": "",
+      "venue": ""
+    },
+    {
+      "date": "2027-04-11",
+      "time": "15:00",
+      "home": "TSV Legau",
+      "away": "SpVgg Kaufbeuren",
       "score": "",
       "venue": ""
     }
@@ -301,6 +300,14 @@
       "away": "FC Bad Wörishofen",
       "score": "",
       "venue": ""
+    },
+    {
+      "date": "2027-04-11",
+      "time": "15:00",
+      "home": "TSV Legau",
+      "away": "SpVgg Kaufbeuren",
+      "score": "",
+      "venue": ""
     }
   ],
   "nextGame": {
@@ -433,13 +440,13 @@
     {
       "pos": 11,
       "team": "TSV Kammlach",
-      "played": 18,
+      "played": 19,
       "won": 5,
-      "drawn": 4,
+      "drawn": 5,
       "lost": 9,
-      "goals": "34:47",
+      "goals": "36:49",
       "diff": "-13",
-      "points": 19
+      "points": 20
     },
     {
       "pos": 12,
@@ -477,13 +484,13 @@
     {
       "pos": 15,
       "team": "FC Oberstdorf",
-      "played": 17,
+      "played": 18,
       "won": 3,
-      "drawn": 4,
+      "drawn": 5,
       "lost": 10,
-      "goals": "22:35",
+      "goals": "24:37",
       "diff": "-13",
-      "points": 13
+      "points": 14
     },
     {
       "pos": 16,
