@@ -3,9 +3,9 @@ const URL="https://tjfnjdzqlrblvwfmswvp.supabase.co";
 const KEY="sb_publishable_9hRarZ9dtcz6swzErkdaQQ_7o0FK_5R";
 const esc=(v="")=>String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const date=v=>{if(!v)return"";const p=String(v).slice(0,10).split("-");return p.length===3?`${p[2]}.${p[1]}.${p[0]}`:v};
-const norm=n=>({...n,image_url:n.image_url||n.imageUrl||null,published_at:n.published_at||n.publishedAt||n.date||"",status:n.status||"published"});
+const norm=n=>({...n,image_url:n.image_url||n.imageUrl||null,published_at:n.published_at||n.publishedAt||n.date||"",status:n.status||"published",gallery:Array.isArray(n.gallery)?n.gallery:[],videos:Array.isArray(n.videos)?n.videos:[]});
 async function supa(limit=100){
- const q=`/rest/v1/news?select=id,category,date,title,teaser,content,image_url,published_at,status&status=eq.published&order=published_at.desc.nullslast,date.desc&limit=${limit}`;
+ const q=`/rest/v1/news?select=id,category,date,title,teaser,content,image_url,gallery,videos,published_at,status&status=eq.published&order=published_at.desc.nullslast,date.desc&limit=${limit}`;
  const r=await fetch(URL+q,{headers:{apikey:KEY,Authorization:`Bearer ${KEY}`},cache:"no-store"});
  if(!r.ok)throw Error("Supabase "+r.status); return (await r.json()).map(norm);
 }

@@ -31,8 +31,11 @@
     if (path === "verein/geschichte.html") return current.includes("geschichte");
     if (path === "stadion.html") return current.includes("stadion");
     if (path === "fanshop.html") return current.includes("fanshop");
+    if (path === "frauen/index.html") return current.includes("/frauen/");
     return false;
   }
+
+  const FANSHOP_URL = "https://textilstars.com/SpVgg-Kaufbeuren";
 
   function buildHeader(base) {
     const header = document.createElement("header");
@@ -41,7 +44,8 @@
     const links = [
       ["Aktuelles", "news.html"],
       ["Spiele", "verein/live-center.html"],
-      ["Mannschaften", "herren/index.html"],
+      ["Herren", "herren/index.html"],
+      ["Damen", "frauen/index.html"],
       ["Jugend", "jugend/index.html"],
       ["Verein", "verein/index.html"],
       ["Historie", "verein/geschichte.html"],
@@ -81,7 +85,8 @@
 
           <nav class="svk-global-nav">
             ${links.map(([label, path]) => `
-              <a href="${base}${path}"
+              <a href="${path === "fanshop.html" ? FANSHOP_URL : base + path}"
+                 ${path === "fanshop.html" ? 'target="_blank" rel="noopener noreferrer"' : ""}
                  class="${relativeActive(path) ? "active" : ""} ${path === "fanshop.html" ? "svk-global-fanshop" : ""}">
                 ${label}
               </a>
@@ -177,6 +182,35 @@
     });
   }
 
+  function installHerrenDropdown() {
+    const nav = document.querySelector(".svk-global-nav");
+    if (!nav || nav.querySelector(".svk-herren-dropdown")) return;
+    const herrenLink = [...nav.querySelectorAll(":scope > a")].find(link =>
+      (link.textContent || "").trim().toLowerCase() === "herren"
+    );
+    if (!herrenLink) return;
+    const href = herrenLink.getAttribute("href") || "";
+    const base = href.replace(/herren\/index\.html(?:\?.*)?$/, "");
+    const wrapper = document.createElement("div");
+    wrapper.className = "svk-verein-dropdown svk-herren-dropdown";
+    const trigger = herrenLink.cloneNode(true);
+    trigger.classList.add("svk-verein-trigger");
+    trigger.setAttribute("aria-haspopup", "true");
+    trigger.setAttribute("aria-expanded", "false");
+    const menu = document.createElement("div");
+    menu.className = "svk-verein-menu";
+    menu.innerHTML = `
+      <a href="${base}herren/erste.html">1. Herren</a>
+      <a href="${base}herren2/index.html">U23</a>
+    `;
+    herrenLink.replaceWith(wrapper); wrapper.append(trigger, menu);
+    const setOpen = open => { wrapper.classList.toggle("open", open); trigger.setAttribute("aria-expanded", String(open)); };
+    trigger.addEventListener("click", e => { if (window.matchMedia("(max-width: 900px)").matches) { e.preventDefault(); setOpen(!wrapper.classList.contains("open")); } });
+    wrapper.addEventListener("mouseenter", () => { if (!window.matchMedia("(max-width: 900px)").matches) setOpen(true); });
+    wrapper.addEventListener("mouseleave", () => { if (!window.matchMedia("(max-width: 900px)").matches) setOpen(false); });
+    document.addEventListener("click", e => { if (!wrapper.contains(e.target)) setOpen(false); });
+  }
+
   function installStadionDropdown() {
     const nav = document.querySelector(".svk-global-nav");
     if (!nav || nav.querySelector(".svk-stadion-dropdown")) return;
@@ -222,6 +256,7 @@
     }
 
     document.body.prepend(buildHeader(base));
+    installHerrenDropdown();
     installVereinDropdown();
     installStadionDropdown();
   }
