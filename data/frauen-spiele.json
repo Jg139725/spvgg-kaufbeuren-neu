@@ -103,6 +103,17 @@
     },
     {
       "pos": 2,
+      "team": "TSV Sielenbach",
+      "played": 10,
+      "won": 5,
+      "drawn": 2,
+      "lost": 3,
+      "goals": "25:18",
+      "diff": "7",
+      "points": 17
+    },
+    {
+      "pos": 3,
       "team": "SpVgg Kaufbeuren",
       "played": 7,
       "won": 5,
@@ -113,29 +124,29 @@
       "points": 16
     },
     {
-      "pos": 3,
-      "team": "TSV Sielenbach",
-      "played": 9,
-      "won": 5,
-      "drawn": 1,
-      "lost": 3,
-      "goals": "25:18",
-      "diff": "7",
-      "points": 16
-    },
-    {
       "pos": 4,
       "team": "FSV Wehringen 1",
-      "played": 8,
+      "played": 9,
       "won": 4,
-      "drawn": 2,
+      "drawn": 3,
       "lost": 2,
       "goals": "10:8",
       "diff": "2",
-      "points": 14
+      "points": 15
     },
     {
       "pos": 5,
+      "team": "SSV Glött",
+      "played": 9,
+      "won": 4,
+      "drawn": 2,
+      "lost": 3,
+      "goals": "13:17",
+      "diff": "-4",
+      "points": 14
+    },
+    {
+      "pos": 6,
       "team": "TSV Ottobeuren",
       "played": 8,
       "won": 4,
@@ -146,7 +157,7 @@
       "points": 13
     },
     {
-      "pos": 6,
+      "pos": 7,
       "team": "SV Wechingen 1",
       "played": 8,
       "won": 4,
@@ -155,17 +166,6 @@
       "goals": "11:14",
       "diff": "-3",
       "points": 12
-    },
-    {
-      "pos": 7,
-      "team": "SSV Glött",
-      "played": 8,
-      "won": 3,
-      "drawn": 2,
-      "lost": 3,
-      "goals": "12:17",
-      "diff": "-5",
-      "points": 11
     },
     {
       "pos": 8,
@@ -192,12 +192,12 @@
     {
       "pos": 10,
       "team": "TSV 1861 Nördlingen",
-      "played": 7,
+      "played": 8,
       "won": 1,
       "drawn": 1,
-      "lost": 5,
-      "goals": "4:13",
-      "diff": "-9",
+      "lost": 6,
+      "goals": "4:14",
+      "diff": "-10",
       "points": 4
     },
     {
@@ -212,5 +212,5 @@
       "points": 1
     }
   ],
-  "updatedAt": "2026-11-20T18:42:26+00:00"
+  "updatedAt": "2026-11-21T16:20:52+00:00"
 }
