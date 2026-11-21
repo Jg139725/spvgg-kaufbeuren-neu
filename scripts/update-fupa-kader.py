@@ -102,7 +102,7 @@ def update_profiles(sections):
 <div><div class="player-profile-heading"><span>1. Herren</span><h2>{name}</h2></div><p>Aktueller Kader der SpVgg Kaufbeuren.</p></div>
 <aside class="career-summary"><span>Weitere Informationen</span><p>Das Spielerprofil auf FuPa enthält aktuelle Spielstatistiken.</p>
 <a href="https://www.fupa.net{path}" target="_blank" rel="noopener noreferrer">FuPa-Profil öffnen ↗</a></aside>
-</div></section></main><script src="../../assets/js/svk-global-header.js"></script>
+</div></section></main><script src="../../assets/js/svk-global-header.js?v=97"></script>
 <script src="../../assets/js/subpages.js"></script></body></html>
 '''.format(name=safe_name, position=html.escape(position), photo=photo,
            number=number or 'Noch nicht angegeben', path=html.escape(path, quote=True))
