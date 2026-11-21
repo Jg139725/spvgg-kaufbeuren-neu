@@ -66,6 +66,8 @@ legend{font-size:.8rem;font-weight:700;color:var(--blue);padding:0 .4em;text-tra
 .s-zugestimmt{background:#e6f0ff;color:var(--blue)}
 .s-beantragt{background:#efe8ff;color:#5b3fc4}
 .s-erledigt{background:#e5f6ec;color:var(--ok)}
+.s-gesperrt{background:#fde8e8;color:#b42318}
+.zc.is-blocked{opacity:.75}
 .s-abgelehnt{background:#fde8e7;color:var(--bad)}
 .next{background:var(--navy)}
 .empty{background:#fff;border:1px dashed var(--line);border-radius:var(--r);padding:20px;text-align:center;color:var(--muted)}

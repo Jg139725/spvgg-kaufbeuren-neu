@@ -167,6 +167,12 @@
       const ins = await sb.from(T_M).insert(row).select().maybeSingle();
       if (!ins.error) me.mitglied = ins.data || row;
     }
+    if (me.mitglied?.gesperrt) {
+      $('waitingTitle').textContent = 'Kein Zugriff';
+      $('waitingText').textContent = 'Dein Zugang zur Jugend-App ist gesperrt. Bei Fragen melde dich bitte bei der Jugendleitung.';
+      $('waitingReload').hidden = true;
+      show('waiting'); return;
+    }
     me.leitung = LEITUNG_ROLES.includes(profile?.role) || (me.mitglied?.freigegeben && me.mitglied?.rolle === 'leitung');
     me.teams = me.mitglied?.freigegeben ? (me.mitglied.teams || []) : [];
     // Zugänge freigeben darf nur, wer in der Datenbank als Freigeber markiert ist (Spalte darf_freigeben, SQL V93)
@@ -248,6 +254,7 @@
         'goto': () => { if (a.dataset.filter != null) $('fStatus').value = a.dataset.filter; renderVerlegungen(); showTab(a.dataset.tab); },
         'z-save': () => saveMitglied(a.dataset.id, a.dataset.approve === '1'),
         'z-block': () => blockMitglied(a.dataset.id),
+        'z-unblock': () => unblockMitglied(a.dataset.id),
         'z-delete': () => deleteMitglied(a.dataset.id)
       }[a.dataset.action] || (() => {}))();
     });
@@ -897,7 +904,7 @@
   }
 
   function mitgliedCard(m) {
-    const pending = !m.freigegeben, self = m.user_id === me.user.id;
+    const gesperrt = !!m.gesperrt, pending = !m.freigegeben && !gesperrt, self = m.user_id === me.user.id;
     const teams = m.teams || [];
     const summary = m.rolle === 'leitung' ? 'Jugendleitung · sieht alles' : (teams.length ? 'Trainer · ' + teams.map(teamName).join(', ') : 'Trainer · noch kein Team');
     const contact = [
@@ -905,11 +912,11 @@
       m.telefon && waNumber(m.telefon) ? `<a class="btn icon wa" href="${waHref(m.telefon)}" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>` : '',
       m.email ? `<a class="btn icon" href="mailto:${esc(m.email)}" aria-label="E-Mail">✉</a>` : ''
     ].join('');
-    return `<details class="zc ${pending ? 'pending' : ''}" data-z="${m.user_id}" ${pending ? 'open' : ''}>
+    return `<details class="zc ${pending ? 'pending' : ''} ${gesperrt ? 'is-blocked' : ''}" data-z="${m.user_id}" ${pending ? 'open' : ''}>
       <summary>
         <div class="avatar">${esc(initials(m.name))}</div>
         <div class="zc-info"><strong>${esc(m.name)}${self ? ' <span class="meta">(du)</span>' : ''}</strong><span class="meta">${esc(pending ? (m.email || 'wartet auf Freigabe') : summary)}</span></div>
-        <span class="pill ${pending ? 's-angefragt' : m.darf_freigeben ? 's-zugestimmt' : 's-erledigt'}">${pending ? 'Wartet' : m.darf_freigeben ? 'Admin' : 'Aktiv'}</span>
+        <span class="pill ${gesperrt ? 's-gesperrt' : pending ? 's-angefragt' : m.darf_freigeben ? 's-zugestimmt' : 's-erledigt'}">${gesperrt ? 'Gesperrt' : pending ? 'Wartet' : m.darf_freigeben ? 'Admin' : 'Aktiv'}</span>
       </summary>
       <div class="zc-body">
         <label>Name<input data-zname value="${esc(m.name)}"></label>
@@ -923,7 +930,9 @@
         <div class="field-label" data-teamslabel ${m.rolle === 'leitung' ? 'hidden' : ''}>Teams (was er sehen darf)</div>
         <div class="team-chips" data-teams ${m.rolle === 'leitung' ? 'hidden' : ''}>${TEAMS.map(t => `<label class="tchip"><input type="checkbox" value="${t[0]}" ${teams.includes(t[0]) ? 'checked' : ''}><span>${t[1]}</span></label>`).join('')}</div>
         <div class="zc-actions">
-          ${pending
+          ${gesperrt
+            ? `<button data-action="z-unblock" data-id="${m.user_id}">Entsperren</button>`
+            : pending
             ? `<button class="ghost danger" data-action="z-delete" data-id="${m.user_id}">Ablehnen</button><button data-action="z-save" data-approve="1" data-id="${m.user_id}">✓ Freigeben</button>`
             : `${self ? '' : `<button class="ghost" data-action="z-block" data-id="${m.user_id}">Sperren</button>`}<button data-action="z-save" data-id="${m.user_id}">Speichern</button>`}
         </div>
@@ -932,11 +941,12 @@
   }
 
   function renderMitglieder() {
-    const pending = mitglieder.filter(m => !m.freigegeben), aktiv = mitglieder.filter(m => m.freigegeben);
+    const pending = mitglieder.filter(m => !m.freigegeben && !m.gesperrt), aktiv = mitglieder.filter(m => m.freigegeben && !m.gesperrt), gesperrt = mitglieder.filter(m => m.gesperrt);
     $('badgeZ').hidden = !pending.length || !me.freigeber; $('badgeZ').textContent = pending.length;
     let html = '';
     if (pending.length) html += `<div class="day-head">Wartet auf Freigabe (${pending.length})</div>` + pending.map(mitgliedCard).join('');
     if (aktiv.length) html += `<div class="day-head">Freigegeben (${aktiv.length}) – antippen zum Bearbeiten</div>` + aktiv.map(mitgliedCard).join('');
+    if (gesperrt.length) html += `<div class="day-head">Gesperrt (${gesperrt.length}) – kein Zugriff auf die Jugend-App</div>` + gesperrt.map(mitgliedCard).join('');
     $('zList').innerHTML = html || '<div class="empty">Noch keine Zugänge beantragt. Schick deinen Trainern einfach den Link zur App – sie können sich dort selbst registrieren.</div>';
     $('zList').querySelectorAll('[data-rolewrap]').forEach(w => w.querySelectorAll('[data-role]').forEach(b => b.onclick = () => {
       w.querySelectorAll('[data-role]').forEach(x => x.classList.toggle('active', x === b));
@@ -967,9 +977,14 @@
     });
   }
   async function blockMitglied(id) {
-    if (!confirm('Zugang sperren? Die Person sieht danach keine Daten mehr.')) return;
-    const { error } = await sb.from(T_M).update({ freigegeben: false, updated_at: new Date().toISOString() }).eq('user_id', id);
-    if (error) alert(error.message); else loadMitglieder();
+    if (!confirm('Zugang zur Jugend-App sperren? Die Person sieht danach keine Daten mehr. Ihre Rechte auf der Website bleiben.')) return;
+    const { error } = await sb.from(T_M).update({ gesperrt: true, freigegeben: false, updated_at: new Date().toISOString() }).eq('user_id', id);
+    if (error) alert(error.message); else { loadMitglieder(); loadPersonen(); }
+  }
+  async function unblockMitglied(id) {
+    if (!confirm('Sperre aufheben? Die Person hat danach wieder Zugriff mit ihrer bisherigen Rolle.')) return;
+    const { error } = await sb.from(T_M).update({ gesperrt: false, freigegeben: true, updated_at: new Date().toISOString() }).eq('user_id', id);
+    if (error) alert(error.message); else { loadMitglieder(); loadPersonen(); }
   }
   async function deleteMitglied(id) {
     if (!confirm('Antrag ablehnen und entfernen?')) return;
