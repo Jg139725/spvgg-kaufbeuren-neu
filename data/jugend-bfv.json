@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-21T11:44:03.221193+00:00",
+  "updatedAt": "2026-11-21T19:45:15.279816+00:00",
   "source": "https://www.bfv.de",
   "teams": {
     "herren": [
@@ -299,12 +299,12 @@
           {
             "pos": 11,
             "name": "TSV Kammlach",
-            "sp": 18,
+            "sp": 19,
             "s": 5,
-            "u": 4,
+            "u": 5,
             "n": 9,
             "diff": -13,
-            "pkt": 19,
+            "pkt": 20,
             "svk": false,
             "logo": "00ES8GNJ2S000014VV0AG08LVUPGND5I"
           },
@@ -347,12 +347,12 @@
           {
             "pos": 15,
             "name": "FC Oberstdorf",
-            "sp": 17,
+            "sp": 18,
             "s": 3,
-            "u": 4,
+            "u": 5,
             "n": 10,
             "diff": -13,
-            "pkt": 13,
+            "pkt": 14,
             "svk": false,
             "logo": "00ES8GNJE4000016VV0AG08LVUPGND5I"
           },
@@ -914,6 +914,18 @@
           },
           {
             "pos": 2,
+            "name": "TSV Sielenbach",
+            "sp": 10,
+            "s": 6,
+            "u": 1,
+            "n": 3,
+            "diff": 9,
+            "pkt": 19,
+            "svk": false,
+            "logo": "00ES8GNJCS000002VV0AG08LVUPGND5I"
+          },
+          {
+            "pos": 3,
             "name": "SpVgg Kaufbeuren",
             "sp": 7,
             "s": 5,
@@ -925,43 +937,43 @@
             "logo": "00ES8GNJE4000007VV0AG08LVUPGND5I"
           },
           {
-            "pos": 3,
-            "name": "TSV Sielenbach",
-            "sp": 9,
-            "s": 5,
-            "u": 1,
-            "n": 3,
-            "diff": 7,
-            "pkt": 16,
-            "svk": false,
-            "logo": "00ES8GNJCS000002VV0AG08LVUPGND5I"
-          },
-          {
             "pos": 4,
-            "name": "FSV Wehringen 1",
-            "sp": 8,
+            "name": "SSV Glött",
+            "sp": 9,
             "s": 4,
             "u": 2,
-            "n": 2,
-            "diff": 2,
+            "n": 3,
+            "diff": -3,
+            "pkt": 14,
+            "svk": false,
+            "logo": "00ES8GNJGK00000MVV0AG08LVUPGND5I"
+          },
+          {
+            "pos": 5,
+            "name": "FSV Wehringen 1",
+            "sp": 9,
+            "s": 4,
+            "u": 2,
+            "n": 3,
+            "diff": 0,
             "pkt": 14,
             "svk": false,
             "logo": "00ES8GNJAC000010VV0AG08LVUPGND5I"
           },
           {
-            "pos": 5,
+            "pos": 6,
             "name": "TSV Ottobeuren",
-            "sp": 8,
+            "sp": 9,
             "s": 4,
-            "u": 1,
+            "u": 2,
             "n": 3,
             "diff": 4,
-            "pkt": 13,
+            "pkt": 14,
             "svk": false,
             "logo": "00ES8GNJ4400000EVV0AG08LVUPGND5I"
           },
           {
-            "pos": 6,
+            "pos": 7,
             "name": "SV Wechingen 1",
             "sp": 8,
             "s": 4,
@@ -973,19 +985,19 @@
             "logo": "00ES8GNJJ4000001VV0AG08LVUPGND5I"
           },
           {
-            "pos": 7,
-            "name": "SSV Glött",
-            "sp": 8,
-            "s": 3,
+            "pos": 8,
+            "name": "TSV Buchenberg",
+            "sp": 9,
+            "s": 2,
             "u": 2,
-            "n": 3,
-            "diff": -5,
-            "pkt": 11,
+            "n": 5,
+            "diff": -2,
+            "pkt": 8,
             "svk": false,
-            "logo": "00ES8GNJGK00000MVV0AG08LVUPGND5I"
+            "logo": "00ES8GNJCS00000TVV0AG08LVUPGND5I"
           },
           {
-            "pos": 8,
+            "pos": 9,
             "name": "SV Wattenweiler 1",
             "sp": 7,
             "s": 2,
@@ -997,25 +1009,13 @@
             "logo": "00ES8GNJLK000001VV0AG08LVUPGND5I"
           },
           {
-            "pos": 9,
-            "name": "TSV Buchenberg",
-            "sp": 8,
-            "s": 2,
-            "u": 1,
-            "n": 5,
-            "diff": -2,
-            "pkt": 7,
-            "svk": false,
-            "logo": "00ES8GNJCS00000TVV0AG08LVUPGND5I"
-          },
-          {
             "pos": 10,
             "name": "TSV 1861 Nördlingen",
-            "sp": 7,
+            "sp": 8,
             "s": 1,
             "u": 1,
-            "n": 5,
-            "diff": -9,
+            "n": 6,
+            "diff": -11,
             "pkt": 4,
             "svk": false,
             "logo": "00ES8GNJHS00000FVV0AG08LVUPGND5I"
@@ -1532,12 +1532,12 @@
           {
             "pos": 2,
             "name": "TSV 1874 Kottern",
-            "sp": 10,
-            "s": 9,
+            "sp": 11,
+            "s": 10,
             "u": 0,
             "n": 1,
-            "diff": 34,
-            "pkt": 27,
+            "diff": 37,
+            "pkt": 30,
             "svk": false,
             "logo": "00ES8GNJE400000HVV0AG08LVUPGND5I"
           },
@@ -1592,11 +1592,11 @@
           {
             "pos": 7,
             "name": "TSV 1896 Rain I",
-            "sp": 11,
+            "sp": 12,
             "s": 5,
             "u": 2,
-            "n": 4,
-            "diff": 0,
+            "n": 5,
+            "diff": -3,
             "pkt": 17,
             "svk": false,
             "logo": "00ES8GNJBK000018VV0AG08LVUPGND5I"
@@ -1837,7 +1837,7 @@
             "heim": false,
             "typ": "Meisterschaften",
             "wettbewerb": "U 15 (C-Jun.) Bezirksoberliga Schwaben",
-            "score": "4:1",
+            "score": "6:1",
             "zusatz": "",
             "ausgang": "N",
             "homeLogo": "00ES8GNJAC00000NVV0AG08LVUPGND5I",
@@ -1875,6 +1875,18 @@
         "table": [
           {
             "pos": 1,
+            "name": "FC Kempten",
+            "sp": 10,
+            "s": 8,
+            "u": 0,
+            "n": 2,
+            "diff": 48,
+            "pkt": 24,
+            "svk": false,
+            "logo": "00ES8GNJE4000009VV0AG08LVUPGND5I"
+          },
+          {
+            "pos": 2,
             "name": "TSV Königsbrunn",
             "sp": 9,
             "s": 7,
@@ -1884,18 +1896,6 @@
             "pkt": 22,
             "svk": false,
             "logo": "00ES8GNJAC000007VV0AG08LVUPGND5I"
-          },
-          {
-            "pos": 2,
-            "name": "FC Kempten",
-            "sp": 9,
-            "s": 7,
-            "u": 0,
-            "n": 2,
-            "diff": 46,
-            "pkt": 21,
-            "svk": false,
-            "logo": "00ES8GNJE4000009VV0AG08LVUPGND5I"
           },
           {
             "pos": 3,
@@ -1948,23 +1948,23 @@
           {
             "pos": 7,
             "name": "TSV Schwabmünchen U15",
-            "sp": 8,
-            "s": 3,
+            "sp": 9,
+            "s": 4,
             "u": 2,
             "n": 3,
-            "diff": 8,
-            "pkt": 11,
+            "diff": 13,
+            "pkt": 14,
             "svk": false,
             "logo": "00ES8GNJAC00000NVV0AG08LVUPGND5I"
           },
           {
             "pos": 8,
             "name": "SV Steinheim",
-            "sp": 9,
+            "sp": 10,
             "s": 3,
             "u": 0,
-            "n": 6,
-            "diff": -12,
+            "n": 7,
+            "diff": -14,
             "pkt": 9,
             "svk": false,
             "logo": "00ES8GNJ7S000004VV0AG08LVUPGND5I"
@@ -2008,11 +2008,11 @@
           {
             "pos": 12,
             "name": "SpVgg Kaufbeuren",
-            "sp": 8,
+            "sp": 9,
             "s": 0,
             "u": 0,
-            "n": 8,
-            "diff": -70,
+            "n": 9,
+            "diff": -75,
             "pkt": 0,
             "svk": true,
             "logo": "00ES8GNJE4000007VV0AG08LVUPGND5I"
