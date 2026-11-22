@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-11-22T01:32:44.363012+00:00",
+  "updatedAt": "2026-11-22T11:57:07.721173+00:00",
   "source": "https://service.bfv.de/rest/pdfexport/vereinsspiele?id=00ES8GNJE4000007VV0AG08LVUPGND5I",
-  "zeitraumAb": "2026-11-22",
+  "zeitraumAb": "2026-11-29",
   "games": [
     {
       "altersklasse": "B-Junioren",
@@ -412,6 +412,297 @@
         "u08"
       ],
       "id": "2026-12-06-12-12-f-junioren-spvgg-kaufbeuren-sv-st-ttwang"
+    },
+    {
+      "altersklasse": "C-Junioren",
+      "typ": "Hallenturnier",
+      "wettbewerb": "Hallen-Kreisturnier",
+      "date": "2026-12-12",
+      "time": "14:30",
+      "home": "FC Füssen",
+      "away": "SpVgg Kaufbeuren",
+      "venue": "Turnhalle Staatliches Gymnasium,Dr.-Enzinger-Str. 5,87629 Füssen",
+      "geaendert": false,
+      "heim": false,
+      "svk_team": "SpVgg Kaufbeuren",
+      "gegner": "FC Füssen",
+      "teams": [
+        "u15"
+      ],
+      "id": "2026-12-12-14-30-c-junioren-fc-f-ssen-spvgg-kaufbeuren"
+    },
+    {
+      "altersklasse": "C-Junioren",
+      "typ": "Hallenturnier",
+      "wettbewerb": "Hallen-Kreisturnier",
+      "date": "2026-12-12",
+      "time": "15:06",
+      "home": "SpVgg Kaufbeuren",
+      "away": "TSV Pfronten",
+      "venue": "Turnhalle Staatliches Gymnasium,Dr.-Enzinger-Str. 5,87629 Füssen",
+      "geaendert": false,
+      "heim": true,
+      "svk_team": "SpVgg Kaufbeuren",
+      "gegner": "TSV Pfronten",
+      "teams": [
+        "u15"
+      ],
+      "id": "2026-12-12-15-06-c-junioren-spvgg-kaufbeuren-tsv-pfronten"
+    },
+    {
+      "altersklasse": "C-Junioren",
+      "typ": "Hallenturnier",
+      "wettbewerb": "Hallen-Kreisturnier",
+      "date": "2026-12-12",
+      "time": "15:42",
+      "home": "SG Oy/Nesselw/Wertach",
+      "away": "SpVgg Kaufbeuren",
+      "venue": "Turnhalle Staatliches Gymnasium,Dr.-Enzinger-Str. 5,87629 Füssen",
+      "geaendert": false,
+      "heim": false,
+      "svk_team": "SpVgg Kaufbeuren",
+      "gegner": "SG Oy/Nesselw/Wertach",
+      "teams": [
+        "u15"
+      ],
+      "id": "2026-12-12-15-42-c-junioren-sg-oy-nesselw-wertach-spvgg-kaufbeuren"
+    },
+    {
+      "altersklasse": "C-Junioren",
+      "typ": "Hallenturnier",
+      "wettbewerb": "Hallen-Kreisturnier",
+      "date": "2026-12-12",
+      "time": "16:18",
+      "home": "SpVgg Kaufbeuren",
+      "away": "SG Thingau-Görisried",
+      "venue": "Turnhalle Staatliches Gymnasium,Dr.-Enzinger-Str. 5,87629 Füssen",
+      "geaendert": false,
+      "heim": true,
+      "svk_team": "SpVgg Kaufbeuren",
+      "gegner": "SG Thingau-Görisried",
+      "teams": [
+        "u15"
+      ],
+      "id": "2026-12-12-16-18-c-junioren-spvgg-kaufbeuren-sg-thingau-g-risried"
+    },
+    {
+      "altersklasse": "C-Junioren",
+      "typ": "Hallenturnier",
+      "wettbewerb": "Hallen-Kreisturnier",
+      "date": "2026-12-12",
+      "time": "16:54",
+      "home": "FC Thalhofen",
+      "away": "SpVgg Kaufbeuren",
+      "venue": "Turnhalle Staatliches Gymnasium,Dr.-Enzinger-Str. 5,87629 Füssen",
+      "geaendert": false,
+      "heim": false,
+      "svk_team": "SpVgg Kaufbeuren",
+      "gegner": "FC Thalhofen",
+      "teams": [
+        "u15"
+      ],
+      "id": "2026-12-12-16-54-c-junioren-fc-thalhofen-spvgg-kaufbeuren"
+    },
+    {
+      "altersklasse": "C-Junioren",
+      "typ": "Hallenturnier",
+      "wettbewerb": "Hallen-Kreisturnier",
+      "date": "2026-12-12",
+      "time": "17:30",
+      "home": "SpVgg Kaufbeuren",
+      "away": "TSV Seeg-Hopferau-Eisenberg",
+      "venue": "Turnhalle Staatliches Gymnasium,Dr.-Enzinger-Str. 5,87629 Füssen",
+      "geaendert": false,
+      "heim": true,
+      "svk_team": "SpVgg Kaufbeuren",
+      "gegner": "TSV Seeg-Hopferau-Eisenberg",
+      "teams": [
+        "u15"
+      ],
+      "id": "2026-12-12-17-30-c-junioren-spvgg-kaufbeuren-tsv-seeg-hopferau-eisenberg"
+    },
+    {
+      "altersklasse": "A-Junioren",
+      "typ": "Hallenturnier",
+      "wettbewerb": "Hallen-Kreisturnier",
+      "date": "2026-12-13",
+      "time": "10:00",
+      "home": "JFG Kronburg A1",
+      "away": "SpVgg Kaufbeuren",
+      "venue": "",
+      "geaendert": false,
+      "heim": false,
+      "svk_team": "SpVgg Kaufbeuren",
+      "gegner": "JFG Kronburg A1",
+      "teams": [
+        "u19"
+      ],
+      "id": "2026-12-13-10-00-a-junioren-jfg-kronburg-a1-spvgg-kaufbeuren"
+    },
+    {
+      "altersklasse": "A-Junioren",
+      "typ": "Hallenturnier",
+      "wettbewerb": "Hallen-Kreisturnier",
+      "date": "2026-12-13",
+      "time": "11:00",
+      "home": "FC Kempten",
+      "away": "SpVgg Kaufbeuren",
+      "venue": "",
+      "geaendert": false,
+      "heim": false,
+      "svk_team": "SpVgg Kaufbeuren",
+      "gegner": "FC Kempten",
+      "teams": [
+        "u19"
+      ],
+      "id": "2026-12-13-11-00-a-junioren-fc-kempten-spvgg-kaufbeuren"
+    },
+    {
+      "altersklasse": "A-Junioren",
+      "typ": "Hallenturnier",
+      "wettbewerb": "Hallen-Kreisturnier",
+      "date": "2026-12-13",
+      "time": "11:20",
+      "home": "SpVgg Kaufbeuren",
+      "away": "JFG Ostallgäu Nord",
+      "venue": "",
+      "geaendert": false,
+      "heim": true,
+      "svk_team": "SpVgg Kaufbeuren",
+      "gegner": "JFG Ostallgäu Nord",
+      "teams": [
+        "u19"
+      ],
+      "id": "2026-12-13-11-20-a-junioren-spvgg-kaufbeuren-jfg-ostallg-u-nord"
+    },
+    {
+      "altersklasse": "B-Junioren",
+      "typ": "Hallenturnier",
+      "wettbewerb": "Hallen-Kreisturnier",
+      "date": "2026-12-13",
+      "time": "14:00",
+      "home": "TSV Pfronten",
+      "away": "SpVgg Kaufbeuren",
+      "venue": "Turnhalle Staatliches Gymnasium,Dr.-Enzinger-Str. 5,87629 Füssen",
+      "geaendert": false,
+      "heim": false,
+      "svk_team": "SpVgg Kaufbeuren",
+      "gegner": "TSV Pfronten",
+      "teams": [
+        "u17"
+      ],
+      "id": "2026-12-13-14-00-b-junioren-tsv-pfronten-spvgg-kaufbeuren"
+    },
+    {
+      "altersklasse": "B-Junioren",
+      "typ": "Hallenturnier",
+      "wettbewerb": "Hallen-Kreisturnier",
+      "date": "2026-12-13",
+      "time": "15:00",
+      "home": "SpVgg Kaufbeuren",
+      "away": "FC Füssen",
+      "venue": "Turnhalle Staatliches Gymnasium,Dr.-Enzinger-Str. 5,87629 Füssen",
+      "geaendert": false,
+      "heim": true,
+      "svk_team": "SpVgg Kaufbeuren",
+      "gegner": "FC Füssen",
+      "teams": [
+        "u17"
+      ],
+      "id": "2026-12-13-15-00-b-junioren-spvgg-kaufbeuren-fc-f-ssen"
+    },
+    {
+      "altersklasse": "B-Junioren",
+      "typ": "Hallenturnier",
+      "wettbewerb": "Hallen-Kreisturnier",
+      "date": "2026-12-13",
+      "time": "16:00",
+      "home": "FC Wiggensbach",
+      "away": "SpVgg Kaufbeuren",
+      "venue": "Turnhalle Staatliches Gymnasium,Dr.-Enzinger-Str. 5,87629 Füssen",
+      "geaendert": false,
+      "heim": false,
+      "svk_team": "SpVgg Kaufbeuren",
+      "gegner": "FC Wiggensbach",
+      "teams": [
+        "u17"
+      ],
+      "id": "2026-12-13-16-00-b-junioren-fc-wiggensbach-spvgg-kaufbeuren"
+    },
+    {
+      "altersklasse": "B-Junioren",
+      "typ": "Hallenturnier",
+      "wettbewerb": "Hallen-Kreisturnier",
+      "date": "2026-12-13",
+      "time": "16:30",
+      "home": "SpVgg Kaufbeuren",
+      "away": "TSV Seeg-Hopferau-Eisenberg",
+      "venue": "Turnhalle Staatliches Gymnasium,Dr.-Enzinger-Str. 5,87629 Füssen",
+      "geaendert": false,
+      "heim": true,
+      "svk_team": "SpVgg Kaufbeuren",
+      "gegner": "TSV Seeg-Hopferau-Eisenberg",
+      "teams": [
+        "u17"
+      ],
+      "id": "2026-12-13-16-30-b-junioren-spvgg-kaufbeuren-tsv-seeg-hopferau-eisenberg"
+    },
+    {
+      "altersklasse": "D-Junioren",
+      "typ": "Hallenturnier",
+      "wettbewerb": "Hallen-Kreisturnier",
+      "date": "2026-12-19",
+      "time": "14:30",
+      "home": "SpVgg Kaufbeuren",
+      "away": "SV Stöttwang",
+      "venue": "",
+      "geaendert": false,
+      "heim": true,
+      "svk_team": "SpVgg Kaufbeuren",
+      "gegner": "SV Stöttwang",
+      "teams": [
+        "u13",
+        "u12"
+      ],
+      "id": "2026-12-19-14-30-d-junioren-spvgg-kaufbeuren-sv-st-ttwang"
+    },
+    {
+      "altersklasse": "D-Junioren",
+      "typ": "Hallenturnier",
+      "wettbewerb": "Hallen-Kreisturnier",
+      "date": "2026-12-19",
+      "time": "14:50",
+      "home": "SSV Niedersonthofen",
+      "away": "SpVgg Kaufbeuren",
+      "venue": "",
+      "geaendert": false,
+      "heim": false,
+      "svk_team": "SpVgg Kaufbeuren",
+      "gegner": "SSV Niedersonthofen",
+      "teams": [
+        "u13",
+        "u12"
+      ],
+      "id": "2026-12-19-14-50-d-junioren-ssv-niedersonthofen-spvgg-kaufbeuren"
+    },
+    {
+      "altersklasse": "D-Junioren",
+      "typ": "Hallenturnier",
+      "wettbewerb": "Hallen-Kreisturnier",
+      "date": "2026-12-19",
+      "time": "15:30",
+      "home": "SV Oberostendorf",
+      "away": "SpVgg Kaufbeuren",
+      "venue": "",
+      "geaendert": false,
+      "heim": false,
+      "svk_team": "SpVgg Kaufbeuren",
+      "gegner": "SV Oberostendorf",
+      "teams": [
+        "u13",
+        "u12"
+      ],
+      "id": "2026-12-19-15-30-d-junioren-sv-oberostendorf-spvgg-kaufbeuren"
     },
     {
       "altersklasse": "B-Junioren",
