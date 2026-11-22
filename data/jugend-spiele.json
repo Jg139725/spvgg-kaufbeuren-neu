@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-11-20T20:41:40.124285+00:00",
+  "updatedAt": "2026-11-22T01:32:44.363012+00:00",
   "source": "https://service.bfv.de/rest/pdfexport/vereinsspiele?id=00ES8GNJE4000007VV0AG08LVUPGND5I",
-  "zeitraumAb": "2026-11-21",
+  "zeitraumAb": "2026-11-22",
   "games": [
     {
       "altersklasse": "B-Junioren",
@@ -285,7 +285,7 @@
       "typ": "Hallenturnier",
       "wettbewerb": "Hallen-Kreisturnier",
       "date": "2026-12-06",
-      "time": "10:08",
+      "time": "09:08",
       "home": "FC Buchloe",
       "away": "SpVgg Kaufbeuren",
       "venue": "Haupt- und Realschule Buchloe,Münchener Str. 22,86807 Buchloe",
@@ -297,14 +297,14 @@
         "u09",
         "u08"
       ],
-      "id": "2026-12-06-10-08-f-junioren-fc-buchloe-spvgg-kaufbeuren"
+      "id": "2026-12-06-09-08-f-junioren-fc-buchloe-spvgg-kaufbeuren"
     },
     {
       "altersklasse": "F-Junioren",
       "typ": "Hallenturnier",
       "wettbewerb": "Hallen-Kreisturnier",
       "date": "2026-12-06",
-      "time": "10:48",
+      "time": "09:48",
       "home": "SpVgg Kaufbeuren",
       "away": "SV Oberostendorf",
       "venue": "Haupt- und Realschule Buchloe,Münchener Str. 22,86807 Buchloe",
@@ -316,14 +316,14 @@
         "u09",
         "u08"
       ],
-      "id": "2026-12-06-10-48-f-junioren-spvgg-kaufbeuren-sv-oberostendorf"
+      "id": "2026-12-06-09-48-f-junioren-spvgg-kaufbeuren-sv-oberostendorf"
     },
     {
       "altersklasse": "F-Junioren",
       "typ": "Hallenturnier",
       "wettbewerb": "Hallen-Kreisturnier",
       "date": "2026-12-06",
-      "time": "11:28",
+      "time": "10:28",
       "home": "FC Jengen",
       "away": "SpVgg Kaufbeuren",
       "venue": "Haupt- und Realschule Buchloe,Münchener Str. 22,86807 Buchloe",
@@ -335,14 +335,14 @@
         "u09",
         "u08"
       ],
-      "id": "2026-12-06-11-28-f-junioren-fc-jengen-spvgg-kaufbeuren"
+      "id": "2026-12-06-10-28-f-junioren-fc-jengen-spvgg-kaufbeuren"
     },
     {
       "altersklasse": "F-Junioren",
       "typ": "Hallenturnier",
       "wettbewerb": "Hallen-Kreisturnier",
       "date": "2026-12-06",
-      "time": "12:00",
+      "time": "11:00",
       "home": "SpVgg Kaufbeuren",
       "away": "FC Blonhofen",
       "venue": "Haupt- und Realschule Buchloe,Münchener Str. 22,86807 Buchloe",
@@ -354,14 +354,14 @@
         "u09",
         "u08"
       ],
-      "id": "2026-12-06-12-00-f-junioren-spvgg-kaufbeuren-fc-blonhofen"
+      "id": "2026-12-06-11-00-f-junioren-spvgg-kaufbeuren-fc-blonhofen"
     },
     {
       "altersklasse": "F-Junioren",
       "typ": "Hallenturnier",
       "wettbewerb": "Hallen-Kreisturnier",
       "date": "2026-12-06",
-      "time": "12:24",
+      "time": "11:24",
       "home": "TV Waal",
       "away": "SpVgg Kaufbeuren",
       "venue": "Haupt- und Realschule Buchloe,Münchener Str. 22,86807 Buchloe",
@@ -373,14 +373,14 @@
         "u09",
         "u08"
       ],
-      "id": "2026-12-06-12-24-f-junioren-tv-waal-spvgg-kaufbeuren"
+      "id": "2026-12-06-11-24-f-junioren-tv-waal-spvgg-kaufbeuren"
     },
     {
       "altersklasse": "F-Junioren",
       "typ": "Hallenturnier",
       "wettbewerb": "Hallen-Kreisturnier",
       "date": "2026-12-06",
-      "time": "12:48",
+      "time": "11:48",
       "home": "SpVgg Kaufbeuren",
       "away": "SC Lindenberg",
       "venue": "Haupt- und Realschule Buchloe,Münchener Str. 22,86807 Buchloe",
@@ -392,14 +392,14 @@
         "u09",
         "u08"
       ],
-      "id": "2026-12-06-12-48-f-junioren-spvgg-kaufbeuren-sc-lindenberg"
+      "id": "2026-12-06-11-48-f-junioren-spvgg-kaufbeuren-sc-lindenberg"
     },
     {
       "altersklasse": "F-Junioren",
       "typ": "Hallenturnier",
       "wettbewerb": "Hallen-Kreisturnier",
       "date": "2026-12-06",
-      "time": "13:12",
+      "time": "12:12",
       "home": "SpVgg Kaufbeuren",
       "away": "SV Stöttwang",
       "venue": "Haupt- und Realschule Buchloe,Münchener Str. 22,86807 Buchloe",
@@ -411,7 +411,7 @@
         "u09",
         "u08"
       ],
-      "id": "2026-12-06-13-12-f-junioren-spvgg-kaufbeuren-sv-st-ttwang"
+      "id": "2026-12-06-12-12-f-junioren-spvgg-kaufbeuren-sv-st-ttwang"
     },
     {
       "altersklasse": "B-Junioren",
