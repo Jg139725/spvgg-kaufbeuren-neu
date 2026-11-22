@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-21T19:45:15.279816+00:00",
+  "updatedAt": "2026-11-22T19:57:17.686857+00:00",
   "source": "https://www.bfv.de",
   "teams": {
     "herren": [
@@ -986,6 +986,18 @@
           },
           {
             "pos": 8,
+            "name": "SV Wattenweiler 1",
+            "sp": 8,
+            "s": 3,
+            "u": 1,
+            "n": 4,
+            "diff": -1,
+            "pkt": 10,
+            "svk": false,
+            "logo": "00ES8GNJLK000001VV0AG08LVUPGND5I"
+          },
+          {
+            "pos": 9,
             "name": "TSV Buchenberg",
             "sp": 9,
             "s": 2,
@@ -995,18 +1007,6 @@
             "pkt": 8,
             "svk": false,
             "logo": "00ES8GNJCS00000TVV0AG08LVUPGND5I"
-          },
-          {
-            "pos": 9,
-            "name": "SV Wattenweiler 1",
-            "sp": 7,
-            "s": 2,
-            "u": 1,
-            "n": 4,
-            "diff": -3,
-            "pkt": 7,
-            "svk": false,
-            "logo": "00ES8GNJLK000001VV0AG08LVUPGND5I"
           },
           {
             "pos": 10,
@@ -1023,11 +1023,11 @@
           {
             "pos": 11,
             "name": "SV Mering",
-            "sp": 7,
+            "sp": 8,
             "s": 0,
             "u": 1,
-            "n": 6,
-            "diff": -25,
+            "n": 7,
+            "diff": -27,
             "pkt": 1,
             "svk": false,
             "logo": "00ES8GNJAC00000FVV0AG08LVUPGND5I"
@@ -1520,12 +1520,12 @@
           {
             "pos": 1,
             "name": "FC Memmingen 2",
-            "sp": 11,
-            "s": 10,
+            "sp": 12,
+            "s": 11,
             "u": 1,
             "n": 0,
-            "diff": 38,
-            "pkt": 31,
+            "diff": 42,
+            "pkt": 34,
             "svk": false,
             "logo": "00ES8GNJ44000004VV0AG08LVUPGND5I"
           },
@@ -1544,35 +1544,35 @@
           {
             "pos": 3,
             "name": "TSV Schwaben Augsburg U17",
-            "sp": 11,
-            "s": 8,
+            "sp": 12,
+            "s": 9,
             "u": 0,
             "n": 3,
-            "diff": 28,
-            "pkt": 24,
+            "diff": 34,
+            "pkt": 27,
             "svk": false,
             "logo": "00ES8GNJ9400000DVV0AG08LVUPGND5I"
           },
           {
             "pos": 4,
             "name": "(SG) Joshofen Bergheim Ried",
-            "sp": 10,
-            "s": 7,
+            "sp": 11,
+            "s": 8,
             "u": 1,
             "n": 2,
-            "diff": 13,
-            "pkt": 22,
+            "diff": 14,
+            "pkt": 25,
             "svk": false,
             "logo": "00ES8GNJCS00000BVV0AG08LVUPGND5I"
           },
           {
             "pos": 5,
             "name": "TSV Bobingen U17",
-            "sp": 11,
+            "sp": 12,
             "s": 5,
             "u": 3,
-            "n": 3,
-            "diff": 2,
+            "n": 4,
+            "diff": -4,
             "pkt": 18,
             "svk": false,
             "logo": "00ES8GNJ9400000KVV0AG08LVUPGND5I"
@@ -1604,11 +1604,11 @@
           {
             "pos": 8,
             "name": "FC 1920 Gundelfingen U17",
-            "sp": 10,
+            "sp": 11,
             "s": 5,
             "u": 0,
-            "n": 5,
-            "diff": 9,
+            "n": 6,
+            "diff": 5,
             "pkt": 15,
             "svk": false,
             "logo": "00ES8GNJGK00000PVV0AG08LVUPGND5I"
@@ -1628,11 +1628,11 @@
           {
             "pos": 10,
             "name": "TSV Schwabmünchen U17",
-            "sp": 10,
+            "sp": 11,
             "s": 4,
             "u": 1,
-            "n": 5,
-            "diff": 1,
+            "n": 6,
+            "diff": 0,
             "pkt": 13,
             "svk": false,
             "logo": "00ES8GNJAC00000NVV0AG08LVUPGND5I"
@@ -1875,6 +1875,18 @@
         "table": [
           {
             "pos": 1,
+            "name": "TSV Königsbrunn",
+            "sp": 10,
+            "s": 8,
+            "u": 1,
+            "n": 1,
+            "diff": 44,
+            "pkt": 25,
+            "svk": false,
+            "logo": "00ES8GNJAC000007VV0AG08LVUPGND5I"
+          },
+          {
+            "pos": 2,
             "name": "FC Kempten",
             "sp": 10,
             "s": 8,
@@ -1884,18 +1896,6 @@
             "pkt": 24,
             "svk": false,
             "logo": "00ES8GNJE4000009VV0AG08LVUPGND5I"
-          },
-          {
-            "pos": 2,
-            "name": "TSV Königsbrunn",
-            "sp": 9,
-            "s": 7,
-            "u": 1,
-            "n": 1,
-            "diff": 39,
-            "pkt": 22,
-            "svk": false,
-            "logo": "00ES8GNJAC000007VV0AG08LVUPGND5I"
           },
           {
             "pos": 3,
@@ -1984,11 +1984,11 @@
           {
             "pos": 10,
             "name": "DJK Göggingen U15 I",
-            "sp": 9,
+            "sp": 10,
             "s": 2,
             "u": 1,
-            "n": 6,
-            "diff": -24,
+            "n": 7,
+            "diff": -29,
             "pkt": 7,
             "svk": false,
             "logo": "00ES8GNJ7S00000QVV0AG08LVUPGND5I"
