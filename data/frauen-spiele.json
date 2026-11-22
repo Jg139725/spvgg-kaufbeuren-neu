@@ -169,6 +169,17 @@
     },
     {
       "pos": 8,
+      "team": "SV Wattenweiler 1",
+      "played": 8,
+      "won": 2,
+      "drawn": 2,
+      "lost": 4,
+      "goals": "10:13",
+      "diff": "-3",
+      "points": 8
+    },
+    {
+      "pos": 9,
       "team": "TSV Buchenberg",
       "played": 9,
       "won": 2,
@@ -177,17 +188,6 @@
       "goals": "12:14",
       "diff": "-2",
       "points": 8
-    },
-    {
-      "pos": 9,
-      "team": "SV Wattenweiler 1",
-      "played": 7,
-      "won": 2,
-      "drawn": 1,
-      "lost": 4,
-      "goals": "10:13",
-      "diff": "-3",
-      "points": 7
     },
     {
       "pos": 10,
@@ -203,14 +203,14 @@
     {
       "pos": 11,
       "team": "SV Mering",
-      "played": 7,
+      "played": 8,
       "won": 0,
-      "drawn": 1,
+      "drawn": 2,
       "lost": 6,
       "goals": "3:28",
       "diff": "-25",
-      "points": 1
+      "points": 2
     }
   ],
-  "updatedAt": "2026-11-21T21:47:20+00:00"
+  "updatedAt": "2026-11-22T17:57:49+00:00"
 }
