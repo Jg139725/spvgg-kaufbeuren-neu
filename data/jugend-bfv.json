@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-22T19:57:17.686857+00:00",
+  "updatedAt": "2026-11-23T13:36:41.785637+00:00",
   "source": "https://www.bfv.de",
   "teams": {
     "herren": [
@@ -1340,6 +1340,17 @@
         "url": "https://www.bfv.de/mannschaften/-/016QFTGKJC000000VV0AG811VTSDEJ30",
         "matches": [
           {
+            "date": "2026-11-25",
+            "time": "19:00",
+            "home": "SpVgg Kaufbeuren",
+            "away": "TSV 1874 Kottern",
+            "heim": true,
+            "typ": "Meisterschaften",
+            "wettbewerb": "U 17 (B-Jun.) Bezirksoberliga Schwaben",
+            "homeLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I",
+            "awayLogo": "00ES8GNJE400000HVV0AG08LVUPGND5I"
+          },
+          {
             "date": "2026-11-29",
             "time": "15:30",
             "home": "SpVgg Kaufbeuren",
@@ -1459,17 +1470,6 @@
             "wettbewerb": "U 17 (B-Jun.) Bezirksoberliga Schwaben",
             "homeLogo": "00ES8GNJAC00000NVV0AG08LVUPGND5I",
             "awayLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I"
-          },
-          {
-            "date": "2027-04-16",
-            "time": "19:00",
-            "home": "SpVgg Kaufbeuren",
-            "away": "FC Memmingen 2",
-            "heim": true,
-            "typ": "Meisterschaften",
-            "wettbewerb": "U 17 (B-Jun.) Bezirksoberliga Schwaben",
-            "homeLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I",
-            "awayLogo": "00ES8GNJ44000004VV0AG08LVUPGND5I"
           }
         ],
         "results": [
@@ -1900,12 +1900,12 @@
           {
             "pos": 3,
             "name": "TSV Neusäß U15",
-            "sp": 8,
-            "s": 6,
+            "sp": 9,
+            "s": 7,
             "u": 1,
             "n": 1,
-            "diff": 16,
-            "pkt": 19,
+            "diff": 18,
+            "pkt": 22,
             "svk": false,
             "logo": "00ES8GNJKC00000TVV0AG08LVUPGND5I"
           },
@@ -2008,11 +2008,11 @@
           {
             "pos": 12,
             "name": "SpVgg Kaufbeuren",
-            "sp": 9,
+            "sp": 10,
             "s": 0,
             "u": 0,
-            "n": 9,
-            "diff": -75,
+            "n": 10,
+            "diff": -77,
             "pkt": 0,
             "svk": true,
             "logo": "00ES8GNJE4000007VV0AG08LVUPGND5I"

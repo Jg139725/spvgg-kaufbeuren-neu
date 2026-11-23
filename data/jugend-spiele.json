@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-11-22T11:57:07.721173+00:00",
+  "updatedAt": "2026-11-23T13:36:28.533476+00:00",
   "source": "https://service.bfv.de/rest/pdfexport/vereinsspiele?id=00ES8GNJE4000007VV0AG08LVUPGND5I",
-  "zeitraumAb": "2026-11-29",
+  "zeitraumAb": "2026-11-25",
   "games": [
     {
       "altersklasse": "B-Junioren",
@@ -110,6 +110,24 @@
         "u19"
       ],
       "id": "2026-11-22-12-00-a-junioren-spvgg-kaufbeuren-sg-tsv-ottobeuren"
+    },
+    {
+      "altersklasse": "B-Junioren",
+      "typ": "Punktspiel",
+      "wettbewerb": "Bezirksoberliga",
+      "date": "2026-11-25",
+      "time": "19:00",
+      "home": "SpVgg Kaufbeuren",
+      "away": "TSV 1874 Kottern",
+      "venue": "Sportpark Haken KR,Wolftrigelstr. 11,87600 Kaufbeuren",
+      "geaendert": false,
+      "heim": true,
+      "svk_team": "SpVgg Kaufbeuren",
+      "gegner": "TSV 1874 Kottern",
+      "teams": [
+        "u17"
+      ],
+      "id": "2026-11-25-19-00-b-junioren-spvgg-kaufbeuren-tsv-1874-kottern"
     },
     {
       "altersklasse": "E-Junioren",
