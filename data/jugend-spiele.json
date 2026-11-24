@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-23T13:36:28.533476+00:00",
+  "updatedAt": "2026-11-24T02:33:38.489349+00:00",
   "source": "https://service.bfv.de/rest/pdfexport/vereinsspiele?id=00ES8GNJE4000007VV0AG08LVUPGND5I",
   "zeitraumAb": "2026-11-25",
   "games": [
@@ -155,17 +155,17 @@
       "date": "2026-11-29",
       "time": "10:48",
       "home": "SpVgg Kaufbeuren",
-      "away": "FSV Kirchdorf",
+      "away": "SG Rammingen-Kirchdorf",
       "venue": "Sporthalle KF-Schelmenhof,Josef-Fischer-Str. 5,87600 Kaufbeuren",
       "geaendert": false,
       "heim": true,
       "svk_team": "SpVgg Kaufbeuren",
-      "gegner": "FSV Kirchdorf",
+      "gegner": "SG Rammingen-Kirchdorf",
       "teams": [
         "u11",
         "u10"
       ],
-      "id": "2026-11-29-10-48-e-junioren-spvgg-kaufbeuren-fsv-kirchdorf"
+      "id": "2026-11-29-10-48-e-junioren-spvgg-kaufbeuren-sg-rammingen-kirchdorf"
     },
     {
       "altersklasse": "E-Junioren",
@@ -432,6 +432,78 @@
       "id": "2026-12-06-12-12-f-junioren-spvgg-kaufbeuren-sv-st-ttwang"
     },
     {
+      "altersklasse": "A-Junioren",
+      "typ": "Hallenturnier",
+      "wettbewerb": "Hallen-Kreisturnier",
+      "date": "2026-12-06",
+      "time": "15:00",
+      "home": "SpVgg Kaufbeuren",
+      "away": "JFG Hasel-Roth-Günz 1",
+      "venue": "Sporthalle Maristenkolleg,Chamagnerplatz 1,87719 Mindelheim",
+      "geaendert": false,
+      "heim": true,
+      "svk_team": "SpVgg Kaufbeuren",
+      "gegner": "JFG Hasel-Roth-Günz 1",
+      "teams": [
+        "u19"
+      ],
+      "id": "2026-12-06-15-00-a-junioren-spvgg-kaufbeuren-jfg-hasel-roth-g-nz-1"
+    },
+    {
+      "altersklasse": "A-Junioren",
+      "typ": "Hallenturnier",
+      "wettbewerb": "Hallen-Kreisturnier",
+      "date": "2026-12-06",
+      "time": "15:40",
+      "home": "SG Obere Singold",
+      "away": "SpVgg Kaufbeuren",
+      "venue": "Sporthalle Maristenkolleg,Chamagnerplatz 1,87719 Mindelheim",
+      "geaendert": false,
+      "heim": false,
+      "svk_team": "SpVgg Kaufbeuren",
+      "gegner": "SG Obere Singold",
+      "teams": [
+        "u19"
+      ],
+      "id": "2026-12-06-15-40-a-junioren-sg-obere-singold-spvgg-kaufbeuren"
+    },
+    {
+      "altersklasse": "A-Junioren",
+      "typ": "Hallenturnier",
+      "wettbewerb": "Hallen-Kreisturnier",
+      "date": "2026-12-06",
+      "time": "16:20",
+      "home": "SG Auerbach Stetten Dirlewang",
+      "away": "SpVgg Kaufbeuren",
+      "venue": "Sporthalle Maristenkolleg,Chamagnerplatz 1,87719 Mindelheim",
+      "geaendert": false,
+      "heim": false,
+      "svk_team": "SpVgg Kaufbeuren",
+      "gegner": "SG Auerbach Stetten Dirlewang",
+      "teams": [
+        "u19"
+      ],
+      "id": "2026-12-06-16-20-a-junioren-sg-auerbach-stetten-dirlewang-spvgg-kaufbeuren"
+    },
+    {
+      "altersklasse": "A-Junioren",
+      "typ": "Hallenturnier",
+      "wettbewerb": "Hallen-Kreisturnier",
+      "date": "2026-12-06",
+      "time": "17:20",
+      "home": "SpVgg Kaufbeuren",
+      "away": "SV Amendingen",
+      "venue": "Sporthalle Maristenkolleg,Chamagnerplatz 1,87719 Mindelheim",
+      "geaendert": false,
+      "heim": true,
+      "svk_team": "SpVgg Kaufbeuren",
+      "gegner": "SV Amendingen",
+      "teams": [
+        "u19"
+      ],
+      "id": "2026-12-06-17-20-a-junioren-spvgg-kaufbeuren-sv-amendingen"
+    },
+    {
       "altersklasse": "C-Junioren",
       "typ": "Hallenturnier",
       "wettbewerb": "Hallen-Kreisturnier",
@@ -538,60 +610,6 @@
         "u15"
       ],
       "id": "2026-12-12-17-30-c-junioren-spvgg-kaufbeuren-tsv-seeg-hopferau-eisenberg"
-    },
-    {
-      "altersklasse": "A-Junioren",
-      "typ": "Hallenturnier",
-      "wettbewerb": "Hallen-Kreisturnier",
-      "date": "2026-12-13",
-      "time": "10:00",
-      "home": "JFG Kronburg A1",
-      "away": "SpVgg Kaufbeuren",
-      "venue": "",
-      "geaendert": false,
-      "heim": false,
-      "svk_team": "SpVgg Kaufbeuren",
-      "gegner": "JFG Kronburg A1",
-      "teams": [
-        "u19"
-      ],
-      "id": "2026-12-13-10-00-a-junioren-jfg-kronburg-a1-spvgg-kaufbeuren"
-    },
-    {
-      "altersklasse": "A-Junioren",
-      "typ": "Hallenturnier",
-      "wettbewerb": "Hallen-Kreisturnier",
-      "date": "2026-12-13",
-      "time": "11:00",
-      "home": "FC Kempten",
-      "away": "SpVgg Kaufbeuren",
-      "venue": "",
-      "geaendert": false,
-      "heim": false,
-      "svk_team": "SpVgg Kaufbeuren",
-      "gegner": "FC Kempten",
-      "teams": [
-        "u19"
-      ],
-      "id": "2026-12-13-11-00-a-junioren-fc-kempten-spvgg-kaufbeuren"
-    },
-    {
-      "altersklasse": "A-Junioren",
-      "typ": "Hallenturnier",
-      "wettbewerb": "Hallen-Kreisturnier",
-      "date": "2026-12-13",
-      "time": "11:20",
-      "home": "SpVgg Kaufbeuren",
-      "away": "JFG Ostallgäu Nord",
-      "venue": "",
-      "geaendert": false,
-      "heim": true,
-      "svk_team": "SpVgg Kaufbeuren",
-      "gegner": "JFG Ostallgäu Nord",
-      "teams": [
-        "u19"
-      ],
-      "id": "2026-12-13-11-20-a-junioren-spvgg-kaufbeuren-jfg-ostallg-u-nord"
     },
     {
       "altersklasse": "B-Junioren",
