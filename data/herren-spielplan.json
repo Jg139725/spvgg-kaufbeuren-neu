@@ -1,7 +1,31 @@
 {
-  "updatedAt": "2026-11-24T13:59:31.108990+00:00",
+  "updatedAt": "2026-11-24T23:32:22.949627+00:00",
   "source": "https://www.bfv.de/mannschaften/-/016PILCMSS000000VV0AG80NVUT1FLRU",
   "fixtures": [
+    {
+      "date": "2027-02-20",
+      "time": "14:00",
+      "home": "SpVgg Kaufbeuren",
+      "away": "VfB Durach e.V.",
+      "score": "",
+      "venue": ""
+    },
+    {
+      "date": "2027-02-27",
+      "time": "14:00",
+      "home": "SpVgg Kaufbeuren",
+      "away": "FC Füssen",
+      "score": "",
+      "venue": ""
+    },
+    {
+      "date": "2027-03-06",
+      "time": "14:00",
+      "home": "SpVgg Kaufbeuren",
+      "away": "SVO Germaringen",
+      "score": "",
+      "venue": ""
+    },
     {
       "date": "2027-03-14",
       "time": "14:00",
@@ -270,6 +294,30 @@
       "status": "abgesagt"
     },
     {
+      "date": "2027-02-20",
+      "time": "14:00",
+      "home": "SpVgg Kaufbeuren",
+      "away": "VfB Durach e.V.",
+      "score": "",
+      "venue": ""
+    },
+    {
+      "date": "2027-02-27",
+      "time": "14:00",
+      "home": "SpVgg Kaufbeuren",
+      "away": "FC Füssen",
+      "score": "",
+      "venue": ""
+    },
+    {
+      "date": "2027-03-06",
+      "time": "14:00",
+      "home": "SpVgg Kaufbeuren",
+      "away": "SVO Germaringen",
+      "score": "",
+      "venue": ""
+    },
+    {
       "date": "2027-03-14",
       "time": "14:00",
       "home": "SV Egg a. d. Günz",
@@ -311,10 +359,10 @@
     }
   ],
   "nextGame": {
-    "date": "2027-03-14",
+    "date": "2027-02-20",
     "time": "14:00",
-    "home": "SV Egg a. d. Günz",
-    "away": "SpVgg Kaufbeuren",
+    "home": "SpVgg Kaufbeuren",
+    "away": "VfB Durach e.V.",
     "score": "",
     "venue": ""
   },
