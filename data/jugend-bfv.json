@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-25T00:05:20.918052+00:00",
+  "updatedAt": "2026-11-25T19:34:27.446290+00:00",
   "source": "https://www.bfv.de",
   "teams": {
     "herren": [
@@ -1351,17 +1351,6 @@
         "url": "https://www.bfv.de/mannschaften/-/016QFTGKJC000000VV0AG811VTSDEJ30",
         "matches": [
           {
-            "date": "2026-11-25",
-            "time": "19:00",
-            "home": "SpVgg Kaufbeuren",
-            "away": "TSV 1874 Kottern",
-            "heim": true,
-            "typ": "Meisterschaften",
-            "wettbewerb": "U 17 (B-Jun.) Bezirksoberliga Schwaben",
-            "homeLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I",
-            "awayLogo": "00ES8GNJE400000HVV0AG08LVUPGND5I"
-          },
-          {
             "date": "2026-11-29",
             "time": "15:30",
             "home": "SpVgg Kaufbeuren",
@@ -1481,9 +1470,34 @@
             "wettbewerb": "U 17 (B-Jun.) Bezirksoberliga Schwaben",
             "homeLogo": "00ES8GNJAC00000NVV0AG08LVUPGND5I",
             "awayLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I"
+          },
+          {
+            "date": "2027-04-16",
+            "time": "19:00",
+            "home": "SpVgg Kaufbeuren",
+            "away": "FC Memmingen 2",
+            "heim": true,
+            "typ": "Meisterschaften",
+            "wettbewerb": "U 17 (B-Jun.) Bezirksoberliga Schwaben",
+            "homeLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I",
+            "awayLogo": "00ES8GNJ44000004VV0AG08LVUPGND5I"
           }
         ],
         "results": [
+          {
+            "date": "2026-11-25",
+            "time": "19:00",
+            "home": "SpVgg Kaufbeuren",
+            "away": "TSV 1874 Kottern",
+            "heim": true,
+            "typ": "Meisterschaften",
+            "wettbewerb": "U 17 (B-Jun.) Bezirksoberliga Schwaben",
+            "score": "1:3",
+            "zusatz": "",
+            "ausgang": "N",
+            "homeLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I",
+            "awayLogo": "00ES8GNJE400000HVV0AG08LVUPGND5I"
+          },
           {
             "date": "2026-11-20",
             "time": "18:00",
@@ -1510,20 +1524,6 @@
             "zusatz": "",
             "ausgang": "N",
             "homeLogo": "00ES8GNJBK000018VV0AG08LVUPGND5I",
-            "awayLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I"
-          },
-          {
-            "date": "2026-11-01",
-            "time": "11:00",
-            "home": "FV Illertissen U16",
-            "away": "SpVgg Kaufbeuren",
-            "heim": false,
-            "typ": "Meisterschaften",
-            "wettbewerb": "U 17 (B-Jun.) Bezirksoberliga Schwaben",
-            "score": "3:1",
-            "zusatz": "",
-            "ausgang": "N",
-            "homeLogo": "01CSGBH4NC000000VV0AG80NVU9EFVSV",
             "awayLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I"
           }
         ],
