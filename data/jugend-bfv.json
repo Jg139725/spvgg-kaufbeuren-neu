@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-24T02:33:48.309844+00:00",
+  "updatedAt": "2026-11-25T00:05:20.918052+00:00",
   "source": "https://www.bfv.de",
   "teams": {
     "herren": [
@@ -9,6 +9,39 @@
         "wettbewerb": "BZL Schwaben Süd",
         "url": "https://www.bfv.de/mannschaften/-/016PILCMSS000000VV0AG80NVUT1FLRU",
         "matches": [
+          {
+            "date": "2027-02-20",
+            "time": "14:00",
+            "home": "SpVgg Kaufbeuren",
+            "away": "VfB Durach e.V.",
+            "heim": true,
+            "typ": "Freundschaftsspiele",
+            "wettbewerb": "FS/H/B-FS/B-S/1",
+            "homeLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I",
+            "awayLogo": "00R20TAHC0000000VV0AG83KVT7COEQK"
+          },
+          {
+            "date": "2027-02-27",
+            "time": "14:00",
+            "home": "SpVgg Kaufbeuren",
+            "away": "FC Füssen",
+            "heim": true,
+            "typ": "Freundschaftsspiele",
+            "wettbewerb": "FS/H/B-FS/B-S/1",
+            "homeLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I",
+            "awayLogo": "00ES8GNJCS000017VV0AG08LVUPGND5I"
+          },
+          {
+            "date": "2027-03-06",
+            "time": "14:00",
+            "home": "SpVgg Kaufbeuren",
+            "away": "SVO Germaringen",
+            "heim": true,
+            "typ": "Freundschaftsspiele",
+            "wettbewerb": "FS/H/B-FS/B-S/1",
+            "homeLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I",
+            "awayLogo": "00ES8GNJCS00001AVV0AG08LVUPGND5I"
+          },
           {
             "date": "2027-03-14",
             "time": "14:00",
@@ -106,28 +139,6 @@
             "typ": "Meisterschaften",
             "wettbewerb": "BZL Schwaben Süd",
             "homeLogo": "00ES8GNJFC00000FVV0AG08LVUPGND5I",
-            "awayLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I"
-          },
-          {
-            "date": "2027-05-15",
-            "time": "15:30",
-            "home": "SpVgg Kaufbeuren",
-            "away": "TV Erkheim",
-            "heim": true,
-            "typ": "Meisterschaften",
-            "wettbewerb": "BZL Schwaben Süd",
-            "homeLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I",
-            "awayLogo": "00ES8GNJ2S00000PVV0AG08LVUPGND5I"
-          },
-          {
-            "date": "2027-05-22",
-            "time": "14:00",
-            "home": "FC Oberstdorf",
-            "away": "SpVgg Kaufbeuren",
-            "heim": false,
-            "typ": "Meisterschaften",
-            "wettbewerb": "BZL Schwaben Süd",
-            "homeLogo": "00ES8GNJE4000016VV0AG08LVUPGND5I",
             "awayLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I"
           }
         ],
@@ -390,6 +401,17 @@
             "awayLogo": "00ES8GNJHS00000VVV0AG08LVUPGND5I"
           },
           {
+            "date": "2027-03-06",
+            "time": "16:30",
+            "home": "SpVgg Kaufbeuren 2",
+            "away": "FSV Inningen",
+            "heim": true,
+            "typ": "Freundschaftsspiele",
+            "wettbewerb": "FS/H/K-FS/ALGÄU/1",
+            "homeLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I",
+            "awayLogo": "00ES8GNJ7S000011VV0AG08LVUPGND5I"
+          },
+          {
             "date": "2027-03-27",
             "time": "15:30",
             "home": "SpVgg Kaufbeuren 2",
@@ -498,17 +520,6 @@
             "wettbewerb": "A-Klasse Allgäu 5",
             "homeLogo": "01OFPMJ8TO000000VV0AG80NVSJUONF9",
             "awayLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I"
-          },
-          {
-            "date": "2027-06-05",
-            "time": "15:30",
-            "home": "SpVgg Kaufbeuren 2",
-            "away": "SV Wald",
-            "heim": true,
-            "typ": "Meisterschaften",
-            "wettbewerb": "A-Klasse Allgäu 5",
-            "homeLogo": "00ES8GNJE4000007VV0AG08LVUPGND5I",
-            "awayLogo": "00ES8GNJFC00000KVV0AG08LVUPGND5I"
           }
         ],
         "results": [
