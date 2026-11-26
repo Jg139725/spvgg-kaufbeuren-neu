@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T03:45:17.365291+00:00",
+  "updatedAt": "2026-11-26T17:16:55.188780+00:00",
   "source": "https://service.bfv.de/rest/pdfexport/vereinsspiele?id=00ES8GNJE4000007VV0AG08LVUPGND5I",
   "zeitraumAb": "2026-11-29",
   "games": [
@@ -251,7 +251,7 @@
       "time": "13:00",
       "home": "SpVgg Kaufbeuren",
       "away": "TSV Meitingen",
-      "venue": "Sportpark Haken Platz 2,Wolftrigelstr. 11,87600 Kaufbeuren",
+      "venue": "Sportpark Haken KR,Wolftrigelstr. 11,87600 Kaufbeuren",
       "geaendert": false,
       "heim": true,
       "svk_team": "SpVgg Kaufbeuren",
@@ -288,7 +288,7 @@
       "time": "15:30",
       "home": "SpVgg Kaufbeuren",
       "away": "FC Thalhofen",
-      "venue": "Parkstadion Kaufbeuren,Berliner Platz 6,87600 Kaufbeuren",
+      "venue": "Sportpark Haken KR,Wolftrigelstr. 11,87600 Kaufbeuren",
       "geaendert": false,
       "heim": true,
       "svk_team": "SpVgg Kaufbeuren",
