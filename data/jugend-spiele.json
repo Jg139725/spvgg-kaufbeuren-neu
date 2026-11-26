@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-11-24T02:33:38.489349+00:00",
+  "updatedAt": "2026-11-26T03:45:17.365291+00:00",
   "source": "https://service.bfv.de/rest/pdfexport/vereinsspiele?id=00ES8GNJE4000007VV0AG08LVUPGND5I",
-  "zeitraumAb": "2026-11-25",
+  "zeitraumAb": "2026-11-29",
   "games": [
     {
       "altersklasse": "B-Junioren",
@@ -708,18 +708,18 @@
       "wettbewerb": "Hallen-Kreisturnier",
       "date": "2026-12-19",
       "time": "14:50",
-      "home": "SSV Niedersonthofen",
+      "home": "(SG) Waltenhofen-Hegge / Sulzberg /",
       "away": "SpVgg Kaufbeuren",
       "venue": "",
       "geaendert": false,
       "heim": false,
       "svk_team": "SpVgg Kaufbeuren",
-      "gegner": "SSV Niedersonthofen",
+      "gegner": "(SG) Waltenhofen-Hegge / Sulzberg /",
       "teams": [
         "u13",
         "u12"
       ],
-      "id": "2026-12-19-14-50-d-junioren-ssv-niedersonthofen-spvgg-kaufbeuren"
+      "id": "2026-12-19-14-50-d-junioren-sg-waltenhofen-hegge-sulzberg-spvgg-kaufbeuren"
     },
     {
       "altersklasse": "D-Junioren",

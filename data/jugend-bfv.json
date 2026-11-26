@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-25T19:34:27.446290+00:00",
+  "updatedAt": "2026-11-26T03:45:32.792565+00:00",
   "source": "https://www.bfv.de",
   "teams": {
     "herren": [
@@ -1543,12 +1543,12 @@
           {
             "pos": 2,
             "name": "TSV 1874 Kottern",
-            "sp": 11,
-            "s": 10,
+            "sp": 12,
+            "s": 11,
             "u": 0,
             "n": 1,
-            "diff": 37,
-            "pkt": 30,
+            "diff": 39,
+            "pkt": 33,
             "svk": false,
             "logo": "00ES8GNJE400000HVV0AG08LVUPGND5I"
           },
@@ -1675,11 +1675,11 @@
           {
             "pos": 13,
             "name": "SpVgg Kaufbeuren",
-            "sp": 11,
+            "sp": 12,
             "s": 1,
             "u": 2,
-            "n": 8,
-            "diff": -20,
+            "n": 9,
+            "diff": -22,
             "pkt": 5,
             "svk": true,
             "logo": "00ES8GNJE4000007VV0AG08LVUPGND5I"
