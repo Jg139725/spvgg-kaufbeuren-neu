@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T17:16:55.188780+00:00",
+  "updatedAt": "2026-11-27T13:03:54.687923+00:00",
   "source": "https://service.bfv.de/rest/pdfexport/vereinsspiele?id=00ES8GNJE4000007VV0AG08LVUPGND5I",
   "zeitraumAb": "2026-11-29",
   "games": [
@@ -793,6 +793,24 @@
         "u17"
       ],
       "id": "2027-02-13-11-00-b-junioren-fc-kempten-spvgg-kaufbeuren"
+    },
+    {
+      "altersklasse": "B-Juniorinnen",
+      "typ": "Freundschaftsspiel",
+      "wettbewerb": "Freundschaftsspiele",
+      "date": "2027-02-28",
+      "time": "14:00",
+      "home": "TSV Gilching/Argelsried U17 W",
+      "away": "SpVgg Kaufbeuren",
+      "venue": "Sportanlage Gilching, Kunstrasen,Talhofstr. 13,82205 Gilching",
+      "geaendert": false,
+      "heim": false,
+      "svk_team": "SpVgg Kaufbeuren",
+      "gegner": "TSV Gilching/Argelsried U17 W",
+      "teams": [
+        "maedels"
+      ],
+      "id": "2027-02-28-14-00-b-juniorinnen-tsv-gilching-argelsried-u17-w-spvgg-kaufbeuren"
     }
   ]
 }
