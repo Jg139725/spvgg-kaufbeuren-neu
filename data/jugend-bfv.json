@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T03:45:32.792565+00:00",
+  "updatedAt": "2026-11-27T23:43:28.589192+00:00",
   "source": "https://www.bfv.de",
   "teams": {
     "herren": [
@@ -1578,6 +1578,18 @@
           },
           {
             "pos": 5,
+            "name": "FC 1920 Gundelfingen U17",
+            "sp": 12,
+            "s": 6,
+            "u": 0,
+            "n": 6,
+            "diff": 7,
+            "pkt": 18,
+            "svk": false,
+            "logo": "00ES8GNJGK00000PVV0AG08LVUPGND5I"
+          },
+          {
+            "pos": 6,
             "name": "TSV Bobingen U17",
             "sp": 12,
             "s": 5,
@@ -1589,7 +1601,7 @@
             "logo": "00ES8GNJ9400000KVV0AG08LVUPGND5I"
           },
           {
-            "pos": 6,
+            "pos": 7,
             "name": "FV Illertissen U16",
             "sp": 11,
             "s": 5,
@@ -1601,7 +1613,7 @@
             "logo": "01CSGBH4NC000000VV0AG80NVU9EFVSV"
           },
           {
-            "pos": 7,
+            "pos": 8,
             "name": "TSV 1896 Rain I",
             "sp": 12,
             "s": 5,
@@ -1613,25 +1625,13 @@
             "logo": "00ES8GNJBK000018VV0AG08LVUPGND5I"
           },
           {
-            "pos": 8,
-            "name": "FC 1920 Gundelfingen U17",
-            "sp": 11,
-            "s": 5,
-            "u": 0,
-            "n": 6,
-            "diff": 5,
-            "pkt": 15,
-            "svk": false,
-            "logo": "00ES8GNJGK00000PVV0AG08LVUPGND5I"
-          },
-          {
             "pos": 9,
             "name": "SG Dirlewang/Auerbach-Stetten",
-            "sp": 10,
+            "sp": 11,
             "s": 4,
             "u": 2,
-            "n": 4,
-            "diff": -2,
+            "n": 5,
+            "diff": -4,
             "pkt": 14,
             "svk": false,
             "logo": "00ES8GNJ2S00000MVV0AG08LVUPGND5I"
